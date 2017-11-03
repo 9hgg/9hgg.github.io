@@ -1,28 +1,26 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
-    <meta charset="utf-8" />
-    <title>Soutenance Joris GUERRY</title>
+  <meta charset="utf-8" />
+  <title>Soutenance Joris GUERRY</title>
 
-    <meta name="description" content="Soutenance de thèse Joris GUERRY" />
-    <meta name="author" content="Joris GUERRY" />
-    <link rel="stylesheet" href="extras/highlight/styles/github.css">
-    <link rel="stylesheet" href="extras/mermaid/mermaid.forest.css">
-    <link href="css/classic-slides.css" rel="stylesheet" />
-
+  <meta name="description" content="Soutenance de thèse Joris GUERRY" />
+  <meta name="author" content="Joris GUERRY" />
+  <link rel="stylesheet" href="extras/highlight/styles/github.css">
+  <link rel="stylesheet" href="extras/mermaid/mermaid.forest.css">
+  <link href="css/classic-slides.css" rel="stylesheet" />
 </head>
 
 <body class="impress-not-supported">
-<!--
+  <!--
     This fallback message is only visible when there is `impress-not-supported` class on body.
 -->
-<div class="fallback-message">
+  <div class="fallback-message">
     <p>Problème dans l'utilisation de Impress.js, est-ce que le navigateur est correct et que les fichiers sont disponibles ?</p>
-</div>
+  </div>
 
-<div id="impress" data-transition-duration="1000">
-
-
+  <div id="impress" data-transition-duration="1000">
 
 
 
@@ -31,7 +29,9 @@
 
 
 
-  <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+    <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
       &&&&                                                                &&&&
       &&&&                                                                &&&&
@@ -44,44 +44,44 @@
       &&&&                                                                &&&&
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
-  <div class="step slide" data-x="0" data-y="0">
-    <center>
-    <h3>Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
-    <h4>Détecte-moi si tu peux !</h4>
-    Soutenance de thèse de <h4>Joris GUERRY</h4> pour l'obtention du titre de <br>Docteur en Informatique
-    </center>
-  </div>
+    <div class="step slide" data-x="0" data-y="0">
+      <center>
+        <h3>Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
+        <h4>Détecte-moi si tu peux !</h4> Soutenance de thèse de
+        <h4>Joris GUERRY</h4> pour l'obtention du titre de <br>Docteur en Informatique
+      </center>
+    </div>
 
-  <div class="step" data-rel-x="0" data-rel-y="1000">
-  <center>
+    <div class="step" data-rel-x="0" data-rel-y="1000">
+      <center>
 
-    <table>
-      <tr>
-        <td style="text-align: center;"><img src="images/0_introduction/david_crop.png" style="height: auto; width:auto;" /></td>
-        <td style="text-align: center;"><img src="images/0_introduction/bertrand_crop.png" style="height: auto; width:auto;" /></td>
-      </tr>
-      <tr>
-      <td style="text-align: center;">David Filliat</td>
-      <td style="text-align: center;">Bertrand Le Saux</td>
-      </tr>
-      <!-- <tr>
+        <table>
+          <tr>
+            <td style="text-align: center;"><img src="images/0_introduction/david_crop.png" style="height: auto; width:auto;" /></td>
+            <td style="text-align: center;"><img src="images/0_introduction/bertrand_crop.png" style="height: auto; width:auto;" /></td>
+          </tr>
+          <tr>
+            <td style="text-align: center;">David Filliat</td>
+            <td style="text-align: center;">Bertrand Le Saux</td>
+          </tr>
+          <!-- <tr>
       <td style="text-align: center;">ENSTA ParisTech</td>
       <td style="text-align: center;">ONERA</td>
       </tr> -->
-      <tr>
-      <td style="text-align: center;"><img src="images/0_introduction/ensta_logo.png" style="height: auto; width:300px;" /></td>
-      <td style="text-align: center;"><img src="images/0_introduction/logo-onera-ident.jpg" style="height: auto; width:300px;" /></td>
-      </tr>
-      <tr>
-      <td style="text-align: center;">Directeur de thèse</td>
-      <td style="text-align: center;">Encadrant</td>
-      </tr>
+          <tr>
+            <td style="text-align: center;"><img src="images/0_introduction/ensta_logo.png" style="height: auto; width:300px;" /></td>
+            <td style="text-align: center;"><img src="images/0_introduction/logo-onera-ident.jpg" style="height: auto; width:300px;" /></td>
+          </tr>
+          <tr>
+            <td style="text-align: center;">Directeur de thèse</td>
+            <td style="text-align: center;">Encadrant</td>
+          </tr>
 
-    </table>
-  </center>
-  </div>
+        </table>
+      </center>
+    </div>
 
-  <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+    <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
       &&&&                                                                &&&&
       &&&&                                                                &&&&
@@ -95,71 +95,115 @@
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 
-  <!-- IMAGE DE FORET -->
-  <div class="step" data-x="2500" data-y="0">
-    <center>
-    <img src="images/0_introduction/foret.jpg" style="height: auto; width:auto;" /><br />
-    <!-- <img class="fade-in fade-out" style="transition-delay: 2s" src="images/0_introduction/loupe.png" style="height: auto; width:auto;  position: absolute; top: -500px;" /><br /> -->
-    </center>
-  </div>
-  <!-- ZOOM IMAGE DE FORET -->
-  <!-- <div class="step" data-rel-x="0" data-rel-y="0" data-z="-1000">
-    <center>
-    <img src="images/0_introduction/foret.jpg" style="position:relative; left:-50%;height: 2000px; width:2000px;" /><br />
-    </center>
-  </div> -->
-
-  <div class="step" data-rel-x="0" data-rel-y="0" data-z="-1000">
-    <center>
-    <img src="images/0_introduction/pixels-only.png" style="height: auto; width:auto;" /><br />
-    </center>
-  </div>
-
-  <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
-    <center>
-    new slide
-    </center>
-
-    <div class="notes">
-      Finalement une image qu'est-ce que c'est ? C'est un vecteur de l'espace [1:255]^w*h*d.
-    </div>
-  </div>
-
-  <div class="step" data-rel-x="0" data-rel-y="1000">
-    <center>
-    <img src="images/0_introduction/pixels-ecran.jpg" style="height: 300px; width:auto;" /><br />
-    <img src="images/0_introduction/fonctionnement_pixel.png" style="height: 300px; width:auto;" /><br />
-    </center>
-    <div class="notes">
-    <b>Fonctionnement d'un écran LCD :</b>
-    Un écran LCD est divisé en petites unités lumineuses appelées pixels. Chaque pixel est subdivisé en trois rectangles (appelés sous-pixels) recouverts par des filtres colorés (rouge, vert ou bleu). Un tube fluorescent (ou un panneau de D.E.L.) se trouvant derrière l'écran produit de la lumière blanche. Pour chaque sous-pixel, une couche de cristaux liquides est située entre deux polariseurs. L'ensemble laisse passer plus ou moins de lumière suivant la tension électrique appliquée. Les pixels étant déjà très petits, l'œil ne distingue pas les sous-pixels.
+    <!-- IMAGE DE FORET -->
+    <div class="step" data-x="2500" data-y="0">
+      <center>
+        <img src="images/0_introduction/foret.jpg" style="height: auto; width:auto;" /><br />
+        <!-- <img class="fade-in fade-out" style="transition-delay: 2s" src="images/0_introduction/loupe.png" style="height: auto; width:auto;  position: absolute; top: -500px;" /><br /> -->
+      </center>
     </div>
 
-  </div>
+    <!-- ZOOM PIXEL -->
+    <div class="step" data-rel-x="0" data-rel-y="0" data-z="-1000">
+      <center>
+        <img src="images/0_introduction/pixels-only.png" style="height: auto; width:auto;" /><br />
+      </center>
+    </div>
+
+    <!-- IMAGE + VECTEUR -->
+    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        Finalement une image c'est un tableau de valeurs. Plus précisement c'est un vecteur de l'espace [1:255]^w*h*d.
+
+        Les caméras que nous avons utilisés dans ces travaux produisent des images de taille (640, 480, 3). Cela signifie qu’il existe environ $10^{2219433}$ images potentielles
+
+        Pour info le nombre d'atome dans l'univers est estimé à $10^{80}$
+
+
+      </center>
+
+      <div class="notes">
+      </div>
+    </div>
+
+    <!-- ESPACE TROP GRAND -->
+    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        new slide
+
+      </center>
+
+      <div class="notes">
+      </div>
+    </div>
+
+    <div class="step" data-rel-x="0" data-rel-y="1000">
+      <center>
+        <img src="images/0_introduction/pixels-ecran.jpg" style="height: 300px; width:auto;" /><br />
+        <img src="images/0_introduction/fonctionnement_pixel.png" style="height: 300px; width:auto;" /><br />
+      </center>
+      <div class="notes">
+        <b>Fonctionnement d'un écran LCD :</b> Un écran LCD est divisé en petites unités lumineuses appelées pixels. Chaque pixel est subdivisé en trois rectangles (appelés sous-pixels) recouverts par des filtres colorés (rouge, vert ou bleu). Un tube
+        fluorescent (ou un panneau de D.E.L.) se trouvant derrière l'écran produit de la lumière blanche. Pour chaque sous-pixel, une couche de cristaux liquides est située entre deux polariseurs. L'ensemble laisse passer plus ou moins de lumière suivant
+        la tension électrique appliquée. Les pixels étant déjà très petits, l'œil ne distingue pas les sous-pixels.
+      </div>
+
+    </div>
 
     <div id="overview" class="step" data-x="0" data-y="0" data-scale="5" style="pointer-events: none;">
     </div>
-</div>
+  </div>
 
-<div id="impress-toolbar"></div>
+  <div id="impress-toolbar"></div>
 
-<div class="impress-progressbar"><div></div></div>
-<div class="impress-progress"></div>
+  <div class="impress-progressbar">
+    <div></div>
+  </div>
+  <div class="impress-progress"></div>
 
-<!-- <div id="impress-help"></div> -->
+  <!-- <div id="impress-help"></div> -->
 
 
-<script type="text/javascript" src="extras/highlight/highlight.pack.js"></script>
-<script type="text/javascript" src="extras/mermaid/mermaid.min.js"></script>
-<script type="text/javascript" src="extras/markdown/markdown.js"></script>
-<script type="text/javascript" src="extras/impress-console/js/impressConsole.js"></script>
-<script type="text/javascript">
-  var impressConsoleCss = 'extras/impress-console/css/impressConsole.css';
+  <script type="text/javascript" src="extras/highlight/highlight.pack.js"></script>
+  <script type="text/javascript" src="extras/mermaid/mermaid.min.js"></script>
+  <script type="text/javascript" src="extras/markdown/markdown.js"></script>
+  <script type="text/javascript" src="extras/impress-console/js/impressConsole.js"></script>
+  <script type="text/javascript">
+    var impressConsoleCss = 'extras/impress-console/css/impressConsole.css';
+  </script>
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+  },
+  TeX: {
+    Macros: {
+      energy: "e",
+      eqby: ["\\stackrel{#1}{=}",1],
+    }
+  }
+  });
 </script>
+  <script type="text/javascript" async src="MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
-
-<script type="text/javascript" src="js/impress.js"></script>
-<script>impress().init();</script>
+  <script type="text/javascript" src="js/impress.js"></script>
+  <script>
+    impress().init();
+  </script>
 
 </body>
+<!--
+
+    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        new slide
+      </center>
+
+      <div class="notes">
+      </div>
+    </div>
+
+
+  -->
 </html>
