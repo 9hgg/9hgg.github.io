@@ -1,0 +1,28 @@
+I Datasets
+
+Grâce à la Kinect de Microsoft en premier lieu puis à toutes les caméras RGBD (Intel RealSense ou Asus Xtion pour ne citer qu'elles) de nombreuses applications ont pu voir le jour dans la communauté robotique et plus particulièrement dans le domaine de la vision par ordinateur. 
+
+Ces applications, pour la plupart, nécessite une phase d'apprentissage, et par conséquent requièrent un ensemble de données pour l'entraînement. C'est dans ce contexte qu'ont été partagés des datasets variés, constitués d'images RGBD.
+
+Disponible en grande quantité aujourd'hui pour des tâches aussi variées que la reconnaissance de geste, d'objets, de scène, etc..., et respectivement pour leur reconstruction, nous nous sommes particulièrement intéréssés à quatre d'entre eux. 
+
+1) Datasets de référence
+
+NYUD_v2 by Silberman, un des premiers datasets RGBD disponibles, est devenu une référence dans le domaine des images RGBD, au même titre que MNIST pour la classification d'images RGB. Assez petit (1449 images), il permet facilement de se comparer à l'état de l'art. Gupta [ref] a proposé une redéfinition des classes d'objets pour en faciliter l'usage que nous emploierons à l'identique.
+Malheureusement, les dernières techniques de machine learning, comme les réseaux de neurones artificiels, nécessitent une grande quantité d'images pour la phase d'entraînement. C'est pourquoi nous avons également décidé de nous tourner vers d'autres datasets.
+
+SUNRGBD construit à partir d'autres datasets possède quant à lui plus de 10000 images. Cela en fait un dataset incontournable pour entraîner et tester nos méthodes.
+
+NYUD_V2 et SUNRGBD sont néanmoins essentiellement tournés vers des classes statiques où chaque scène étiquetée est indépendante des autres. 
+
+Le besoin de datasets comportant de la vidéo naît du scénario final applicatif : un robot mobile dans une mission d'exploration en assistance au sauvetage. Nous allons donc également nous intéresser au dataset RGBD People qui offre trois séquences vidéos corrélées d'un hall universitaire avec l'étiquetage des personnes et de leur niveau d'occlusion respectif.
+
+2) Datasets RGBD à grandes variations lumineuses
+
+Dans le cadre de notre scénario exploratoire nous envisageons de faire face à des grandes variations de luminosité. Il est important de prendre en considération que les caméras RGBD énoncées ci-dessus font références à des périphériques dits actifs. Cela signifie que pour obtenir la carte de profondeur les caméras ont recours à l'émission d'un champ infrarouge particulier. Cette méthode offre l'avantage de fonctionner sans source lumineuse extérieure (dans le noir donc) mais peut être fortement bruitée par le soleil (c'est à dire en extérieur). 
+Nous envisageons ainsi, au cours d'une même séquence d'exploration, d'observer un milieu éclairé par le soleil, puis de rentrer dans un bâtiment aux lumières éteintes et enfin d'alterner des salles éclairées ou peu éclairées voire pas du tout. Au début de cette étude aucun dataset n'était disponible pour étudier l'influence de ces variations qui peuvent parfois être brutales. C'est pourquoi nous avons commencé à produire le dataset ONERA.ROOM, dont les images proviennent exclusivement d'une Kinect (ou d'une Xtion) embarquée sur un robot mobile (cf. fig [ref]). L'objectif final du dataset ONERA.ROOM est de rendre disponible une quinzaine de séquences vidéos labellisées image par image sur un ensemble de dix classes (ie. personne, voiture, table, chaise, bureau, écran, porte, etc...) qui incluent des variations de luminosités très fortes. 
+
+D'autres travaux récents s'intéressent également à cette problématique : Eitel [ref] a rendu disponible le dataset InOutPeople [ref] qui offre aussi des variations de luminosité observées depuis un robot mobile avec comme unique objet labellisé les personnes.
+
+Nous résumons l'essentiel de ces informations et quelques détails supplémentaires dans le tableau [ref].
+Pour obtenir des informations sur d'autres datasets RGBD nous redirigons le lecteur à vers l'article de Firman, [ref]. 
