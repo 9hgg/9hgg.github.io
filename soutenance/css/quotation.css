@@ -1,0 +1,78 @@
+.myblockquote {
+  font-family: Georgia, serif;
+  font-size: 40px;
+  font-style: italic;
+  /*width: 700px;*/
+  margin: 0.25em 0;
+  padding: 0.35em 40px;
+  line-height: 1.45;
+  position: relative;
+  color: #0E2A4E;
+}
+
+.myblockquote:before {
+  display: block;
+  padding-left: 10px;
+  content: "\201C";
+  font-size: 150px;
+  position: absolute;
+  left: -60px;
+  top: -50px;
+  color: #0E2A4E;
+}
+
+.myblockquote .mycite {
+  color: #446285;
+  font-size: 28px;
+  display: block;
+  margin-top: 5px;
+}
+
+.myblockquote .mycite:before {
+  content: "\2014 \2009";
+}
+/*--------------------------------------------------------*/
+/*article reference*/
+.article_blockquote {
+  font-family: Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+  /*width: 700px;*/
+  margin: 0.25em 0;
+  padding: 0.35em 40px;
+  line-height: 1.45;
+  position: relative;
+  color: #0E2A4E;
+  text-align: right;
+}
+
+/*.article_blockquote:before {
+  display: block;
+  padding-left: 10px;
+  content: "\201C";
+  font-size: 150px;
+  position: absolute;
+  left: -60px;
+  top: -50px;
+  color: #0E2A4E;
+}*/
+
+.article_blockquote .article_cite {
+  color: #446285;
+  font-size: 15px;
+  /*display: block;*/
+  margin-top: 5px;
+}
+
+.article_blockquote .article_cite:before {
+  content: "\2014 \2009";
+}
+
+.article_reference {
+  position: relative;
+  width: 17px;
+  height: 16px;
+  vertical-align: text-top;
+  fill: none;
+  stroke: #1a0dab;
+}
