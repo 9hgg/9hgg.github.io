@@ -9,7 +9,9 @@
   <meta name="author" content="Joris GUERRY" />
   <link rel="stylesheet" href="extras/highlight/styles/github.css">
   <link rel="stylesheet" href="extras/mermaid/mermaid.forest.css">
+  <!-- <link href="css/impress_not_supported.css" rel="stylesheet" /> -->
   <link href="css/classic-slides.css" rel="stylesheet" />
+
   <link href="css/quotation.css" rel="stylesheet" />
 </head>
 
@@ -106,7 +108,7 @@
 
     <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <img src="images/0_introduction/contexte_1.jpg" style="height: 700px; width:auto;" /><br />
+        <img src="images/0_introduction/contexte_1.jpg" style="height: auto; width:100%;" /><br />
       </center>
       <div class="notes">
       </div>
@@ -114,7 +116,7 @@
 
     <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <img src="images/0_introduction/contexte_2.jpg" style="height: 700px; width:auto;" /><br />
+        <img src="images/0_introduction/contexte_2.jpg" style="height: auto; width:100%;" /><br />
       </center>
       <div class="notes">
       </div>
@@ -122,7 +124,7 @@
 
     <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <img src="images/0_introduction/contexte_3.jpg" style="height: 700px; width:auto;" /><br />
+        <img src="images/0_introduction/contexte_3.jpg" style="height: auto; width:100%;" /><br />
       </center>
       <div class="notes">
       </div>
@@ -130,7 +132,7 @@
 
     <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <img src="images/0_introduction/contexte_4.jpg" style="height: 700px; width:auto;" /><br />
+        <img src="images/0_introduction/contexte_4.jpg" style="height: auto; width:100%;" /><br />
       </center>
       <div class="notes">
       </div>
@@ -195,44 +197,7 @@
       <center>
         ... mais pour les robots <br /><br />
 
-
-
-        <!--
-
-      <div class="div_wrapper" style="display: table;">
-        <div class="div_cell" style="display: table-cell;">
-          <p style="text-align: center; font-size: 50%">Tortoise (Grey Walter - 1950)</p>
-          <img src="images/0_introduction/tortoise.jpg" style="height: 200px; width:auto;" />
-        </div>
-        <div class="div_cell" style="display: table-cell;">
-          <p style="text-align: center; font-size: 50%">Asimo (Honda - 2000)</p>
-          <img src="images/0_introduction/asimo.jpg" style="height: 200px; width:auto;" />
-        </div>
-        <div class="div_cell" style="display: table-cell;">
-          <p style="text-align: center; font-size: 50%">Handle (Boston Dynamics - 2016)</p>
-          <img src="images/0_introduction/handle.jpg" style="height: 200px; width:auto;" />
-        </div>
-      </div>
-      <div class="div_wrapper" style="display: table;">
-        <div class="div_cell" style="display: table-cell;">
-          <img src="images/0_introduction/tortoise.gif" style="height: 200px; width:auto;" />
-        </div>
-        <div class="div_cell" style="display: table-cell;">
-          <img src="images/0_introduction/asimo.gif" style="height: 200px; width:auto;" />
-        </div>
-        <div class="div_cell" style="display: table-cell;">
-          <img src="images/0_introduction/handle.gif" style="height: 200px; width:auto;" />
-        </div>
-      </div> -->
-
-
-        <!-- <table style="margin-left: 0px; margin-right: auto;"> -->
         <table>
-          <!-- <tr>
-          <td style="text-align: center;"><img src="images/0_introduction/tortoise.jpg" style="height: 300px; width:auto;" /></td>
-          <td style="text-align: center;"><img src="images/0_introduction/asimo.jpg" style="height: 300px; width:auto;" /></td>
-          <td style="text-align: center;"><img src="images/0_introduction/handle.jpg" style="height: 300px; width:auto;" /></td>
-        </tr> -->
           <tr>
             <td style="text-align: center;"><img src="images/0_introduction/tortoise.gif" style="height: 200px; width:364px;" /></td>
             <td style="text-align: center;"><img src="images/0_introduction/tortoise.jpg" style="height: 200px; width:284px;" /></td>
@@ -281,7 +246,7 @@
     <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         Qu'est-ce qu'une image ?
-        <img src="images/0_introduction/foret.jpg" style="height: auto; width:auto;" /><br />
+        <img src="images/0_introduction/foret.jpg" style="height: auto; width:100%;" /><br />
         <!-- <img class="fade-in fade-out" style="transition-delay: 2s" src="images/0_introduction/loupe.png" style="height: auto; width:auto;  position: absolute; top: -500px;" /><br /> -->
       </center>
     </div>
@@ -294,15 +259,17 @@
     </div>
 
     <!-- IMAGE + VECTEUR -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step" data-rel-x="0" data-rel-y="1200" data-z="0">
       <center>
-        Finalement une image c'est un tableau de valeurs. Plus précisement c'est un vecteur de l'espace [1:255]^w*h*d. Les caméras que nous avons utilisés dans ces travaux produisent des images de taille (640, 480, 3). Cela signifie qu’il existe environ $10^{2219433}$
-        images potentielles Pour info le nombre d'atome dans l'univers est estimé à $10^{80}$
-
-
+        Qu'est-ce qu'une image ?
+        <img src="images/0_introduction/grumpy/grumpy_rgb.png" style="height: auto; width:100%;" /><br />
       </center>
+      <div style="font-size:30px">
+        $Image\in[0:255]^{W \cdot H \cdot D}$ <br /> Exemple : <br /> Image de Kinect (640, 480, 3) $\rightarrow$ $10^{2219433}$ images potentielles <br /> Nombre d'atomes dans l'univers $ \approx 10^{80}$
+      </div>
 
       <div class="notes">
+        Ce que l'on peut voir ici c'est la représentation d'une image sous sa forme RGB. Elle est utile car nos yeux sont sensibles à ces trois couleurs et ainsi nous avons directement accès à l'information nécessaire pour générer cette image sur un écran. Mais certaines imprimantes ne fonctionnent pas avec la représentation RGB mais la représentation CYMK / CMJN (cyan, magenta, jaune, noir) (en anglais CMYK, cyan, magenta, yellow, key). Tout est question d'objectif. Quel est notre objectif ? Et quelle est la représentation la plus adéquate ?
       </div>
     </div>
 
@@ -311,7 +278,8 @@
       <center>
         <h4 style="margin-bottom: -10px;">Fléau de la dimension</h4>
         <blockquote class="article_blockquote">
-          <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Curse of dimensionality." Adaptive control processes: a guided tour. Princeton, NJ (1961).
+          <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Curse of dimensionality." Adaptive control processes: a guided tour. Princeton,
+          NJ (1961).
           <cite class="article_cite">Bellman, R.</cite>
         </blockquote>
 
@@ -325,7 +293,7 @@
       <div style="font-size:30px">
 
 
-        Pour chaque dimension :
+        Pour chaque nombre de dimensions :
         <ul>
           <li>500 points générés aléatoirement</li>
           <li> Calcul de : $log_{10} \left( \frac{distance_{max}-distance_{min}}{distance_{min}} \right)$</li>
@@ -335,12 +303,12 @@
           <tr>
             <td>En dimension 2 : </td>
             <td style="width: 100px; overflow: hidden; display: inline-block; white-space: nowrap;"></td>
-            <td>$distance_{max}=$ 2500 $distance_{min}$</td>
+            <td>$distance_{max}\approx$ 2500 $distance_{min}$</td>
           </tr>
           <tr>
             <td>En dimension 50 :</td>
             <td style="width: 100px; overflow: hidden; display: inline-block; white-space: nowrap;"></td>
-            <td>$distance_{max}=$ 3 $distance_{min}$</td>
+            <td>$distance_{max}\approx$ 3 $distance_{min}$</td>
           </tr>
         </table>
 
@@ -367,7 +335,7 @@
 
     </div> -->
 
-    <div id="overview" class="step" data-x="0" data-y="0" data-scale="5" style="pointer-events: none;">
+    <div id="overview" class="step" data-x="2500" data-y="3000" data-scale="10" style="pointer-events: none;">
     </div>
   </div>
 
@@ -378,7 +346,7 @@
   </div>
   <div class="impress-progress"></div>
 
-  <!-- <div id="impress-help"></div> -->
+  <div id="impress-help"></div>
 
 
   <script type="text/javascript" src="extras/highlight/highlight.pack.js"></script>
@@ -397,6 +365,14 @@
   <script type="text/javascript" src="js/impress.js"></script>
   <script>
     impress().init();
+    document.addEventListener("keydown", function(event) {
+      if (event.keyCode == 27) {
+
+        impress().goto("overview");
+
+        event.preventDefault();
+      }
+    }, false);
   </script>
 
 </body>

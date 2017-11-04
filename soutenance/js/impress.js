@@ -23,24 +23,24 @@
 // Let me show you the cogs that make impress.js run...
 (function ( document, window ) {
     'use strict';
-    
+
     // HELPER FUNCTIONS
-    
+
     // `pfx` is a function that takes a standard CSS property name as a parameter
     // and returns it's prefixed version valid for current browser it runs in.
     // The code is heavily inspired by Modernizr http://www.modernizr.com/
     var pfx = (function () {
-        
+
         var style = document.createElement('dummy').style,
             prefixes = 'Webkit Moz O ms Khtml'.split(' '),
             memory = {};
-        
+
         return function ( prop ) {
             if ( typeof memory[ prop ] === "undefined" ) {
-                
+
                 var ucProp  = prop.charAt(0).toUpperCase() + prop.substr(1),
                     props   = (prop + ' ' + prefixes.join(ucProp + ' ') + ucProp).split(' ');
-                
+
                 memory[ prop ] = null;
                 for ( var i in props ) {
                     if ( style[ props[i] ] !== undefined ) {
@@ -48,20 +48,20 @@
                         break;
                     }
                 }
-            
+
             }
-            
+
             return memory[ prop ];
         };
-    
+
     })();
-    
+
     // `arraify` takes an array-like object and turns it into real Array
     // to make all the Array.prototype goodness available.
     var arrayify = function ( a ) {
         return [].slice.call( a );
     };
-    
+
     // `css` function applies the styles given in `props` object to the element
     // given as `el`. It runs all property names through `pfx` function to make
     // sure proper prefixed version of the property is used.
@@ -77,14 +77,14 @@
         }
         return el;
     };
-    
+
     // `toNumber` takes a value given as `numeric` parameter and tries to turn
     // it into a number. If it is not possible it returns 0 (or other value
     // given as `fallback`).
     var toNumber = function (numeric, fallback) {
         return isNaN(numeric) ? (fallback || 0) : Number(numeric);
     };
-    
+
     var validateOrder = function ( order, fallback ) {
         var validChars = "xyz";
         var returnStr = "";
@@ -104,26 +104,26 @@
         else
             return "xyz";
     };
-    
+
     // `byId` returns element with given `id` - you probably have guessed that ;)
     var byId = function ( id ) {
         return document.getElementById(id);
     };
-    
+
     // `$` returns first element for given CSS `selector` in the `context` of
     // the given element or whole document.
     var $ = function ( selector, context ) {
         context = context || document;
         return context.querySelector(selector);
     };
-    
+
     // `$$` return an array of elements for given CSS `selector` in the `context` of
     // the given element or whole document.
     var $$ = function ( selector, context ) {
         context = context || document;
         return arrayify( context.querySelectorAll(selector) );
     };
-    
+
     // `triggerEvent` builds a custom DOM event with given `eventName` and `detail` data
     // and triggers it on element given as `el`.
     var triggerEvent = function (el, eventName, detail) {
@@ -131,12 +131,12 @@
         event.initCustomEvent(eventName, true, true, detail);
         el.dispatchEvent(event);
     };
-    
+
     // `translate` builds a translate transform string for given data.
     var translate = function ( t ) {
         return " translate3d(" + t.x + "px," + t.y + "px," + t.z + "px) ";
     };
-    
+
     // `rotate` builds a rotate transform string for given data.
     // By default the rotations are in X Y Z order that can be reverted by passing `true`
     // as second parameter.
@@ -153,17 +153,17 @@
         }
         return css;
     };
-    
+
     // `scale` builds a scale transform string for given data.
     var scale = function ( s ) {
         return " scale(" + s + ") ";
     };
-    
+
     // `perspective` builds a perspective transform string for given data.
     var perspective = function ( p ) {
         return " perspective(" + p + "px) ";
     };
-    
+
     // `getElementFromHash` returns an element located by id from hash part of
     // window location.
     var getElementFromHash = function () {
@@ -171,71 +171,71 @@
         // so both "fallback" `#slide-id` and "enhanced" `#/slide-id` will work
         return byId( window.location.hash.replace(/^#\/?/,"") );
     };
-    
+
     // `computeWindowScale` counts the scale factor between window size and size
     // defined for the presentation in the config.
     var computeWindowScale = function ( config ) {
         var hScale = window.innerHeight / config.height,
             wScale = window.innerWidth / config.width,
             scale = hScale > wScale ? wScale : hScale;
-        
+
         if (config.maxScale && scale > config.maxScale) {
             scale = config.maxScale;
         }
-        
+
         if (config.minScale && scale < config.minScale) {
             scale = config.minScale;
         }
-        
+
         return scale;
     };
-    
+
     // CHECK SUPPORT
     var body = document.body;
-    var impressSupported = 
-                          // browser should support CSS 3D transtorms 
+    var impressSupported =
+                          // browser should support CSS 3D transtorms
                            ( pfx("perspective") !== null ) &&
                           // and `classList` and `dataset` APIs
                            ( body.classList ) &&
                            ( body.dataset );
-    
+
     if (!impressSupported) {
         // we can't be sure that `classList` is supported
         body.className += " impress-not-supported ";
     }
     // GLOBALS AND DEFAULTS
-    
+
     // This is where the root elements of all impress.js instances will be kept.
     // Yes, this means you can have more than one instance on a page, but I'm not
     // sure if it makes any sense in practice ;)
     var roots = {};
-    
+
     var preInitPlugins = [];
     var preStepLeavePlugins = [];
-    
+
     // some default config values.
     var defaults = {
         width: 1024,
         height: 768,
         maxScale: 1,
         minScale: 0,
-        
+
         perspective: 1000,
-        
+
         transitionDuration: 1000
     };
-    
+
     // it's just an empty function ... and a useless comment.
     var empty = function () { return false; };
-    
+
     // IMPRESS.JS API
-    
+
     // And that's where interesting things will start to happen.
     // It's the core `impress` function that returns the impress.js API
     // for a presentation based on the element with given id ('impress'
     // by default).
     var impress = window.impress = function ( rootId ) {
-        
+
         // If impress.js is not supported by the browser return a dummy API
         // it may not be a perfect solution but we return early and avoid
         // running code that may use features not implemented in the browser.
@@ -250,56 +250,56 @@
                 lib: {}
             };
         }
-        
+
         rootId = rootId || "impress";
-        
+
         // if given root is already initialized just return the API
         if (roots["impress-root-" + rootId]) {
             return roots["impress-root-" + rootId];
         }
-        
+
         // The gc library depends on being initialized before we do any changes to DOM.
         var lib = initLibraries(rootId);
         if (lib === "error") return;
-        
+
         body.classList.remove("impress-not-supported");
         body.classList.add("impress-supported");
 
         // data of all presentation steps
         var stepsData = {};
-        
+
         // element of currently active step
         var activeStep = null;
-        
+
         // current state (position, rotation and scale) of the presentation
         var currentState = null;
-        
+
         // array of step elements
         var steps = null;
-        
+
         // configuration options
         var config = null;
-        
+
         // scale factor of the browser window
-        var windowScale = null;        
-        
+        var windowScale = null;
+
         // root presentation elements
         var root = byId( rootId );
         var canvas = document.createElement("div");
-        
+
         var initialized = false;
-        
+
         // STEP EVENTS
         //
         // There are currently two step events triggered by impress.js
-        // `impress:stepenter` is triggered when the step is shown on the 
+        // `impress:stepenter` is triggered when the step is shown on the
         // screen (the transition from the previous one is finished) and
         // `impress:stepleave` is triggered when the step is left (the
         // transition to next step just starts).
-        
+
         // reference to last entered step
         var lastEntered = null;
-        
+
         // `onStepEnter` is called whenever the step element is entered
         // but the event is triggered only if the step is different than
         // last entered step.
@@ -313,7 +313,7 @@
             }
             triggerEvent(step, "impress:steprefresh");
         };
-        
+
         // `onStepLeave` is called whenever the step element is left
         // but the event is triggered only if the step is the same as
         // last entered step.
@@ -323,7 +323,7 @@
                 lastEntered = null;
             }
         };
-        
+
         // `initStep` initializes given step element by reading data from its
         // data attributes and setting correct styles.
         var initStep = function ( el, idx ) {
@@ -344,13 +344,13 @@
                     transitionDuration: toNumber(data.transitionDuration, config.transitionDuration),
                     el: el
                 };
-            
+
             if ( !el.id ) {
                 el.id = "step-" + (idx + 1);
             }
-            
+
             stepsData["impress-" + el.id] = step;
-            
+
             css(el, {
                 position: "absolute",
                 transform: "translate(-50%,-50%)" +
@@ -360,19 +360,19 @@
                 transformStyle: "preserve-3d"
             });
         };
-        
+
         // Initialize all steps.
         // Read the data-* attributes, store in internal stepsData, and render with CSS.
         var initAllSteps = function() {
             steps = $$(".step", root);
             steps.forEach( initStep );
         };
-        
+
         // `init` API function that initializes (and runs) the presentation.
         var init = function () {
             if (initialized) { return; }
             execPreInitPlugins(root);
-            
+
             // First we set up the viewport for mobile devices.
             // For some reason iPad goes nuts when it is not done properly.
             var meta = $("meta[name='viewport']") || document.createElement("meta");
@@ -381,41 +381,41 @@
                 meta.name = 'viewport';
                 document.head.appendChild(meta);
             }
-            
+
             // initialize configuration object
             var rootData = root.dataset;
             config = {
                 width: toNumber( rootData.width, defaults.width ),
                 height: toNumber( rootData.height, defaults.height ),
                 maxScale: toNumber( rootData.maxScale, defaults.maxScale ),
-                minScale: toNumber( rootData.minScale, defaults.minScale ),                
+                minScale: toNumber( rootData.minScale, defaults.minScale ),
                 perspective: toNumber( rootData.perspective, defaults.perspective ),
                 transitionDuration: toNumber( rootData.transitionDuration, defaults.transitionDuration )
             };
-            
+
             windowScale = computeWindowScale( config );
-            
+
             // wrap steps with "canvas" element
             arrayify( root.childNodes ).forEach(function ( el ) {
                 canvas.appendChild( el );
             });
             root.appendChild(canvas);
-            
+
             // set initial styles
             document.documentElement.style.height = "100%";
-            
+
             css(body, {
                 height: "100%",
                 overflow: "hidden"
             });
-            
+
             var rootStyles = {
                 position: "absolute",
                 transformOrigin: "top left",
                 transition: "all 0s ease-in-out",
                 transformStyle: "preserve-3d"
             };
-            
+
             css(root, rootStyles);
             css(root, {
                 top: "50%",
@@ -423,25 +423,25 @@
                 transform: perspective( config.perspective/windowScale ) + scale( windowScale )
             });
             css(canvas, rootStyles);
-            
+
             body.classList.remove("impress-disabled");
             body.classList.add("impress-enabled");
-            
+
             // get and init steps
             initAllSteps();
-            
+
             // set a default initial state of the canvas
             currentState = {
                 translate: { x: 0, y: 0, z: 0 },
                 rotate:    { x: 0, y: 0, z: 0, order: "xyz" },
                 scale:     1
             };
-            
+
             initialized = true;
-            
+
             triggerEvent(root, "impress:init", { api: roots[ "impress-root-" + rootId ] });
         };
-        
+
         // `getStep` is a helper function that returns a step element defined by parameter.
         // If a number is given, step with index given by the number is returned, if a string
         // is given step element with such id is returned, if DOM element is given it is returned
@@ -454,28 +454,28 @@
             }
             return (step && step.id && stepsData["impress-" + step.id]) ? step : null;
         };
-        
+
         // used to reset timeout for `impress:stepenter` event
         var stepEnterTimeout = null;
-        
+
         // `goto` API function that moves to step given with `el` parameter (by index, id or element),
         // with a transition `duration` optionally given as second parameter.
         var goto = function ( el, duration, reason ) {
             reason = reason || "goto";
-            
+
             if ( !initialized ) {
                 return false;
             }
-            
+
             // Re-execute initAllSteps for each transition. This allows to edit step attributes dynamically,
             // such as change their coordinates, or even remove or add steps, and have that change
             // apply when goto() is called.
             initAllSteps();
-            
+
             if ( !(el = getStep(el)) ) {
                 return false;
             }
-            
+
             // Sometimes it's possible to trigger focus on first link with some keyboard action.
             // Browser in such a case tries to scroll the page to make this element visible
             // (even that body overflow is set to hidden) and it breaks our careful positioning.
@@ -485,10 +485,10 @@
             //
             // If you are reading this and know any better way to handle it, I'll be glad to hear about it!
             window.scrollTo(0, 0);
-            
+
             var step = stepsData["impress-" + el.id];
             duration = (duration !== undefined ? duration : step.transitionDuration);
-            
+
             // If we are in fact moving to another step, start with executing the registered preStepLeave plugins.
             if (activeStep && activeStep !== el) {
                 var event = { target: activeStep, detail : {} };
@@ -501,15 +501,15 @@
                 step = stepsData["impress-" + el.id];
                 duration = event.detail.transitionDuration;
             }
-            
+
             if ( activeStep ) {
                 activeStep.classList.remove("active");
                 body.classList.remove("impress-on-" + activeStep.id);
             }
             el.classList.add("active");
-            
+
             body.classList.add("impress-on-" + el.id);
-            
+
             // compute target state of the canvas based on given step
             var target = {
                 rotate: {
@@ -525,7 +525,7 @@
                 },
                 scale: 1 / step.scale
             };
-            
+
             // Check if the transition is zooming in or not.
             //
             // This information is used to alter the transition style:
@@ -533,23 +533,23 @@
             // and the scaling is delayed, but when we are zooming out we start
             // with scaling down and move and rotation are delayed.
             var zoomin = target.scale >= currentState.scale;
-            
+
             duration = toNumber(duration, config.transitionDuration);
             var delay = (duration / 2);
-            
+
             // if the same step is re-selected, force computing window scaling,
             // because it is likely to be caused by window resize
             if (el === activeStep) {
                 windowScale = computeWindowScale(config);
             }
-            
+
             var targetScale = target.scale * windowScale;
-            
+
             // trigger leave of currently active element (if it's not the same step again)
             if (activeStep && activeStep !== el) {
                 onStepLeave(activeStep, el);
             }
-            
+
             // Now we alter transforms of `root` and `canvas` to trigger transitions.
             //
             // And here is why there are two elements: `root` and `canvas` - they are
@@ -565,13 +565,13 @@
                 transitionDuration: duration + "ms",
                 transitionDelay: (zoomin ? delay : 0) + "ms"
             });
-            
+
             css(canvas, {
                 transform: rotate(target.rotate, true) + translate(target.translate),
                 transitionDuration: duration + "ms",
                 transitionDelay: (zoomin ? 0 : delay) + "ms"
             });
-            
+
             // Here is a tricky part...
             //
             // If there is no change in scale or no change in rotation and translation, it means there was actually
@@ -587,17 +587,17 @@
                  currentState.translate.y === target.translate.y && currentState.translate.z === target.translate.z) ) {
                 delay = 0;
             }
-            
+
             // store current state
             currentState = target;
             activeStep = el;
-            
+
             // And here is where we trigger `impress:stepenter` event.
             // We simply set up a timeout to fire it taking transition duration (and possible delay) into account.
             //
             // I really wanted to make it in more elegant way. The `transitionend` event seemed to be the best way
             // to do it, but the fact that I'm using transitions on two separate elements and that the `transitionend`
-            // event is only triggered when there was a transition (change in the values) caused some bugs and 
+            // event is only triggered when there was a transition (change in the values) caused some bugs and
             // made the code really complicated, cause I had to handle all the conditions separately. And it still
             // needed a `setTimeout` fallback for the situations when there is no transition at all.
             // So I decided that I'd rather make the code simpler than use shiny new `transitionend`.
@@ -608,46 +608,46 @@
             stepEnterTimeout = window.setTimeout(function() {
                 onStepEnter(activeStep);
             }, duration + delay);
-            
+
             return el;
         };
-        
+
         // `prev` API function goes to previous step (in document order)
         var prev = function () {
             var prev = steps.indexOf( activeStep ) - 1;
             prev = prev >= 0 ? steps[ prev ] : steps[ steps.length-1 ];
-            
+
             return goto(prev, undefined, "prev");
         };
-        
+
         // `next` API function goes to next step (in document order)
         var next = function () {
             var next = steps.indexOf( activeStep ) + 1;
             next = next < steps.length ? steps[ next ] : steps[ 0 ];
-            
+
             return goto(next, undefined, "next");
         };
-        
+
         // Swipe for touch devices by @and3rson.
         // Below we extend the api to control the animation between the currently
         // active step and a presumed next/prev step. See touch plugin for
         // an example of using this api.
-        
+
         // Helper function
         var interpolate = function(a, b, k) {
             return a + (b - a) * k;
         };
-    
-        // Animate a swipe. 
+
+        // Animate a swipe.
         //
         // pct is a value between -1.0 and +1.0, designating the current length
         // of the swipe.
         //
-        // If pct is negative, swipe towards the next() step, if positive, 
-        // towards the prev() step. 
+        // If pct is negative, swipe towards the next() step, if positive,
+        // towards the prev() step.
         //
-        // Note that pre-stepleave plugins such as goto can mess with what is a 
-        // next() and prev() step, so we need to trigger the pre-stepleave event 
+        // Note that pre-stepleave plugins such as goto can mess with what is a
+        // next() and prev() step, so we need to trigger the pre-stepleave event
         // here, even if a swipe doesn't guarantee that the transition will
         // actually happen.
         //
@@ -675,7 +675,7 @@
             }
             execPreStepLeavePlugins(event);
             var nextElement = event.detail.next;
-            
+
             var nextStep = stepsData['impress-' + nextElement.id];
             var zoomin = nextStep.scale >= currentState.scale;
             // if the same step is re-selected, force computing window scaling,
@@ -712,7 +712,7 @@
                 transitionDelay: "0ms"
             });
         };
-        
+
         // Teardown impress
         // Resets the DOM to the state it was before impress().init() was called.
         // (If you called impress(rootId).init() for multiple different rootId's, then you must
@@ -741,26 +741,26 @@
             steps.forEach(function (step) {
                 step.classList.add("future");
             });
-            
+
             lib.gc.addEventListener(root, "impress:stepenter", function (event) {
                 event.target.classList.remove("past");
                 event.target.classList.remove("future");
                 event.target.classList.add("present");
             }, false);
-            
+
             lib.gc.addEventListener(root, "impress:stepleave", function (event) {
                 event.target.classList.remove("present");
                 event.target.classList.add("past");
             }, false);
-            
+
         }, false);
-        
+
         // Adding hash change support.
         lib.gc.addEventListener(root, "impress:init", function(){
-            
+
             // last hash detected
             var lastHash = "";
-            
+
             // `#/step-id` is used instead of `#step-id` to prevent default browser
             // scrolling to element in hash.
             //
@@ -770,10 +770,10 @@
             lib.gc.addEventListener(root, "impress:stepenter", function (event) {
                 window.location.hash = lastHash = "#/" + event.target.id;
             }, false);
-            
+
             lib.gc.addEventListener(window, "hashchange", function () {
                 // When the step is entered hash in the location is updated
-                // (just few lines above from here), so the hash change is 
+                // (just few lines above from here), so the hash change is
                 // triggered and we would call `goto` again on the same element.
                 //
                 // To avoid this we store last entered hash and compare.
@@ -781,14 +781,14 @@
                     goto( getElementFromHash() );
                 }
             }, false);
-            
-            // START 
+
+            // START
             // by selecting step defined in url or first step of the presentation
             goto(getElementFromHash() || steps[0], 0);
         }, false);
-        
+
         body.classList.add("impress-disabled");
-        
+
         // store and return API for given impress.js root element
         return (roots[ "impress-root-" + rootId ] = {
             init: init,
@@ -801,10 +801,10 @@
         });
 
     };
-    
+
     // flag that can be used in JS to check if browser have passed the support test
     impress.supported = impressSupported;
-    
+
     // ADD and INIT LIBRARIES
     // Library factories are defined in src/lib/*.js, and register themselves by calling
     // impress.addLibraryFactory(libraryFactoryObject). They're stored here, and used to augment
@@ -832,7 +832,7 @@
     };
 
     // `addPreInitPlugin` allows plugins to register a function that should
-    // be run (synchronously) at the beginning of init, before 
+    // be run (synchronously) at the beginning of init, before
     // impress().init() itself executes.
     impress.addPreInitPlugin = function( plugin, weight ) {
         weight = toNumber(weight,10);
@@ -841,7 +841,7 @@
         }
         preInitPlugins[weight].push( plugin );
     };
-    
+
     // Called at beginning of init, to execute all pre-init plugins.
     var execPreInitPlugins = function(root) {
         for( var i = 0; i < preInitPlugins.length; i++ ) {
@@ -853,7 +853,7 @@
             }
         }
     };
-    
+
     // `addPreStepLeavePlugin` allows plugins to register a function that should
     // be run (synchronously) at the beginning of goto()
     impress.addPreStepLeavePlugin = function( plugin, weight ) {
@@ -863,7 +863,7 @@
         }
         preStepLeavePlugins[weight].push( plugin );
     };
-    
+
     // Called at beginning of goto(), to execute all preStepLeave plugins.
     var execPreStepLeavePlugins = function(event) {
         for( var i = 0; i < preStepLeavePlugins.length; i++ ) {
@@ -905,48 +905,48 @@
     var roots = [];
     var rootsCount = 0;
     var startingState = { roots : [] };
-    
+
     var libraryFactory = function(rootId) {
         if (roots[rootId]) {
             return roots[rootId];
         }
-        
+
         // Per root global variables (instance variables?)
         var elementList = [];
         var eventListenerList = [];
         var callbackList = [];
-        
+
         recordStartingState(rootId);
-        
+
         // LIBRARY FUNCTIONS
         // Below are definitions of the library functions we return at the end
         var pushElement = function ( element ) {
             elementList.push(element);
         };
-        
+
         // Convenience wrapper that combines DOM appendChild with gc.pushElement
         var appendChild = function ( parent, element ) {
             parent.appendChild(element);
             pushElement(element);
         };
-        
+
         var pushEventListener = function ( target, type, listenerFunction ) {
             eventListenerList.push( {target:target, type:type, listener:listenerFunction} );
         };
-        
+
         // Convenience wrapper that combines DOM addEventListener with gc.pushEventListener
         var addEventListener = function ( target, type, listenerFunction ) {
             target.addEventListener( type, listenerFunction );
             pushEventListener( target, type, listenerFunction );
         };
-        
+
         // If the above utilities are not enough, plugins can add their own callback function
         // to do arbitrary things.
         var addCallback = function ( callback ) {
             callbackList.push(callback);
         };
         addCallback(function(rootId){ resetStartingState(rootId)} );
-        
+
         var teardown = function () {
             // Execute the callbacks in LIFO order
             for ( var i = callbackList.length-1; i >= 0; i-- ) {
@@ -964,7 +964,7 @@
                 target.removeEventListener(type, listener);
             }
         };
-        
+
         var lib = {
             pushElement: pushElement,
             appendChild: appendChild,
@@ -977,11 +977,11 @@
         rootsCount++;
         return lib;
     };
-    
+
     // Let impress core know about the existence of this library
     window.impress.addLibraryFactory( { gc : libraryFactory } );
-    
-    
+
+
     // CORE INIT
     // The library factory (gc(rootId)) is called at the beginning of impress(rootId).init()
     // For the purposes of teardown(), we can use this as an opportunity to save the state
@@ -1002,7 +1002,7 @@
                 id: el.getAttribute("id")
             });
         }
-        
+
         // In the rare case of multiple roots, the following is changed on first init() and
         // reset at last tear().
         if ( rootsCount == 0 ) {
@@ -1026,17 +1026,17 @@
             };
         }
     };
-    
+
     // CORE TEARDOWN
     var resetStartingState = function(rootId) {
         // Reset body element
         document.body.classList.remove("impress-enabled");
         document.body.classList.remove("impress-disabled");
-        
+
         var root = document.getElementById(rootId);
         var activeId = root.querySelector(".active").id;
         document.body.classList.remove("impress-on-" + activeId);
-        
+
         document.documentElement.style["height"] = '';
         document.body.style["height"] = '';
         document.body.style["overflow"] = '';
@@ -1081,7 +1081,7 @@
         var canvas = root.firstChild;
         var canvasHTML = canvas.innerHTML;
         root.innerHTML = canvasHTML;
-        
+
         if( roots[rootId] !== undefined ) {
             delete roots[rootId];
             rootsCount--;
@@ -1093,7 +1093,7 @@
             if (startingState.body.impressNotSupported) {
                 document.body.classList.add("impress-not-supported");
             };
-            
+
             // We need to remove or reset the meta element inserted by impress.js
             var meta = null;
             var metas = document.head.querySelectorAll("meta");
@@ -1109,11 +1109,11 @@
                 }
             }
         }
-        
-        
+
+
     };
 
-    
+
 })(document, window);
 
 /**
@@ -1136,19 +1136,19 @@
         return isNaN(numeric) ? (fallback || 0) : Number(numeric);
     };
 
-    // On impress:init, check whether there is a default setting, as well as 
+    // On impress:init, check whether there is a default setting, as well as
     // handle step-1.
     document.addEventListener("impress:init", function (event) {
         // Getting API from event data instead of global impress().init().
         // You don't even need to know what is the id of the root element
-        // or anything. `impress:init` event data gives you everything you 
+        // or anything. `impress:init` event data gives you everything you
         // need to control the presentation that was just initialized.
         api = event.detail.api;
         root = event.target;
         // Element attributes starting with 'data-', become available under
         // element.dataset. In addition hyphenized words become camelCased.
         var data = root.dataset;
-        
+
         if (data.autoplay) {
             autoplayDefault = toNumber(data.autoplay, 0);
         }
@@ -1158,14 +1158,14 @@
         if (toolbar) {
             addToolbarButton(toolbar);
         }
-        
+
         api.lib.gc.addCallback( function(rootId){
             clearTimeout(timeoutHandle);
         });
         // Note that right after impress:init event, also impress:stepenter is
         // triggered for the first slide, so that's where code flow continues.
     }, false);
-        
+
     // If default autoplay time was defined in the presentation root, or
     // in this step, set timeout.
     document.addEventListener("impress:stepenter", function (event) {
@@ -1186,13 +1186,13 @@
         if ( timeoutHandle ) {
             clearTimeout(timeoutHandle);
         }
-   
+
         if ( timeout > 0) {
             timeoutHandle = setTimeout( function() { api.next(); }, timeout*1000 );
         }
         setButtonText();
     };
-    
+
 
     /*** Toolbar plugin integration *******************************************/
     var status = "not clicked";
@@ -1228,7 +1228,7 @@
             return "&#9654;"; // play
         }
     };
-    
+
     var setButtonText = function() {
         if (toolbarButton) {
             // Keep button size the same even if label content is changing
@@ -1271,16 +1271,16 @@
  *
  * Press Ctrl+b to hide all slides, and Ctrl+b again to show them.
  * Also navigating to a different slide will show them again (impress:stepleave).
- * 
+ *
  * Copyright 2014 @Strikeskids
  * Released under the MIT license.
  */
 (function ( document, window ) {
     'use strict';
-    
+
     var canvas = null;
     var blackedOut = false;
-    
+
     // While waiting for a shared library of utilities, copying these 2 from main impress.js
     var css = function ( el, props ) {
         var key, pkey;
@@ -1296,17 +1296,17 @@
     };
 
     var pfx = (function () {
-        
+
         var style = document.createElement('dummy').style,
             prefixes = 'Webkit Moz O ms Khtml'.split(' '),
             memory = {};
-        
+
         return function ( prop ) {
             if ( typeof memory[ prop ] === "undefined" ) {
-                
+
                 var ucProp  = prop.charAt(0).toUpperCase() + prop.substr(1),
                     props   = (prop + ' ' + prefixes.join(ucProp + ' ') + ucProp).split(' ');
-                
+
                 memory[ prop ] = null;
                 for ( var i in props ) {
                     if ( style[ props[i] ] !== undefined ) {
@@ -1314,14 +1314,14 @@
                         break;
                     }
                 }
-            
+
             }
-            
+
             return memory[ prop ];
         };
-    
+
     })();
-    
+
 
 
     var removeBlackout = function() {
@@ -1351,7 +1351,7 @@
         var root = event.target;
         canvas = root.firstElementChild;
         var gc = api.lib.gc;
-        
+
         gc.addEventListener(document, "keydown", function ( event ) {
             if ( event.ctrlKey && event.keyCode === 66 ) {
                 event.preventDefault();
@@ -1366,7 +1366,7 @@
                 }
             }
         }, false);
-        
+
         gc.addEventListener(document, "keyup", function ( event ) {
             if ( event.ctrlKey && event.keyCode === 66 ) {
                 event.preventDefault();
@@ -1374,7 +1374,7 @@
         }, false);
 
     }, false);
-        
+
     document.addEventListener("impress:stepleave", function (event) {
         removeBlackout();
     }, false);
@@ -1419,7 +1419,7 @@
             for (var idx=0; idx < markdownDivs.length; idx++) {
               var element = markdownDivs[idx];
 
-              // Note: unlike the previous two, markdown.js doesn't automatically find or convert anything in 
+              // Note: unlike the previous two, markdown.js doesn't automatically find or convert anything in
               var slides = element.textContent.split(/^-----$/m);
               var i = slides.length - 1;
               element.innerHTML = markdown.toHTML(slides[i]);
@@ -1439,11 +1439,11 @@
               element.id = id;
             }
         } // markdown
-        
+
         if(window.hljs){
-            hljs.initHighlightingOnLoad();        
+            hljs.initHighlightingOnLoad();
         }
-        
+
         if(window.mermaid){
             mermaid.initialize({startOnLoad:true});
         }
@@ -1452,7 +1452,7 @@
     var postInit = function(event){
         if(window.impressConsole){
             // Init impressConsole.js.
-            // This does not yet show the window, just activates the plugin. 
+            // This does not yet show the window, just activates the plugin.
             // Press 'P' to show the console.
             // Note that we must pass the correct path to css file as well.
             // See https://github.com/regebro/impress-console/issues/19
@@ -1462,7 +1462,7 @@
             else{
                 impressConsole().init();
             }
-            
+
             // Add 'P' to the help popup
             triggerEvent(document, "impress:help:add", { command : "P", text : "Presenter console", row : 10} );
 
@@ -1508,11 +1508,11 @@
  */
 (function ( document, window ) {
     'use strict';
-    
+
     document.addEventListener("impress:stepleave", function (event) {
         document.activeElement.blur()
     }, false);
-        
+
 })(document, window);
 
 
@@ -1523,14 +1523,14 @@
  * and will alter the destination where to transition next.
  *
  * Example:
- * 
+ *
  *         <!-- When leaving this step, go directly to "step-5" -->
  *         <div class="step" data-goto="step-5">
- * 
+ *
  *         <!-- When leaving this step with next(), go directly to "step-5", instead of the next step.
  *              If moving backwards to previous step - e.g. prev() instead of next() - then go to "step-1". -->
  *         <div class="step" data-goto-next="step-5" data-goto-prev="step-1">
- * 
+ *
  * Copyright 2016 Henrik Ingo (@henrikingo)
  * Released under the MIT license.
  */
@@ -1541,14 +1541,14 @@
         return isNaN(numeric) ? (fallback || 0) : Number(numeric);
     };
 
-            
+
     var goto = function(event) {
         if ( (!event) || (!event.target) )
             return;
-        
+
         var data = event.target.dataset;
         var steps = document.querySelectorAll(".step");
-        
+
         // Handle event.target data-goto-next attribute
         if ( !isNaN(data.gotoNext) && event.detail.reason == "next" ) {
             event.detail.next = steps[data.gotoNext];
@@ -1604,10 +1604,10 @@
             }
         }
     };
-    
+
     // Register the plugin to be called in pre-stepleave phase
     impress.addPreStepLeavePlugin( goto );
-    
+
 })(document, window);
 
 
@@ -1615,7 +1615,7 @@
  * Help popup plugin
  *
  * Example:
- * 
+ *
  *     <!-- Show a help popup at start, or if user presses 'H' -->
  *     <div id="impress-help"></div>
  *
@@ -1652,7 +1652,7 @@
             }
         }
     };
-    
+
     var toggleHelp = function() {
         var helpDiv = document.getElementById("impress-help");
         if(helpDiv.style.display == 'block') {
@@ -1673,6 +1673,18 @@
             }
         }
     }, false);
+
+    // document.addEventListener("keyup", function ( event ) {
+    //     // Check that event target is html or body element.
+    //     if ( event.target.nodeName == "BODY" || event.target.nodeName == "HTML" ) {
+    //         if ( event.keyCode == 27 ) { // 'ESC'
+    //             event.preventDefault();
+    //             api.goto(document.getElementById("overview"))
+    //             toggleHelp();
+    //
+    //         }
+    //     }
+    // }, false);
 
     // API
     // Other plugins can add help texts, typically if they support an action on a keypress.
@@ -1718,8 +1730,8 @@
         // Use our own API to register the help text for 'h'
         triggerEvent(document, "impress:help:add", { command : "H", text : "Show this help", row : 0} );
     });
-    
-    
+
+
 })(document, window);
 
 
@@ -1765,7 +1777,7 @@
     // Detect mobile browsers & add CSS class as appropriate.
     document.addEventListener("impress:init", function (event) {
         var body = document.body;
-        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){ 
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
             body.classList.add('impress-mobile');
         }
         // Unset all this on teardown
@@ -1805,7 +1817,7 @@
 /**
  * Mouse timeout plugin
  *
- * After 3 seconds of mouse inactivity, add the css class 
+ * After 3 seconds of mouse inactivity, add the css class
  * `body.impress-mouse-timeout`. On `mousemove`, `click` or `touch`, remove the
  * class.
  *
@@ -1889,7 +1901,7 @@
  */
 (function ( document, window ) {
     'use strict';
-    
+
     var triggerEvent = function (el, eventName, detail) {
         var event = document.createEvent("CustomEvent");
         event.initCustomEvent(eventName, true, true, detail);
@@ -1900,7 +1912,7 @@
     document.addEventListener("impress:init", function (event) {
         // Getting API from event data.
         // So you don't event need to know what is the id of the root element
-        // or anything. `impress:init` event data gives you everything you 
+        // or anything. `impress:init` event data gives you everything you
         // need to control the presentation that was just initialized.
         var api = event.detail.api;
         var gc = api.lib.gc;
@@ -1924,13 +1936,13 @@
             if ( event.altKey || event.ctrlKey || event.metaKey ){
                 return false;
             }
-            
+
             // In the case of TAB, we force step navigation always, overriding the browser navigation between
             // input elements, buttons and links.
             if ( event.keyCode === 9 ) {
                 return true;
             }
-            
+
             // With the sole exception of TAB, we also ignore keys pressed if shift is down.
             if ( event.shiftKey ){
                 return false;
@@ -1946,17 +1958,17 @@
                 return true;
             }
         };
-        
-        
+
+
         // KEYBOARD NAVIGATION HANDLERS
-        
+              
         // Prevent default keydown action when one of supported key is pressed.
         gc.addEventListener(document, "keydown", function ( event ) {
             if ( isNavigationEvent(event) ) {
                 event.preventDefault();
             }
         }, false);
-        
+
         // Trigger impress action (next or prev) on keyup.
         gc.addEventListener(document, "keyup", function ( event ) {
             if ( isNavigationEvent(event) ) {
@@ -1986,7 +1998,7 @@
                 event.preventDefault();
             }
         }, false);
-        
+
         // delegated handler for clicking on the links to presentation steps
         gc.addEventListener(document, "click", function ( event ) {
             // event delegation with "bubbling"
@@ -1996,22 +2008,22 @@
                     (target !== document.documentElement) ) {
                 target = target.parentNode;
             }
-            
+
             if ( target.tagName === "A" ) {
                 var href = target.getAttribute("href");
-                
+
                 // if it's a link to presentation step, target this step
                 if ( href && href[0] === '#' ) {
                     target = document.getElementById( href.slice(1) );
                 }
             }
-            
+
             if ( api.goto(target) ) {
                 event.stopImmediatePropagation();
                 event.preventDefault();
             }
         }, false);
-        
+
         // delegated handler for clicking on step elements
         gc.addEventListener(document, "click", function ( event ) {
             var target = event.target;
@@ -2020,17 +2032,17 @@
                     (target !== document.documentElement) ) {
                 target = target.parentNode;
             }
-            
+
             if ( api.goto(target) ) {
                 event.preventDefault();
             }
         }, false);
-        
+
         // Add a line to the help popup
         triggerEvent(document, "impress:help:add", { command : "Left &amp; Right", text : "Previous &amp; Next step", row : 1} );
-        
+
     }, false);
-        
+
 })(document, window);
 
 
@@ -2068,7 +2080,7 @@
         tempDiv.innerHTML = html;
         return tempDiv.firstChild;
     };
-    
+
     var selectOptionsHtml = function(){
         var options = "";
         for ( var i = 0; i < steps.length; i++ ) {
@@ -2077,7 +2089,7 @@
                 options = options + '<option value="' + steps[i].id + '">' + steps[i].id + '</option>' + "\n";
             }
         }
-        return options;    
+        return options;
     };
 
     var addNavigationControls = function( event ) {
@@ -2115,13 +2127,13 @@
             function() {
                 api.next();
         });
-        
+
         triggerEvent(toolbar, "impress:toolbar:appendChild", { group : 0, element : prev } );
         triggerEvent(toolbar, "impress:toolbar:appendChild", { group : 0, element : select } );
         triggerEvent(toolbar, "impress:toolbar:appendChild", { group : 0, element : next } );
-        
+
     };
-    
+
     // API for not listing given step in the select widget.
     // For example, if you set class="skip" on some element, you may not want it to show up in the list either.
     // Otoh we cannot assume that, or anything else, so steps that user wants omitted must be specifically added with this API call.
@@ -2131,7 +2143,7 @@
             select.innerHTML = selectOptionsHtml();
         }
     }, false);
-    
+
     // wait for impress.js to be initialized
     document.addEventListener("impress:init", function (event) {
         toolbar = document.querySelector("#impress-toolbar");
@@ -2139,7 +2151,7 @@
             addNavigationControls( event );
         }
     }, false);
-    
+
 })(document, window);
 
 
@@ -2170,12 +2182,12 @@
 
 	var progressbar = document.querySelector('div.impress-progressbar div');
 	var progress = document.querySelector('div.impress-progress');
-	
-	if (null !== progressbar || null !== progress) {      
+
+	if (null !== progressbar || null !== progress) {
 		document.addEventListener("impress:stepleave", function (event) {
 			updateProgressbar(event.detail.next.id);
 		});
-		
+
 		document.addEventListener("impress:steprefresh", function (event) {
 			getSteps();
 			updateProgressbar(event.target.id);
@@ -2202,26 +2214,26 @@
  * since as you add, remove or move steps, you may not need to edit the positions
  * as much as is the case with the absolute coordinates supported by impress.js
  * core.
- * 
+ *
  * Example:
- * 
+ *
  *         <!-- Position step 1000 px to the right and 500 px up from the previous step. -->
  *         <div class="step" data-rel-x="1000" data-rel-y="500">
- * 
+ *
  * Following html attributes are supported for step elements:
- * 
+ *
  *     data-rel-x
  *     data-rel-y
  *     data-rel-z
- * 
- * These values are also inherited from the previous step. This makes it easy to 
- * create a boring presentation where each slide shifts for example 1000px down 
+ *
+ * These values are also inherited from the previous step. This makes it easy to
+ * create a boring presentation where each slide shifts for example 1000px down
  * from the previous.
- * 
+ *
  * In addition to plain numbers, which are pixel values, it is also possible to
  * define relative positions as a multiple of screen height and width, using
  * a unit of "h" and "w", respectively, appended to the number.
- * 
+ *
  * Example:
  *
  *        <div class="step" data-rel-x="1.5w" data-rel-y="1.5h">
@@ -2230,7 +2242,7 @@
  * core at the beginning of `impress().init()`. This allows it to process its own
  * data attributes first, and possibly alter the data-x, data-y and data-z attributes
  * that will then be processed by `impress().init()`.
- * 
+ *
  * (Another name for this kind of plugin might be called a *filter plugin*, but
  * *pre-init plugin* is more generic, as a plugin might do whatever it wants in
  * the pre-init stage.)
@@ -2272,7 +2284,7 @@
 
     var computeRelativePositions = function ( el, prev ) {
         var data = el.dataset;
-        
+
         if( !prev ) {
             // For the first step, inherit these defaults
             var prev = { x:0, y:0, z:0, relative: {x:0, y:0, z:0} };
@@ -2293,16 +2305,16 @@
         if(data.x !== undefined) step.relative.x = 0;
         if(data.y !== undefined) step.relative.y = 0;
         if(data.z !== undefined) step.relative.z = 0;
-        
+
         // Apply relative position to absolute position, if non-zero
         // Note that at this point, the relative values contain a number value of pixels.
         step.x = step.x + step.relative.x;
         step.y = step.y + step.relative.y;
         step.z = step.z + step.relative.z;
-        
-        return step;        
+
+        return step;
     };
-            
+
     var rel = function(root) {
         var steps = root.querySelectorAll(".step");
         var prev;
@@ -2323,10 +2335,10 @@
             prev = step;
         }
     };
-    
+
     // Register the plugin to be called in pre-init phase
     impress.addPreInitPlugin( rel );
-    
+
     // Register teardown callback to reset the data.x, .y, .z values.
     document.addEventListener( "impress:init", function(event) {
         var root = event.target;
@@ -2375,7 +2387,7 @@
  */
 (function ( document, window ) {
     'use strict';
-    
+
     // throttling function calls, by Remy Sharp
     // http://remysharp.com/2010/07/21/throttling-function-calls/
     var throttle = function (fn, delay) {
@@ -2388,7 +2400,7 @@
             }, delay);
         };
     };
-    
+
     // wait for impress.js to be initialized
     document.addEventListener("impress:init", function (event) {
         var api = event.detail.api;
@@ -2398,7 +2410,7 @@
             api.goto( document.querySelector(".step.active"), 500 );
         }, 250), false);
     }, false);
-        
+
 })(document, window);
 
 
@@ -2406,12 +2418,12 @@
  * Skip Plugin
  *
  * Example:
- * 
+ *
  *    <!-- This slide is disabled in presentations, when moving with next()
  *         and prev() commands, but you can still move directly to it, for
  *         example with a url (anything using goto()). -->
  *         <div class="step skip">
- * 
+ *
  * Copyright 2016 Henrik Ingo (@henrikingo)
  * Released under the MIT license.
  */
@@ -2446,7 +2458,7 @@
     var skip = function(event) {
         if ( (!event) || (!event.target) )
             return;
-        
+
         if ( event.detail.next.classList.contains("skip") ) {
             if ( event.detail.reason == "next" ) {
                 // Go to the next next step instead
@@ -2463,11 +2475,11 @@
             event.detail.transitionDuration = toNumber( event.detail.next.dataset.transitionDuration, event.detail.transitionDuration);
         }
     };
-    
+
     // Register the plugin to be called in pre-stepleave phase
     // The weight makes this plugin run early. This is a good thing, because this plugin calls itself recursively.
     impress.addPreStepLeavePlugin( skip, 1 );
-    
+
 })(document, window);
 
 
@@ -2475,12 +2487,12 @@
  * Stop Plugin
  *
  * Example:
- * 
+ *
  *        <!-- Stop at this slide.
- *             (For example, when used on the last slide, this prevents the 
+ *             (For example, when used on the last slide, this prevents the
  *             presentation from wrapping back to the beginning.) -->
  *        <div class="step" data-stop="true">
- * 
+ *
  * Copyright 2016 Henrik Ingo (@henrikingo)
  * Released under the MIT license.
  */
@@ -2490,17 +2502,17 @@
     var stop = function(event) {
         if ( (!event) || (!event.target) )
             return;
-        
+
         if ( event.target.classList.contains("stop") ) {
             if ( event.detail.reason == "next" )
                 event.detail.next = event.target;
         }
     };
-    
+
     // Register the plugin to be called in pre-stepleave phase
     // The weight makes this plugin run fairly late.
     impress.addPreStepLeavePlugin( stop, 20 );
-    
+
 })(document, window);
 
 
@@ -2511,9 +2523,9 @@
  * or tapping on the left/right edges of the screen.
  *
  *
- * 
+ *
  * Copyright 2015: Andrew Dunai (@and3rson)
- * Modified to a plugin, 2016: Henrik Ingo (@henrikingo) 
+ * Modified to a plugin, 2016: Henrik Ingo (@henrikingo)
  *
  * MIT License
  */
@@ -2527,7 +2539,7 @@
     var lastX = 0;
     var lastDX = 0;
     var threshold = window.innerWidth / 20;
-    
+
     document.addEventListener('touchstart', function (event) {
         lastX = startX = event.touches[0].clientX;
     });
@@ -2585,7 +2597,7 @@
  * To add/activate the toolbar in your presentation, add this div:
  *
  *     <div id="impress-toolbar"></div>
- * 
+ *
  * Styling the toolbar is left to presentation author. Here's an example CSS:
  *
  *    .impress-enabled div#impress-toolbar {
@@ -2617,7 +2629,7 @@
  *      callback : "mycallback",         // Toolbar plugin will trigger event `impress:toolbar:added:mycallback` when done.
  *      before: element }                // The reference element for an insertBefore() call.
  *
- * You should also listen to the `impress:toolbar:added:mycallback` event. At 
+ * You should also listen to the `impress:toolbar:added:mycallback` event. At
  * this point you can find the new widget in the DOM, and for example add an
  * event listener to it.
  *
@@ -2640,7 +2652,7 @@
         event.initCustomEvent(eventName, true, true, detail);
         el.dispatchEvent(event);
     };
-    
+
     /**
      * Get the span element that is a child of toolbar, identified by index.
      *
@@ -2666,7 +2678,7 @@
         }
         return groups[index];
     };
-    
+
     /**
      * Get the span element from groups[] that is immediately after given index.
      *

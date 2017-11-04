@@ -10,8 +10,11 @@
 /* @import url(http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic|Cutive+Mono); */
 @import url(fonts.css);
 
-
-
+/* on overview step everything is visible */
+body.impress-on-overview .step {
+  opacity: 1;
+  cursor: pointer;
+}
 /*
     We display a fallback message for users with browsers that don't support
     all the features required by it. All of the content will be still fully
@@ -67,7 +70,7 @@ body {
     width: 1000px;
     padding: 40px;
     margin: 20px auto;
-    border: 3px solid red;
+    /*border: 3px solid red;*/
     box-sizing:         content-box;
 
     font-family: 'PT Serif', georgia, serif;
@@ -111,7 +114,7 @@ body {
     height: 700px;
     padding: 40px 60px;
 
-    background-image: url(../images/background.png);
+    background-image: url(../css/images/background.png);
     background-color: white;
     border: 1px solid rgba(0, 0, 0, .3);
     border-radius: 10px;
@@ -237,7 +240,7 @@ img {
 */
 
 .title {
-    background-image: url(../images/background-title.png);
+    background-image: url(../css/images/background-title.png);
 }
 
 .title h1,
