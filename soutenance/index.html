@@ -50,10 +50,24 @@
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
     <div class="step slide" data-x="0" data-y="0">
       <center>
-        <h3>Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
-        <h4>Détecte-moi si tu peux !</h4> Soutenance de thèse de
-        <h4>Joris GUERRY</h4> pour l'obtention du titre de <br>Docteur en Informatique
+        <h3 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
+        <h5 style="margin:0px;">Détecte-moi si tu peux !</h5><br/>
+        <span style="font-size:25px;">Soutenance de thèse de</span>
+        <h4>Joris GUERRY</h4>
+        <span style="font-size:25px;">pour l'obtention du grade de </span><br/>
+        <b>Docteur en Informatique</b><br/>
+        <span style="font-size:25px;">de l'Université Paris-Saclay</span>
+<br /><br /><br />
+        <table>
+          <tr>
+            <td style="text-align: center;"><img src="images/logos/interfaces.png" style="height: 80px; width:auto;" /></td>
+            <td style="text-align: center;"><img src="images/logos/x.png" style="height: 130px; width:auto;" /></td>
+            <td style="text-align: center;"><img src="images/logos/onera.png" style="height: 80px; width:auto;" /></td>
+          </tr>
+        </table>
       </center>
+
+
     </div>
 
     <div class="step" data-rel-x="0" data-rel-y="1000">
@@ -302,18 +316,8 @@
 
     <!-- VIDEO EXEMPLE DETECTION -->
     <div id="video-step-1" class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
-
-
-
-
-
-
-
-
       <h3>Les tâches de la vision par ordinateur</h3>
       <center>
-
-
         <video id="detection_yolov2_007" style="width:45%; height:auto;" loop muted>
           <source src="videos/detection_yolov2_007.mp4" type="video/mp4">
         Votre navigateur ne supporte pas la balise vidéo.
@@ -323,6 +327,15 @@
           Votre navigateur ne supporte pas la balise vidéo.
           </video><br />
       </center>
+      <blockquote class="article_blockquote">
+        <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"YOLO9000: better, faster, stronger." (2016)
+        <cite class="article_cite">Joseph Redmon and Ali Farhadi</cite>
+      </blockquote>
+      <blockquote class="article_blockquote">
+        <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Segnet: A deep convolutional encoder-decoder architecture for image segmentation."
+        (2015)
+        <cite class="article_cite">Badrinarayanan, Kendall and Cipolla</cite>
+      </blockquote>
       <div style="text-align:right;">
         <button onclick='ex1_play()' class="button button_blue">Lecture</button>
         <button onclick='ex1_pause()' class="button button_blue">Pause</button>
@@ -334,8 +347,6 @@
         var videoStep1 = document.getElementById("video-step-1");
         var detection_yolov2_007 = document.getElementById("detection_yolov2_007");
         var segmentation_segnet_road = document.getElementById("segmentation_segnet_road");
-
-        var video = document.getElementById("video");
         videoStep1.addEventListener("impress:stepenter", function() {
           // alert("Hello! I am an alert box!!");
           detection_yolov2_007.play();
@@ -346,11 +357,7 @@
           segmentation_segnet_road.pause();
         }, false);
 
-
-
-
         function ex1_play() {
-          // alert("Hello! I am an alert box!!");
           detection_yolov2_007.play();
           segmentation_segnet_road.play();
         }
@@ -358,17 +365,22 @@
         function ex1_pause() {
           detection_yolov2_007.pause();
           segmentation_segnet_road.pause();
-          myVideo.pause();
         }
-
-
         // document.getElementById('vid1').addEventListener('loadedmetadata', function() {
         //   this.currentTime = 50;
         // }, false);
+        // alert("Hello! I am an alert box!!");
       </script>
     </div>
 
+    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        new slide
+      </center>
 
+      <div class="notes">
+      </div>
+    </div>
 
     <div id="overview" class="step" data-x="2500" data-y="3000" data-scale="10" style="pointer-events: none;">
     </div>
