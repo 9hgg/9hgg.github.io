@@ -100,7 +100,8 @@
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
     <div class="step" data-x="2500" data-y="0" data-z="0">
       <center>
-        <h1>Quelques exemples</h1>
+        <h2>La reconnaissance visuelle,</h2>
+        <h3>quelques exemples</h3>
       </center>
       <div class="notes">
       </div>
@@ -218,7 +219,7 @@
         </table>
       </center>
       <div class="notes">
-        Comment faire le lien entre les concepts des hommes et l'informatique embarquée des robots ?
+        Comment faire le lien entre les concepts des hommes et l'informatique embarquée des robots ? C'est là qu'intervient ce qu'on appelle la Vision par ordinateur ou Computer Vision.
       </div>
     </div>
 
@@ -258,82 +259,62 @@
       </center>
     </div>
 
-    <!-- IMAGE + VECTEUR -->
+    <!-- IMAGE GRUMPY RGB-->
     <div class="step" data-rel-x="0" data-rel-y="1200" data-z="0">
       <center>
         Qu'est-ce qu'une image ?
-        <img src="images/0_introduction/grumpy/grumpy_rgb.png" style="height: auto; width:100%;" /><br />
+        <img src="images/0_introduction/grumpy/grumpy_rgb.png" style="height: auto; width:100%;" /><br /> $Image\in[0:255]^{W \cdot H \cdot D}$
       </center>
-      <div style="font-size:30px">
-        $Image\in[0:255]^{W \cdot H \cdot D}$ <br /> Exemple : <br /> Image de Kinect (640, 480, 3) $\rightarrow$ $10^{2219433}$ images potentielles <br /> Nombre d'atomes dans l'univers $ \approx 10^{80}$
+      <div style="font-size:28px">
+        <br /> Exemple : <br /> Image de Kinect (640, 480, 3) $\rightarrow$ $256^{640 \cdot 480 \cdot 3} = $ <span style="color: red;">$ 10^{2219434}$</span> images potentielles <br /> Nombre d'atomes dans l'univers $ \approx 10^{80}$
       </div>
 
       <div class="notes">
-        Ce que l'on peut voir ici c'est la représentation d'une image sous sa forme RGB. Elle est utile car nos yeux sont sensibles à ces trois couleurs et ainsi nous avons directement accès à l'information nécessaire pour générer cette image sur un écran. Mais certaines imprimantes ne fonctionnent pas avec la représentation RGB mais la représentation CYMK / CMJN (cyan, magenta, jaune, noir) (en anglais CMYK, cyan, magenta, yellow, key). Tout est question d'objectif. Quel est notre objectif ? Et quelle est la représentation la plus adéquate ?
+        Ce que l'on peut voir ici c'est la représentation d'une image sous sa forme RGB. Elle est utile car nos yeux sont sensibles à ces trois couleurs et ainsi nous avons directement accès à l'information nécessaire pour générer cette image sur un écran.
       </div>
     </div>
 
-    <!-- ESPACE TROP GRAND -->
+    <!-- ESPACE DE REPRESENTATION -->
     <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h4 style="margin-bottom: -10px;">Fléau de la dimension</h4>
-        <blockquote class="article_blockquote">
-          <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Curse of dimensionality." Adaptive control processes: a guided tour. Princeton,
-          NJ (1961).
-          <cite class="article_cite">Bellman, R.</cite>
-        </blockquote>
-
-
-        <img src="images/0_introduction/curse_of_dim_curve.jpg" style="height: 400px; width:auto;margin-bottom: -40px;" />
+        <h3>Un espace de représentation pour une tâche donnée</h3>
+        <img src="images/0_introduction/representation/representation_type.png" style="height: auto; width:100%;" /><br />
       </center>
-      <blockquote class="article_blockquote">
-        <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>Introduction to data mining. 1st. (2005).
-        <cite class="article_cite">Tan, Pang-Ning, Michael Steinbach, and Vipin Kumar.</cite>
-      </blockquote>
-      <div style="font-size:30px">
-
-
-        Pour chaque nombre de dimensions :
-        <ul>
-          <li>500 points générés aléatoirement</li>
-          <li> Calcul de : $log_{10} \left( \frac{distance_{max}-distance_{min}}{distance_{min}} \right)$</li>
-          <!-- <li>500 points générés aléatoirement</li> -->
-        </ul>
-        <table>
-          <tr>
-            <td>En dimension 2 : </td>
-            <td style="width: 100px; overflow: hidden; display: inline-block; white-space: nowrap;"></td>
-            <td>$distance_{max}\approx$ 2500 $distance_{min}$</td>
-          </tr>
-          <tr>
-            <td>En dimension 50 :</td>
-            <td style="width: 100px; overflow: hidden; display: inline-block; white-space: nowrap;"></td>
-            <td>$distance_{max}\approx$ 3 $distance_{min}$</td>
-          </tr>
-        </table>
-
-
-      </div>
-
-
-
-
       <div class="notes">
-        Donc plus le nombre de dimension augmente, moins la distance entre les objets devient significative et donc plus il devient difficile de différencier des vecteurs.
+        Mais certaines imprimantes ne fonctionnent pas avec la représentation RGB mais la représentation CYMK / CMJN (cyan, magenta, jaune, noir) (en anglais CMYK, cyan, magenta, yellow, key). Tout est question d'objectif. Quel est notre objectif ? Et quelle
+        est la représentation la plus adéquate ? ALors en effet, si l'objectif est de reproduire une image visible par l'homme, la représentation RGB est idéale, mais s'il s'agit de faire automatiquement la différence entre un chien et chat (automatiquement
+        au sens algorithmique) c'est une autre histoire. En effet, on attaque ici la problématique de partitionnement de notre espace de données. Pourquoi ne pas utiliser la représentation RGB également ? Et bien en fait, faire de la classification c'est
+        mesurer l'appartenance à un groupe. Le problème avec la représentation RGB c'est que chaque pixel correspond à une dimension.
       </div>
     </div>
 
-    <!-- <div class="step" data-rel-x="0" data-rel-y="1000">
+    <!-- QEULLES SONT LES TACHES DE LA VISION PAR ORDINATEUR ? -->
+    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <h3>Les tâches de la vision par ordinateur</h3>
       <center>
-        <img src="images/0_introduction/fonctionnement_pixel.png" style="height: 300px; width:auto;" /><br />
+        <img src="images/0_introduction/tasks.png" style="height: auto; width:100%;" /><br />
       </center>
-      <div class="notes">
-        <b>Fonctionnement d'un écran LCD :</b> Un écran LCD est divisé en petites unités lumineuses appelées pixels. Chaque pixel est subdivisé en trois rectangles (appelés sous-pixels) recouverts par des filtres colorés (rouge, vert ou bleu). Un tube
-        fluorescent (ou un panneau de D.E.L.) se trouvant derrière l'écran produit de la lumière blanche. Pour chaque sous-pixel, une couche de cristaux liquides est située entre deux polariseurs. L'ensemble laisse passer plus ou moins de lumière suivant
-        la tension électrique appliquée. Les pixels étant déjà très petits, l'œil ne distingue pas les sous-pixels.
-      </div>
 
-    </div> -->
+      <div class="notes">
+      </div>
+    </div>
+
+    <!-- VIDEO EXEMPLE DETECTION -->
+    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <h3>Les tâches de la vision par ordinateur</h3>
+      <center>
+        <img src="images/0_introduction/tasks.png" style="height: auto; width:100%;" /><br />
+      </center>
+
+      <div class="notes">
+      </div>
+    </div>
+    <video width="320" height="240" controls>
+      <source src="/assets_tutorials/media/Shaun-the-Sheep-The-Movie-Official-Trailer.mp4" type="video/mp4">
+      <source src="/assets_tutorials/media/Shaun-the-Sheep-The-Movie-Official-Trailer.ogg" type="video/ogg">
+    Votre navigateur ne supporte pas la balise vidéo.
+    </video>
+
 
     <div id="overview" class="step" data-x="2500" data-y="3000" data-scale="10" style="pointer-events: none;">
     </div>
@@ -346,7 +327,7 @@
   </div>
   <div class="impress-progress"></div>
 
-  <div id="impress-help"></div>
+  <!-- <div id="impress-help"></div> -->
 
 
   <script type="text/javascript" src="extras/highlight/highlight.pack.js"></script>

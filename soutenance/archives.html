@@ -1,0 +1,94 @@
+<!-- CARTE D'EUROPE -->
+<div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+
+  <center>
+    <img src="images/0_introduction/map/cities-and-capitals-of-europe-in-map.png" style="height: auto; width:100%;" /><br />
+  </center>
+
+  <div class="notes">
+    Nicosie(Chypre) -> Reykyavik(Islande) : 4873km <br /> Viennes(Autriche) -> Bratislava(Slovaquie) : 55km <br /> Ratio : 100 (89) <br /><br /> Nicosie : 111 km² <br /> Reykyavik : Superficie 274 km² <br /> Vienne : Superficie 415 km² <br /> Bratislava
+    : Superficie 368 km² <br />
+
+  </div>
+</div>
+
+
+<!-- ESPACE TROP GRAND -->
+<div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+  <center>
+    <h4 style="margin-bottom: -10px;">Fléau de la dimension</h4>
+    <blockquote class="article_blockquote">
+      <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Curse of dimensionality." Adaptive control processes: a guided tour. Princeton,
+      NJ (1961).
+      <cite class="article_cite">Bellman, R.</cite>
+    </blockquote>
+    <img src="images/0_introduction/curse_of_dim_curve.jpg" style="height: 400px; width:auto;margin-bottom: -40px;" />
+  </center>
+  <blockquote class="article_blockquote">
+    <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>Introduction to data mining. 1st. (2005).
+    <cite class="article_cite">Tan, Pang-Ning, Michael Steinbach, and Vipin Kumar.</cite>
+  </blockquote>
+  <div style="font-size:30px">
+    Pour chaque nombre de dimensions :
+    <ul>
+      <li>500 points générés aléatoirement</li>
+      <li> Calcul de : $log_{10} \left( \frac{distance_{max}-distance_{min}}{distance_{min}} \right)$</li>
+      <!-- <li>500 points générés aléatoirement</li> -->
+    </ul>
+    <table>
+      <tr>
+        <td>En dimension 2 : </td>
+        <td style="width: 100px; overflow: hidden; display: inline-block; white-space: nowrap;"></td>
+        <td>$distance_{max}\approx$ 2500 $distance_{min}$</td>
+      </tr>
+      <tr>
+        <td>En dimension 50 :</td>
+        <td style="width: 100px; overflow: hidden; display: inline-block; white-space: nowrap;"></td>
+        <td>$distance_{max}\approx$ 3 $distance_{min}$</td>
+      </tr>
+    </table>
+  </div>
+
+
+
+
+
+  <div class="notes">
+    Pour comprendre cette courbe vous pouvez imaginez la carte de France. Si vous tirez au hasard 500 villes, il y aura deux villes qui seront plus proches entre-elles que les autres, et deux villes qui seront plus éloignés. Oui ? Cela permet de définir la
+    distance minimale et maximale qu'il existe entre deux villes. Et bien ce que vous dit cette courbe c'est que la distance max est 2500 fois plus grande que la distance min. Maintenant, qu'est-ce qui peut différencer deux villes ? (superficie, PIB,
+    taille moytenne) Et vous cherchez à définir les villes qui sont plus a "Donc plus le nombre de dimension augmente, moins la distance entre les objets devient significative et donc plus il devient difficile de différencier des vecteurs."
+  </div>
+</div>
+
+<!-- Résumé sur le besoin de diminuer les dimensions spatiales -->
+<div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+  objectif de cette slide : dire la phrase "C'est à cause du fléau de la dimension que nous ne pouvons pas utiliser directement l'image RGB comme espace de représentation pour faire de la classification. En effet, on pouvait voir qu'en dimension "
+  <center>
+    new slide
+  </center>
+
+  <div class="notes">
+  </div>
+</div>
+
+<div class="step" data-rel-x="0" data-rel-y="1000">
+  <center>
+    <img src="images/0_introduction/fonctionnement_pixel.png" style="height: 300px; width:auto;" /><br />
+  </center>
+  <div class="notes">
+    <b>Fonctionnement d'un écran LCD :</b> Un écran LCD est divisé en petites unités lumineuses appelées pixels. Chaque pixel est subdivisé en trois rectangles (appelés sous-pixels) recouverts par des filtres colorés (rouge, vert ou bleu). Un tube fluorescent
+    (ou un panneau de D.E.L.) se trouvant derrière l'écran produit de la lumière blanche. Pour chaque sous-pixel, une couche de cristaux liquides est située entre deux polariseurs. L'ensemble laisse passer plus ou moins de lumière suivant la tension électrique
+    appliquée. Les pixels étant déjà très petits, l'œil ne distingue pas les sous-pixels.
+  </div>
+
+</div>
+
+
+<div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+  <center>
+    new slide
+  </center>
+
+  <div class="notes">
+  </div>
+</div>
