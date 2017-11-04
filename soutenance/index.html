@@ -13,6 +13,7 @@
   <link href="css/classic-slides.css" rel="stylesheet" />
 
   <link href="css/quotation.css" rel="stylesheet" />
+  <link href="css/buttons.css" rel="stylesheet" />
 </head>
 
 <body class="impress-not-supported">
@@ -300,20 +301,73 @@
     </div>
 
     <!-- VIDEO EXEMPLE DETECTION -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div id="video-step-1" class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+
+
+
+
+
+
+
+
       <h3>Les tâches de la vision par ordinateur</h3>
       <center>
-        <img src="images/0_introduction/tasks.png" style="height: auto; width:100%;" /><br />
-      </center>
 
+
+        <video id="detection_yolov2_007" style="width:45%; height:auto;" loop muted>
+          <source src="videos/detection_yolov2_007.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la balise vidéo.
+        </video>
+        <video id="segmentation_segnet_road" style="width:45%; height:auto;" loop muted>
+            <source src="videos/segmentation_segnet_road.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la balise vidéo.
+          </video><br />
+      </center>
+      <div style="text-align:right;">
+        <button onclick='ex1_play()' class="button button_blue">Lecture</button>
+        <button onclick='ex1_pause()' class="button button_blue">Pause</button>
+      </div>
       <div class="notes">
       </div>
+
+      <script>
+        var videoStep1 = document.getElementById("video-step-1");
+        var detection_yolov2_007 = document.getElementById("detection_yolov2_007");
+        var segmentation_segnet_road = document.getElementById("segmentation_segnet_road");
+
+        var video = document.getElementById("video");
+        videoStep1.addEventListener("impress:stepenter", function() {
+          // alert("Hello! I am an alert box!!");
+          detection_yolov2_007.play();
+          segmentation_segnet_road.play();
+        }, false);
+        videoStep1.addEventListener("impress:stepleave", function() {
+          detection_yolov2_007.pause();
+          segmentation_segnet_road.pause();
+        }, false);
+
+
+
+
+        function ex1_play() {
+          // alert("Hello! I am an alert box!!");
+          detection_yolov2_007.play();
+          segmentation_segnet_road.play();
+        }
+
+        function ex1_pause() {
+          detection_yolov2_007.pause();
+          segmentation_segnet_road.pause();
+          myVideo.pause();
+        }
+
+
+        // document.getElementById('vid1').addEventListener('loadedmetadata', function() {
+        //   this.currentTime = 50;
+        // }, false);
+      </script>
     </div>
-    <video width="320" height="240" controls>
-      <source src="/assets_tutorials/media/Shaun-the-Sheep-The-Movie-Official-Trailer.mp4" type="video/mp4">
-      <source src="/assets_tutorials/media/Shaun-the-Sheep-The-Movie-Official-Trailer.ogg" type="video/ogg">
-    Votre navigateur ne supporte pas la balise vidéo.
-    </video>
+
 
 
     <div id="overview" class="step" data-x="2500" data-y="3000" data-scale="10" style="pointer-events: none;">
