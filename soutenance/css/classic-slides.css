@@ -291,6 +291,20 @@ img {
     opacity: 1.0;
     transition: 0s;
 }
+/*
+   late-enhanced
+*/
+/*.future .late-enhanced {
+  font-weight:lighter;
+}
+.present .late-enhanced {
+  font-weight: bolder;
+  text-decoration: underline;
+  transition: 3s;
+}
+.past .late-enhanced {
+    transition: 0s;
+}*/
 /*.past .fade-out {
     opacity: 0.0;
     transition: 3s;
@@ -388,6 +402,18 @@ body.impress-mouse-timeout {
 .impress-enabled #impress-help td {
     padding-left: 1em;
     padding-right: 1em;
+}
+
+
+/* Substep plugin */
+
+#impress .step .substep {
+    opacity: 0;
+}
+
+#impress .step .substep.substep-visible {
+    opacity: 1;
+    transition: opacity 1s;
 }
 
 /*

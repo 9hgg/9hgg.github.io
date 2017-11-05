@@ -92,3 +92,124 @@
   <div class="notes">
   </div>
 </div>
+
+
+
+<!-- 3D scene renderer -->
+<div id="3d_test" class="step slide" data-rel-x="0" data-rel-y="1000" data-z="0">
+  <div class="notes">
+  </div>
+  <script>
+    if (!Detector.webgl) {
+      Detector.addGetWebGLMessage();
+    }
+    var container;
+    var camera, controls, scene, renderer;
+    var lighting, ambient, keyLight, fillLight, backLight;
+    init("3d_test");
+    animate("3d_test");
+
+    function init(slide_id) {
+      slide_el = document.getElementById(slide_id);
+      container = document.createElement('div');
+      slide_el.appendChild(container);
+      var cs = getComputedStyle(slide_el);
+      var paddingX = parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight);
+      var paddingY = parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
+      var borderX = parseFloat(cs.borderLeftWidth) + parseFloat(cs.borderRightWidth);
+      var borderY = parseFloat(cs.borderTopWidth) + parseFloat(cs.borderBottomWidth);
+      // Element width and height minus padding and border
+      containerWidth = slide_el.offsetWidth - paddingX - borderX;
+      containerHeight = slide_el.offsetHeight - paddingY - borderY;
+      myWidth = containerWidth; //100;//window.innerWidth
+      myHeight = containerHeight; //100;//window.innerHeight
+      /* Camera */
+      camera = new THREE.PerspectiveCamera(45, myWidth / myHeight, 1, 1000);
+      camera.position.z = 3;
+      /* Scene */
+      scene = new THREE.Scene();
+      lighting = false;
+      ambient = new THREE.AmbientLight(0xffffff, 1.0);
+      scene.add(ambient);
+      keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
+      keyLight.position.set(-100, 0, 100);
+      fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(240, 100%, 75%)'), 0.75);
+      fillLight.position.set(100, 0, 100);
+      backLight = new THREE.DirectionalLight(0xffffff, 1.0);
+      backLight.position.set(100, 0, -100).normalize();
+      /* Model */
+      var mtlLoader = new THREE.MTLLoader();
+      mtlLoader.setBaseUrl('3d_objects/female-croupier-2013-03-26/');
+      mtlLoader.setPath('3d_objects/female-croupier-2013-03-26/');
+      mtlLoader.load('female-croupier-2013-03-26.mtl', function(materials) {
+        materials.preload();
+        materials.materials.default.map.magFilter = THREE.NearestFilter;
+        materials.materials.default.map.minFilter = THREE.LinearFilter;
+        var objLoader = new THREE.OBJLoader();
+        objLoader.setMaterials(materials);
+        objLoader.setPath('3d_objects/female-croupier-2013-03-26/');
+        objLoader.load('female-croupier-2013-03-26.obj', function(object) {
+          scene.add(object);
+        });
+      });
+      /* Renderer */
+      renderer = new THREE.WebGLRenderer();
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setSize(myWidth, myHeight);
+      renderer.setClearColor(new THREE.Color("hsl(360, 100%, 100%)")); //grey -> "hsl(0, 0%, 10%)"
+      container.appendChild(renderer.domElement);
+      /* Controls */
+      controls = new THREE.OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = true;
+      controls.dampingFactor = 0.25;
+      controls.enableZoom = false;
+      /* Events */
+      window.addEventListener('resize', onWindowResize, false);
+      window.addEventListener('keydown', onKeyboardEvent, false);
+    }
+
+    function onWindowResize() {
+      windowHalfX = window.innerWidth / 2;
+      windowHalfY = window.innerHeight / 2;
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    }
+
+    function onKeyboardEvent(e) {
+      if (e.code === 'KeyL') {
+        lighting = !lighting;
+        if (lighting) {
+          ambient.intensity = 0.25;
+          scene.add(keyLight);
+          scene.add(fillLight);
+          scene.add(backLight);
+        } else {
+          ambient.intensity = 1.0;
+          scene.remove(keyLight);
+          scene.remove(fillLight);
+          scene.remove(backLight);
+        }
+      }
+    }
+
+    function animate(slide_id) {
+      requestAnimationFrame(animate);
+      controls.update();
+      render();
+    }
+
+    function render() {
+      renderer.render(scene, camera);
+    }
+  </script>
+</div>
+
+<div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+  <center>
+    <iframe src="./3d_objects/female-croupier-2013-03-26.html" style="width:600px;height:600px;"></iframe>
+  </center>
+
+  <div class="notes">
+  </div>
+</div>

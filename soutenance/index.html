@@ -5,22 +5,18 @@
   <meta charset="utf-8" />
   <title>Soutenance Joris GUERRY</title>
 
+  <link rel="icon" href="favicon.ico" sizes="16x16" type="image/ico">
   <meta name="description" content="Soutenance de thèse Joris GUERRY" />
   <meta name="author" content="Joris GUERRY" />
   <link rel="stylesheet" href="extras/highlight/styles/github.css">
   <link rel="stylesheet" href="extras/mermaid/mermaid.forest.css">
   <!-- <link href="css/impress_not_supported.css" rel="stylesheet" /> -->
+  <!-- <link href="css/soutenance.css" rel="stylesheet" type="text/css" /> -->
   <link href="css/classic-slides.css" rel="stylesheet" />
 
   <link href="css/quotation.css" rel="stylesheet" />
   <link href="css/buttons.css" rel="stylesheet" />
 
-  <!-- 3D object renderer -->
-  <script src="js/tree/three.js"></script>
-  <script src="js/tree/Detector.js"></script>
-  <script src="js/tree/OrbitControls.js"></script>
-  <script src="js/tree/OBJLoader.js"></script>
-  <script src="js/tree/MTLLoader.js"></script>
 
 </head>
 
@@ -317,6 +313,7 @@
       </center>
 
       <div class="notes">
+        Alors, il existe d'autres tâches de la vision par ordinateur non montrées ici. A la fois des tâches
       </div>
     </div>
 
@@ -379,170 +376,468 @@
       </script>
     </div>
 
-    <div id="3d_test" class="step slide" data-rel-x="0" data-rel-y="1000" data-z="0">
+
+    <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                        PLAN I                                  &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+    <!-- <div class="step" data-x="7500" data-y="-6000" data-z="3000" data-rotate-x="90" data-rotate-y="0" data-rotate-z="0">
+      <center>
+        <h1>Plan I</h1>
+      </center>
       <div class="notes">
       </div>
-      <script>
-        if (!Detector.webgl) {
-          Detector.addGetWebGLMessage();
-        }
-
-        var container;
-        // var slide_3d_test = document.getElementById("3d_test");
-
-        var camera, controls, scene, renderer;
-        var lighting, ambient, keyLight, fillLight, backLight;
-
-        var windowHalfX = window.innerWidth / 2;
-        var windowHalfY = window.innerHeight / 2;
-
-        init("3d_test");
-        animate("3d_test");
-
-        function init(slide_id) {
-          slide_el = document.getElementById(slide_id);
-          container = document.createElement('div');
-          slide_el.appendChild(container);
+    </div> -->
 
 
-          var cs = getComputedStyle(slide_el);
-          var paddingX = parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight);
-          var paddingY = parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
-          var borderX = parseFloat(cs.borderLeftWidth) + parseFloat(cs.borderRightWidth);
-          var borderY = parseFloat(cs.borderTopWidth) + parseFloat(cs.borderBottomWidth);
-          // Element width and height minus padding and border
-          containerWidth = slide_el.offsetWidth - paddingX - borderX;
-          containerHeight = slide_el.offsetHeight - paddingY - borderY;
 
-
-          myWidth = containerWidth;//100;//window.innerWidth
-          myHeight = containerHeight;//100;//window.innerHeight
-
-          /* Camera */
-
-          camera = new THREE.PerspectiveCamera(45, myWidth / myHeight, 1, 1000);
-          camera.position.z = 3;
-
-          /* Scene */
-
-          scene = new THREE.Scene();
-          lighting = false;
-
-          ambient = new THREE.AmbientLight(0xffffff, 1.0);
-          scene.add(ambient);
-
-          keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
-          keyLight.position.set(-100, 0, 100);
-
-          fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(240, 100%, 75%)'), 0.75);
-          fillLight.position.set(100, 0, 100);
-
-          backLight = new THREE.DirectionalLight(0xffffff, 1.0);
-          backLight.position.set(100, 0, -100).normalize();
-
-          /* Model */
-
-          var mtlLoader = new THREE.MTLLoader();
-          mtlLoader.setBaseUrl('3d_objects/female-croupier-2013-03-26/');
-          mtlLoader.setPath('3d_objects/female-croupier-2013-03-26/');
-          mtlLoader.load('female-croupier-2013-03-26.mtl', function(materials) {
-
-            materials.preload();
-
-            materials.materials.default.map.magFilter = THREE.NearestFilter;
-            materials.materials.default.map.minFilter = THREE.LinearFilter;
-
-            var objLoader = new THREE.OBJLoader();
-            objLoader.setMaterials(materials);
-            objLoader.setPath('3d_objects/female-croupier-2013-03-26/');
-            objLoader.load('female-croupier-2013-03-26.obj', function(object) {
-
-              scene.add(object);
-
-            });
-
-          });
-
-          /* Renderer */
-
-          renderer = new THREE.WebGLRenderer();
-          renderer.setPixelRatio(window.devicePixelRatio);
-          renderer.setSize(myWidth, myHeight);
-          renderer.setClearColor(new THREE.Color("hsl(360, 100%, 100%)")); //grey -> "hsl(0, 0%, 10%)"
-
-          container.appendChild(renderer.domElement);
-
-          /* Controls */
-
-          controls = new THREE.OrbitControls(camera, renderer.domElement);
-          controls.enableDamping = true;
-          controls.dampingFactor = 0.25;
-          controls.enableZoom = false;
-
-          /* Events */
-
-          window.addEventListener('resize', onWindowResize, false);
-          window.addEventListener('keydown', onKeyboardEvent, false);
-
-        }
-
-        function onWindowResize() {
-
-          windowHalfX = window.innerWidth / 2;
-          windowHalfY = window.innerHeight / 2;
-
-          camera.aspect = window.innerWidth / window.innerHeight;
-          camera.updateProjectionMatrix();
-
-          renderer.setSize(window.innerWidth, window.innerHeight);
-
-        }
-
-        function onKeyboardEvent(e) {
-
-          if (e.code === 'KeyL') {
-
-            lighting = !lighting;
-
-            if (lighting) {
-
-              ambient.intensity = 0.25;
-              scene.add(keyLight);
-              scene.add(fillLight);
-              scene.add(backLight);
-
-            } else {
-
-              ambient.intensity = 1.0;
-              scene.remove(keyLight);
-              scene.remove(fillLight);
-              scene.remove(backLight);
-
-            }
-
-          }
-
-        }
-
-        function animate(slide_id) {
-
-          requestAnimationFrame(animate);
-
-          controls.update();
-
-          render();
-
-        }
-
-        function render() {
-
-          renderer.render(scene, camera);
-
-        }
-      </script>
+    <div class="step slide" data-rel-x="0" data-rel-y="1000" data-z="1000" data-rotate-x="-90" data-rotate-y="0" data-rotate-z="0">
+      <center>
+        <div style="opacity:1">
+          <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
+          <h6 style="margin:0px;">Détecte-moi si tu peux !</h5><br/><br/><br/>
+        </div>
+      </center>
+      <div style="">
+        <ol type="I" style="display:table; margin:auto;">
+          <li style="font-size: 40px;font-weight: bold; opacity:1">Sélection d'algorithmes de classification</li>
+          <li style="font-size: 40px;font-weight: bold; opacity:1">Approche multimodale pour la détection</li>
+          <li style="font-size: 40px;font-weight: bold; opacity:1">Approche multivue pour la segmentation</li>
+        </ol>
+      </div>
+      <div class="notes">
+      </div>
     </div>
 
-    <div id="overview" class="step" data-x="2500" data-y="3000" data-scale="10" style="pointer-events: none;">
+
+
+
+
+
+
+    <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                        CONTRIBUTION 2D                         &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+    <div class="step slide" data-x="7500" data-y="0" data-z="0">
+      <center>
+        <div style="opacity:1">
+          <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
+          <h6 style="margin:0px;">Détecte-moi si tu peux !</h5><br/><br/><br/>
+        </div>
+      </center>
+      <div style="">
+        <ol type="I" style="display:table; margin:auto;">
+          <li style="font-size: 40px;font-weight: bold; opacity:1">Sélection d'algorithmes de classification</li>
+          <li style="font-size: 40px;font-weight: bold; opacity:0.3">Approche multimodale pour la détection</li>
+          <li style="font-size: 40px;font-weight: bold; opacity:0.3">Approche multivue pour la segmentation</li>
+        </ol>
+      </div>
+      <div class="notes">
+      </div>
+    </div>
+
+
+    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        nouvelle planche vide
+      </center>
+
+      <div class="notes">
+      </div>
+    </div>
+    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        nouvelle planche vide
+      </center>
+
+      <div class="notes">
+      </div>
+    </div>
+    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        nouvelle planche vide
+      </center>
+
+      <div class="notes">
+      </div>
+    </div>
+
+
+
+
+    <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                        CONTRIBUTION 2.5D                         &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+    <div class="step slide" data-x="10000" data-y="0">
+      <center>
+        <div style="opacity:1">
+          <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
+          <h6 style="margin:0px;">Détecte-moi si tu peux !</h5><br/><br/><br/>
+        </div>
+      </center>
+      <div style="">
+        <ol type="I" style="display:table; margin:auto;">
+          <li style="font-size: 40px;font-weight: bold; opacity:0.3">Sélection d'algorithmes de classification</li>
+          <li style="font-size: 40px;font-weight: bold; opacity:1">Approche multimodale pour la détection</li>
+          <li style="font-size: 40px;font-weight: bold; opacity:0.3">Approche multivue pour la segmentation</li>
+        </ol>
+      </div>
+      <div class="notes">
+      </div>
+    </div>
+
+
+
+    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        nouvelle planche vide
+      </center>
+
+      <div class="notes">
+      </div>
+    </div>
+    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        nouvelle planche vide
+      </center>
+
+      <div class="notes">
+      </div>
+    </div>
+    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        nouvelle planche vide
+      </center>
+
+      <div class="notes">
+      </div>
+    </div>
+
+
+
+
+    <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                        CONTRIBUTION 3D                         &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+    <div class="step slide" data-x="12500" data-y="0">
+      <center>
+        <div style="opacity:1">
+          <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
+          <h6 style="margin:0px;">Détecte-moi si tu peux !</h5><br/><br/><br/>
+        </div>
+      </center>
+      <div style="">
+        <ol type="I" style="display:table; margin:auto;">
+          <li style="font-size: 40px;font-weight: bold; opacity:0.3">Sélection d'algorithmes de classification</li>
+          <li style="font-size: 40px;font-weight: bold; opacity:0.3">Approche multimodale pour la détection</li>
+          <li style="font-size: 40px;font-weight: bold; opacity:1">Approche multivue pour la segmentation</li>
+        </ol>
+      </div>
+      <div class="notes">
+      </div>
+    </div>
+
+    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        nouvelle planche vide
+      </center>
+
+      <div class="notes">
+      </div>
+    </div>
+    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        nouvelle planche vide
+      </center>
+
+      <div class="notes">
+      </div>
+    </div>
+    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        nouvelle planche vide
+      </center>
+
+      <div class="notes">
+      </div>
+    </div>
+
+    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        <iframe src="./3d_objects/ply_viewer.html#cag2017/00003_xyzpred.ply" style="width:600px;height:600px;"></iframe>
+      </center>
+
+      <div class="notes">
+      </div>
+    </div>
+
+
+    <div class="step slide" data-rel-x="0" data-rel-y="1000" data-z="1000" data-rotate-x="-90" data-rotate-y="0" data-rotate-z="0">
+      <center>
+        <div style="opacity:1">
+          <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
+          <h6 style="margin:0px;">Détecte-moi si tu peux !</h5><br/><br/><br/>
+        </div>
+      </center>
+      <div style="">
+        <ol type="I" style="display:table; margin:auto;">
+
+          <li style="font-size: 40px;font-weight: bold; margin: 30px 0; opacity:1">Sélection d'algorithmes de <span class="late-enhanced" style="transition-delay: 2s">classification</span>
+            <div id="burst-2D" class="substep">
+              <span style="position:relative;top:10px">2D</span>
+            </div>
+          </li>
+
+          <li style="font-size: 40px;font-weight: bold; margin: 30px 0; opacity:1">
+            Approche multimodale pour la <span class="late-enhanced" style="transition-delay: 3s">détection</span>
+            <div id="burst-25D" class="substep">
+              <span style="position:relative;top:10px">2.5D</span>
+            </div>
+          </li>
+
+          <li style="font-size: 40px;font-weight: bold; margin: 30px 0; opacity:1">Approche multivue pour la <span class="late-enhanced" style="transition-delay: 4s">segmentation</span>
+            <div id="burst-3D" class="substep">
+              <span style="position:relative;top:10px">3D</span>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="notes">
+      </div>
+      <style>
+        .future .late-enhanced {}
+
+        .present .late-enhanced {
+          color: blue;
+          transition: all 3s;
+        }
+
+        .past .late-enhanced {
+          transition: 0s;
+          color: blue;
+        }
+
+        #burst-2D {
+          margin-left: 15px;
+          display: inline-block;
+          font-size: 40px;
+          background: #071527;
+          color: white;
+          width: 80px;
+          height: 80px;
+          position: relative;
+          text-align: center;
+          -webkit-transform: rotate(20deg);
+          -moz-transform: rotate(20deg);
+          -ms-transform: rotate(20deg);
+          -o-transform: rotate(20eg);
+        }
+
+        #burst-2D:before {
+          background: #071527;
+          color: white;
+          z-index: -1;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 80px;
+          width: 80px;
+          -webkit-transform: rotate(135deg);
+          -moz-transform: rotate(135deg);
+          -ms-transform: rotate(135deg);
+          -o-transform: rotate(135deg);
+        }
+
+        #burst-25D {
+          margin-left: 15px;
+          display: inline-block;
+          background: #071527;
+          color: white;
+          font-size: 40px;
+          width: 80px;
+          height: 80px;
+          position: relative;
+          text-align: center;
+          -webkit-transform: rotate(20deg);
+          -moz-transform: rotate(20deg);
+          -ms-transform: rotate(20deg);
+          -o-transform: rotate(20eg);
+        }
+
+        #burst-25D:before {
+          background: #071527;
+          color: white;
+          z-index: -1;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 80px;
+          width: 80px;
+          -webkit-transform: rotate(135deg);
+          -moz-transform: rotate(135deg);
+          -ms-transform: rotate(135deg);
+          -o-transform: rotate(135deg);
+        }
+
+        #burst-3D {
+          margin-left: 15px;
+          display: inline-block;
+          background: #071527;
+          color: white;
+          font-size: 40px;
+          width: 80px;
+          height: 80px;
+          position: relative;
+          text-align: center;
+          -webkit-transform: rotate(20deg);
+          -moz-transform: rotate(20deg);
+          -ms-transform: rotate(20deg);
+          -o-transform: rotate(20eg);
+        }
+
+        #burst-3D:before {
+          background: #071527;
+          color: white;
+          z-index: -1;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 80px;
+          width: 80px;
+          -webkit-transform: rotate(135deg);
+          -moz-transform: rotate(135deg);
+          -ms-transform: rotate(135deg);
+          -o-transform: rotate(135deg);
+        }
+      </style>
+    </div>
+
+
+
+
+
+    <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                        CONCLUSION                              &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&                                                                &&&&
+      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+    <div class="step slide" data-x="15000" data-y="0">
+      <center>
+        <!-- <div style="
+                position: relative;
+                width: 270px;
+                padding: 50px 40px;
+                margin: 1em auto 80px;
+                text-align: center;
+                color: #fff;
+                background: #075698;
+                background: -webkit-gradient(linear, 0 0, 0 100%, from(#2e88c4), to(#075698));
+                background: -moz-linear-gradient(#2e88c4, #075698);
+                background: -o-linear-gradient(#2e88c4, #075698);
+                background: linear-gradient(#2e88c4, #075698);
+                background-image: linear-gradient(rgb(46, 136, 196), rgb(7, 86, 152));
+                background-position-x: initial;
+                background-position-y: initial;
+                background-size: initial;
+                background-repeat-x: initial;
+                background-repeat-y: initial;
+                background-attachment: initial;
+                background-origin: initial;
+                background-clip: initial;
+                background-color: initial;
+                -webkit-border-top-left-radius: 220px 120px;
+                -webkit-border-top-right-radius: 220px 120px;
+                -webkit-border-bottom-right-radius: 220px 120px;
+                -webkit-border-bottom-left-radius: 220px 120px;
+                -moz-border-radius: 220px / 120px;
+                border-radius: 220px / 120px;">2D</div> -->
+
+
+        <h3>Conclusion</h3>
+      </center>
+      <ul>
+        <li></li>
+      </ul>
+
+      <div class="notes">
+      </div>
+    </div>
+
+
+
+    <div class="step slide" data-rel-x="0" data-rel-y="1000">
+      <center>
+        <h3>Perspectives</h3>
+      </center>
+      <ul>
+        <li></li>
+      </ul>
+
+      <div class="notes">
+      </div>
+    </div>
+
+
+
+
+
+
+    <div id="overview" class="step" data-x="7500" data-y="3000" data-scale="10" style="pointer-events: none;">
     </div>
   </div>
 
@@ -569,7 +864,7 @@
   </script>
   <script type="text/javascript" async src="MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
-  <script type="text/javascript" src="js/impress.js"></script>
+  <script type="text/javascript" src="js/impress_henrik.js"></script>
   <script>
     impress().init();
     document.addEventListener("keydown", function(event) {
@@ -587,7 +882,7 @@
 
     <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        new slide
+        nouvelle planche vide
       </center>
 
       <div class="notes">
