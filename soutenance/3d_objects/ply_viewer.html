@@ -11,10 +11,11 @@
   <!-- 3D object renderer -->
   <script src="../js/tree/three.js"></script>
   <script src="../js/tree/Detector.js"></script>
-  <script src="../js/tree/OrbitControls.js"></script>
-  <script src="../js/tree/OBJLoader.js"></script>
-  <script src="../js/tree/MTLLoader.js"></script>
+  <!-- <script src="../js/tree/OrbitControls.js"></script> -->
+  <!-- <script src="../js/tree/OBJLoader.js"></script>
+  <script src="../js/tree/MTLLoader.js"></script> -->
   <script type="text/javascript" src="../js/tree/PLYLoader.js"></script>
+  <script type="text/javascript" src="../js/tree/TrackballControls.js"></script>
   <!-- <script type="text/javascript" src="../js/tree/dat.gui.js"></script> -->
 
   <style>
@@ -67,7 +68,8 @@
     if (!Detector.webgl) {
       Detector.addGetWebGLMessage();
     }
-
+    var clock = new THREE.Clock();
+    var trackballControls;
     var container;
     // var slide_3d_test = document.getElementById("3d_test");
 
@@ -122,6 +124,22 @@
 
       backLight = new THREE.DirectionalLight(0xffffff, 1.0);
       backLight.position.set(100, 0, -100).normalize();
+
+
+
+      trackballControls = new THREE.TrackballControls(camera);
+
+      trackballControls.rotateSpeed = 1.0;
+      trackballControls.zoomSpeed = 1.0;
+      trackballControls.panSpeed = 1.0;
+//        trackballControls.noZoom=false;
+//        trackballControls.noPan=false;
+      trackballControls.staticMoving = true;
+      function setCamControls() {
+
+      }
+
+
 
       /* Model */
       var group;
@@ -215,16 +233,16 @@
 
       /* Controls */
 
-      controls = new THREE.OrbitControls(camera, renderer.domElement);
-      controls.enableDamping = true;
-      controls.dampingFactor = 0.25;
-      controls.enableZoom = false;
+      // controls = new THREE.OrbitControls(camera, renderer.domElement);
+      // controls.enableDamping = true;
+      // controls.dampingFactor = 0.25;
+      // controls.enableZoom = true;
 
       /* Events */
 
       window.addEventListener('resize', onWindowResize, false);
       window.addEventListener('keydown', onKeyboardEvent, false);
-
+      // window.addEventListener( 'mousewheel', onDocumentMouseWheel, false );
     }
 
     function onWindowResize() {
@@ -267,9 +285,12 @@
 
     function animate() {
 
+      var delta = clock.getDelta();
+      trackballControls.update(delta);
+
       requestAnimationFrame(animate);
 
-      controls.update();
+      // controls.update();
 
       render();
 

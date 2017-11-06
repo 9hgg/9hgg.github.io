@@ -376,32 +376,45 @@
       </script>
     </div>
 
-
-    <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-      &&&&                                                                &&&&
-      &&&&                                                                &&&&
-      &&&&                                                                &&&&
-      &&&&                                                                &&&&
-      &&&&                        PLAN I                                  &&&&
-      &&&&                                                                &&&&
-      &&&&                                                                &&&&
-      &&&&                                                                &&&&
-      &&&&                                                                &&&&
-      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
-
-    <!-- <div class="step" data-x="7500" data-y="-6000" data-z="3000" data-rotate-x="90" data-rotate-y="0" data-rotate-z="0">
+    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h1>Plan I</h1>
+        <h3>La classification</h3>
+
+        en gros : la classif c'est la brique de base, <br />
+        mais l'espace RGB est trop grand (curse of dimensionality)<br />
+         -> donc on essaye de réduire l'espace de représentation<br />
+         -> changement d'espace par description
       </center>
+
       <div class="notes">
+        exprimer l'idée du fléau de la dimension et qu'on peut pas utiliser l'espace RGB -> une image RGB > boite noir > un clustering
+        on essaye de passer de l'espace RGB à un espace où chaque classe repose sur une dimension particulière
+        autrement dit on essaye de trouver une projection de l'espace RGB à l'espace des classes,
+        autrement dit on cherche à partitionner l'espace RGB en N classes.
+        Or pour faire des partitions on mesure les similarités entre les vecteurs d'un espace et le problème c'est que en grande dimension la notion de similarité, autrement dit de distance, perd de sa valeur. En effet, chaque dimension est une occasion de plus pour deux vecteurs de s'éloigner (exemple des villes).
+      --> Du coup on cherche à diminuer la taille de l'espace de représentation avant de commencer a faire du partitionnement.
       </div>
-    </div> -->
+    </div>
 
+    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        <h3>Descripteurs et classification</h3>
 
+        formalisme de Lecun
+        <img src="images/0_introduction/lecun_level.png" style="height: auto; width:100%;" />
+      </center>
 
-    <div class="step slide" data-rel-x="0" data-rel-y="1000" data-z="1000" data-rotate-x="-90" data-rotate-y="0" data-rotate-z="0">
+      <div class="notes">
+
+      </div>
+    </div>
+    <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+      &&&&                        PLAN                                  &&&&
+      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+    <div class="step slide fade-in" style="transition-delay: 2s" data-rel-x="0" data-rel-y="1000" data-z="1000" data-rotate-x="-90" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
       <center>
         <div style="opacity:1">
           <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
@@ -439,7 +452,7 @@
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 
-    <div class="step slide" data-x="7500" data-y="0" data-z="0">
+    <div class="step slide" data-x="7500" data-y="0" data-z="0" data-transition-duration="3000">
       <center>
         <div style="opacity:1">
           <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
@@ -483,7 +496,13 @@
       </div>
     </div>
 
-
+    <div class="step slide fade-in" style="transition-delay: 2s" data-rel-x="0" data-rel-y="1000" data-z="1000" data-rotate-x="-90" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
+      <center>
+        Conclusion 2D
+      </center>
+      <div class="notes">
+      </div>
+    </div>
 
 
     <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -492,7 +511,7 @@
       &&&&                                                                &&&&
       &&&&                                                                &&&&
       &&&&                                                                &&&&
-      &&&&                        CONTRIBUTION 2.5D                         &&&&
+      &&&&                        CONTRIBUTION 2.5D                       &&&&
       &&&&                                                                &&&&
       &&&&                                                                &&&&
       &&&&                                                                &&&&
@@ -500,7 +519,7 @@
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 
-    <div class="step slide" data-x="10000" data-y="0">
+    <div class="step slide" data-x="10000" data-y="0"  data-z="0" data-transition-duration="3000">
       <center>
         <div style="opacity:1">
           <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
@@ -545,7 +564,13 @@
       </div>
     </div>
 
-
+    <div class="step slide fade-in" style="transition-delay: 2s" data-rel-x="0" data-rel-y="1000" data-z="1000" data-rotate-x="-90" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
+      <center>
+        Conclusion 2.5D
+      </center>
+      <div class="notes">
+      </div>
+    </div>
 
 
     <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -562,7 +587,7 @@
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 
-    <div class="step slide" data-x="12500" data-y="0">
+    <div class="step slide" data-x="12500" data-y="0"  data-z="0" data-transition-duration="3000">
       <center>
         <div style="opacity:1">
           <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
@@ -614,8 +639,29 @@
       </div>
     </div>
 
+    <div class="step slide fade-in" style="transition-delay: 2s" data-rel-x="0" data-rel-y="1000" data-z="1000" data-rotate-x="-90" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
+      <center>
+        Conclusion 3D
+      </center>
+      <div class="notes">
+      </div>
+    </div>
 
-    <div class="step slide" data-rel-x="0" data-rel-y="1000" data-z="1000" data-rotate-x="-90" data-rotate-y="0" data-rotate-z="0">
+        <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+          &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                        CONCLUSION                              &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+          &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+    <div class="step slide" data-x="15000" data-y="0"  data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0"  data-transition-duration="3000">
       <center>
         <div style="opacity:1">
           <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
@@ -762,21 +808,8 @@
 
 
 
-    <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-      &&&&                                                                &&&&
-      &&&&                                                                &&&&
-      &&&&                                                                &&&&
-      &&&&                                                                &&&&
-      &&&&                        CONCLUSION                              &&&&
-      &&&&                                                                &&&&
-      &&&&                                                                &&&&
-      &&&&                                                                &&&&
-      &&&&                                                                &&&&
-      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 
-    <div class="step slide" data-x="15000" data-y="0">
+    <div class="step slide" data-rel-x="0" data-rel-y="1000">
       <center>
         <!-- <div style="
                 position: relative;
@@ -835,9 +868,18 @@
 
 
 
+        <div class="step" data-rel-x="0" data-rel-y="1000">
+          <center>
+            <img src="images/questions/questions2.gif" style="height: auto; width:auto;" />
+          </center>
 
 
-    <div id="overview" class="step" data-x="7500" data-y="3000" data-scale="10" style="pointer-events: none;">
+          <div class="notes">
+          </div>
+        </div>
+
+
+    <div id="overview" class="step" data-x="7500" data-y="3500"  data-z="-2000" data-scale="10" data-rotate-x="-60" data-rotate-y="0" data-rotate-z="0"  data-transition-duration="3000" style="pointer-events: none;">
     </div>
   </div>
 
