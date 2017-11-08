@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="extras/highlight/styles/github.css">
   <link rel="stylesheet" href="extras/mermaid/mermaid.forest.css">
   <!-- <link href="css/impress_not_supported.css" rel="stylesheet" /> -->
-  <!-- <link href="css/soutenance.css" rel="stylesheet" type="text/css" /> -->
+
   <link href="css/classic-slides.css" rel="stylesheet" />
 
   <link href="css/quotation.css" rel="stylesheet" />
@@ -21,6 +21,63 @@
 </head>
 
 <body class="impress-not-supported">
+
+
+  <div id="ribbon_question" style="width: 300px;
+    background: #c41313;
+    position: fixed;
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 1px;
+    color: #f0f0f0;
+    top: 54px;
+    left: -65px;
+    right: auto;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);opacity:0;transition: 2s;z-index:10000;"><b>? - Phase de questions</b></div>
+
+
+
+  <div id="ribbon_2D" style="width: 300px;
+  background: #0E2A4E;
+  position: fixed;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #f0f0f0;
+  top: 54px;
+  right: -65px;
+  left: auto;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);opacity:0;transition: 2s;z-index:10000;">I - Sélection d'algorithmes</div>
+
+  <div id="ribbon_25D" style="width: 300px;
+  background: #0E2A4E;
+  position: fixed;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #f0f0f0;
+  top: 54px;
+  right: -65px;
+  left: auto;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);opacity:0;transition: 2s;z-index:10000;">II - Détection multimodale</div>
+
+  <div id="ribbon_3D" style="width: 300px;
+  background: #0E2A4E;
+  position: fixed;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #f0f0f0;
+  top: 54px;
+  right: -65px;
+  left: auto;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);opacity:0;transition: 2s;z-index:10000;">III - Segmentation multivue</div>
+
+
   <!--
     This fallback message is only visible when there is `impress-not-supported` class on body.
 -->
@@ -51,7 +108,7 @@
       &&&&                                                                &&&&
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
-    <div class="step slide" data-x="0" data-y="0">
+    <div class="step noribbon slide" data-x="0" data-y="0">
       <center>
         <h3 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
         <h5 style="margin:0px;">Détecte-moi si tu peux !</h5><br/>
@@ -74,7 +131,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000">
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000">
       <center>
 
         <table>
@@ -120,7 +177,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-x="2500" data-y="0" data-z="0">
+    <div class="step noribbon" data-x="2500" data-y="0" data-z="0">
       <center>
         <h2>La reconnaissance visuelle,</h2>
         <h3>quelques exemples</h3>
@@ -131,7 +188,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <img src="images/0_introduction/contexte_1.jpg" style="height: auto; width:100%;" /><br />
       </center>
@@ -141,7 +198,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <img src="images/0_introduction/contexte_2.jpg" style="height: auto; width:100%;" /><br />
       </center>
@@ -151,7 +208,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <img src="images/0_introduction/contexte_3.jpg" style="height: auto; width:100%;" /><br />
       </center>
@@ -161,7 +218,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <img src="images/0_introduction/contexte_4.jpg" style="height: auto; width:100%;" /><br />
       </center>
@@ -171,11 +228,11 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        Pour un humain, une image c'est...
+        <span style="position:relative;top:100px;">Pour un humain, une image c'est...</span>
       </center>
-      <ul>
+      <ul style="position:relative;top:100px;">
         <li class="fade-in fade-out" style="transition-delay: 2s">un environnement,</li>
         <li class="fade-in fade-out" style="transition-delay: 2.1s">un sujet,</li>
         <li class="fade-in fade-out" style="transition-delay: 2.2s">un point de vue,</li>
@@ -183,7 +240,7 @@
         <li class="fade-in fade-out" style="transition-delay: 2.4s">une histoire,</li>
         <li class="fade-in fade-out" style="transition-delay: 2.5s">des souvenirs,</li>
       </ul>
-
+      <img class="fade-in fade-out" src="images/0_introduction/representation/brain.png" style="transition-delay: 2.6s; height: auto; width:300px; position: relative;bottom: 300px;left:500px;" />
       <div class="notes">
         En fait un humain ne reconnait pas un objet, mais il reconnait un concept.
         <br /> Plus qu'un objet, c'est un concept.
@@ -192,7 +249,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         L'humain reconnaît des concepts.
         <br />
@@ -231,7 +288,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-x="5000" data-y="0">
+    <div class="step noribbon" data-x="5000" data-y="0">
       <center>
         ... mais pour les robots <br />
 
@@ -262,7 +319,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <!-- <blockquote>
         Computer vision is concerned with the automatic extraction, analysis and understanding of useful information from a single image or a sequence of images. It involves the development of a theoretical and algorithmic basis to <b>achieve automatic visual understanding.</b>
         <p style="text-align: right">The British Machine Vision Association and Society for Pattern Recognition</p>
@@ -286,7 +343,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         Qu'est-ce qu'une image ?
         <img src="images/0_introduction/foret.jpg" style="height: auto; width:100%;" /><br />
@@ -298,7 +355,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="0" data-z="-1500">
+    <div class="step noribbon" data-rel-x="0" data-rel-y="0" data-z="-1500">
       <center>
         <img src="images/0_introduction/pixels-only.png" style="height: auto; width:auto;" /><br />
       </center>
@@ -308,7 +365,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1200" data-z="0">
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1200" data-z="0">
       <center>
         Qu'est-ce qu'une image ?
         <img src="images/0_introduction/grumpy/grumpy_rgb.png" style="height: auto; width:100%;" /><br /> $Image\in[0:255]^{W \cdot H \cdot D}$
@@ -326,7 +383,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <!-- <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0" data-scale="1">
+    <!-- <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0" data-scale="1">
       <center>
         <iframe src="./million.html" style="width:100%;height:800px;"></iframe>
       </center>
@@ -339,10 +396,10 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h3>Un espace de représentation pour une tâche donnée</h3>
-        <img src="images/0_introduction/representation/representation_type.png" style="height: auto; width:100%;" /><br />
+        <img src="images/0_introduction/representation/representation_brain.png" style="height: auto; width:100%;" /><br />
       </center>
       <div class="notes">
         Mais certaines imprimantes ne fonctionnent pas avec la représentation RGB mais la représentation CYMK / CMJN (cyan, magenta, jaune, noir) (en anglais CMYK, cyan, magenta, yellow, key). Tout est question d'objectif. Quel est notre objectif ? Et quelle
@@ -356,7 +413,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <h3>Les tâches de la vision par ordinateur</h3>
       <center>
         <img src="images/0_introduction/tasks.png" style="height: auto; width:100%;" /><br />
@@ -368,7 +425,7 @@
     </div>
 
     <!-- VIDEO EXEMPLE DETECTION -->
-    <div id="video-step-1" class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div id="video-step-1" class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <h3>Les tâches de la vision par ordinateur</h3>
       <center>
         <video id="detection_yolov2_007" style="width:45%; height:auto;" loop muted>
@@ -397,40 +454,11 @@
         la brique de base c'est la classification. que ce soit en détection ou en segmentation, il arrive toujours le moment où on doit prendre une décision sur la classe de l'entité considérée. C'est pourquoi je vous propose de réfléchir plus attentivement à
         la tâche de classification.
       </div>
-
-      <script>
-        var videoStep1 = document.getElementById("video-step-1");
-        var detection_yolov2_007 = document.getElementById("detection_yolov2_007");
-        var segmentation_segnet_road = document.getElementById("segmentation_segnet_road");
-        videoStep1.addEventListener("impress:stepenter", function() {
-          // alert("Hello! I am an alert box!!");
-          detection_yolov2_007.play();
-          segmentation_segnet_road.play();
-        }, false);
-        videoStep1.addEventListener("impress:stepleave", function() {
-          detection_yolov2_007.pause();
-          segmentation_segnet_road.pause();
-        }, false);
-
-        function ex1_play() {
-          detection_yolov2_007.play();
-          segmentation_segnet_road.play();
-        }
-
-        function ex1_pause() {
-          detection_yolov2_007.pause();
-          segmentation_segnet_road.pause();
-        }
-        // document.getElementById('vid1').addEventListener('loadedmetadata', function() {
-        //   this.currentTime = 50;
-        // }, false);
-        // alert("Hello! I am an alert box!!");
-      </script>
     </div>
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h3>La classification</h3>
         <img src="images/0_introduction/blackbox/blackbox.png" style="height: auto; width:100%;" /><br />
@@ -453,7 +481,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="0" data-rel-z="-1500">
+    <div class="step noribbon" data-rel-x="0" data-rel-y="0" data-rel-z="-1500">
       <img src="images/0_introduction/blackbox/open_blackbox.png" class="fade-in" style="transition: 1s;height: auto; width:100%;" /><br />
     </div>
 
@@ -462,7 +490,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h3>Descripteurs et classification</h3>
         <!-- formalisme de Lecun -->
@@ -485,24 +513,54 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h3>L'apprentissage profond</h3>
         <div style="font-size: 15px;">
-          Présenter rapidement les CNNs. Utiliser l'idée de changement d'espace de représentation pour expliquer le rôle de chaque couche.
+
+
+          <img src="images/0_introduction/cnn/vertFilter.png" style="height: auto; width:200px; position: relative;top: 0px;left: 100px; top:-50px;" />
+          <img src="images/0_introduction/cnn/convSobel_2.gif" style="height: auto; width:20%; position: relative;top: 50px;left: -100px; z-index:3" />
+          <br />
+          <img src="images/0_introduction/cnn/vertical_original.gif" style="height: auto; width:30%; position: relative;top: 0px;left: 0px;" />
+
+
+          <img src="images/0_introduction/cnn/vertical.gif" style="height: auto; width:30%; position: relative;top: 0px;left: 0px;" />
+
+          <blockquote class="article_blockquote">
+            <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>personnal webpage
+            <cite class="article_cite">Pr Jürgen Brauer</cite>
+          </blockquote>
+
+          <!-- Présenter rapidement les CNNs. Utiliser l'idée de changement d'espace de représentation pour expliquer le rôle de chaque couche. -->
         </div>
 
       </center>
 
       <div class="notes">
-
+        cnn-> decoupler l'information exemple de jouer pour enfant avec le cube dans le carré
       </div>
     </div>
 
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <!-- <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        <h3 style="margin-bottom:-18px;">L'apprentissage profond</h3>
+      </center>
+
+      <img src="images/0_introduction/cnn/8pixel.gif" style="height: auto; width:200px; position: relative;top: 0px;left: 100px; top:-50px;" />
+      <img src="images/0_introduction/cnn/convSobel_2.gif" style="height: auto; width:20%; position: relative;top: 50px;left: -100px; z-index:3" />
+
+      <div class="notes">
+
+      </div>
+    </div> -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h3 style="margin-bottom:-18px;">L'apprentissage profond</h3>
 
@@ -511,7 +569,31 @@
           <cite class="article_cite">Adam Harley </cite>
         </blockquote>
 
-        <iframe src="http://scs.ryerson.ca/~aharley/vis/conv/flat.html" style="width:100%;height:600px;"></iframe>
+        <div id="div_one" style="display:none;">
+          <iframe src="http://scs.ryerson.ca/~aharley/vis/conv/flat.html" style="width:100%;height:600px;"></iframe>
+        </div>
+        <div id="div_two">
+          <img src="images/0_introduction/cnn/conv_all_8.png" style="height: auto; width:100%;" />
+        </div>
+        <script>
+          function myFunction() {
+            var div_one = document.getElementById("div_one");
+            var div_two = document.getElementById("div_two");
+            var button_one = document.getElementById("button_one");
+            var button_two = document.getElementById("button_two");
+
+            div_one.style.display = (
+              div_one.style.display == "none" ? "block" : "none");
+            div_two.style.display = (
+              div_two.style.display == "none" ? "block" : "none");
+            button_one.style.display = (
+              button_one.style.display == "none" ? "block" : "none");
+            button_two.style.display = (
+              button_two.style.display == "none" ? "block" : "none");
+          }
+        </script>
+        <button id="button_one" onclick="myFunction()" class="button button_blue">Interactif</button>
+        <button id="button_two" onclick="myFunction()" class="button button_blue" style="display:none;">Statique</button>
       </center>
 
       <div class="notes">
@@ -521,6 +603,38 @@
 
 
 
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        <h3>L'apprentissage profond</h3>
+      </center>
+      <img src="images/0_introduction/cnn/layer123_cnnvis.png" style="height: 85%; width:auto; position: relative;top: 0px;left: 0px; top:0px; padding:0px;" />
+      <div class="notes">
+
+      </div>
+    </div>
+
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        <h3 style="margin-bottom:0px;">L'apprentissage profond</h3>
+        <img src="images/0_introduction/cnn/backprop.gif" style="height: auto; width:50%; position: relative;top: 0px;left: 0px;" /> <span style="font-size:20px;position:relative;top:-110px;">Rétropropagation du gradient</span><br />
+        <img src="images/0_introduction/cnn/psd-anim.gif" style="height: auto; width:40%; position: relative;top: 0px;left: 0px; top:0px;" /><span style="font-size:20px;position:relative;top:-210px;">Filtres d'une première couche de CNN</span><br />
+      </center>
+      <blockquote class="article_blockquote">
+        <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>http://xxii.fr
+        <!-- <cite class="article_cite"></cite> -->
+      </blockquote>
+      <div class="notes">
+
+      </div>
+    </div>
+
 
     <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
         &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -528,7 +642,7 @@
         &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
         &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 
-    <div class="step slide fade-in" style="transition-delay: 2s" data-rel-x="0" data-rel-y="1000" data-z="1000" data-rotate-x="-90" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
+    <div class="step noribbon slide fade-in" style="transition-delay: 2s" data-rel-x="0" data-rel-y="1000" data-z="1000" data-rotate-x="-90" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
       <center>
         <div style="opacity:1">
           <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
@@ -591,7 +705,7 @@
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 
-    <div class="step slide" data-x="7500" data-y="0" data-z="0" data-transition-duration="3000">
+    <div class="step noribbon slide" data-x="7500" data-y="0" data-z="0" data-transition-duration="3000">
       <center>
         <div style="opacity:1">
           <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
@@ -611,21 +725,24 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <!-- <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         tableau des vitesses de calcul
       </center>
 
       <div class="notes">
       </div>
-    </div>
+    </div> -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <img src="images/1_2D/choixmethodes.png" style="height: auto; width:100%;" />
+        <h3>Fusion vs. Sélection</h3><br><br><br><br><br><br><br><br><br>
       </center>
+
+      <img src="images/1_2D/choixmethodes4.png" style="height: auto; width:100%;position:absolute;bottom:250px;" />
+      <img src="images/1_2D/choixmethodes.png" style="height: auto; width:100%;position:absolute;bottom:250px;" class="substep" /></br>
 
       <div class="notes">
       </div>
@@ -634,10 +751,10 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h3>Preuve de concept</h3>
-          <h4>Réseau de confiance</h4>
+        <h4>Réseau de confiance</h4>
 
 
         <img src="images/1_2D/rc_0.png" style="height: auto; width:40%;" />
@@ -650,7 +767,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <img src="images/1_2D/cam_an.png" style="height: auto; width:30%;" />
         <img src="images/1_2D/cam_ln.png" style="height: auto; width:30%;" />
@@ -663,7 +780,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <img src="images/1_2D/cam_oracle.png" style="height: auto; width:40%;" />
         <img src="images/1_2D/cam_tnn.png" style="height: auto; width:45%;" />
@@ -675,7 +792,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h3>Cas 1</h3> Ajouter listing des méthodes
       </center>
@@ -686,7 +803,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h4>Corrélation Méthodes/Jeux de données</h4>
         <img src="images/1_2D/graph_corr_method_dataset_pr100_color.png" style="height: auto; width:100%;" />
@@ -698,7 +815,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h4>Corrélation Méthodes/Classes</h4>
         <img src="images/1_2D/graph_corr_method_class_pr100_color.png" style="height: 600px; width:auto;" />
@@ -710,7 +827,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h4>Corrélation Méthodes/Méthodes</h4>
         <img src="images/1_2D/graph_corr_method_method_pr100_color_h.png" style="height: 400px; width:auto;" />
@@ -722,7 +839,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h4>Avec réseau de confiance...</h4> ajouter tableau des résultats
       </center>
@@ -733,7 +850,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h3>Cas 2</h3>
         <p style="font-size:30px;">Sur ImageNet, meme données, meme type de méthodes, architectures différentes : SqueezeNet, GoogleNet, AlexNet, VGG16</p>
@@ -746,7 +863,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h4>Complémentarité des méthodes</h4> ajouter tableaux page 78 du manuscrit
       </center>
@@ -757,7 +874,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h4>Architecture du réseau de confiance</h4>
         <img src="images/1_2D/dofeann.png" style="max-height: 600px; width:auto;" />
@@ -770,7 +887,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h4>Résultats du Cas 2</h4> ajotuer tableau manuscrit page 80
       </center>
@@ -781,7 +898,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         Une autre approche sur le Cas 2 : en partant des données
       </center>
@@ -792,7 +909,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <!-- <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <!-- <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         nouvelle planche vide
       </center>
@@ -804,7 +921,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step slide fade-in" style="transition-delay: 2s" data-rel-x="0" data-rel-y="1000" data-z="1000" data-rotate-x="-90" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
+    <div class="step noribbon slide fade-in" style="transition-delay: 2s" data-rel-x="0" data-rel-y="1000" data-z="1000" data-rotate-x="-90" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
       <center>
         Conclusion 2D
       </center>
@@ -854,7 +971,7 @@
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 
-    <div class="step slide" data-x="10000" data-y="0" data-z="0" data-transition-duration="3000">
+    <div class="step noribbon slide" data-x="10000" data-y="0" data-z="0" data-transition-duration="3000">
       <center>
         <div style="opacity:1">
           <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
@@ -876,7 +993,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         nouvelle planche vide
       </center>
@@ -887,7 +1004,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         nouvelle planche vide
       </center>
@@ -898,7 +1015,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         nouvelle planche vide
       </center>
@@ -909,7 +1026,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         nouvelle planche vide
       </center>
@@ -920,7 +1037,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         nouvelle planche vide
       </center>
@@ -931,7 +1048,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         nouvelle planche vide
       </center>
@@ -942,7 +1059,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         nouvelle planche vide
       </center>
@@ -953,7 +1070,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         nouvelle planche vide
       </center>
@@ -964,7 +1081,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         nouvelle planche vide
       </center>
@@ -975,7 +1092,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         nouvelle planche vide
       </center>
@@ -986,7 +1103,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         nouvelle planche vide
       </center>
@@ -997,7 +1114,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         nouvelle planche vide
       </center>
@@ -1008,7 +1125,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         nouvelle planche vide
       </center>
@@ -1019,7 +1136,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         nouvelle planche vide
       </center>
@@ -1030,7 +1147,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         nouvelle planche vide
       </center>
@@ -1042,7 +1159,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step slide fade-in" style="transition-delay: 2s" data-rel-x="0" data-rel-y="1000" data-z="1000" data-rotate-x="-90" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
+    <div class="step noribbon slide fade-in" style="transition-delay: 2s" data-rel-x="0" data-rel-y="1000" data-z="1000" data-rotate-x="-90" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
       <center>
         Conclusion 2.5D
       </center>
@@ -1094,7 +1211,7 @@
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 
-    <div class="step slide" data-x="12500" data-y="0" data-z="0" data-transition-duration="3000">
+    <div class="step noribbon slide" data-x="12500" data-y="0" data-z="0" data-transition-duration="3000">
       <center>
         <div style="opacity:1">
           <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
@@ -1114,7 +1231,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         nouvelle planche vide
       </center>
@@ -1125,7 +1242,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         nouvelle planche vide
       </center>
@@ -1136,7 +1253,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         nouvelle planche vide
       </center>
@@ -1147,7 +1264,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <iframe src="./3d_objects/ply_viewer.html#cag2017/00003_xyzpred.ply" style="width:600px;height:600px;"></iframe>
       </center>
@@ -1156,7 +1273,7 @@
       </div>
     </div>
 
-    <div class="step slide fade-in" style="transition-delay: 2s" data-rel-x="0" data-rel-y="1000" data-z="1000" data-rotate-x="-90" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
+    <div class="step noribbon slide fade-in" style="transition-delay: 2s" data-rel-x="0" data-rel-y="1000" data-z="1000" data-rotate-x="-90" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
       <center>
         Conclusion 3D
       </center>
@@ -1178,7 +1295,7 @@
           &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
           &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 
-    <div class="step slide" data-x="15000" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
+    <div class="step slide noribbon" data-x="15000" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
       <center>
         <div style="opacity:1">
           <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
@@ -1326,7 +1443,7 @@
 
 
 
-    <div class="step slide" data-rel-x="0" data-rel-y="1000">
+    <div class="step slide noribbon" data-rel-x="0" data-rel-y="1000">
       <center>
         <!-- <div style="
                 position: relative;
@@ -1370,7 +1487,7 @@
 
 
 
-    <div class="step slide" data-rel-x="0" data-rel-y="1000">
+    <div class="step noribbon slide" data-rel-x="0" data-rel-y="1000">
       <center>
         <h3>Perspectives</h3>
       </center>
@@ -1387,7 +1504,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step" data-rel-x="0" data-rel-y="1000">
+    <div id="step_question" class="step noribbon" data-rel-x="0" data-rel-y="1000">
       <center>
         <img src="images/questions/questions2.gif" style="height: auto; width:auto;" />
       </center>
@@ -1398,9 +1515,9 @@
     </div>
 
 
-    <!-- <div id="overview" class="step" data-x="5000" data-y="6000" data-z="-2000" data-scale="10" data-rotate-x="-60" data-rotate-y="-20" data-rotate-z="10" data-transition-duration="3000" style="pointer-events: none;"> </div> -->
-    <div id="overview" class="step" data-x="8500" data-y="10000" data-z="-2000" data-scale="11" data-rotate-x="-62" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000" style="pointer-events: none;"> </div>
-    <!-- <div id="overview" class="step" data-x="7500" data-y="10000" data-z="-2000" data-scale="15" data-rotate-x="-40" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000" style="pointer-events: none;"> </div> -->
+    <!-- <div id="overview" class="step noribbon" data-x="5000" data-y="6000" data-z="-2000" data-scale="10" data-rotate-x="-60" data-rotate-y="-20" data-rotate-z="10" data-transition-duration="3000" style="pointer-events: none;"> </div> -->
+    <div id="overview" class="step noribbon" data-x="8500" data-y="10000" data-z="-2000" data-scale="11" data-rotate-x="-62" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000" style="pointer-events: none;"> </div>
+    <!-- <div id="overview" class="step noribbon" data-x="7500" data-y="10000" data-z="-2000" data-scale="15" data-rotate-x="-40" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000" style="pointer-events: none;"> </div> -->
   </div>
 
   <div id="impress-toolbar"></div>
@@ -1411,6 +1528,7 @@
   <div class="impress-progress"></div>
 
   <!-- <div id="impress-help"></div> -->
+
 
 
   <script type="text/javascript" src="extras/highlight/highlight.pack.js"></script>
@@ -1449,6 +1567,99 @@
   </script>
   <script type="text/javascript" async src="MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
+  <!-- Video playing -->
+  <script>
+    var videoStep1 = document.getElementById("video-step-1");
+    var detection_yolov2_007 = document.getElementById("detection_yolov2_007");
+    var segmentation_segnet_road = document.getElementById("segmentation_segnet_road");
+    videoStep1.addEventListener("impress:stepenter", function() {
+      // alert("Hello! I am an alert box!!");
+      detection_yolov2_007.play();
+      segmentation_segnet_road.play();
+    }, false);
+    videoStep1.addEventListener("impress:stepleave", function() {
+      detection_yolov2_007.pause();
+      segmentation_segnet_road.pause();
+    }, false);
+
+    function ex1_play() {
+      detection_yolov2_007.play();
+      segmentation_segnet_road.play();
+    }
+
+    function ex1_pause() {
+      detection_yolov2_007.pause();
+      segmentation_segnet_road.pause();
+    }
+    // document.getElementById('vid1').addEventListener('loadedmetadata', function() {
+    //   this.currentTime = 50;
+    // }, false);
+    // alert("Hello! I am an alert box!!");
+  </script>
+
+  <!-- Ribbon part -->
+  <script>
+    var ribbon_2D = document.getElementById("ribbon_2D");
+    var ribbon_25D = document.getElementById("ribbon_25D");
+    var ribbon_3D = document.getElementById("ribbon_3D");
+    var ribbon_question = document.getElementById("ribbon_question");
+
+    var steps_2D = document.getElementsByClassName("step_2D");
+    var steps_25D = document.getElementsByClassName("step_25D");
+    var steps_3D = document.getElementsByClassName("step_3D");
+    var steps_noribbon = document.getElementsByClassName("noribbon");
+    var step_question = document.getElementById("step_question");
+
+
+    step_question.addEventListener("impress:stepenter", function() {
+      ribbon_question.style.opacity = "1"
+    }, false);
+
+    var i;
+    for (i = 0; i < steps_noribbon.length; i++) {
+      steps_noribbon[i].addEventListener("impress:stepenter", function() {
+        ribbon_2D.style.opacity = "0"
+        ribbon_25D.style.opacity = "0"
+        ribbon_3D.style.opacity = "0"
+      }, false);
+    }
+
+    var i;
+    for (i = 0; i < steps_2D.length; i++) {
+      steps_2D[i].addEventListener("impress:stepenter", function() {
+        ribbon_2D.style.opacity = "1"
+        ribbon_25D.style.opacity = "0"
+        ribbon_3D.style.opacity = "0"
+      }, false);
+    }
+
+
+    var i;
+    for (i = 0; i < steps_25D.length; i++) {
+      steps_25D[i].addEventListener("impress:stepenter", function() {
+        ribbon_2D.style.opacity = "0"
+        ribbon_25D.style.opacity = "1"
+        ribbon_3D.style.opacity = "0"
+      }, false);
+    }
+
+    var i;
+    for (i = 0; i < steps_3D.length; i++) {
+      steps_3D[i].addEventListener("impress:stepenter", function() {
+        ribbon_2D.style.opacity = "0"
+        ribbon_25D.style.opacity = "0"
+        ribbon_3D.style.opacity = "1"
+      }, false);
+    }
+
+
+
+    // part_3D_end.addEventListener("impress:stepleave", function() {
+    //
+    // }, false);
+  </script>
+
+  <link href="css/soutenance.css" rel="stylesheet" type="text/css" />
 </body>
 
 
