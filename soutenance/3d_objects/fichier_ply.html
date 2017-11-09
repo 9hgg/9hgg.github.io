@@ -95,7 +95,7 @@
           blending: THREE.AdditiveBlending,
           map: generateSprite()
         });
-
+        material.sizeAttenuation = false;
         group = new THREE.PointCloud(geometry, material);
         group.sortParticles = true;
 
