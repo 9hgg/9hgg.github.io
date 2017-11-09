@@ -16,7 +16,8 @@
 
   <link href="css/quotation.css" rel="stylesheet" />
   <link href="css/buttons.css" rel="stylesheet" />
-
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src='js/jquery.svg3dtagcloud.min.js'></script>
 
 </head>
 
@@ -111,11 +112,11 @@
     <div class="step noribbon slide" data-x="0" data-y="0">
       <center>
         <h3 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
-        <h5 style="margin:0px;">Détecte-moi si tu peux !</h5><br/>
+        <h5 style="margin:0px;">Détecte-moi si tu peux !</h5><br />
         <span style="font-size:25px;">Soutenance de thèse de</span>
         <h4>Joris GUERRY</h4>
-        <span style="font-size:25px;">pour l'obtention du grade de </span><br/>
-        <b>Docteur en Informatique</b><br/>
+        <span style="font-size:25px;">pour l'obtention du grade de </span><br />
+        <b>Docteur en Informatique</b><br />
         <span style="font-size:25px;">de l'Université Paris-Saclay</span><br /><br />
         <table>
           <tr>
@@ -190,7 +191,7 @@
     <!-- ######################################################################## -->
     <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <img src="images/0_introduction/contexte_1.jpg" style="height: auto; width:100%;" /><br />
+        <img src="images/0_introduction/contexte/chabal.jpg" style="height: auto; width:100%;" /><br />
       </center>
       <div class="notes">
       </div>
@@ -200,7 +201,7 @@
     <!-- ######################################################################## -->
     <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <img src="images/0_introduction/contexte_2.jpg" style="height: auto; width:100%;" /><br />
+        <img src="images/0_introduction/contexte/extincteur.jpg" style="height: auto; width:100%;" /><br />
       </center>
       <div class="notes">
       </div>
@@ -210,7 +211,7 @@
     <!-- ######################################################################## -->
     <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <img src="images/0_introduction/contexte_3.jpg" style="height: auto; width:100%;" /><br />
+        <img src="images/0_introduction/contexte/johnny.jpg" style="height: auto; width:100%;" /><br />
       </center>
       <div class="notes">
       </div>
@@ -220,7 +221,7 @@
     <!-- ######################################################################## -->
     <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <img src="images/0_introduction/contexte_4.jpg" style="height: auto; width:100%;" /><br />
+        <img src="images/0_introduction/contexte/un-parking-pour-velos.jpg" style="height: auto; width:100%;" /><br />
       </center>
       <div class="notes">
       </div>
@@ -332,7 +333,7 @@
 
       <div class="notes">
         La vision par ordinateur, en utilisant un anglicisme très pratique, c'est l'art de sémantiser des images de façon automatique, c'est à dire donner du sens aux images sans l'intervention de l'homme.
-        <br> Transition : Alors qu'est-ce que ça veut dire donner du sens au image ? Et bien tout d'abords intéressons nous rapidement à qu'est-ce que c'est qu'une image ?
+        <br /> Transition : Alors qu'est-ce que ça veut dire donner du sens au image ? Et bien tout d'abords intéressons nous rapidement à qu'est-ce que c'est qu'une image ?
       </div>
     </div>
 
@@ -646,7 +647,7 @@
       <center>
         <div style="opacity:1">
           <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
-            <h6 style="margin:0px;">Détecte-moi si tu peux !</h5><br/><br/><br/>
+            <h6 style="margin:0px;">Détecte-moi si tu peux !</h5><br /><br /><br />
         </div>
       </center>
       <div style="">
@@ -709,7 +710,7 @@
       <center>
         <div style="opacity:1">
           <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
-          <h6 style="margin:0px;">Détecte-moi si tu peux !</h5><br/><br/><br/>
+          <h6 style="margin:0px;">Détecte-moi si tu peux !</h5><br /><br /><br />
         </div>
       </center>
       <div style="">
@@ -738,7 +739,7 @@
     <!-- ######################################################################## -->
     <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h3>Fusion vs. Sélection</h3><br><br><br><br><br><br><br><br><br>
+        <h3>Fusion vs. Sélection</h3><br /><br /><br /><br /><br /><br /><br /><br /><br />
       </center>
 
       <img src="images/1_2D/choixmethodes4.png" style="height: auto; width:100%;position:absolute;bottom:250px;" />
@@ -754,11 +755,29 @@
     <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h3>Preuve de concept</h3>
-        <h4>Réseau de confiance</h4>
+        <h5>Réseau de confiance</h5>
 
 
-        <img src="images/1_2D/rc_0.png" style="height: auto; width:40%;" />
-        <img src="images/1_2D/rc_1.png" style="height: auto; width:40%;" />
+        <img src="images/1_2D/rc_0.png" style="height: auto; width:45%;" />
+        <img src="images/1_2D/rc_1.png" class="substep" style="height: auto; width:45%;" />
+      </center>
+
+      <div class="notes">
+      </div>
+    </div>
+
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        Jeux de données : SUN3D
+        <img src="images/1_2D/sun3d.png" style="height: auto; width:100%;" />
+
+
+        <!-- <img src="images/1_2D/cam_ln.png" style="height: auto; width:40%;" /><br />
+            <img src="images/1_2D/cam_all.png" style="height: auto; width:30%;" /> -->
       </center>
 
       <div class="notes">
@@ -769,9 +788,23 @@
     <!-- ######################################################################## -->
     <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <img src="images/1_2D/cam_an.png" style="height: auto; width:30%;" />
-        <img src="images/1_2D/cam_ln.png" style="height: auto; width:30%;" />
-        <img src="images/1_2D/cam_all.png" style="height: auto; width:30%;" />
+        Méthodes :<br />
+        <table style="text-align:center">
+          <tr>
+            <td><img src="images/1_2D/min_lenet.png" style="height: 500px; width:auto;" /> </td>
+            <td><img src="images/1_2D/min_alexnet.png" style="height: 500px; width:auto;" /></td>
+          </tr>
+          <tr>
+            <td> <span style="font-size:20px">LeNet (<svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>1998 LeCun) &</span></td>
+            <td> <span style="font-size:20px">AlexNet (<svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>2012 Krizhevsky)</span></td>
+          </tr>
+        </table>
+
+
+
+
+        <!-- <img src="images/1_2D/cam_ln.png" style="height: auto; width:40%;" /><br />
+                <img src="images/1_2D/cam_all.png" style="height: auto; width:30%;" /> -->
       </center>
 
       <div class="notes">
@@ -782,8 +815,45 @@
     <!-- ######################################################################## -->
     <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <img src="images/1_2D/cam_oracle.png" style="height: auto; width:40%;" />
-        <img src="images/1_2D/cam_tnn.png" style="height: auto; width:45%;" />
+        <h5>Complémentarité des méthodes</h5>
+        <table>
+          <tr>
+            <td>
+              <img src="images/1_2D/cam_an_nolegend.png" style="height: 300px;; width:auto" />
+            </td>
+            <td>
+              <img src="images/1_2D/cam_ln_nolegend.png" style="height: 300px;; width:auto" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="images/1_2D/legend_proof_1.png" style="height: 100px;; width:auto" /><br />
+              <img src="images/1_2D/legend_proof_2.png" style="height: 100px;; width:auto" class="substep" />
+            </td>
+            <td>
+              <img src="images/1_2D/cam_all_nolegend.png" style="height: 300px;; width:auto" class="substep" />
+            </td>
+          </tr>
+        </table>
+
+        <br />
+
+
+      </center>
+
+      <div class="notes">
+      </div>
+    </div>
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
+
+      <center>
+        <h5>Performance du réseau de confiance</h5>
+        <img src="images/1_2D/cam_oracle_nolegend.png" style="height: auto; width:45%;" />
+        <img src="images/1_2D/cam_tnn_nolegend.png" style="height: auto; width:45%;" class="substep" /><br />
+        <img src="images/1_2D/legend_proof_oracle_tnn.png" style="height: auto; width:45%;" />
       </center>
 
       <div class="notes">
@@ -794,7 +864,53 @@
     <!-- ######################################################################## -->
     <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h3>Cas 1</h3> Ajouter listing des méthodes
+        <h3>Cas applicatif n°1</h3> 6 jeux de données :<br>
+        <table>
+          <tr>
+            <td>
+              <img src="images/1_2D/datasets/cifar_10.png" style="height: 100px; width: 100px;" />
+            </td>
+            <td>
+              <img src="images/1_2D/datasets/cifar_100.png" style="height: 100px; width: 100px;" />
+            </td>
+            <td>
+              <img src="images/1_2D/datasets/caltech101.jpg" style="height: 100px; width: 100px;" />
+            </td>
+            <td>
+              <img src="images/1_2D/datasets/caltech256.jpg" style="height: 100px; width: 100px;" />
+            </td>
+            <td>
+              <img src="images/1_2D/datasets/sun3d.png" style="height: 100px; width: 100px;" />
+            </td>
+            <td>
+              <img src="images/1_2D/datasets/mountain_vs_forest.png" style="height: 100px; width: 100px;" />
+            </td>
+          </tr>
+          <tr style="font-size:20px;text-align:center;">
+            <td>CIFAR10</td>
+            <td>CIFAR100</td>
+            <td>Caltech101</td>
+            <td>Caltech256</td>
+            <td>SUN3D</td>
+            <td>Mountain/Forest</td>
+          </tr>
+        </table>
+        6 méthodes de classification :<br>
+        <span style="font-size:20px;">HoG+SVM et 5 CNNs (AlexNet, LeNet, GoogleNet, SqueezeNet, VGG16)</span>
+
+
+      </center>
+
+      <div class="notes">
+      </div>
+    </div>
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        <h3>Cas applicatif n°1</h3>
+        <div id='method_holder'></div>
       </center>
 
       <div class="notes">
@@ -806,16 +922,43 @@
     <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h4>Corrélation Méthodes/Jeux de données</h4>
-        <img src="images/1_2D/graph_corr_method_dataset_pr100_color.png" style="height: auto; width:100%;" />
+        <img src="images/1_2D/jo_method_dataset.png" style="height: 500px; width:auto;" />
       </center>
 
       <div class="notes">
       </div>
+
     </div>
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        <h4>Corrélation Méthodes/Jeux de données</h4>
+        <img src="images/1_2D/jo_method_dataset_oracle.png" style="height: 500px; width:auto;" />
+      </center>
+
+      <div class="notes">
+      </div>
+
+    </div>
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        <h4>Corrélation Méthodes/Jeux de données</h4>
+        <img src="images/1_2D/jo_method_dataset_oracle_tnn.png" style="height: 500px; width:auto;" />
+      </center>
+
+      <div class="notes">
+      </div>
+
+    </div>
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h4>Corrélation Méthodes/Classes</h4>
         <img src="images/1_2D/graph_corr_method_class_pr100_color.png" style="height: 600px; width:auto;" />
@@ -823,11 +966,11 @@
 
       <div class="notes">
       </div>
-    </div>
+    </div> -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <!-- <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h4>Corrélation Méthodes/Méthodes</h4>
         <img src="images/1_2D/graph_corr_method_method_pr100_color_h.png" style="height: 400px; width:auto;" />
@@ -835,15 +978,129 @@
 
       <div class="notes">
       </div>
-    </div>
+    </div> -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h4>Avec réseau de confiance...</h4> ajouter tableau des résultats
-      </center>
+        <h4>Cas n°1 : Résultats quantitatifs</h4>
 
+        <table>
+          <tr>
+            <td>
+              <table style="font-size:15px;text-align:center;">
+                <tr>
+                  <td> <b>Méthode</b> </td>
+                  <td> <b>Précision moyenne (%)</b> </td>
+                </tr>
+                <tr>
+                  <td> bvlc_GoogleNet </td>
+                  <td> 24,7 </td>
+                </tr>
+                <tr>
+                  <td> VGG_cnn_s </td>
+                  <td> 23,7 </td>
+                </tr>
+                <tr>
+                  <td> an_cifar10_gs </td>
+                  <td> 18,3 </td>
+                </tr>
+                <tr>
+                  <td> an_cifar10_rgb </td>
+                  <td> 18,2 </td>
+                </tr>
+                <tr>
+                  <td> bvlc_AlexNet </td>
+                  <td> 17,7 </td>
+                </tr>
+                <tr>
+                  <td> svm_mountain_forest </td>
+                  <td> 17 </td>
+                </tr>
+                <tr>
+                  <td> SqueezeNet </td>
+                  <td> 16,8 </td>
+                </tr>
+                <tr>
+                  <td> ln_cifar10_rgb </td>
+                  <td> 14 </td>
+                </tr>
+                <tr>
+                  <td> ln_cifar10_gs </td>
+                  <td> 13,7 </td>
+                </tr>
+                <tr>
+                  <td> ln_caltech101_gs </td>
+                  <td> 12,5 </td>
+                </tr>
+                <tr>
+                  <td> svm_caltech101 </td>
+                  <td> 11,3 </td>
+                </tr>
+                <tr>
+                  <td> ln_cifar100_gs </td>
+                  <td> 11,3 </td>
+                </tr>
+                <tr>
+                  <td> ln_sun3d_gs </td>
+                  <td> 11,3 </td>
+                </tr>
+                <tr>
+                  <td> ln_caltech256_gs </td>
+                  <td> 9,3 </td>
+                </tr>
+                <tr>
+                  <td> svm_cifar10 </td>
+                  <td> 9 </td>
+                </tr>
+                <tr>
+                  <td> an_sun3d_rgb </td>
+                  <td> 8 </td>
+                </tr>
+                <tr>
+                  <td> svm_caltech256 </td>
+                  <td> 6,3 </td>
+                </tr>
+                <tr>
+                  <td> svm_sun3d </td>
+                  <td> 5,7 </td>
+                </tr>
+                <tr>
+                  <td> svm_cifar100 </td>
+                  <td> 1,8 </td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              <table style="font-size:15px;text-align:center;">
+                <tr>
+                  <td> <b>Méthode</b> </td>
+                  <td> <b>Précision moyenne (%)</b> </td>
+                </tr>
+                <tr>
+                  <td> Oracle </td>
+                  <td> 77,8 </td>
+                </tr>
+                <tr>
+                  <td> RC : SqueezeNet 256x256 </td>
+                  <td> 43 </td>
+                </tr>
+                <tr>
+                  <td> RC : LeNet 32x32 </td>
+                  <td> 36,3 </td>
+                </tr>
+                <tr>
+                  <td> RC : AlexNet 256x256 </td>
+                  <td> 23,7 </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+
+
+      </center>
       <div class="notes">
       </div>
     </div>
@@ -852,8 +1109,18 @@
     <!-- ######################################################################## -->
     <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h3>Cas 2</h3>
-        <p style="font-size:30px;">Sur ImageNet, meme données, meme type de méthodes, architectures différentes : SqueezeNet, GoogleNet, AlexNet, VGG16</p>
+        <h3>Cas applicatif n°2</h3> <span style="font-size:30px;">1 seul jeu de données : ImageNet</span><br>
+
+        <img src="images/1_2D/datasets/imagenet.png" style="height: auto; width: 100%;" />
+        <br /> <span style="font-size:30px;">4 méthodes de classification :</span>
+        <span style="font-size:20px;">AlexNet, GoogleNet, SqueezeNet, VGG16</span>
+    </div>
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        <h3>Cas applicatif n°2</h3>
         <img src="images/1_2D/pipeline.png" style="height: auto; width:100%;" />
       </center>
 
@@ -865,7 +1132,9 @@
     <!-- ######################################################################## -->
     <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h4>Complémentarité des méthodes</h4> ajouter tableaux page 78 du manuscrit
+        <h3>Cas applicatif n°2</h3>
+        <img src="images/1_2D/dofeann.png" style="height: 500px; width:auto;" /><br />
+        <span style="font-size:20px;">Réseau de confiance "<i>DoFeaNN</i>" : <i>Domain Features Neural Network</i></span>
       </center>
 
       <div class="notes">
@@ -876,48 +1145,62 @@
     <!-- ######################################################################## -->
     <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h4>Architecture du réseau de confiance</h4>
-        <img src="images/1_2D/dofeann.png" style="max-height: 600px; width:auto;" />
+        <h3>Cas applicatif n°2</h3>
+        <img src="images/1_2D/pipeline.png" style="height: 100px; width: auto;" />
+        <img src="images/1_2D/dofeann.png" style="height: 100px; width:auto;" /><br />
 
+        <table style="font-size:20px;text-align:center;">
+          <tr>
+            <td> <b>Méthode</b> </td>
+            <td> <b>Top-1 score (%)</b> </td>
+            <td> <b>Temps de calcul cumulés</b> </td>
+          </tr>
+          <tr>
+            <td> AlexNet </td>
+            <td> 83,2 </td>
+            <td> 41,98 s </td>
+          </tr>
+          <tr>
+            <td> GoogleNet </td>
+            <td> 82,3 </td>
+            <td> 67,16 s </td>
+          </tr>
+          <tr>
+            <td> VGG </td>
+            <td> 83,9 </td>
+            <td> 73,88 s </td>
+          </tr>
+          <tr>
+            <td> SqueezeNet </td>
+            <td> 80,4 </td>
+            <td> 100,74 s </td>
+          </tr>
+          <tr style="border-bottom: 1px solid black">
+            <td>
+              <hr /> Oracle
+              <hr />
+            </td>
+            <td>
+              <hr /> 93,2
+              <hr />
+            </td>
+            <td>
+              <hr /> 476,43 s
+              <hr />
+            </td>
+
+          </tr>
+          <tr>
+            <td> RC Dofeann + méthodes choisies </td>
+            <td> 83,8 </td>
+            <td> 129,4 s </td>
+          </tr>
+        </table>
       </center>
 
       <div class="notes">
       </div>
     </div>
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
-      <center>
-        <h4>Résultats du Cas 2</h4> ajotuer tableau manuscrit page 80
-      </center>
-
-      <div class="notes">
-      </div>
-    </div>
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
-      <center>
-        Une autre approche sur le Cas 2 : en partant des données
-      </center>
-
-      <div class="notes">
-      </div>
-    </div>
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <!-- <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
-      <center>
-        nouvelle planche vide
-      </center>
-
-      <div class="notes">
-      </div>
-    </div> -->
-
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
@@ -975,7 +1258,7 @@
       <center>
         <div style="opacity:1">
           <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
-          <h6 style="margin:0px;">Détecte-moi si tu peux !</h5><br/><br/><br/>
+          <h6 style="margin:0px;">Détecte-moi si tu peux !</h5><br /><br /><br />
         </div>
       </center>
       <div style="">
@@ -995,7 +1278,10 @@
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        nouvelle planche vide
+        <img src="images/0_introduction/contexte_1.jpg" style="height: 270px; width:405px;" />
+        <img src="images/0_introduction/contexte_2.jpg" style="height: 270px; width:405px;" /><br />
+        <img src="images/0_introduction/contexte_3.jpg" style="height: 270px; width:405px;" />
+        <img src="images/0_introduction/contexte_4.jpg" style="height: 270px; width:405px;" />
       </center>
 
       <div class="notes">
@@ -1006,7 +1292,11 @@
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        nouvelle planche vide
+        <h3>Image RGBD</h3>
+        <img src="images/3_3D/ex2RGBD.png" style="height: auto; width:60%;" /><br />
+        <img src="images/1_2D/kinect.jpg" style="height: auto; width:200px;position:absolute;right:0px;bottom:350px;" />
+        <img src="images/2_25D/kinect_example.gif" style="height: auto; width:200px;position:absolute;right:0px;bottom:150px;" />
+
       </center>
 
       <div class="notes">
@@ -1017,7 +1307,16 @@
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        nouvelle planche vide
+        <h3>Architecture CNN RGBD</h3>
+        <h5>Gating Network</h5>
+                <img src="images/2_25D/eitel.png" style="height: auto; width:100%" />
+
+                <blockquote class="article_blockquote">
+                  <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Choosing smartly: Adaptive multimodal fusion for object detection in changing environments." IROS (2016)
+                  <cite class="article_cite">Mees, Oier, Andreas Eitel, and Wolfram Burgard</cite>
+                </blockquote>
+
+
       </center>
 
       <div class="notes">
@@ -1028,7 +1327,15 @@
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        nouvelle planche vide
+        <h3>Architecture CNN RGBD</h3>
+        <h5 style="margin-bottom:0px;font-style: italic;">Gating Network</h5>
+                <img src="images/2_25D/InOutPeople.png" style="height: auto; width:70%;margin-top:0px;" />
+                <blockquote class="article_blockquote">
+                  <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Choosing smartly: Adaptive multimodal fusion for object detection in changing environments." IROS (2016)
+                  <cite class="article_cite">Mees, Oier, Andreas Eitel, and Wolfram Burgard</cite>
+                </blockquote>
+
+
       </center>
 
       <div class="notes">
@@ -1039,7 +1346,9 @@
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        nouvelle planche vide
+          <h3>Architecture CNN RGBD</h3>
+          <h5 style="margin-bottom:0px;">Notre objectif</h5>
+          <img src="images/2_25D/r_mcnn_begin_questionmark.png" style="height: auto; width:100%" />
       </center>
 
       <div class="notes">
@@ -1050,7 +1359,15 @@
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        nouvelle planche vide
+        <h3>Architecture CNN RGB<span style="background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);">D</span></h3>
+        <h5 style="margin-bottom:0px;font-style: italic;">Faster RCNN</h5>
+                <img src="images/2_25D/rcnn.png" style="height: auto; width:70%;margin-top:0px;" />
+                <blockquote class="article_blockquote">
+                  <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Faster R-CNN: Towards real-time object detection with region proposal networks." NIPS (2015)
+                  <cite class="article_cite">Ren, Shaoqing, et al.</cite>
+                </blockquote>
+
+
       </center>
 
       <div class="notes">
@@ -1061,7 +1378,35 @@
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        nouvelle planche vide
+          <h3>Architecture CNN RGBD</h3>
+          <h5 style="margin-bottom:0px;">Notre objectif : <span style="font-style:italic">R&M CNN</span></h5>
+          <img src="images/2_25D/r_mcnn.png" style="height: auto; width:100%" />
+      </center>
+
+      <div class="notes">
+      </div>
+    </div>
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+          <h3>Architecture CNN RGBD</h3>
+          <h5 style="margin-bottom:0px;">Notre objectif : <span style="font-style:italic">R&M CNN</span></h5>
+          <img src="images/2_25D/r_mcnn_selector.png" style="height: auto; width:100%" />
+      </center>
+
+      <div class="notes">
+      </div>
+    </div>
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+          <h3 style="margin:0px;">Architecture CNN RGBD</h3>
+          <h5 style="margin:0px;">Nos méthodes :</h5>
+          <img src="images/2_25D/archis.jpg" style="height: auto; width:50%" />
       </center>
 
       <div class="notes">
@@ -1215,7 +1560,7 @@
       <center>
         <div style="opacity:1">
           <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
-          <h6 style="margin:0px;">Détecte-moi si tu peux !</h5><br/><br/><br/>
+          <h6 style="margin:0px;">Détecte-moi si tu peux !</h5><br /><br /><br />
         </div>
       </center>
       <div style="">
@@ -1233,7 +1578,8 @@
     <!-- ######################################################################## -->
     <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        nouvelle planche vide
+        <img src="images/3_3D/ex2RGBD.png" style="height: 270px; width:405px;" />
+        <img src="images/3_3D/ex3RGBD.png" style="height: 270px; width:405px;" /><br />
       </center>
 
       <div class="notes">
@@ -1299,7 +1645,7 @@
       <center>
         <div style="opacity:1">
           <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
-          <h6 style="margin:0px;">Détecte-moi si tu peux !</h5><br/><br/><br/>
+          <h6 style="margin:0px;">Détecte-moi si tu peux !</h5><br /><br /><br />
         </div>
       </center>
       <div style="">
@@ -1658,7 +2004,112 @@
     //
     // }, false);
   </script>
+  <script>
+    $(document).ready(function() {
+      // alert("coucou")
 
+      var entries = [
+
+        // { label: 'Flashforum', url: 'http://www.flashforum.de/', target: '_top' },
+        {
+          label: 'svm_cifar10'
+        },
+        {
+          label: 'svm_cifar100'
+        },
+        {
+          label: 'svm_caltech101'
+        },
+        {
+          label: 'svm_caltech256'
+        },
+        {
+          label: 'svm_sun3d'
+        },
+        {
+          label: 'svm_mountain_forest'
+        },
+        {
+          label: 'bvlc_AlexNet'
+        },
+        {
+          label: 'bvlc_GoogleNet'
+        },
+        {
+          label: 'VGG_cnn_s'
+        },
+        {
+          label: 'SqueezeNet'
+        },
+        {
+          label: 'ln_cifar10_gs'
+        },
+        {
+          label: 'ln_cifar10_rgb'
+        },
+        {
+          label: 'an_cifar10_gs'
+        },
+        {
+          label: 'an_cifar10_rgb'
+        },
+        {
+          label: 'ln_cifar100_gs'
+        },
+        {
+          label: 'ln_caltech101_gs'
+        },
+        {
+          label: 'ln_caltech256_gs'
+        },
+        {
+          label: 'ln_sun3d_gs'
+        },
+        {
+          label: 'an_sun3d_rgb'
+        }
+
+      ];
+
+      var settings = {
+
+        entries: entries,
+        width: 700,
+        height: 500,
+        radius: '65%',
+        radiusMin: 75,
+        // bgDraw: true,
+        bgColor: '#fff',
+        // opacityOver: 1.00,
+        // opacityOut: 0.05,
+        opacitySpeed: 6,
+        fov: 800,
+        speed: 0.3,
+        // fontFamily: 'Oswald, Arial, sans-serif',
+        fontSize: '20',
+        fontColor: '#0E2A4E',
+        fontWeight: 'normal', //bold
+        fontStyle: 'normal', //italic
+        fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+        fontToUpperCase: true,
+        tooltipFontFamily: 'Oswald, Arial, sans-serif',
+        tooltipFontSize: '11',
+        tooltipFontColor: '#000',
+        tooltipFontWeight: 'bold', //bold or normal
+        tooltipFontStyle: 'normal', //italic
+        tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+        tooltipFontToUpperCase: false,
+        tooltipTextAnchor: 'left',
+        tooltipDiffX: 0,
+        tooltipDiffY: 10
+
+      };
+
+      //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+      $('#method_holder').svg3DTagCloud(settings);
+
+    });
+  </script>
   <link href="css/soutenance.css" rel="stylesheet" type="text/css" />
 </body>
 
