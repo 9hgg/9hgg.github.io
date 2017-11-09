@@ -1206,8 +1206,18 @@
     <!-- ######################################################################## -->
     <div class="step noribbon slide fade-in" style="transition-delay: 2s" data-rel-x="0" data-rel-y="1000" data-z="1000" data-rotate-x="-90" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
       <center>
-        Conclusion 2D
+        <h4>Conclusion I - Sélection d'algorithmes</h4>
+
       </center>
+      <ul>
+        <li>Le concept de réseau de confiance a du potentiel <img src="images/1_2D/rc_0.png" style="height: 50px; width:auto;" /></li>
+        <li>Deux situations :</li>
+        <ul>
+          <li>données facilement séparables (cas 1) <img src="images/1_2D/jo_oracle_tnn.png" style="height: 50px; width:auto;" /></li>
+          <li>données difficilement séparables (cas 2) <img src="images/1_2D/pipeline.png" style="height: 50px; width:auto;" /></li>
+        </ul>
+        <li> Structure DoFeaNN inadaptée <img src="images/1_2D/dofeann.png" style="height: 50px; width:auto;" /></li>
+      </ul>
       <div class="notes">
       </div>
     </div>
@@ -1409,7 +1419,8 @@
       <center>
         <h3 style="margin:0px;">Détecteur RGBD</h3>
         <h5 style="margin:0px;">Nos méthodes :</h5>
-        <img src="images/2_25D/archis.jpg" style="height: auto; width:50%" />
+        <img src="images/2_25D/archis.jpg" style="height: auto; width:70%" />
+        <img src="images/2_25D/nms.png" style="height: auto; width:300px;box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); position: absolute;bottom: 100px;left: -150px;" class="substep" />
       </center>
 
       <div class="notes">
@@ -1594,7 +1605,8 @@
         </video>
       </center>
       <blockquote class="article_blockquote">
-        <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Look At This One" Detection sharing between modality-independent classifiers for robotic discovery of people (2017)
+        <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Look At This One" Detection sharing between modality-independent classifiers for
+        robotic discovery of people (2017)
         <cite class="article_cite">Joris GUERRY, Bertrand Le Saux, David Filliat</cite>
       </blockquote>
       <div style="text-align:right;">
@@ -1716,8 +1728,8 @@
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-                <h4 style="margin:0px;">Résultats de détection multimodale</h4>
-                 <img src="images/2_25D/exemple_ux_trans.jpg" style="height: auto; width:70%" />
+        <h4 style="margin:0px;">Résultats de détection multimodale</h4>
+        <img src="images/2_25D/exemple_ux_trans.jpg" style="height: auto; width:70%" />
       </center>
 
       <div class="notes">
@@ -1729,8 +1741,14 @@
     <!-- ######################################################################## -->
     <div class="step noribbon slide fade-in" style="transition-delay: 2s" data-rel-x="0" data-rel-y="1000" data-z="1000" data-rotate-x="-90" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
       <center>
-        Conclusion 2.5D
+        <h4>Conclusion II - Détection multimodale</h4>
       </center>
+      <ul>
+        <li>trois nouvelles architectures de détection (U,X,Y) <img src="images/2_25D/archis.jpg" style="height: 50px; width:auto" /></li>
+        <li>nouvelles références sur deux jeux de données RGBD :<br />RGBD People <img src="images/2_25D/rgbdp_404.jpg" style="height: 40px; width:auto" /> & InOutDoor RGBD People<img src="images/2_25D/InOutPeople_image.png" style="height: 40px; width:auto"
+          /></li>
+        <li>création et mise à disposition d'un nouveau jeu de données RGBD complexe : ONERA.ROOM<img src="images/2_25D/orvidz.png" style="height: 50px; width:auto" /></li>
+      </ul>
       <div class="notes">
       </div>
     </div>
@@ -1796,6 +1814,7 @@
       <div class="notes">
       </div>
     </div>
+
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
@@ -1811,6 +1830,7 @@
       <div class="notes">
       </div>
     </div>
+
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
@@ -1826,47 +1846,65 @@
       <div class="notes">
       </div>
     </div>
+
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <iframe src="./3d_objects/ply_viewer.html#cag2017/00003_xyzrgb.ply" style="width:600px;height:600px;"></iframe>
+        <h3>Jeu de données : SUNRGBD<br>
+
+              <img src="images/3_3D/dataset_SUNRGBD_overview.jpg" style="height: 400px; width: auto;" />
+
+
+
+
       </center>
 
       <div class="notes">
       </div>
     </div>
 
-    <div class="step noribbon slide fade-in" style="transition-delay: 2s" data-rel-x="0" data-rel-y="1000" data-z="1000" data-rotate-x="-90" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
-      <center>
-        Conclusion 3D
-      </center>
-      <div class="notes">
-      </div>
-    </div>
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        nouvelle planche vide
+        Méthode de base : SnapNet<br>
+          <img src="images/3_3D/pipeline_snapnet.png" style="height: auto; width: 100%;" /><br />
+          <img src="images/3_3D/snapnet_structure.png" style="height: auto; width: 100%;" />
+
+              <!-- <img src="images/3_3D/dataset_SUNRGBD_overview.jpg" style="height: 400px; width: auto;" /> -->
+              <blockquote class="article_blockquote">
+                <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Unstructured point cloud semantic labeling using deep segmentation networks." Eurographics Workshop on 3D Object Retrieval (2017)                <cite class="article_cite">Boulch, Alexandre, Bertrand Le Saux, and Nicolas Audebert</cite>
+              </blockquote>
+
+
       </center>
 
       <div class="notes">
       </div>
     </div>
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
-      <center>
-        nouvelle planche vide
-      </center>
 
-      <div class="notes">
-      </div>
-    </div>
+        <!-- ######################################################################## -->
+        <!-- ######################################################################## -->
+        <!-- ######################################################################## -->
+        <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
+          <center>
+            Adaptation à la robotique : <br />SnapNet&rarr;SnapNet-R<br>
+
+                  <!-- <img src="images/3_3D/dataset_SUNRGBD_sampling.png" style="height: 400px; width: auto;" /> -->
+
+                  <img src="images/3_3D/hazirbas16fusenet.png" style="height: auto; width: 100%;" />
+                  <blockquote class="article_blockquote">
+                    <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg> "Fusenet: Incorporating depth into semantic segmentation via fusion-based cnn architecture." ACCV (2016)
+                    <cite class="article_cite">Hazirbas, Caner, et al.</cite>
+                  </blockquote>
+          </center>
+
+          <div class="notes">
+          </div>
+        </div>
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
@@ -1881,7 +1919,7 @@
 
     <div class="step noribbon slide fade-in" style="transition-delay: 2s" data-rel-x="0" data-rel-y="1000" data-z="1000" data-rotate-x="-90" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
       <center>
-        Conclusion 3D
+        <h4>Conclusion III - Segmentation multivue</h4>
       </center>
       <div class="notes">
       </div>
@@ -1892,8 +1930,24 @@
           &&&&                                                                &&&&
           &&&&                                                                &&&&
           &&&&                                                                &&&&
+          &&&&               & &                                              &&&&
+          &&&&             &     &                                            &&&&
+          &&&&             &                                                  &&&&
+          &&&&             &                                                  &&&&
+          &&&&             &                                                  &&&&
+          &&&&             &                                                  &&&&
+          &&&&             &                                                  &&&&
+          &&&&             &                                                  &&&&
+          &&&&             &     &                                            &&&&
+          &&&&               & &   ONCLUSION                                  &&&&
           &&&&                                                                &&&&
-          &&&&                        CONCLUSION                              &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
           &&&&                                                                &&&&
           &&&&                                                                &&&&
           &&&&                                                                &&&&
@@ -1905,7 +1959,7 @@
       <center>
         <div style="opacity:1">
           <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
-          <h6 style="margin:0px;">Détecte-moi si tu peux !</h5><br /><br /><br />
+        <h6 style="margin:0px;">Détecte-moi si tu peux !</h5><br /><br /><br />
         </div>
       </center>
       <div style="">
@@ -2178,8 +2232,8 @@
     var videoStep1 = document.getElementById("video-step-1");
     var detection_yolov2_007 = document.getElementById("detection_yolov2_007");
     var segmentation_segnet_road = document.getElementById("segmentation_segnet_road");
-    var videoStep2  = document.getElementById("video-step-2");
-    var video_ecmr  = document.getElementById("video_ecmr");
+    var videoStep2 = document.getElementById("video-step-2");
+    var video_ecmr = document.getElementById("video_ecmr");
     videoStep1.addEventListener("impress:stepenter", function() {
       // alert("Hello! I am an alert box!!");
       detection_yolov2_007.play();
