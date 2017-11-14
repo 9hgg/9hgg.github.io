@@ -25,7 +25,7 @@
 
 
   <div id="ribbon_question" style="width: 300px;
-    background: #c41313;
+    background: #9e0e0e;
     position: fixed;
     text-align: center;
     line-height: 50px;
@@ -35,12 +35,12 @@
     left: -65px;
     right: auto;
     transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);opacity:0;transition: 2s;z-index:10000;"><b>? - Phase de questions</b></div>
+    -webkit-transform: rotate(-45deg);opacity:0;transition: 2s;z-index:10000;"><b>&#191;&nbsp;Phase de questions&nbsp;?</b></div>
 
 
 
   <div id="ribbon_2D" style="width: 300px;
-  background: #0E2A4E;
+  background: rgb(0, 62, 145);
   position: fixed;
   text-align: center;
   line-height: 50px;
@@ -53,7 +53,7 @@
   -webkit-transform: rotate(45deg);opacity:0;transition: 2s;z-index:10000;">I - Sélection d'algorithmes</div>
 
   <div id="ribbon_25D" style="width: 300px;
-  background: #0E2A4E;
+  background: rgb(0, 62, 145);
   position: fixed;
   text-align: center;
   line-height: 50px;
@@ -66,7 +66,7 @@
   -webkit-transform: rotate(45deg);opacity:0;transition: 2s;z-index:10000;">II - Détection multimodale</div>
 
   <div id="ribbon_3D" style="width: 300px;
-  background: #0E2A4E;
+  background: rgb(0, 62, 145);
   position: fixed;
   text-align: center;
   line-height: 50px;
@@ -103,7 +103,7 @@
       &&&&                                                                &&&&
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
-    <div class="step noribbon slide" data-x="0" data-y="0">
+    <div id="start-introduction" class="step noribbon slide" data-x="0" data-y="0">
       <center>
         <h3 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
         <h5 style="margin:0px;">Détecte-moi si tu peux !</h5><br />
@@ -333,6 +333,21 @@
 
 
 
+    <!-- Problematique -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        Qu'est-ce qu'une image ?
+
+        <!-- <img class="fade-in fade-out" style="transition-delay: 2s" src="images/0_introduction/loupe.png" style="height: auto; width:auto;  position: absolute; top: -500px;" /><br /> -->
+      </center>
+
+
+    </div>
+
+
     <!-- IMAGE DE FORET -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
@@ -420,25 +435,36 @@
 
     <!-- VIDEO EXEMPLE DETECTION -->
     <div id="video-step-1" class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
-      <h3>Les tâches de la vision par ordinateur</h3>
+      <h5>Les tâches de la vision par ordinateur</h5>
       <center>
         <video id="detection_yolov2_007" style="width:45%; height:auto;" loop muted>
-          <source src="videos/detection_yolov2_007.mp4" type="video/mp4">
+          <source src="videos/yolo9000-007-object-detection-180.mp4" type="video/mp4">
         Votre navigateur ne supporte pas la balise vidéo.
         </video>
         <video id="segmentation_segnet_road" style="width:45%; height:auto;" loop muted>
             <source src="videos/segmentation_segnet_road.mp4" type="video/mp4">
           Votre navigateur ne supporte pas la balise vidéo.
           </video><br />
+        <video id="yolo-coco-object-detection-180" style="width:45%; height:auto;" loop muted>
+              <source src="videos/yolo-coco-object-detection-180.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la balise vidéo.
+            </video>
+        <video id="mask-rcnn-coco-mask" style="width:45%; height:auto;" loop muted>
+                <source src="videos/mask-rcnn-coco-mask.mp4" type="video/mp4">
+              Votre navigateur ne supporte pas la balise vidéo.
+              </video><br />
       </center>
       <blockquote class="article_blockquote">
         <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"YOLO9000: better, faster, stronger." (2016)
-        <cite class="article_cite">Joseph Redmon and Ali Farhadi</cite>
+        <cite class="article_cite">Redmon and Farhadi</cite>
       </blockquote>
       <blockquote class="article_blockquote">
-        <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Segnet: A deep convolutional encoder-decoder architecture for image segmentation."
-        (2015)
+        <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Segnet: A deep conv. encoder-decoder architecture for image segmentation." (2015)
         <cite class="article_cite">Badrinarayanan, Kendall and Cipolla</cite>
+      </blockquote>
+      <blockquote class="article_blockquote">
+        <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Mask r-cnn." (2017)
+        <cite class="article_cite">He, Gkioxari, Doll&aeacute;r and Girshick</cite>
       </blockquote>
       <div style="text-align:right;">
         <button onclick='ex1_play()' class="button button_blue">Lecture</button>
@@ -472,42 +498,62 @@
         </p>
       </div>
     </div>
+
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <div class="step noribbon" data-rel-x="0" data-rel-y="0" data-rel-z="-1500">
-      <img src="images/0_introduction/blackbox/open_blackbox.png" class="fade-in" style="transition: 1s;height: auto; width:100%;" /><br />
+      <img src="images/0_introduction/blackbox/features_0.png" style="height: auto; width:100%;position:absolute;top:-200px" />
+      <img src="images/0_introduction/blackbox/features_1.png" style="height: auto; width:100%;position:absolute;top:-200px;" class="substep"/>
+      <img src="images/0_introduction/blackbox/features_2.png" style="height: auto; width:100%;position:absolute;top:-200px;" class="substep"/>
+      <img src="images/0_introduction/blackbox/features_3.png" style="height: auto; width:100%;position:absolute;top:-200px;" class="substep"/>
+      <img src="images/0_introduction/blackbox/features_4.png" style="height: auto; width:100%;position:absolute;top:-200px;" class="substep"/>
+      <img src="images/0_introduction/blackbox/features_5.png" style="height: auto; width:100%;position:absolute;top:-200px;" class="substep"/>
+      <img src="images/0_introduction/blackbox/features_6.png" style="height: auto; width:100%;position:absolute;top:-200px;" class="substep"/>
+      <img src="images/0_introduction/blackbox/features_7.png" style="height: auto; width:100%;position:absolute;top:-200px;" class="substep"/>
+      <img src="images/0_introduction/blackbox/features_8.png" style="height: auto; width:100%;position:absolute;top:-200px;" class="substep"/>
+      <img src="images/0_introduction/blackbox/features_9.png" style="height: auto; width:100%;position:absolute;top:-200px;" class="substep"/>
+      <img src="images/0_introduction/blackbox/features_10.png" style="height: auto; width:100%;position:absolute;top:-200px;" class="substep"/>
+      <img src="images/0_introduction/blackbox/features_11.png" style="height: auto; width:100%;position:absolute;top:-200px;" class="substep"/>
+      <img src="images/0_introduction/blackbox/features_12.png" style="height: auto; width:100%;position:absolute;top:-200px;" class="substep"/>
+      <img src="images/0_introduction/blackbox/features_13.png" style="height: auto; width:100%;position:absolute;top:-200px;" class="substep"/>
     </div>
-
-
 
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
-      <center>
-        <h3>Descripteurs et classification</h3>
-        <!-- formalisme de Lecun -->
+      mais un robot ca galere parce que ci parce que ça notamment GPU, besoin critique blablabla
+    </div>
 
-        <!-- <blockquote class="article_blockquote">
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        <h3>Descripteurs et classification</h3> -->
+    <!-- formalisme de Lecun -->
+
+    <!-- <blockquote class="article_blockquote">
           <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Sketchable histograms of oriented gradients for object detection." ICPR 2012.
           Springer Berlin Heidelberg,
           <cite class="article_cite">Zaytseva, Ekaterina, Santi Seguí, and Jordi Vitria. </cite>
         </blockquote> -->
 
-        <img src="images/0_introduction/lecun_level.png" style="height: auto; width:80%; position: relative;top: 20px;left: 00px;" />
+    <!-- <img src="images/0_introduction/lecun_level.png" style="height: auto; width:80%; position: relative;top: 20px;left: 00px;" />
         <img src="images/0_introduction/lecun.jpg" style="height: auto; width:300px;box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); position: absolute;top: 200px;left: 130px;" />
       </center>
 
       <div class="notes">
 
       </div>
-    </div>
+    </div> -->
 
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <!-- <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h3>L'apprentissage profond</h3>
         <div style="font-size: 15px;">
@@ -526,7 +572,7 @@
             <cite class="article_cite">Pr Jürgen Brauer</cite>
           </blockquote>
 
-          <!-- Présenter rapidement les CNNs. Utiliser l'idée de changement d'espace de représentation pour expliquer le rôle de chaque couche. -->
+
         </div>
 
       </center>
@@ -534,7 +580,7 @@
       <div class="notes">
         cnn-> decoupler l'information exemple de jouer pour enfant avec le cube dans le carré
       </div>
-    </div>
+    </div> -->
 
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
@@ -554,7 +600,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <!-- <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h3 style="margin-bottom:-18px;">L'apprentissage profond</h3>
 
@@ -593,28 +639,33 @@
       <div class="notes">
 
       </div>
-    </div>
+    </div> -->
 
 
 
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <!-- <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h3>L'apprentissage profond</h3>
       </center>
-      <img src="images/0_introduction/cnn/layer123_cnnvis.png" style="height: 85%; width:auto; position: relative;top: 0px;left: 0px; top:0px; padding:0px;" />
+      <img src="images/0_introduction/cnn/layer123_cnnvis.png" style="height: auto; width:50%;" />
+      <blockquote class="article_blockquote">
+        <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg> "Visualizing and understanding convolutional networks." ECCV 2014
+        <cite class="article_cite">Matthew D. Zeiler and Rob Fergus.</cite>
+      </blockquote>
       <div class="notes">
 
       </div>
-    </div>
+    </div> -->
 
 
+
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <!-- <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h3 style="margin-bottom:0px;">L'apprentissage profond</h3>
         <img src="images/0_introduction/cnn/backprop.gif" style="height: auto; width:50%; position: relative;top: 0px;left: 0px;" /> <span style="font-size:20px;position:relative;top:-110px;">Rétropropagation du gradient</span><br />
@@ -622,12 +673,12 @@
       </center>
       <blockquote class="article_blockquote">
         <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>http://xxii.fr
-        <!-- <cite class="article_cite"></cite> -->
+        <cite class="article_cite"></cite>
       </blockquote>
       <div class="notes">
 
       </div>
-    </div>
+    </div> -->
 
 
     <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -699,7 +750,7 @@
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 
-    <div class="step noribbon slide" data-x="7500" data-y="0" data-z="0" data-transition-duration="3000">
+    <div id="start-2D" class="step noribbon slide" data-x="7500" data-y="0" data-z="0" data-transition-duration="3000">
       <center>
         <div style="opacity:1">
           <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
@@ -782,16 +833,17 @@
     <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         Méthodes :<br />
-        <table style="text-align:center">
-          <tr>
-            <td><img src="images/1_2D/min_lenet.png" style="height: 500px; width:auto;" /> </td>
-            <td><img src="images/1_2D/min_alexnet.png" style="height: 500px; width:auto;" /></td>
-          </tr>
-          <tr>
-            <td> <span style="font-size:20px">LeNet (<svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>1998 LeCun) &</span></td>
-            <td> <span style="font-size:20px">AlexNet (<svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>2012 Krizhevsky)</span></td>
-          </tr>
-        </table>
+        <span style="font-size:20px">LeNet (<svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>1998 LeCun) &</span><br />
+        <img src="images/1_2D/lenet.png" style="height: 60px; width:auto" /><br />
+
+
+        <span style="font-size:20px">AlexNet (<svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>2012 Krizhevsky)</span>
+        <img src="images/1_2D/alexnet.png" style="height: 60px; width:auto" /><br />
+
+
+
+
+
 
 
 
@@ -1113,7 +1165,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <!-- <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h3>Cas applicatif n°2</h3>
         <img src="images/1_2D/pipeline.png" style="height: auto; width:100%;" />
@@ -1121,7 +1173,7 @@
 
       <div class="notes">
       </div>
-    </div>
+    </div> -->
 
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
@@ -1174,16 +1226,16 @@
           </tr>
           <tr style="border-bottom: 1px solid black">
             <td>
-              <hr /> Oracle
-              <hr />
+              Oracle
+
             </td>
             <td>
-              <hr /> 93,2
-              <hr />
+              93,2
+
             </td>
             <td>
-              <hr /> 476,43 s
-              <hr />
+              476,43 s
+
             </td>
 
           </tr>
@@ -1263,7 +1315,7 @@
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 
-    <div class="step noribbon slide" data-x="10000" data-y="0" data-z="0" data-transition-duration="3000">
+    <div id="start-25D" class="step noribbon slide" data-x="10000" data-y="0" data-z="0" data-transition-duration="3000">
       <center>
         <div style="opacity:1">
           <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
@@ -1323,7 +1375,7 @@
         <blockquote class="article_blockquote">
           <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Choosing smartly: Adaptive multimodal fusion for object detection in changing
           environments." IROS (2016)
-          <cite class="article_cite">Mees, Oier, Andreas Eitel, and Wolfram Burgard</cite>
+          <cite class="article_cite">Oier Mees, Andreas Eitel, and Wolfram Burgard</cite>
         </blockquote>
 
 
@@ -1343,7 +1395,7 @@
         <blockquote class="article_blockquote">
           <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Choosing smartly: Adaptive multimodal fusion for object detection in changing
           environments." IROS (2016)
-          <cite class="article_cite">Mees, Oier, Andreas Eitel, and Wolfram Burgard</cite>
+          <cite class="article_cite">Oier Mees, Andreas Eitel, and Wolfram Burgard</cite>
         </blockquote>
 
 
@@ -1497,92 +1549,92 @@
           <tr>
             <th> Méthode </th>
             <th> Source </th>
-            <th> Précision/Rappel </th>
+            <!-- <th> Précision/Rappel </th> -->
             <th> PM </th>
             <th> EER </th>
-            <th> mIoU </th>
-            <th> F1 </th>
+            <!-- <th> mIoU </th> -->
+            <!-- <th> F1 </th> -->
           </tr>
           <tr>
             <td> Gating Net, MEES et al, [2016] </td>
             <td> RGB-D </td>
-            <td> –/81,1 </td>
+            <!-- <td> –/81,1 </td> -->
             <td> 80,4 </td>
             <td> – </td>
-            <td> – </td>
-            <td> – </td>
+            <!-- <td> – </td> -->
+            <!-- <td> – </td> -->
           </tr>
           <tr>
             <td> Faster RCNN (Ren et al. 2015) </td>
             <td> RGB </td>
-            <td> <b>73,2</b>/94,2 </td>
+            <!-- <td> <b>73,2</b>/94,2 </td> -->
             <td> 91,9 </td>
             <td> 90,1 </td>
-            <td> <b>80,3</b> </td>
-            <td> <b>82,4</b> </td>
+            <!-- <td> <b>80,3</b> </td> -->
+            <!-- <td> <b>82,4</b> </td> -->
           </tr>
           <tr>
             <td> Faster RCNN (Ren et al. 2015) </td>
             <td> D </td>
-            <td> 46,9/85,9 </td>
+            <!-- <td> 46,9/85,9 </td> -->
             <td> 84 </td>
             <td> 84,8 </td>
-            <td> 79,4 </td>
-            <td> 60,7 </td>
+            <!-- <td> 79,4 </td> -->
+            <!-- <td> 60,7 </td> -->
           </tr>
           <tr>
             <td> U </td>
             <td> RGB-D </td>
-            <td> 45,6/96,4 </td>
+            <!-- <td> 45,6/96,4 </td> -->
             <td> <b>94,4</b> </td>
             <td> 92,1 </td>
-            <td> <b>80,3</b> </td>
-            <td> 61,9 </td>
+            <!-- <td> <b>80,3</b> </td> -->
+            <!-- <td> 61,9 </td> -->
           </tr>
           <tr>
             <td> X </td>
             <td> RGB-D </td>
-            <td> 43,5/<b>96,5</b> </td>
+            <!-- <td> 43,5/<b>96,5</b> </td> -->
             <td> 94,3 </td>
             <td> <b>92,4</b> </td>
-            <td> 79,9 </td>
-            <td> 60 </td>
+            <!-- <td> 79,9 </td> -->
+            <!-- <td> 60 </td> -->
           </tr>
           <tr>
             <td> Y </td>
             <td> RGB-D </td>
-            <td> 59,4/93,3 </td>
+            <!-- <td> 59,4/93,3 </td> -->
             <td> 90,2 </td>
             <td> 90,1 </td>
-            <td> 80,2 </td>
-            <td> 72,6 </td>
+            <!-- <td> 80,2 </td> -->
+            <!-- <td> 72,6 </td> -->
           </tr>
           <tr>
             <td> U* </td>
             <td> <span style="background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);">RGB</span>-D </td>
-            <td> 46,9/85,9 </td>
+            <!-- <td> 46,9/85,9 </td> -->
             <td> 84 </td>
             <td> 84,8 </td>
-            <td> 79,4 </td>
-            <td> 60,7 </td>
+            <!-- <td> 79,4 </td> -->
+            <!-- <td> 60,7 </td> -->
           </tr>
           <tr>
             <td> X* </td>
             <td> <span style="background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);">RGB</span>-D </td>
-            <td> 45,9/85,9 </td>
+            <!-- <td> 45,9/85,9 </td> -->
             <td> 84,1 </td>
             <td> 84,8 </td>
-            <td> 79,4 </td>
-            <td> 59,9 </td>
+            <!-- <td> 79,4 </td> -->
+            <!-- <td> 59,9 </td> -->
           </tr>
           <tr>
             <td> Y* </td>
             <td> <span style="background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);">RGB</span>-D </td>
-            <td> n.a/0 </td>
+            <!-- <td> n.a/0 </td> -->
             <td> n.a </td>
             <td> n.a </td>
-            <td> 0 </td>
-            <td> n.a </td>
+            <!-- <td> 0 </td> -->
+            <!-- <td> n.a </td> -->
           </tr>
         </table>
       </center>
@@ -1606,7 +1658,7 @@
       <blockquote class="article_blockquote">
         <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Look At This One" Detection sharing between modality-independent classifiers for
         robotic discovery of people (2017)
-        <cite class="article_cite">Joris GUERRY, Bertrand Le Saux, David Filliat</cite>
+        <cite class="article_cite">Joris Guerry, Bertrand Le Saux et David Filliat</cite>
       </blockquote>
       <div style="text-align:right;">
         <button onclick='ex2_play()' class="button button_blue">Lecture</button>
@@ -1629,92 +1681,83 @@
           <tr>
             <th> Méthode </th>
             <th> Source </th>
-            <th> Précision/Rappel </th>
+            <!-- <th> Précision/Rappel </th> -->
             <th> PM </th>
             <th> EER </th>
-            <th> mIoU </th>
-            <th> F1 </th>
+            <!-- <th> mIoU </th> -->
+            <!-- <th> F1 </th> -->
           </tr>
           <tr>
             <td> Faster RCNN (Ren et al. 2015) </td>
             <td> RGB </td>
-            <td> 61,0/96,1 </td>
+            <!-- <td> 61,0/96,1 </td> -->
             <td> 91,2 </td>
             <th> 91 </th>
-            <th> 72,8 </th>
-            <td> 74,6 </td>
+            <!-- <th> 72,8 </th> -->
+            <!-- <td> 74,6 </td> -->
           </tr>
           <tr>
             <td> Faster RCNN (Ren et al. 2015) </td>
             <td> Depth </td>
-            <td> 25,6/76,9 </td>
+            <!-- <td> 25,6/76,9 </td> -->
             <td> 66,9 </td>
             <td> 68,3 </td>
-            <td> 65,3 </td>
-            <td> 38,5 </td>
+            <!-- <td> 65,3 </td> -->
+            <!-- <td> 38,5 </td> -->
           </tr>
           <tr>
             <td> U </td>
             <td> RGB-D </td>
-            <td> 26,7/95,8 </td>
+            <!-- <td> 26,7/95,8 </td> -->
             <td> 90,6 </td>
             <td> 88 </td>
-            <td> 71,1 </td>
-            <td> 41,8 </td>
+            <!-- <td> 71,1 </td> -->
+            <!-- <td> 41,8 </td> -->
           </tr>
           <tr>
             <td> X </td>
             <td> RGB-D </td>
-            <td> 25,7/<b>96,6</b> </td>
+            <!-- <td> 25,7/<b>96,6</b> </td> -->
             <th> 91,3 </th>
             <td> 89,1 </td>
-            <td> 71,7 </td>
-            <td> 40,7 </td>
+            <!-- <td> 71,7 </td> -->
+            <!-- <td> 40,7 </td> -->
           </tr>
           <tr>
             <td> Y </td>
             <td> RGB-D </td>
-            <td> <b>81,1</b>/92,1 </td>
+            <!-- <td> <b>81,1</b>/92,1 </td> -->
             <td> 87,1 </td>
             <td> 90,3 </td>
-            <td> 71,7 </td>
-            <th> 86,3 </th>
+            <!-- <td> 71,7 </td> -->
+            <!-- <th> 86,3 </th> -->
           </tr>
           <tr>
             <td> U* </td>
             <td> RGB-D </td>
-            <td> 18,2/78,3 </td>
+            <!-- <td> 18,2/78,3 </td> -->
             <td> 67 </td>
             <td> 68,3 </td>
-            <td> 65,3 </td>
-            <td> 29,5 </td>
+            <!-- <td> 65,3 </td> -->
+            <!-- <td> 29,5 </td> -->
           </tr>
           <tr>
             <td> X* </td>
             <td> RGB-D </td>
-            <td> 25,0/77,0 </td>
+            <!-- <td> 25,0/77,0 </td> -->
             <td> 66,7 </td>
             <td> 68,1 </td>
-            <td> 65,3 </td>
-            <td> 37,8 </td>
+            <!-- <td> 65,3 </td> -->
+            <!-- <td> 37,8 </td> -->
           </tr>
           <tr>
             <td> Y* </td>
             <td> RGB-D </td>
-            <td> n.a/0 </td>
+            <!-- <td> n.a/0 </td> -->
             <td> n.a </td>
             <td> n.a </td>
-            <td> 0 </td>
-            <td> n.a </td>
-          </tr>
-          <tr>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
+            <!-- <td> 0 </td> -->
+            <!-- <td> n.a </td> -->
           </tr>
         </table>
       </center>
@@ -1796,7 +1839,7 @@
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
       &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 
-    <div class="step noribbon slide" data-x="12500" data-y="0" data-z="0" data-transition-duration="3000">
+    <div id="start-3D" class="step noribbon slide" data-x="12500" data-y="0" data-z="0" data-transition-duration="3000">
       <center>
         <div style="opacity:1">
           <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
@@ -1875,7 +1918,7 @@
 
               <!-- <img src="images/3_3D/dataset_SUNRGBD_overview.jpg" style="height: 400px; width: auto;" /> -->
               <blockquote class="article_blockquote">
-                <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Unstructured point cloud semantic labeling using deep segmentation networks." Eurographics Workshop on 3D Object Retrieval (2017)                <cite class="article_cite">Boulch, Alexandre, Bertrand Le Saux, and Nicolas Audebert</cite>
+                <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Unstructured point cloud semantic labeling using deep segmentation networks." Eurographics Workshop on 3D Object Retrieval (2017)                <cite class="article_cite">Alexandre Boulch, Bertrand Le Saux and Nicolas Audebert</cite>
               </blockquote>
 
 
@@ -1961,261 +2004,271 @@
                     <h3 style="margin:0px;">Résultats</h3>
         <h5 style="margin:0px;">Jeu de données : <span style="font-style:italic">SUNRGBD 37</span> classes</h5>
         <!-- <img src="images/2_25D/InOutPeople_image.png" style="height: auto; width:80%" /> -->
-        <table style="font-size:17px;text-align:center;">
+        <style>
+          .results {
+            border: 1px solid rgba(14, 42, 78, .5);
+            padding: 5px;
+            text-align: center;
+          }
+        </style>
+        <table style="font-size:17px;border-collapse:collapse;">
+          <!--text-align:center;border:1px solid black">-->
           <tr>
-            <th> Expérience
-              <hr /> </th>
-            <th> Source
-              <hr />
+            <th class="results"> Expérience
             </th>
-            <th colspan="2"> Entraînement
-              <hr />
+            <th class="results"> Source
+
+            </th>
+            <!-- <th colspan="2"> Entraînement
+
             </th>
             <th colspan="2"> Test
-              <hr />
+
+            </th> -->
+            <th class="results"> Précision
             </th>
-            <th> P
-              <hr /> </th>
-            <th> PM
-              <hr /> </th>
-            <th> mIoU
-              <hr />
+            <th class="results"> Précision Moyenne
+            </th>
+            <th class="results"> IoU moyen
+
             </th>
           </tr>
           <tr>
-            <td> LSTM-CF (LI et al, 2016) </td>
-            <td> (RGB) </td>
-            <td> pré proc. </td>
-            <td> augm. </td>
-            <td> pré proc. </td>
-            <td> augm. </td>
-            <td> – </td>
-            <td> 48,1 </td>
-            <td> – </td>
+            <td class="results"> LSTM-CF [Li et al, 2016] </td>
+            <td class="results"> RGB </td>
+            <!-- <td class="results"> pré proc. </td>
+            <td class="results"> augm. </td>
+            <td class="results"> pré proc. </td>
+            <td class="results"> augm. </td> -->
+            <td class="results"> – </td>
+            <td class="results"> 48,1 </td>
+            <td class="results"> – </td>
           </tr>
           <tr>
-            <td> FCN 8s (LONG et al, 2015) </td>
-            <td> (RGB) </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> 68,2 </td>
-            <td> 38,4 </td>
-            <td> 27,4 </td>
+            <td class="results"> FCN 8s [Long et al, 2015] </td>
+            <td class="results"> RGB </td>
+            <!-- <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> </td> -->
+            <td class="results"> 68,2 </td>
+            <td class="results"> 38,4 </td>
+            <td class="results"> 27,4 </td>
           </tr>
           <tr>
-            <td> Bayesian SegNet (KENDALL et al, 2015) </td>
-            <td> (RGB) </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> 71,2 </td>
-            <td> 45,9 </td>
-            <td> 30,7 </td>
+            <td class="results"> Bayesian SegNet [Kendall et al, 2015] </td>
+            <td class="results"> RGB </td>
+            <!-- <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> </td> -->
+            <td class="results"> 71,2 </td>
+            <td class="results"> 45,9 </td>
+            <td class="results"> 30,7 </td>
           </tr>
           <tr>
-            <td> Context-CRF (LIN et al, 2017) </td>
-            <td> (RGB-D) </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> 78,4 </td>
-            <td> 53,4 </td>
-            <td> 42,3 </td>
+            <td class="results"> Context-CRF [Lin et al, 2017] </td>
+            <td class="results"> RGB-D </td>
+            <!-- <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> </td> -->
+            <td class="results"> <b>78,4</b> </td>
+            <td class="results"> 53,4 </td>
+            <td class="results"> <b>42,3</b> </td>
           </tr>
           <tr>
-            <td> *FuseNet SF5 (HAZIRBAS et al, 2016) </td>
-            <td> (RGB-D) </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> 76,3 </td>
-            <td> 48,3 </td>
-            <td> 37,3 </td>
-          </tr>
-          <tr>
-            <td> DFCN-DCRF (JIANG et al, 2017)
-              <hr /> </td>
-            <td> (RGB-D)
-              <hr /> </td>
-            <td>&nbsp;
-              <hr />
+            <td class="results"> DFCN-DCRF [Jiang et al, 2017]
             </td>
-            <td> &nbsp;
-              <hr />
+            <td class="results"> RGB-D
             </td>
-            <td>&nbsp;
-              <hr />
+            <!-- <td class="results">&nbsp;
+
             </td>
-            <td>&nbsp;
-              <hr />
+            <td class="results"> &nbsp;
+
             </td>
-            <td> 76,6
-              <hr />
+            <td class="results">&nbsp;
+
             </td>
-            <td> 50,6
-              <hr />
+            <td class="results">&nbsp;
+
+            </td> -->
+            <td class="results"> 76,6
+
             </td>
-            <td> 39,3
-              <hr />
+            <td class="results"> 50,6
+
+            </td>
+            <td class="results"> 39,3
+
             </td>
           </tr>
+
           <tr>
-            <td> *1 FuseNet SF5 </td>
-            <td> (RGB-D) </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> 76,88 </td>
-            <td> 52,61 </td>
-            <td> 39,17 </td>
+            <td class="results"> FuseNet SF5 [Hazirbas et al, 2016] </td>
+            <td class="results"> RGB-D </td>
+            <!-- <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> </td> -->
+            <td class="results"> 76,3 </td>
+            <td class="results"> 48,3 </td>
+            <td class="results"> 37,3 </td>
+          </tr>
+          <!-- <tr>
+            <td class="results"> *1 FuseNet SF5 </td>
+            <td class="results"> RGB-D </td>
+            <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> 76,88 </td>
+            <td class="results"> 52,61 </td>
+            <td class="results"> 39,17 </td>
           </tr>
           <tr>
-            <td> 1 FuseNet SF5 </td>
-            <td> (RGB-D) </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> 77,21 </td>
-            <td> 54,81 </td>
-            <td> 39,11 </td>
+            <td class="results"> 1 FuseNet SF5 </td>
+            <td class="results"> RGB-D </td>
+            <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> 77,21 </td>
+            <td class="results"> 54,81 </td>
+            <td class="results"> 39,11 </td>
           </tr>
           <tr>
-            <td> 2 </td>
-            <td> (RGB-D) </td>
-            <td> </td>
-            <td> </td>
-            <td> y </td>
-            <td> </td>
-            <td> 74,87 </td>
-            <td> 52,47 </td>
-            <td> 36,68 </td>
+            <td class="results"> 2 </td>
+            <td class="results"> RGB-D </td>
+            <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> y </td>
+            <td class="results"> </td>
+            <td class="results"> 74,87 </td>
+            <td class="results"> 52,47 </td>
+            <td class="results"> 36,68 </td>
           </tr>
           <tr>
-            <td> 3 </td>
-            <td> (RGB-D) </td>
-            <td> </td>
-            <td> </td>
-            <td> y </td>
-            <td> y </td>
-            <td> 72,52 </td>
-            <td> 53,27 </td>
-            <td> 33,89 </td>
+            <td class="results"> 3 </td>
+            <td class="results"> RGB-D </td>
+            <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> y </td>
+            <td class="results"> y </td>
+            <td class="results"> 72,52 </td>
+            <td class="results"> 53,27 </td>
+            <td class="results"> 33,89 </td>
           </tr>
           <tr>
-            <td> 4 </td>
-            <td> (RGB-D) </td>
-            <td> y </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> 72,81 </td>
-            <td> 52,02 </td>
-            <td> 34,32 </td>
+            <td class="results"> 4 </td>
+            <td class="results"> RGB-D </td>
+            <td class="results"> y </td>
+            <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> 72,81 </td>
+            <td class="results"> 52,02 </td>
+            <td class="results"> 34,32 </td>
           </tr>
           <tr>
-            <td> 5 </td>
-            <td> (RGB-D) </td>
-            <td> y </td>
-            <td> </td>
-            <td> y </td>
-            <td> </td>
-            <td> 77,2 </td>
-            <td> 55,03 </td>
-            <td> 39,33 </td>
+            <td class="results"> 5 </td>
+            <td class="results"> RGB-D </td>
+            <td class="results"> y </td>
+            <td class="results"> </td>
+            <td class="results"> y </td>
+            <td class="results"> </td>
+            <td class="results"> 77,2 </td>
+            <td class="results"> 55,03 </td>
+            <td class="results"> 39,33 </td>
           </tr>
           <tr>
-            <td> 6 </td>
-            <td> (RGB-D) </td>
-            <td> y </td>
-            <td> </td>
-            <td> y </td>
-            <td> y </td>
-            <td> 70,25 </td>
-            <td> 56,87 </td>
-            <td> 30,32 </td>
+            <td class="results"> 6 </td>
+            <td class="results"> RGB-D </td>
+            <td class="results"> y </td>
+            <td class="results"> </td>
+            <td class="results"> y </td>
+            <td class="results"> y </td>
+            <td class="results"> 70,25 </td>
+            <td class="results"> 56,87 </td>
+            <td class="results"> 30,32 </td>
           </tr>
           <tr>
-            <td> 7 </td>
-            <td> (RGB-D) </td>
-            <td> y </td>
-            <td> y </td>
-            <td> </td>
-            <td> </td>
-            <td> 75,51 </td>
-            <td> 53,71 </td>
-            <td> 36,65 </td>
+            <td class="results"> 7 </td>
+            <td class="results"> RGB-D </td>
+            <td class="results"> y </td>
+            <td class="results"> y </td>
+            <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> 75,51 </td>
+            <td class="results"> 53,71 </td>
+            <td class="results"> 36,65 </td>
           </tr>
           <tr>
-            <td> 8 </td>
-            <td> (RGB-D) </td>
-            <td> y </td>
-            <td> y </td>
-            <td> y </td>
-            <td> </td>
-            <td> 77,57 </td>
-            <td> 56,7 </td>
-            <td> 38,83 </td>
-          </tr>
+            <td class="results"> 8 </td>
+            <td class="results"> RGB-D </td>
+            <td class="results"> y </td>
+            <td class="results"> y </td>
+            <td class="results"> y </td>
+            <td class="results"> </td>
+            <td class="results"> 77,57 </td>
+            <td class="results"> 56,7 </td>
+            <td class="results"> 38,83 </td>
+          </tr> -->
           <tr>
-            <td> 9 SnapNet-R
-              <hr />
+            <td class="results"> SnapNet-R
+
             </td>
-            <td> (RGB-D)
-              <hr />
+            <td class="results"> RGB-D
+
             </td>
-            <td> y
-              <hr />
+            <!-- <td class="results"> y
+
             </td>
-            <td> y
-              <hr />
+            <td class="results"> y
+
             </td>
-            <td> y
-              <hr />
+            <td class="results"> y
+
             </td>
-            <td> y
-              <hr />
+            <td class="results"> y
+
+            </td> -->
+            <td class="results"> 78,04
+
             </td>
-            <td> 78,04
-              <hr />
+            <td class="results"> <b>58,13</b>
+
             </td>
-            <td> 58,13
-              <hr />
+            <td class="results"> 39,61
+
             </td>
-            <td> 39,61
-              <hr />
-            </td>
+          </tr>
+          <!-- <tr>
+            <td class="results"> 10** FusetNet SF5 (HD) </td>
+            <td class="results"> RGB-D </td>
+            <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> </td>
+            <td class="results"> 71,44 </td>
+            <td class="results"> 45,97 </td>
+            <td class="results"> 29,74 </td>
           </tr>
           <tr>
-            <td> 10** FusetNet SF5 (HD) </td>
-            <td> (RGB-D) </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> 71,44 </td>
-            <td> 45,97 </td>
-            <td> 29,74 </td>
-          </tr>
-          <tr>
-            <td> 11** SnapNet-R (HD) </td>
-            <td> (RGB-D) </td>
-            <td> y </td>
-            <td> y </td>
-            <td> y </td>
-            <td> y </td>
-            <td> 73,55 </td>
-            <td> 50,07 </td>
-            <td> 33,46 </td>
-          </tr>
+            <td class="results"> 11** SnapNet-R (HD) </td>
+            <td class="results"> RGB-D </td>
+            <td class="results"> y </td>
+            <td class="results"> y </td>
+            <td class="results"> y </td>
+            <td class="results"> y </td>
+            <td class="results"> 73,55 </td>
+            <td class="results"> 50,07 </td>
+            <td class="results"> 33,46 </td>
+          </tr> -->
         </table>
       </center>
+
 
       <div class="notes">
       </div>
@@ -2273,12 +2326,14 @@
           &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
           &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 
-    <div class="step slide noribbon" data-x="15000" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
+    <div id="start-conclusion" class="step slide noribbon" data-x="15000" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
       <center>
-        <div style="opacity:1">
-          <h5 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
-        <h6 style="margin:0px;">Détecte-moi si tu peux !</h5><br /><br /><br />
+
+        <div style="opacity:0.5">
+          <h6 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
+        <span style="font-size:15px;font-style:italic">Détecte-moi si tu peux !</span>
         </div>
+        <h3>Conclusion</h3>
       </center>
       <div style="">
         <ol type="I" style="display:table; margin:auto;">
@@ -2416,49 +2471,13 @@
       </style>
     </div>
 
-
-
-
-
-
     <div class="step slide noribbon" data-rel-x="0" data-rel-y="1000">
       <center>
-        <!-- <div style="
-                position: relative;
-                width: 270px;
-                padding: 50px 40px;
-                margin: 1em auto 80px;
-                text-align: center;
-                color: #fff;
-                background: #075698;
-                background: -webkit-gradient(linear, 0 0, 0 100%, from(#2e88c4), to(#075698));
-                background: -moz-linear-gradient(#2e88c4, #075698);
-                background: -o-linear-gradient(#2e88c4, #075698);
-                background: linear-gradient(#2e88c4, #075698);
-                background-image: linear-gradient(rgb(46, 136, 196), rgb(7, 86, 152));
-                background-position-x: initial;
-                background-position-y: initial;
-                background-size: initial;
-                background-repeat-x: initial;
-                background-repeat-y: initial;
-                background-attachment: initial;
-                background-origin: initial;
-                background-clip: initial;
-                background-color: initial;
-                -webkit-border-top-left-radius: 220px 120px;
-                -webkit-border-top-right-radius: 220px 120px;
-                -webkit-border-bottom-right-radius: 220px 120px;
-                -webkit-border-bottom-left-radius: 220px 120px;
-                -moz-border-radius: 220px / 120px;
-                border-radius: 220px / 120px;">2D</div> -->
-
-
         <h3>Conclusion</h3>
         <table>
-
           <tr>
-            <td><span style="position:relative;top:0px">1&nbsp;&nbsp;&nbsp;</span></td>
-            <td><img src="images/1_2D/pipeline.png" style="height: 150px; width: auto;" /><br /></td>
+            <td style="text-align:center;padding-right:20px;"><span style="position:relative;top:0px;font-size:40px;">I</span></td>
+            <td><img src="images/4_conclusion/2_1_2D.png" style="height: 150px; width: auto;" /><br /></td>
             <td>
               <ul style="font-size:20px">
                 <li>Concept de Réseau de Confiance</li>
@@ -2468,8 +2487,8 @@
             </td>
           </tr>
           <tr>
-            <td><span style="position:relative;top:0px">2&nbsp;&nbsp;&nbsp;</span></td>
-            <td><img src="images/2_25D/archix.jpg" style="height: 150px; width: auto;" /><br /></td>
+            <td style="text-align:center;padding-right:20px;"><span style="position:relative;top:0px;font-size:40px;">II</span></td>
+            <td><img src="images/4_conclusion/2_2_25D.png" style="height: 150px; width: auto;" /><br /></td>
             <td>
               <ul style="font-size:20px">
                 <li>Nouvelles architectures multimodales</li>
@@ -2477,21 +2496,17 @@
                 <li>Nouvelles références de détection RGBD</li>
               </ul>
             </td>
-
           </tr>
           <tr>
-            <td><span style="position:relative;top:0px">3&nbsp;&nbsp;&nbsp;</span></td>
-            <td><img src="images/3_3D/snapnet_r_pipeline.png" style="height: 150px; width: auto;" /></td>
+            <td style="text-align:center;padding-right:20px;"><span style="position:relative;top:0px;font-size:40px;">III</span></td>
+            <td><img src="images/4_conclusion/2_3_3D.png" style="height: 150px; width: auto;" /></td>
             <td>
               <ul style="font-size:20px">
                 <li>Adaptation d'une méthode multivue 3D</li>
                 <li>Nouvelles références de segmentation RGBD</li>
-
               </ul>
             </td>
-
           </tr>
-
         </table>
       </center>
       <div class="notes">
@@ -2508,11 +2523,14 @@
         <li>Unifier les différentes contributions</li>
         <ul>
           <li>Intégrer la fusion en X dans SnapNet-R</li>
-          <li>Intégrer le réseau de confiance dans la fusion en X</li>
         </ul>
         <li>SnapNet-R "<span style="font-style:italic;">Scene-aware</span>"</li>
-        <li>Apprentissage profond bayésien</li>
-        <li>Réseaux de neurones binaires</li>
+        <li>Intégration robotique</li>
+        <ul>
+          <li>Réseaux de neurones binaires</li>
+          <li>Prise en compte de l'aspect temporel</li>
+          <li>Apprentissage profond bayésien</li>
+        </ul>
       </ul>
 
       <div class="notes">
@@ -2538,6 +2556,42 @@
     <!-- <div id="overview" class="step noribbon" data-x="5000" data-y="6000" data-z="-2000" data-scale="10" data-rotate-x="-60" data-rotate-y="-20" data-rotate-z="10" data-transition-duration="3000" style="pointer-events: none;"> </div> -->
     <div id="overview" class="step noribbon" data-x="8500" data-y="10000" data-z="-2000" data-scale="11" data-rotate-x="-62" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000" style="pointer-events: none;"> </div>
     <!-- <div id="overview" class="step noribbon" data-x="7500" data-y="10000" data-z="-2000" data-scale="15" data-rotate-x="-40" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000" style="pointer-events: none;"> </div> -->
+
+
+
+
+
+
+    <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+          &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&             & & & &                &                           &&&&
+          &&&&             &                      &                           &&&&
+          &&&&             &                      &                           &&&&
+          &&&&             & & &                  &                           &&&&
+          &&&&             &        & & &     & & &                           &&&&
+          &&&&             &        &     &  &    &                           &&&&
+          &&&&             &        &     &  &    &                           &&&&
+          &&&&             & & & &  &     &   & & &                           &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&                                                                &&&&
+          &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+          &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+
   </div>
 
   <div id="impress-toolbar"></div>
@@ -2580,6 +2634,41 @@
         location.reload();
       }
     }, false);
+    document.addEventListener("keydown", function(event) {
+      if (event.keyCode == 72) {
+        // 72 -> h start-introduction
+        impress().goto("start-introduction");
+        event.preventDefault();
+      }
+    }, false);
+    document.addEventListener("keydown", function(event) {
+      if (event.keyCode == 74) {
+        // 74 -> j start-2D
+        impress().goto("start-2D");
+        event.preventDefault();
+      }
+    }, false);
+    document.addEventListener("keydown", function(event) {
+      if (event.keyCode == 75) {
+        // 75 -> k start-25D
+        impress().goto("start-25D");
+        event.preventDefault();
+      }
+    }, false);
+    document.addEventListener("keydown", function(event) {
+      if (event.keyCode == 76) {
+        // 76 -> l start-3D
+        impress().goto("start-3D");
+        event.preventDefault();
+      }
+    }, false);
+    document.addEventListener("keydown", function(event) {
+      if (event.keyCode == 77) {
+        // 77 -> m start-conclusion
+        impress().goto("start-conclusion");
+        event.preventDefault();
+      }
+    }, false);
   </script>
 
   <script type="text/x-mathjax-config">
@@ -2589,19 +2678,29 @@
 
   <!-- Video playing -->
   <script>
+    // video 1
     var videoStep1 = document.getElementById("video-step-1");
     var detection_yolov2_007 = document.getElementById("detection_yolov2_007");
     var segmentation_segnet_road = document.getElementById("segmentation_segnet_road");
+    var yolo_coco = document.getElementById("yolo-coco-object-detection-180");
+    var mask = document.getElementById("mask-rcnn-coco-mask");
+
+    // video 2
     var videoStep2 = document.getElementById("video-step-2");
     var video_ecmr = document.getElementById("video_ecmr");
+
     videoStep1.addEventListener("impress:stepenter", function() {
       // alert("Hello! I am an alert box!!");
       detection_yolov2_007.play();
       segmentation_segnet_road.play();
+      yolo_coco.play();
+      mask.play();
     }, false);
     videoStep1.addEventListener("impress:stepleave", function() {
       detection_yolov2_007.pause();
       segmentation_segnet_road.pause();
+        yolo_coco.pause();
+        mask.pause();
     }, false);
 
     videoStep2.addEventListener("impress:stepenter", function() {
@@ -2615,11 +2714,15 @@
     function ex1_play() {
       detection_yolov2_007.play();
       segmentation_segnet_road.play();
+      yolo_coco.play();
+      mask.play();
     }
 
     function ex1_pause() {
       detection_yolov2_007.pause();
       segmentation_segnet_road.pause();
+      yolo_coco.pause();
+      mask.pause();
     }
 
     function ex2_play() {
