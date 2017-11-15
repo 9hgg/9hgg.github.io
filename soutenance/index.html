@@ -337,15 +337,15 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <!-- <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h5 style="margin-bottom:0px;padding-bottom:0px;">Qu'est-ce qu'une image ?</h5>
 
-        <!-- <img class="fade-in fade-out" style="transition-delay: 2s" src="images/0_introduction/loupe.png" style="height: auto; width:auto;  position: absolute; top: -500px;" /><br /> -->
+        <img class="fade-in fade-out" style="transition-delay: 2s" src="images/0_introduction/loupe.png" style="height: auto; width:auto;  position: absolute; top: -500px;" /><br />
       </center>
 
 
-    </div>
+    </div> -->
 
 
     <!-- IMAGE DE FORET -->
@@ -377,12 +377,16 @@
     <div class="step noribbon" data-rel-x="0" data-rel-y="1200" data-z="0">
       <center>
         <h5 style="margin-bottom:0px;padding-bottom:0px;">Qu'est-ce qu'une image ?</h5>
-        <img src="images/0_introduction/grumpy/grumpy_rgb.png" style="height: auto; width:100%;" /><br /> $Image\in[0:255]^{W \cdot H \cdot D}$
+        <img src="images/0_introduction/grumpy/grumpy_rgb.png" style="height: auto; width:100%;" /><br />
+        <!-- $Image\in[0:255]^{W \cdot H \cdot D}$ -->
+        <img src="images/0_introduction/vecteur_image.png" style="height: auto; width:70%;" />
       </center>
-      <div style="font-size:28px">
+
+      <!-- vecteur_image.png -->
+      <!-- <div style="font-size:28px">
         <span style="text-decoration:underline;">Exemple :</span> <br /> Image de Kinect (640, 480, 3) $\rightarrow$ $256^{640 \cdot 480 \cdot 3} = $ <span style="color: red;">$ 10^{2219434}$</span> images potentielles <br /> Nombre d'atomes dans l'univers
         $ \approx 10^{80}$
-      </div>
+      </div> -->
 
       <div class="notes">
         Ce que l'on peut voir ici c'est la représentation d'une image sous sa forme RGB. Elle est utile car nos yeux sont sensibles à ces trois couleurs et ainsi nous avons directement accès à l'information nécessaire pour générer cette image sur un écran.
@@ -464,7 +468,7 @@
       </blockquote>
       <blockquote class="article_blockquote">
         <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Mask r-cnn." (2017)
-        <cite class="article_cite">He, Gkioxari, Doll&aeacute;r and Girshick</cite>
+        <cite class="article_cite">He, Gkioxari, Doll&agrave;r and Girshick</cite>
       </blockquote>
       <div style="text-align:right;">
         <button onclick='ex1_play()' class="button button_blue">Lecture</button>
@@ -502,9 +506,9 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step noribbon fade-in" data-rel-x="0" data-rel-y="0" data-rel-z="-1500">
+    <div class="step fade-in noribbon" data-rel-x="0" data-rel-y="0" data-rel-z="-1500">
 
-      <img src="images/0_introduction/blackbox/features_0.png" style="height: auto; width:90%;position:absolute;left:5%;top:-200px;margin:0px;padding:0px;" />
+      <img src="images/0_introduction/blackbox/features_0.png" style="height: auto; width:90%;position:absolute;left:5%;top:-200px;transition:1s;" class="fade-in" />
       <img src="images/0_introduction/blackbox/features_1.png" style="height: auto; width:90%;position:absolute;left:5%;top:-200px;" class="substep" />
       <img src="images/0_introduction/blackbox/features_2.png" style="height: auto; width:90%;position:absolute;left:5%;top:-200px;" class="substep" />
       <img src="images/0_introduction/blackbox/features_3.png" style="height: auto; width:90%;position:absolute;left:5%;top:-200px;" class="substep" />
@@ -524,6 +528,34 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <div class="step noribbon" data-rel-x="0" data-rel-y="1500" data-z="0">
+      <h4>GoogleNet</h4>
+      <blockquote class="article_blockquote">
+        <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Going deeper with convolutions." (CVPR 2015)
+        <cite class="article_cite">Szegedy et al.</cite>
+      </blockquote>
+      <table>
+        <tr>
+          <td><img src="images/0_introduction/GoogleNet.gif" style="height: auto; width:500px;" /></td>
+
+          <td style="font-size:30px;">
+            <ul>
+              <li>Beaucoup de couches</li>
+              <li>Beaucoup de paramètres</li>
+              <li>Beaucoup d'opérations</li>
+              <li>&#8599; le temps de calcul</li>
+              <li>&#8599; la mémoire nécessaire</li>
+
+            </ul>
+          </td>
+        </tr>
+      </table>
+      <img src="images/0_introduction/GoogLeNet.png" style="height: auto; width:100%;" />
+    </div>
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <!-- mais un robot ca galere parce que ci parce que ça notamment GPU, besoin critique blablabla -->
 
 
@@ -1519,7 +1551,15 @@
       <center>
         <h3 style="margin:0px;">Détecteur RGBD</h3>
         <h5 style="margin-bottom:0px;">Notre objectif : <span style="font-style:italic">R&M CNN</span></h5>
-        <img src="images/2_25D/r_mcnn.png" style="height: auto; width:100%" />
+        <!-- <img src="images/2_25D/r_mcnn.png" style="height: auto; width:100%" /><img src="images/2_25D/r_mcnn_selector.png" style="height: auto; width:100%" /> -->
+        <div style="height:500px">
+&nbsp;
+        </div>
+        <img src="images/2_25D/r_mcnn.png" style="height: auto; width:100%;position:absolute;left:5%;bottom:100px;" />
+        <img src="images/2_25D/r_mcnn_selector.png" style="height: auto; width:100%;position:absolute;left:5%;bottom:100px;" class="substep" />
+        <img src="images/2_25D/r_mcnn.png" style="height: auto; width:100%;position:absolute;left:5%;bottom:100px;" class="substep" />
+
+
       </center>
 
       <div class="notes">
@@ -1528,7 +1568,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <!-- <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h3 style="margin:0px;">Détecteur RGBD</h3>
         <h5 style="margin-bottom:0px;">Notre objectif : <span style="font-style:italic">R&M CNN</span></h5>
@@ -1537,16 +1577,16 @@
 
       <div class="notes">
       </div>
-    </div>
+    </div> -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h3 style="margin:0px;">Détecteur RGBD</h3>
-        <h5 style="margin:0px;">Nos méthodes :</h5>
-        <img src="images/2_25D/archis.jpg" style="height: auto; width:70%" />
-        <img src="images/2_25D/nms.png" style="height: auto; width:300px;box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); position: absolute;bottom: 100px;left: -150px;" class="substep" />
+        <h5 style="margin:0px;padding:0px">Détecteur RGBD</h5>
+        <h6 style="margin:0px;">Nos méthodes :</h6>
+        <img src="images/2_25D/archis.jpg" style="height: auto; width:60%" />
+        <img src="images/2_25D/nms.png" style="height: auto; width:300px;box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); position: absolute;bottom: -80px; right: 150px;" class="substep" />
       </center>
 
       <div class="notes">
@@ -1941,9 +1981,18 @@
     <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h3>Image RGBD</h3>
-        <img src="images/3_3D/ex2RGBD.png" style="height: auto; width:60%;" /><br />
-        <img src="images/1_2D/kinect.jpg" style="height: auto; width:200px;position:absolute;right:0px;bottom:350px;" />
-        <img src="images/2_25D/kinect_example.gif" style="height: auto; width:200px;position:absolute;right:0px;bottom:150px;" />
+
+        <div style="display:block;width:100%;height:600px;">
+          &nbsp;
+        </div>
+        <img src="images/3_3D/RGBD_d.png" style="height: auto; width:70%;position:absolute;left:5%;bottom:100px;" />
+        <img src="images/3_3D/RGBD_rgb.png" style="height: auto; width:70%;position:absolute;left:5%;bottom:100px;" class="substep" />
+
+
+
+        <!-- <img src="images/3_3D/ex2RGBD.png" style="height: auto; width:60%;" /><br /> -->
+        <!-- <img src="images/1_2D/kinect.jpg" style="height: auto; width:200px;position:absolute;right:0px;bottom:350px;" />
+        <img src="images/2_25D/kinect_example.gif" style="height: auto; width:200px;position:absolute;right:0px;bottom:150px;" /> -->
 
       </center>
 
@@ -1954,7 +2003,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <!-- <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h3>Image RGBD</h3>
         <img src="images/3_3D/ex3RGBD.png" style="height: auto; width:60%;" /><br />
@@ -1965,7 +2014,7 @@
 
       <div class="notes">
       </div>
-    </div>
+    </div> -->
 
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
@@ -2032,7 +2081,8 @@
     <!-- ######################################################################## -->
     <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <iframe src="./3d_objects/ply_viewer.html#cag2017/00003_xyzpred.ply" style="width:600px;height:600px;"></iframe>
+        <!-- <iframe src="./3d_objects/ply_viewer.html#cag2017/00003_xyzpred.ply" style="width:600px;height:600px;"></iframe> -->
+        <img src="images/3_3D/cag2017_00003.gif" style="height: auto; width: 100%;" />
       </center>
 
       <div class="notes">
@@ -2737,7 +2787,7 @@
       if (event.keyCode == 76) {
         // 76 -> l start-3D
         impress().goto("start-3D");
-        event.preventDefault();
+        // event.preventDefault();
       }
     }, false);
     document.addEventListener("keydown", function(event) {
@@ -2749,10 +2799,10 @@
     }, false);
   </script>
 
-  <script type="text/x-mathjax-config">
+  <!-- <script type="text/x-mathjax-config">
     MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, TeX: { Macros: { energy: "e", eqby: ["\\stackrel{#1}{=}",1], } } });
   </script>
-  <script type="text/javascript" async src="MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <script type="text/javascript" async src="MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
 
   <!-- Video playing -->
   <script>
@@ -2984,6 +3034,10 @@
     });
   </script>
   <link href="css/soutenance.css" rel="stylesheet" type="text/css" />
+
+  <!-- <script type="text/javascript">
+    alert("ok")
+  </script> -->
 </body>
 
 
