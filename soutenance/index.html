@@ -526,54 +526,77 @@
     <div class="step noribbon" data-rel-x="0" data-rel-y="1500" data-z="0">
       <!-- mais un robot ca galere parce que ci parce que ça notamment GPU, besoin critique blablabla -->
 
-      <div>
+
+      <center>
+
+
+        <h5>Problématiques</h5>
+
         <table>
           <tr>
-            <td style="text-align:center;font-size:20px;"><img src="images/2_25D/robby.jpg" style="height: auto; width:100%;" /></td>
-            <!-- <td style="text-align:center;font-size:20px;"><img class="substep" src="images/0_introduction/asus_rog_zephyrus.jpg" style="height: auto; width:100%;" /></td> -->
-          </tr>
-          <tr>
-            <td style="text-align:center;font-size:30px;">SUMMIT XL de Robotnik&trade;</td>
-            <!-- <td style="text-align:center;font-size:30px;"><span class="substep">ROG Zephyrus de Asus&trade;</span></td> -->
-          </tr>
-          <tr>
             <td>
-              <div style="font-size:20px;">
+              <div style="font-size:20px;" class="substep">
                 <ul>
-                  <li>ressources limitées</li>
-                  <ul>
-                    <li>mémoire GPU,</li>
-                    <li>consommation d'énergie,</li>
-                    <li>échauffement</li>
-                  </ul>
-                  <li>besoins fonctionnels</li>
-                  <ul>
-                    <li>réactivité</li>
-                  </ul>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div style="font-size:20px;">
-                <ul>
-                  <li>géométrie</li>
+                  <li>géométrie du robot</li>
                   <ul>
                     <li>observation en contre-plongée</li>
                     <li>observation avec azimut élevé</li>
                     <li>holonomie imparfaite</li>
                   </ul>
-                  <li>limitations matérielles</li>
+
+                </ul>
+              </div>
+            </td>
+            <td>
+              <div style="font-size:20px;" class="substep">
+                <ul>
+
+                  <li>capteur embarqué</li>
                   <ul>
                     <li>photosensibilité</li>
                     <li>résolution</li>
+                    <li>sensibilité aux vibrations</li>
+                  </ul>
+                </ul>
+              </div>
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div style="font-size:20px;" class="substep">
+                <ul>
+                  <li>unité de calcul</li>
+                  <ul>
+                    <li>mémoire GPU</li>
+                    <li>consommation d'énergie</li>
+                    <li>échauffement</li>
+                  </ul>
+
+                </ul>
+              </div>
+            </td>
+            <td>
+              <div style="font-size:20px;" class="substep">
+                <ul>
+                  <li>besoins fonctionnels</li>
+                  <ul>
+                    <li>réactivité</li>
+                    <li>adaptation de domaine</li>
+                    <li style="visibility:hidden;"></li>
                   </ul>
                 </ul>
               </div>
             </td>
+            <td>
+
+            </td>
           </tr>
         </table>
 
-      </div>
+        <img src="images/2_25D/robby.jpg" style="height: auto; width:30%;" /><span style="font-size:20px;position:relative;bottom:100px">SUMMIT XL de Robotnik&trade;</span>
+      </center>
+
 
 
     </div>
@@ -1544,27 +1567,27 @@
             <th> EER </th>
           </tr>
           <tr>
-            <td> HOD (SPINELLO et ARRAS 2012) </td>
+            <td> HOD [Spinello et al. 2012] </td>
             <td> D </td>
             <td> 56.3 </td>
           </tr>
           <tr>
-            <td> HGE (SPINELLO et ARRAS 2012) </td>
+            <td> HGE [Spinello et al. 2012] </td>
             <td> RGB-D </td>
             <td> 87.4 </td>
           </tr>
           <tr>
-            <td> Gating Network (MEES et al. 2016) </td>
-            <td> RGBD-Optical flow </td>
+            <td> Gating Network [Mees et al. 2016] </td>
+            <td> RGBD-Optic. flow </td>
             <td> 89.3 </td>
           </tr>
           <tr>
-            <td> Faster RCNN (Ren et al. 2015) </td>
+            <td> Faster RCNN [Ren et al. 2015] </td>
             <td> D </td>
             <td> 98.3 </td>
           </tr>
           <tr>
-            <td> Faster RCNN (Ren et al. 2015) </td>
+            <td> Faster RCNN [Ren et al. 2015] </td>
             <td> RGB </td>
             <td> 98.4 </td>
           </tr>
@@ -1608,7 +1631,7 @@
             <!-- <th> F1 </th> -->
           </tr>
           <tr>
-            <td> Gating Net, MEES et al, [2016] </td>
+            <td> Gating Net [Mees et al 2016] </td>
             <td> RGB-D </td>
             <!-- <td> –/81,1 </td> -->
             <td> 80,4 </td>
@@ -1617,7 +1640,7 @@
             <!-- <td> – </td> -->
           </tr>
           <tr>
-            <td> Faster RCNN (Ren et al. 2015) </td>
+            <td> Faster RCNN [Ren et al. 2015] </td>
             <td> RGB </td>
             <!-- <td> <b>73,2</b>/94,2 </td> -->
             <td> 91,9 </td>
@@ -1626,7 +1649,7 @@
             <!-- <td> <b>82,4</b> </td> -->
           </tr>
           <tr>
-            <td> Faster RCNN (Ren et al. 2015) </td>
+            <td> Faster RCNN [Ren et al. 2015] </td>
             <td> D </td>
             <!-- <td> 46,9/85,9 </td> -->
             <td> 84 </td>
@@ -1740,7 +1763,7 @@
             <!-- <th> F1 </th> -->
           </tr>
           <tr>
-            <td> Faster RCNN (Ren et al. 2015) </td>
+            <td> Faster RCNN [Ren et al. 2015] </td>
             <td> RGB </td>
             <!-- <td> 61,0/96,1 </td> -->
             <td> 91,2 </td>
@@ -1749,7 +1772,7 @@
             <!-- <td> 74,6 </td> -->
           </tr>
           <tr>
-            <td> Faster RCNN (Ren et al. 2015) </td>
+            <td> Faster RCNN [Ren et al. 2015] </td>
             <td> Depth </td>
             <!-- <td> 25,6/76,9 </td> -->
             <td> 66,9 </td>
@@ -1838,10 +1861,13 @@
         <h4>Conclusion II - Détection multimodale</h4>
       </center>
       <ul>
-        <li>trois nouvelles architectures de détection (U,X,Y) <img src="images/2_25D/archis.jpg" style="height: 50px; width:auto" /></li>
-        <li>nouvelles références sur deux jeux de données RGBD :<br />RGBD People <img src="images/2_25D/rgbdp_404.jpg" style="height: 40px; width:auto" /> & InOutDoor RGBD People<img src="images/2_25D/InOutPeople_image.png" style="height: 40px; width:auto"
-          /></li>
-        <li>création et mise à disposition d'un nouveau jeu de données RGBD complexe : ONERA.ROOM<img src="images/2_25D/orvidz.png" style="height: 50px; width:auto" /></li>
+        <li>trois nouvelles architectures de détection (U,X,Y) <img src="images/4_conclusion/2_2_25D.png" style="height: 50px; width:auto; position:relative; top:15px;" /></li>
+        <li>nouveaux résultats de référence sur 2 jeux de données RGBD :</li>
+        <ul>
+          <li>RGBD People <img src="images/2_25D/rgbdp_404.jpg" style="height: 40px; width:auto; position:relative; top:10px;" /> </li>
+          <li>InOutDoor RGBD People<img src="images/2_25D/InOutPeople_image.png" style="height: 40px; width:auto; position:relative; top:10px;" /> </li>
+        </ul>
+        <li>création et mise à disposition d'un nouveau jeu de données RGBD complexe : ONERA.ROOM<img src="images/2_25D/orvidz.png" style="height: 50px; width:auto; position:relative; top:15px;" /></li>
       </ul>
       <div class="notes">
       </div>
@@ -1970,7 +1996,7 @@
 
               <!-- <img src="images/3_3D/dataset_SUNRGBD_overview.jpg" style="height: 400px; width: auto;" /> -->
               <blockquote class="article_blockquote">
-                <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Unstructured point cloud semantic labeling using deep segmentation networks." Eurographics Workshop on 3D Object Retrieval (2017)                <cite class="article_cite">Alexandre Boulch, Bertrand Le Saux and Nicolas Audebert</cite>
+                <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Unstructured point cloud semantic labeling using deep segmentation networks." Eurographics Workshop on 3D Object Retrieval (2017)                <cite class="article_cite">Boulch, Le Saux and Audebert</cite>
               </blockquote>
 
 
@@ -1993,7 +2019,7 @@
     <blockquote class="article_blockquote">
       <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg> "Fusenet: Incorporating depth into semantic segmentation via fusion-based cnn architecture."
       ACCV (2016)
-      <cite class="article_cite">Hazirbas, Caner, et al.</cite>
+      <cite class="article_cite">Hazirbas et al.</cite>
     </blockquote>
   </center>
 
@@ -2336,7 +2362,7 @@
       </center>
       <ul>
         <li>Adaptation de SnapNet à des données RGBD monovues</li>
-        <li>Nouvelles références sur :</li>
+        <li>nouveaux résultats de référence sur :</li>
         <ul>
           <li> SUNRGBD 37 classes</li>
           <li> NYUDv2 40 classes</li>
@@ -2429,7 +2455,7 @@
           margin-left: 15px;
           display: inline-block;
           font-size: 40px;
-          background: #071527;
+          background: rgb(0, 62, 145);
           color: white;
           width: 80px;
           height: 80px;
@@ -2438,11 +2464,11 @@
           -webkit-transform: rotate(20deg);
           -moz-transform: rotate(20deg);
           -ms-transform: rotate(20deg);
-          -o-transform: rotate(20eg);
+          -o-transform: rotate(20deg);
         }
 
         #burst-2D:before {
-          background: #071527;
+          background: rgb(0, 62, 145);
           color: white;
           z-index: -1;
           content: "";
@@ -2460,7 +2486,7 @@
         #burst-25D {
           margin-left: 15px;
           display: inline-block;
-          background: #071527;
+          background: rgb(0, 62, 145);
           color: white;
           font-size: 40px;
           width: 80px;
@@ -2470,11 +2496,11 @@
           -webkit-transform: rotate(20deg);
           -moz-transform: rotate(20deg);
           -ms-transform: rotate(20deg);
-          -o-transform: rotate(20eg);
+          -o-transform: rotate(20deg);
         }
 
         #burst-25D:before {
-          background: #071527;
+          background: rgb(0, 62, 145);
           color: white;
           z-index: -1;
           content: "";
@@ -2492,7 +2518,7 @@
         #burst-3D {
           margin-left: 15px;
           display: inline-block;
-          background: #071527;
+          background: rgb(0, 62, 145);
           color: white;
           font-size: 40px;
           width: 80px;
@@ -2502,11 +2528,11 @@
           -webkit-transform: rotate(20deg);
           -moz-transform: rotate(20deg);
           -ms-transform: rotate(20deg);
-          -o-transform: rotate(20eg);
+          -o-transform: rotate(20deg);
         }
 
         #burst-3D:before {
-          background: #071527;
+          background: rgb(0, 62, 145);
           color: white;
           z-index: -1;
           content: "";
