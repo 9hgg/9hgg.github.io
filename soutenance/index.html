@@ -1655,18 +1655,25 @@ Votre navigateur ne supporte pas la balise vidéo.
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
+
+
     <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        Méthode de base : SnapNet<br>
-        <img src="images/3_3D/pipeline_snapnet.png" style="height: auto; width: 100%;" /><br />
-        <img src="images/3_3D/snapnet_structure.png" style="height: auto; width: 100%;" />
-
-        <!-- <img src="images/3_3D/dataset_SUNRGBD_overview.jpg" style="height: 400px; width: auto;" /> -->
-        <blockquote class="article_blockquote">
-          <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Unstructured point cloud semantic labeling using deep segmentation networks."
-          Eurographics Workshop on 3D Object Retrieval (2017) <cite class="article_cite">Boulch, Le Saux and Audebert</cite>
-        </blockquote>
+        <h5>De SnapNet à SnapNet-R</h5>
       </center>
+      <div style="height:600px;">
+
+      </div>
+      <img src="images/3_3D/snap_vs_snapR/snap_vs_snapR_0.png" style="height: auto; width:90%;position:absolute;left:5%;bottom:100px;transition:1s;" />
+      <img src="images/3_3D/snap_vs_snapR/snap_vs_snapR_1.png" style="height: auto; width:90%;position:absolute;left:5%;bottom:100px;" class="substep" />
+      <img src="images/3_3D/snap_vs_snapR/snap_vs_snapR_2.png" style="height: auto; width:90%;position:absolute;left:5%;bottom:100px;" class="substep" />
+      <img src="images/3_3D/snap_vs_snapR/snap_vs_snapR_3.png" style="height: auto; width:90%;position:absolute;left:5%;bottom:100px;" class="substep" />
+      <img src="images/3_3D/snap_vs_snapR/snap_vs_snapR_4.png" style="height: auto; width:90%;position:absolute;left:5%;bottom:100px;" class="substep" />
+      <img src="images/3_3D/snap_vs_snapR/snap_vs_snapR_5.png" style="height: auto; width:90%;position:absolute;left:5%;bottom:100px;" class="substep" />
+      <img src="images/3_3D/snap_vs_snapR/snap_vs_snapR_6.png" style="height: auto; width:90%;position:absolute;left:5%;bottom:100px;" class="substep" />
+      <img src="images/3_3D/snap_vs_snapR/snap_vs_snapR_7.png" style="height: auto; width:90%;position:absolute;left:5%;bottom:100px;" class="substep" />
+      <img src="images/3_3D/snap_vs_snapR/snap_vs_snapR_8.png" style="height: auto; width:90%;position:absolute;left:5%;bottom:100px;" class="substep" />
+      <img src="images/3_3D/snap_vs_snapR/snap_vs_snapR_9.png" style="height: auto; width:90%;position:absolute;left:5%;bottom:100px;" class="substep" />
     </div>
 
     <!-- ######################################################################## -->
@@ -1674,26 +1681,9 @@ Votre navigateur ne supporte pas la balise vidéo.
     <!-- ######################################################################## -->
     <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        Adaptation à la robotique : <br />SnapNet&rarr;SnapNet-R<br>
-
-        <img src="images/3_3D/hazirbas16fusenet.png" style="height: auto; width: 100%;" />
-        <blockquote class="article_blockquote">
-          <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg> "Fusenet: Incorporating depth into semantic segmentation via fusion-based cnn
-          architecture." ACCV (2016)
-          <cite class="article_cite">Hazirbas et al.</cite>
-        </blockquote>
-      </center>
-
-    </div>
-
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
-      <center>
+        <h5>SnapNet-R : stratégie d'observation</h5>
         <img src="images/3_3D/cag2017_00003.gif" style="height: auto; width: 80%;" />
       </center>
-
     </div>
 
     <!-- ######################################################################## -->
@@ -1701,21 +1691,17 @@ Votre navigateur ne supporte pas la balise vidéo.
     <!-- ######################################################################## -->
     <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        Adaptation à la robotique : <br />SnapNet&rarr;SnapNet-R<br>
-
+        <h5>SnapNet-R : stratégie d'observation</h5>
         <img src="images/3_3D/dataset_SUNRGBD_sampling.png" style="height: auto; width: 70%;" />
-
       </center>
-
     </div>
+
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        Adaptation à la robotique : <br />SnapNet&rarr;SnapNet-R<br>
-
-
+        <h5>SnapNet-R</h5>
         <img src="images/3_3D/snapnet_r_pipeline.png" style="height: auto; width: 100%;" />
 
       </center>
@@ -1772,7 +1758,7 @@ Votre navigateur ne supporte pas la balise vidéo.
             <td class="results"> 27,4 </td>
           </tr>
           <tr>
-            <td class="results"> Bayesian SegNet <span style="font-size:15px;">[Kendall et al. 2015]</span>  </td>
+            <td class="results"> Bayesian SegNet <span style="font-size:15px;">[Kendall et al. 2015]</span> </td>
             <td class="results"> RGB </td>
             <td class="results"> 71,2 </td>
             <td class="results"> 45,9 </td>
@@ -1886,10 +1872,11 @@ Votre navigateur ne supporte pas la balise vidéo.
                   <td class="results"> <b>40.07</b> </td>
                 </tr>
                 <tr>
-                  <td style="white-space: nowrap" class="results"> FuseNet SF5 <span style="font-size:15px;">[Hazirbas et al. 2016]</span> (RGB-D) </td>
-                  <td class="results"> 62.19 </td>
-                  <td class="results"> 48.28 </td>
-                  <td class="results"> 31.01 </td>
+                  <td style="white-space: nowrap" class="results"><span style="color:#064d00;"> FuseNet SF5 <span style="font-size:15px;">[Hazirbas et al. 2016]</span> (RGB-D)</span>
+                  </td>
+                  <td class="results"><span style="color:#064d00;"> 62.19 </span></td>
+                  <td class="results"><span style="color:#064d00;"> 48.28 </span></td>
+                  <td class="results"><span style="color:#064d00;"> 31.01 </span></td>
                 </tr>
                 <tr>
                   <td style="white-space: nowrap" class="results"><span style="color:#064d00;">	SnapNet-R <span style="font-size:15px;">[Guerry et al. 2017]</span> (RGB-D) </span>
@@ -1942,19 +1929,21 @@ Votre navigateur ne supporte pas la balise vidéo.
                   <td class="results"> 54.2 </td>
                 </tr>
                 <tr>
-                  <td  style="white-space: nowrap" class="results"> MVCNet-MP <span style="font-size:15px;">[Ma et al. 2017]</span> (RGB-D) </td>
+                  <td style="white-space: nowrap" class="results"> MVCNet-MP <span style="font-size:15px;">[Ma et al. 2017]</span> (RGB-D) </td>
                   <td class="results"> <span style="font-style:italic;text-decoration: underline;">79.13</span> </td>
                   <td class="results"> 70.59 </td>
                   <td class="results"> <span style="font-style:italic;text-decoration: underline;">59.07</span> </td>
                 </tr>
                 <tr>
-                  <td  style="white-space: nowrap" class="results"> FuseNet SF5 <span style="font-size:15px;">[Hazirbas et al. 2016]</span> (RGB-D) </td>
-                  <td class="results"> 78.41 </td>
-                  <td class="results"> <span style="font-style:italic;text-decoration: underline;">72.07</span> </td>
-                  <td class="results"> 56.33 </td>
+                  <td style="white-space: nowrap" class="results"><span style="color:#064d00;"> FuseNet SF5 <span style="font-size:15px;">[Hazirbas et al. 2016]</span> (RGB-D) </span>
+                  </td>
+                  <td class="results"><span style="color:#064d00;"> 78.41 </span></td>
+                  <td class="results"><span style="color:#064d00;"> <span style="font-style:italic;text-decoration: underline;">72.07</span></span>
+                  </td>
+                  <td class="results"><span style="color:#064d00;"> 56.33</span> </td>
                 </tr>
                 <tr>
-                  <td  style="white-space: nowrap" class="results"><span style="color:#064d00;">	SnapNet-R <span style="font-size:15px;">[Guerry et al. 2017]</span> (RGB-D) </span>
+                  <td style="white-space: nowrap" class="results"><span style="color:#064d00;">	SnapNet-R <span style="font-size:15px;">[Guerry et al. 2017]</span> (RGB-D) </span>
                   </td>
                   <td class="results"><span style="color:#064d00;">	<b>81.95</b>	</span></td>
                   <td class="results"><span style="color:#064d00;"> <b>77.51</b> </span> </td>
@@ -1983,7 +1972,8 @@ Votre navigateur ne supporte pas la balise vidéo.
         <li>Adaptation de SnapNet à des données RGBD monovues</li>
         <ul>
           <li> nouvelle stratégie d'observation</li>
-          <li> FuseNet</li>
+          <li> retrait du maillage</li>
+          <li> changement de structure sémantique : FuseNet</li>
         </ul>
         <li>Nouveaux résultats de référence sur :</li>
         <ul>
@@ -2028,232 +2018,278 @@ Votre navigateur ne supporte pas la balise vidéo.
       <center>
 
         <div style="opacity:0.5">
-          <h6 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h3>
-<span style="font-size:15px;font-style:italic">Détecte-moi si tu peux !</span>
-</div>
-<h3>Conclusion</h3>
-</center>
-<div style="">
-<ol type="I" style="display:table; margin:auto;">
+          <h6 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios d’exploration robotique.</h6>
+          <span style="font-size:15px;font-style:italic">Détecte-moi si tu peux !</span>
+        </div>
+        <h3>Conclusion</h3>
+      </center>
+      <div style="">
+        <ol type="I" style="display:table; margin:auto;">
 
-<li style="font-size: 40px;font-weight: bold; margin: 30px 0; opacity:1">Sélection d'algorithmes de <span class="late-enhanced" style="transition-delay: 2s">classification</span>
-<div id="burst-2D" class="substep">
-<span style="position:relative;top:10px">2D</span>
-</div>
-</li>
+          <li style="font-size: 40px;font-weight: bold; margin: 30px 0; opacity:1">Sélection d'algorithmes de <span class="late-enhanced" style="transition-delay: 2s">classification</span>
+            <div id="burst-2D" class="substep">
+              <span style="position:relative;top:10px">2D</span>
+            </div>
+          </li>
 
-<li style="font-size: 40px;font-weight: bold; margin: 30px 0; opacity:1">
-Approche multimodale pour la <span class="late-enhanced" style="transition-delay: 3s">détection</span>
-<div id="burst-25D" class="substep">
-<span style="position:relative;top:10px">2.5D</span>
-</div>
-</li>
+          <li style="font-size: 40px;font-weight: bold; margin: 30px 0; opacity:1">
+            Approche multimodale pour la <span class="late-enhanced" style="transition-delay: 3s">détection</span>
+            <div id="burst-25D" class="substep">
+              <span style="position:relative;top:10px">2.5D</span>
+            </div>
+          </li>
 
-<li style="font-size: 40px;font-weight: bold; margin: 30px 0; opacity:1">Approche multivue pour la <span class="late-enhanced" style="transition-delay: 4s">segmentation</span>
-<div id="burst-3D" class="substep">
-<span style="position:relative;top:10px">3D</span>
-</div>
-</li>
-</ol>
-</div>
+          <li style="font-size: 40px;font-weight: bold; margin: 30px 0; opacity:1">Approche multivue pour la <span class="late-enhanced" style="transition-delay: 4s">segmentation</span>
+            <div id="burst-3D" class="substep">
+              <span style="position:relative;top:10px">3D</span>
+            </div>
+          </li>
+        </ol>
+      </div>
 
-<style>
-.future .late-enhanced {}
+      <style>
+        .future .late-enhanced {}
 
-.present .late-enhanced {
-color: blue;
-transition: all 3s;
-}
+        .present .late-enhanced {
+          color: blue;
+          transition: all 3s;
+        }
 
-.past .late-enhanced {
-transition: 0s;
-color: blue;
-}
+        .past .late-enhanced {
+          transition: 0s;
+          color: blue;
+        }
 
-#burst-2D {
-margin-left: 15px;
-display: inline-block;
-font-size: 40px;
-background: rgb(0, 62, 145);
-color: white;
-width: 80px;
-height: 80px;
-position: relative;
-text-align: center;
--webkit-transform: rotate(20deg);
--moz-transform: rotate(20deg);
--ms-transform: rotate(20deg);
--o-transform: rotate(20deg);
-}
+        #burst-2D {
+          margin-left: 15px;
+          display: inline-block;
+          font-size: 40px;
+          background: rgb(0, 62, 145);
+          color: white;
+          width: 80px;
+          height: 80px;
+          position: relative;
+          text-align: center;
+          -webkit-transform: rotate(20deg);
+          -moz-transform: rotate(20deg);
+          -ms-transform: rotate(20deg);
+          -o-transform: rotate(20deg);
+        }
 
-#burst-2D:before {
-background: rgb(0, 62, 145);
-color: white;
-z-index: -1;
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-height: 80px;
-width: 80px;
--webkit-transform: rotate(135deg);
--moz-transform: rotate(135deg);
--ms-transform: rotate(135deg);
--o-transform: rotate(135deg);
-}
+        #burst-2D:before {
+          background: rgb(0, 62, 145);
+          color: white;
+          z-index: -1;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 80px;
+          width: 80px;
+          -webkit-transform: rotate(135deg);
+          -moz-transform: rotate(135deg);
+          -ms-transform: rotate(135deg);
+          -o-transform: rotate(135deg);
+        }
 
-#burst-25D {
-margin-left: 15px;
-display: inline-block;
-background: rgb(0, 62, 145);
-color: white;
-font-size: 40px;
-width: 80px;
-height: 80px;
-position: relative;
-text-align: center;
--webkit-transform: rotate(20deg);
--moz-transform: rotate(20deg);
--ms-transform: rotate(20deg);
--o-transform: rotate(20deg);
-}
+        #burst-25D {
+          margin-left: 15px;
+          display: inline-block;
+          background: rgb(0, 62, 145);
+          color: white;
+          font-size: 40px;
+          width: 80px;
+          height: 80px;
+          position: relative;
+          text-align: center;
+          -webkit-transform: rotate(20deg);
+          -moz-transform: rotate(20deg);
+          -ms-transform: rotate(20deg);
+          -o-transform: rotate(20deg);
+        }
 
-#burst-25D:before {
-background: rgb(0, 62, 145);
-color: white;
-z-index: -1;
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-height: 80px;
-width: 80px;
--webkit-transform: rotate(135deg);
--moz-transform: rotate(135deg);
--ms-transform: rotate(135deg);
--o-transform: rotate(135deg);
-}
+        #burst-25D:before {
+          background: rgb(0, 62, 145);
+          color: white;
+          z-index: -1;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 80px;
+          width: 80px;
+          -webkit-transform: rotate(135deg);
+          -moz-transform: rotate(135deg);
+          -ms-transform: rotate(135deg);
+          -o-transform: rotate(135deg);
+        }
 
-#burst-3D {
-margin-left: 15px;
-display: inline-block;
-background: rgb(0, 62, 145);
-color: white;
-font-size: 40px;
-width: 80px;
-height: 80px;
-position: relative;
-text-align: center;
--webkit-transform: rotate(20deg);
--moz-transform: rotate(20deg);
--ms-transform: rotate(20deg);
--o-transform: rotate(20deg);
-}
+        #burst-3D {
+          margin-left: 15px;
+          display: inline-block;
+          background: rgb(0, 62, 145);
+          color: white;
+          font-size: 40px;
+          width: 80px;
+          height: 80px;
+          position: relative;
+          text-align: center;
+          -webkit-transform: rotate(20deg);
+          -moz-transform: rotate(20deg);
+          -ms-transform: rotate(20deg);
+          -o-transform: rotate(20deg);
+        }
 
-#burst-3D:before {
-background: rgb(0, 62, 145);
-color: white;
-z-index: -1;
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-height: 80px;
-width: 80px;
--webkit-transform: rotate(135deg);
--moz-transform: rotate(135deg);
--ms-transform: rotate(135deg);
--o-transform: rotate(135deg);
-}
-</style>
-</div>
+        #burst-3D:before {
+          background: rgb(0, 62, 145);
+          color: white;
+          z-index: -1;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 80px;
+          width: 80px;
+          -webkit-transform: rotate(135deg);
+          -moz-transform: rotate(135deg);
+          -ms-transform: rotate(135deg);
+          -o-transform: rotate(135deg);
+        }
+      </style>
+    </div>
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
 
-<div class="step slide noribbon" data-rel-x="0" data-rel-y="1000">
-<center>
-<h3>Conclusion</h3>
-<table>
-<tr>
-<td style="text-align:center;padding-right:20px;"><span style="position:relative;top:0px;font-size:40px;">I  </span></td>
-<td><img src="images/4_conclusion/2_1_2D.png" style="height: 150px; width: auto;" /><br /></td>
-<td>
-<ul style="font-size:20px">
-<li>Concept de Réseau de Confiance</li>
-<li>Fonctionnel sous certaines conditions</li>
-<li>Potentiel inexploité</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td style="text-align:center;padding-right:20px;"><span style="position:relative;top:0px;font-size:40px;">II  </span></td>
-<td><img src="images/4_conclusion/2_2_25D.png" style="height: 150px; width: auto;" /><br /></td>
-<td>
-<ul style="font-size:20px">
-<li>Nouvelles architectures multimodales</li>
-<li>Fusion simple de l'information</li>
-<li>Nouvelles références de détection RGBD</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td style="text-align:center;padding-right:20px;"><span style="position:relative;top:0px;font-size:40px;">III  </span></td>
-<td><img src="images/4_conclusion/2_3_3D.png" style="height: 150px; width: auto;" /></td>
-<td>
-<ul style="font-size:20px">
-<li>Adaptation d'une méthode multivue 3D</li>
-<li>Nouvelles références de segmentation RGBD</li>
-</ul>
-</td>
-</tr>
-</table>
-</center>
+    <div class="step slide noribbon" data-rel-x="0" data-rel-y="1000">
+      <center>
+        <h3>Conclusion</h3>
+        <table>
+          <tr>
+            <td style="text-align:center;padding-right:20px;"><span style="position:relative;top:0px;font-size:40px;">I  </span></td>
+            <td><img src="images/4_conclusion/2_1_2D.png" style="height: 150px; width: auto;" /><br /></td>
+            <td>
+              <ul style="font-size:20px">
+                <li>Concept de Réseau de Confiance</li>
+                <li>Fonctionnel sous certaines conditions</li>
+                <li>Potentiel inexploité</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;padding-right:20px;"><span style="position:relative;top:0px;font-size:40px;">II  </span></td>
+            <td><img src="images/4_conclusion/2_2_25D.png" style="height: 150px; width: auto;" /><br /></td>
+            <td>
+              <ul style="font-size:20px">
+                <li>Nouvelles architectures multimodales</li>
+                <li>Fusion simple de l'information</li>
+                <li>Nouvelles références de détection RGBD</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;padding-right:20px;"><span style="position:relative;top:0px;font-size:40px;">III  </span></td>
+            <td><img src="images/4_conclusion/2_3_3D.png" style="height: 150px; width: auto;" /></td>
+            <td>
+              <ul style="font-size:20px">
+                <li>Adaptation d'une méthode multivue 3D</li>
+                <li>Nouvelles références de segmentation RGBD</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </center>
 
-</div>
+    </div>
 
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
 
-
-<div class="step noribbon slide" data-rel-x="0" data-rel-y="1000">
-<center>
-<h3>Perspectives</h3>
-</center>
-<ul>
-<li>Unifier les différentes contributions</li>
-<ul>
-<li>Intégrer la fusion en X dans SnapNet-R</li>
-</ul>
-<li>SnapNet-R "<span style="font-style:italic;">Scene-aware</span>"</li>
-<li>Intégration robotique</li>
-<ul>
-<li>Réseaux de neurones binaires</li>
-<li>Prise en compte de l'aspect temporel</li>
-<li>Apprentissage profond bayésien</li>
-</ul>
-</ul>
+    <div class="step noribbon slide" data-rel-x="0" data-rel-y="1000">
+      <center>
+        <h3>Dissémination</h3>
+      </center>
+      <div style="font-size:20px;">
 
 
-</div>
+        <ul>
+          <li><span style="font-size:20px;color:#0000ff;text-decoration:underline;">Journée des Jeunes Chercheurs en Robotique 2015 :</span><br /> Reconnaissance d’objets pour l’exploration robotique <span style="font-size:15px;color:#0000ff;">[poster]</span></li>
+
+          <li><span style="font-size:20px;color:#0000ff;text-decoration:underline;">Journée des Jeunes Chercheurs en Robotique 2016&nbsp;:</span><br /> Sélection d'algorithmes par réseaux de neurones <span style="font-size:15px;color:#0000ff;">[présentation & organisation]</span></li>
+
+          <li><span style="font-size:20px;color:#0000ff;text-decoration:underline;">Reconnaissance des Formes et l'Intelligence Artificielle 2016, workshop&nbsp;: "Apprentissage profond pour la perception et la robotique"&nbsp;:</span><br /> Sélection d’algorithmes de classification par réseau de neurones <span style="font-size:15px;color:#0000ff;">[article]</span></li>
 
 
+          <li><span style="font-size:20px;color:#0000ff;text-decoration:underline;">International Conference on Computer Vision 2017, Workshop: "3D Reconstruction meets Semantics"&nbsp;:</span><br /> SnapNet-R: Consistent 3D Multi-View Semantic Labeling for Robotics <span style="font-size:15px;color:#0000ff;">[article]</span></li>
 
-<!-- ######################################################################## -->
-<!-- ######################################################################## -->
-<!-- ######################################################################## -->
-<div id="step_question" class="step noribbon" data-rel-x="0" data-rel-y="1000">
-<center>
-<img src="images/questions/questions2.gif" style="height: auto; width:auto;" />
-</center>
+          <li><span style="font-size:20px;color:#0000ff;text-decoration:underline;">Colloque du Groupement de Recherche en Traitement du Signal et des Images 2017&nbsp;:</span><br /> RCNN RGBD pour la détection de personnes en conditions difficiles <span style="font-size:15px;color:#0000ff;">[article]</span></li>
 
 
 
-</div>
+          <li><span style="font-size:20px;color:#0000ff;text-decoration:underline;">European Conferance on Mobile Robotics 2017&nbsp;:</span><br /> “Look At This One”, Detection sharing between modality-independent classifiers for robotic discovery of people <span style="font-size:15px;color:#0000ff;">[article]</span></li>
 
 
-<div id="overview" class="step noribbon" data-x="8500" data-y="10000" data-z="-2000" data-scale="11" data-rotate-x="-62" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000" style="pointer-events: none;"> </div>
-
-
+          <li> <span style="font-size:20px;color:#0000ff;text-decoration:underline;">Eurographics Workshop on 3D Object Retrieval (2017)&nbsp;:</span> SHREC’17 Track: 3D Hand Gesture Recognition Using a Depth and Skeletal Dataset <span style="font-size:15px;color:#0000ff;">[article]</span></li>
 
 
 
-<!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+        </ul>
+
+        Soumis&nbsp;:
+        <ul>
+          <li><span style="font-size:20px;color:#0000ff;text-decoration:underline;">Computers and Graphics 2017&nbsp;:</span><br /> “SnapNet”, 3D point cloud semantic labeling with 2D deep segmentation networks <span style="font-size:15px;color:#0000ff;">[Journal]</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon slide" data-rel-x="0" data-rel-y="1000">
+      <center>
+        <h3>Perspectives</h3>
+      </center>
+      <ul>
+        <li>Unifier les différentes contributions</li>
+        <ul>
+          <li>Intégrer la fusion en X dans SnapNet-R</li>
+        </ul>
+        <li>SnapNet-R "<span style="font-style:italic;">Scene-aware</span>"</li>
+        <li>Intégration robotique</li>
+        <ul>
+          <li>Réseaux de neurones binaires</li>
+          <li>Prise en compte de l'aspect temporel</li>
+          <li>Apprentissage profond bayésien</li>
+        </ul>
+      </ul>
+
+
+    </div>
+
+
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div id="step_question" class="step noribbon" data-rel-x="0" data-rel-y="1000">
+      <center>
+        <img src="images/questions/questions2.gif" style="height: auto; width:auto;" />
+      </center>
+
+
+
+    </div>
+
+
+    <div id="overview" class="step noribbon" data-x="8500" data-y="10000" data-z="-2000" data-scale="11" data-rotate-x="-62" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000" style="pointer-events: none;"> </div>
+
+
+
+
+
+    <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 &&&&                                                                &&&&
 &&&&                                                                &&&&
@@ -2283,334 +2319,332 @@ width: 80px;
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
 
 
-</div>
+  </div>
 
-<div id="impress-toolbar"></div>
+  <div id="impress-toolbar"></div>
 
-<div class="impress-progressbar">
-<div></div>
-</div>
-<div class="impress-progress"></div>
+  <div class="impress-progressbar">
+    <div></div>
+  </div>
+  <div class="impress-progress"></div>
 
-<!-- <div id="impress-help"></div> -->
+  <!-- <div id="impress-help"></div> -->
 
 
 
-<script type="text/javascript" src="extras/highlight/highlight.pack.js"></script>
-<script type="text/javascript" src="extras/mermaid/mermaid.min.js"></script>
-<script type="text/javascript" src="extras/markdown/markdown.js"></script>
-<script type="text/javascript" src="extras/impress-console/js/impressConsole.js"></script>
-<script type="text/javascript">
-var impressConsoleCss = 'extras/impress-console/css/impressConsole.css';
-</script>
+  <script type="text/javascript" src="extras/highlight/highlight.pack.js"></script>
+  <script type="text/javascript" src="extras/mermaid/mermaid.min.js"></script>
+  <script type="text/javascript" src="extras/markdown/markdown.js"></script>
+  <script type="text/javascript" src="extras/impress-console/js/impressConsole.js"></script>
+  <script type="text/javascript">
+    var impressConsoleCss = 'extras/impress-console/css/impressConsole.css';
+  </script>
 
-<script type="text/javascript" src="js/impress_henrik.js"></script>
-<script>
-impress().init();
-// alert('init')
-document.addEventListener("keydown", function(event) {
-if (event.keyCode == 27) {
+  <script type="text/javascript" src="js/impress_henrik.js"></script>
+  <script>
+    impress().init();
+    // alert('init')
+    document.addEventListener("keydown", function(event) {
+      if (event.keyCode == 27) {
 
-impress().goto("overview");
+        impress().goto("overview");
 
-event.preventDefault();
-}
-}, false);
-document.addEventListener("keydown", function(event) {
-if (event.keyCode == 82) {
-// 82 -> r
-// impress().goto("overview");
+        event.preventDefault();
+      }
+    }, false);
+    document.addEventListener("keydown", function(event) {
+      if (event.keyCode == 82) {
+        // 82 -> r
+        // impress().goto("overview");
 
-event.preventDefault();
-location.reload();
-}
-}, false);
-document.addEventListener("keydown", function(event) {
-if (event.keyCode == 72) {
-// 72 -> h start-introduction
-impress().goto("start-introduction");
-event.preventDefault();
-}
-}, false);
-document.addEventListener("keydown", function(event) {
-if (event.keyCode == 74) {
-// 74 -> j start-2D
-impress().goto("start-2D");
-event.preventDefault();
-}
-}, false);
-document.addEventListener("keydown", function(event) {
-if (event.keyCode == 75) {
-// 75 -> k start-25D
-impress().goto("start-25D");
-event.preventDefault();
-}
-}, false);
-document.addEventListener("keydown", function(event) {
-if (event.keyCode == 76) {
-// 76 -> l start-3D
-impress().goto("start-3D");
-// event.preventDefault();
-}
-}, false);
-document.addEventListener("keydown", function(event) {
-if (event.keyCode == 77) {
-// 77 -> m start-conclusion
-impress().goto("start-conclusion");
-event.preventDefault();
-}
-}, false);
-</script>
+        event.preventDefault();
+        location.reload();
+      }
+    }, false);
+    document.addEventListener("keydown", function(event) {
+      if (event.keyCode == 72) {
+        // 72 -> h start-introduction
+        impress().goto("start-introduction");
+        event.preventDefault();
+      }
+    }, false);
+    document.addEventListener("keydown", function(event) {
+      if (event.keyCode == 74) {
+        // 74 -> j start-2D
+        impress().goto("start-2D");
+        event.preventDefault();
+      }
+    }, false);
+    document.addEventListener("keydown", function(event) {
+      if (event.keyCode == 75) {
+        // 75 -> k start-25D
+        impress().goto("start-25D");
+        event.preventDefault();
+      }
+    }, false);
+    document.addEventListener("keydown", function(event) {
+      if (event.keyCode == 76) {
+        // 76 -> l start-3D
+        impress().goto("start-3D");
+        // event.preventDefault();
+      }
+    }, false);
+    document.addEventListener("keydown", function(event) {
+      if (event.keyCode == 77) {
+        // 77 -> m start-conclusion
+        impress().goto("start-conclusion");
+        event.preventDefault();
+      }
+    }, false);
+  </script>
 
-<!-- <script type="text/x-mathjax-config">
+  <!-- <script type="text/x-mathjax-config">
 MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, TeX: { Macros: { energy: "e", eqby: ["\\stackrel{#1}{=}",1], } } });
 </script>
 <script type="text/javascript" async src="MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
 
-<!-- Video playing -->
-<script>
-// video 1
-var videoStep1 = document.getElementById("video-step-1");
-var detection_yolov2_007 = document.getElementById("detection_yolov2_007");
-var segmentation_segnet_road = document.getElementById("segmentation_segnet_road");
-var yolo_coco = document.getElementById("yolo-coco-object-detection-180");
-var mask = document.getElementById("mask-rcnn-coco-mask-180");
+  <!-- Video playing -->
+  <script>
+    // video 1
+    var videoStep1 = document.getElementById("video-step-1");
+    var detection_yolov2_007 = document.getElementById("detection_yolov2_007");
+    var segmentation_segnet_road = document.getElementById("segmentation_segnet_road");
+    var yolo_coco = document.getElementById("yolo-coco-object-detection-180");
+    var mask = document.getElementById("mask-rcnn-coco-mask-180");
 
-// video 2
-var videoStep2 = document.getElementById("video-step-2");
-var video_ecmr1 = document.getElementById("video_ecmr1");
-var video_ecmr2 = document.getElementById("video_ecmr2");
-var video_ecmr3 = document.getElementById("video_ecmr3");
-var video_ecmr4 = document.getElementById("video_ecmr4");
+    // video 2
+    var videoStep2 = document.getElementById("video-step-2");
+    var video_ecmr1 = document.getElementById("video_ecmr1");
+    var video_ecmr2 = document.getElementById("video_ecmr2");
+    var video_ecmr3 = document.getElementById("video_ecmr3");
+    var video_ecmr4 = document.getElementById("video_ecmr4");
 
-videoStep1.addEventListener("impress:stepenter", function() {
-// alert("Hello! I am an alert box!!");
-detection_yolov2_007.play();
-segmentation_segnet_road.play();
-yolo_coco.play();
-mask.play();
-}, false);
-videoStep1.addEventListener("impress:stepleave", function() {
-detection_yolov2_007.pause();
-segmentation_segnet_road.pause();
-yolo_coco.pause();
-mask.pause();
-}, false);
+    videoStep1.addEventListener("impress:stepenter", function() {
+      // alert("Hello! I am an alert box!!");
+      detection_yolov2_007.play();
+      segmentation_segnet_road.play();
+      yolo_coco.play();
+      mask.play();
+    }, false);
+    videoStep1.addEventListener("impress:stepleave", function() {
+      detection_yolov2_007.pause();
+      segmentation_segnet_road.pause();
+      yolo_coco.pause();
+      mask.pause();
+    }, false);
 
-videoStep2.addEventListener("impress:stepenter", function() {
-video_ecmr1.play();
-video_ecmr2.play();
-video_ecmr3.play();
-video_ecmr4.play();
-}, false);
-videoStep2.addEventListener("impress:stepleave", function() {
-video_ecmr1.pause();
-video_ecmr2.pause();
-video_ecmr3.pause();
-video_ecmr4.pause();
-}, false);
+    videoStep2.addEventListener("impress:stepenter", function() {
+      video_ecmr1.play();
+      video_ecmr2.play();
+      video_ecmr3.play();
+      video_ecmr4.play();
+    }, false);
+    videoStep2.addEventListener("impress:stepleave", function() {
+      video_ecmr1.pause();
+      video_ecmr2.pause();
+      video_ecmr3.pause();
+      video_ecmr4.pause();
+    }, false);
 
-function ex1_play() {
-detection_yolov2_007.play();
-segmentation_segnet_road.play();
-yolo_coco.play();
-mask.play();
-}
+    function ex1_play() {
+      detection_yolov2_007.play();
+      segmentation_segnet_road.play();
+      yolo_coco.play();
+      mask.play();
+    }
 
-function ex1_pause() {
-detection_yolov2_007.pause();
-segmentation_segnet_road.pause();
-yolo_coco.pause();
-mask.pause();
-}
+    function ex1_pause() {
+      detection_yolov2_007.pause();
+      segmentation_segnet_road.pause();
+      yolo_coco.pause();
+      mask.pause();
+    }
 
-function ex2_play() {
-video_ecmr1.play();
-video_ecmr2.play();
-video_ecmr3.play();
-video_ecmr4.play();
-}
+    function ex2_play() {
+      video_ecmr1.play();
+      video_ecmr2.play();
+      video_ecmr3.play();
+      video_ecmr4.play();
+    }
 
-function ex2_pause() {
-video_ecmr1.pause();
-video_ecmr2.pause();
-video_ecmr3.pause();
-video_ecmr4.pause();
-}
-</script>
+    function ex2_pause() {
+      video_ecmr1.pause();
+      video_ecmr2.pause();
+      video_ecmr3.pause();
+      video_ecmr4.pause();
+    }
+  </script>
 
-<!-- Ribbon part -->
-<script>
-var ribbon_2D = document.getElementById("ribbon_2D");
-var ribbon_25D = document.getElementById("ribbon_25D");
-var ribbon_3D = document.getElementById("ribbon_3D");
-var ribbon_question = document.getElementById("ribbon_question");
+  <!-- Ribbon part -->
+  <script>
+    var ribbon_2D = document.getElementById("ribbon_2D");
+    var ribbon_25D = document.getElementById("ribbon_25D");
+    var ribbon_3D = document.getElementById("ribbon_3D");
+    var ribbon_question = document.getElementById("ribbon_question");
 
-var steps_2D = document.getElementsByClassName("step_2D");
-var steps_25D = document.getElementsByClassName("step_25D");
-var steps_3D = document.getElementsByClassName("step_3D");
-var steps_noribbon = document.getElementsByClassName("noribbon");
-var step_question = document.getElementById("step_question");
-
-
-step_question.addEventListener("impress:stepenter", function() {
-ribbon_question.style.opacity = "1"
-}, false);
-
-var i;
-for (i = 0; i < steps_noribbon.length; i++) {
-steps_noribbon[i].addEventListener("impress:stepenter", function() {
-ribbon_2D.style.opacity = "0"
-ribbon_25D.style.opacity = "0"
-ribbon_3D.style.opacity = "0"
-}, false);
-}
-
-var i;
-for (i = 0; i < steps_2D.length; i++) {
-steps_2D[i].addEventListener("impress:stepenter", function() {
-ribbon_2D.style.opacity = "1"
-ribbon_25D.style.opacity = "0"
-ribbon_3D.style.opacity = "0"
-}, false);
-}
+    var steps_2D = document.getElementsByClassName("step_2D");
+    var steps_25D = document.getElementsByClassName("step_25D");
+    var steps_3D = document.getElementsByClassName("step_3D");
+    var steps_noribbon = document.getElementsByClassName("noribbon");
+    var step_question = document.getElementById("step_question");
 
 
-var i;
-for (i = 0; i < steps_25D.length; i++) {
-steps_25D[i].addEventListener("impress:stepenter", function() {
-ribbon_2D.style.opacity = "0"
-ribbon_25D.style.opacity = "1"
-ribbon_3D.style.opacity = "0"
-}, false);
-}
+    step_question.addEventListener("impress:stepenter", function() {
+      ribbon_question.style.opacity = "1"
+    }, false);
 
-var i;
-for (i = 0; i < steps_3D.length; i++) {
-steps_3D[i].addEventListener("impress:stepenter", function() {
-ribbon_2D.style.opacity = "0"
-ribbon_25D.style.opacity = "0"
-ribbon_3D.style.opacity = "1"
-}, false);
-}
+    var i;
+    for (i = 0; i < steps_noribbon.length; i++) {
+      steps_noribbon[i].addEventListener("impress:stepenter", function() {
+        ribbon_2D.style.opacity = "0"
+        ribbon_25D.style.opacity = "0"
+        ribbon_3D.style.opacity = "0"
+      }, false);
+    }
+
+    var i;
+    for (i = 0; i < steps_2D.length; i++) {
+      steps_2D[i].addEventListener("impress:stepenter", function() {
+        ribbon_2D.style.opacity = "1"
+        ribbon_25D.style.opacity = "0"
+        ribbon_3D.style.opacity = "0"
+      }, false);
+    }
 
 
-</script>
-<script>
-$(document).ready(function() {
-// alert("coucou")
+    var i;
+    for (i = 0; i < steps_25D.length; i++) {
+      steps_25D[i].addEventListener("impress:stepenter", function() {
+        ribbon_2D.style.opacity = "0"
+        ribbon_25D.style.opacity = "1"
+        ribbon_3D.style.opacity = "0"
+      }, false);
+    }
 
-var entries = [
+    var i;
+    for (i = 0; i < steps_3D.length; i++) {
+      steps_3D[i].addEventListener("impress:stepenter", function() {
+        ribbon_2D.style.opacity = "0"
+        ribbon_25D.style.opacity = "0"
+        ribbon_3D.style.opacity = "1"
+      }, false);
+    }
+  </script>
+  <script>
+    $(document).ready(function() {
+      // alert("coucou")
 
-// { label: 'Flashforum', url: 'http://www.flashforum.de/', target: '_top' },
-{
-label: 'svm_cifar10'
-},
-{
-label: 'svm_cifar100'
-},
-{
-label: 'svm_caltech101'
-},
-{
-label: 'svm_caltech256'
-},
-{
-label: 'svm_sun3d'
-},
-{
-label: 'svm_mountain_forest'
-},
-{
-label: 'bvlc_AlexNet'
-},
-{
-label: 'bvlc_GoogleNet'
-},
-{
-label: 'VGG_cnn_s'
-},
-{
-label: 'SqueezeNet'
-},
-{
-label: 'ln_cifar10_gs'
-},
-{
-label: 'ln_cifar10_rgb'
-},
-{
-label: 'an_cifar10_gs'
-},
-{
-label: 'an_cifar10_rgb'
-},
-{
-label: 'ln_cifar100_gs'
-},
-{
-label: 'ln_caltech101_gs'
-},
-{
-label: 'ln_caltech256_gs'
-},
-{
-label: 'ln_sun3d_gs'
-},
-{
-label: 'an_sun3d_rgb'
-}
+      var entries = [
 
-];
+        // { label: 'Flashforum', url: 'http://www.flashforum.de/', target: '_top' },
+        {
+          label: 'svm_cifar10'
+        },
+        {
+          label: 'svm_cifar100'
+        },
+        {
+          label: 'svm_caltech101'
+        },
+        {
+          label: 'svm_caltech256'
+        },
+        {
+          label: 'svm_sun3d'
+        },
+        {
+          label: 'svm_mountain_forest'
+        },
+        {
+          label: 'bvlc_AlexNet'
+        },
+        {
+          label: 'bvlc_GoogleNet'
+        },
+        {
+          label: 'VGG_cnn_s'
+        },
+        {
+          label: 'SqueezeNet'
+        },
+        {
+          label: 'ln_cifar10_gs'
+        },
+        {
+          label: 'ln_cifar10_rgb'
+        },
+        {
+          label: 'an_cifar10_gs'
+        },
+        {
+          label: 'an_cifar10_rgb'
+        },
+        {
+          label: 'ln_cifar100_gs'
+        },
+        {
+          label: 'ln_caltech101_gs'
+        },
+        {
+          label: 'ln_caltech256_gs'
+        },
+        {
+          label: 'ln_sun3d_gs'
+        },
+        {
+          label: 'an_sun3d_rgb'
+        }
 
-var settings = {
+      ];
 
-entries: entries,
-width: 700,
-height: 500,
-radius: '65%',
-radiusMin: 75,
-// bgDraw: true,
-bgColor: '#fff',
-// opacityOver: 1.00,
-// opacityOut: 0.05,
-opacitySpeed: 6,
-fov: 800,
-speed: 0.3,
-// fontFamily: 'Oswald, Arial, sans-serif',
-fontSize: '20',
-fontColor: '#0E2A4E',
-fontWeight: 'normal', //bold
-fontStyle: 'normal', //italic
-fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
-fontToUpperCase: true,
-tooltipFontFamily: 'Oswald, Arial, sans-serif',
-tooltipFontSize: '11',
-tooltipFontColor: '#000',
-tooltipFontWeight: 'bold', //bold or normal
-tooltipFontStyle: 'normal', //italic
-tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
-tooltipFontToUpperCase: false,
-tooltipTextAnchor: 'left',
-tooltipDiffX: 0,
-tooltipDiffY: 10
+      var settings = {
 
-};
+        entries: entries,
+        width: 700,
+        height: 500,
+        radius: '65%',
+        radiusMin: 75,
+        // bgDraw: true,
+        bgColor: '#fff',
+        // opacityOver: 1.00,
+        // opacityOut: 0.05,
+        opacitySpeed: 6,
+        fov: 800,
+        speed: 0.3,
+        // fontFamily: 'Oswald, Arial, sans-serif',
+        fontSize: '20',
+        fontColor: '#0E2A4E',
+        fontWeight: 'normal', //bold
+        fontStyle: 'normal', //italic
+        fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+        fontToUpperCase: true,
+        tooltipFontFamily: 'Oswald, Arial, sans-serif',
+        tooltipFontSize: '11',
+        tooltipFontColor: '#000',
+        tooltipFontWeight: 'bold', //bold or normal
+        tooltipFontStyle: 'normal', //italic
+        tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+        tooltipFontToUpperCase: false,
+        tooltipTextAnchor: 'left',
+        tooltipDiffX: 0,
+        tooltipDiffY: 10
 
-//var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
-$('#method_holder').svg3DTagCloud(settings);
+      };
 
-});
-</script>
-<link href="css/soutenance.css" rel="stylesheet" type="text/css" />
+      //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+      $('#method_holder').svg3DTagCloud(settings);
 
-<style>
-.results {
-border: 1px solid rgba(14, 42, 78, .5);
-padding: 5px;
-text-align: center;
-}
-</style>
+    });
+  </script>
+  <link href="css/soutenance.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    .results {
+      border: 1px solid rgba(14, 42, 78, .5);
+      padding: 5px;
+      text-align: center;
+    }
+  </style>
 </body>
 
 </html>
