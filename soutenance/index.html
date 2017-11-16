@@ -412,8 +412,15 @@
     <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h5>Un espace de représentation <br />pour une tâche donnée</h5>
-        <img src="images/0_introduction/representation/representation_brain.png" style="height: auto; width:100%;" /><br />
+        <!-- <img src="images/0_introduction/representation/representation_brain.png" style="height: auto; width:100%;" /><br /> -->
       </center>
+      <div style="height:600px;">
+
+      </div>
+      <img src="images/0_introduction/representation/representation_brain_1.png" style="height: auto; width:90%;position:absolute;left:5%;bottom:250px;transition:1s;" />
+      <img src="images/0_introduction/representation/representation_brain_2.png" style="height: auto; width:90%;position:absolute;left:5%;bottom:250px;" class="substep" />
+
+
       <div class="notes">
         Mais certaines imprimantes ne fonctionnent pas avec la représentation RGB mais la représentation CYMK / CMJN (cyan, magenta, jaune, noir) (en anglais CMYK, cyan, magenta, yellow, key). Tout est question d'objectif. Quel est notre objectif ? Et quelle
         est la représentation la plus adéquate ? ALors en effet, si l'objectif est de reproduire une image visible par l'homme, la représentation RGB est idéale, mais s'il s'agit de faire automatiquement la différence entre un chien et chat (automatiquement
@@ -569,13 +576,12 @@
             <td>
               <div style="font-size:20px;" class="substep">
                 <ul>
-                  <li>géométrie du robot</li>
+                  <li>unité de calcul</li>
                   <ul>
-                    <li>observation en contre-plongée</li>
-                    <li>observation avec azimut élevé</li>
-                    <li>holonomie imparfaite</li>
+                    <li>mémoire GPU</li>
+                    <li>consommation d'énergie</li>
+                    <li>échauffement</li>
                   </ul>
-
                 </ul>
               </div>
             </td>
@@ -598,11 +604,11 @@
             <td>
               <div style="font-size:20px;" class="substep">
                 <ul>
-                  <li>unité de calcul</li>
+                  <li>géométrie du robot</li>
                   <ul>
-                    <li>mémoire GPU</li>
-                    <li>consommation d'énergie</li>
-                    <li>échauffement</li>
+                    <li>observation en contre-plongée</li>
+                    <li>observation avec azimut élevé</li>
+                    <li>holonomie imparfaite</li>
                   </ul>
 
                 </ul>
@@ -1003,9 +1009,10 @@
 
       <center>
         <h5>Performance du réseau de confiance</h5>
-        <img src="images/1_2D/cam_oracle_nolegend.png" style="height: auto; width:45%;" />
-        <img src="images/1_2D/cam_tnn_nolegend.png" style="height: auto; width:45%;" class="substep" /><br />
-        <img src="images/1_2D/legend_proof_oracle_tnn.png" style="height: auto; width:45%;" />
+        <img src="images/1_2D/cam_oracle_nolegend.png" style="height: auto; width:40%;" />
+        <img src="images/1_2D/cam_tnn_nolegend.png" style="height: auto; width:40%;" class="substep" /><br />
+        <img src="images/1_2D/legend_proof_oracle_tnn.png" style="height: auto; width:40%;" />
+        <span style="font-size:20px;color:black;" class="substep">+7.4 points /AlexNet et +4.9 points /LeNet</span>
       </center>
 
       <div class="notes">
@@ -1073,6 +1080,26 @@
     <!-- ######################################################################## -->
     <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
+        <h5>Corrélation Méthodes/Jeux de données</h5>
+      </center>
+      <div style="height:600px;">
+
+      </div>
+      <img src="images/1_2D/jo_method/jo_method_1.png" style="height: auto; width:90%;position:absolute;left:5%;bottom:-50px;transition:1s;" />
+      <img src="images/1_2D/jo_method/jo_method_2.png" style="height: auto; width:90%;position:absolute;left:5%;bottom:-50px;" class="substep" />
+      <img src="images/1_2D/jo_method/jo_method_3.png" style="height: auto; width:90%;position:absolute;left:5%;bottom:-50px;" class="substep" />
+      <img src="images/1_2D/jo_method/jo_method_4.png" style="height: auto; width:90%;position:absolute;left:5%;bottom:-50px;" class="substep" />
+      <img src="images/1_2D/jo_method/jo_method_5.png" style="height: auto; width:90%;position:absolute;left:5%;bottom:-50px;" class="substep" />
+      <img src="images/1_2D/jo_method/jo_method_6.png" style="height: auto; width:90%;position:absolute;left:5%;bottom:-50px;" class="substep" />
+      <img src="images/1_2D/jo_method/jo_method_7.png" style="height: auto; width:90%;position:absolute;left:5%;bottom:-50px;" class="substep" />
+      <img src="images/1_2D/jo_method/jo_method_8.png" style="height: auto; width:90%;position:absolute;left:5%;bottom:-50px;" class="substep" />
+    </div>
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
         <h4>Corrélation Méthodes/Jeux de données</h4>
         <img src="images/1_2D/jo_method_dataset.png" style="height: 500px; width:auto;" />
       </center>
@@ -1080,11 +1107,11 @@
       <div class="notes">
       </div>
 
-    </div>
+    </div> -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <!-- <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h4>Corrélation Méthodes/Jeux de données</h4>
         <img src="images/1_2D/jo_method_dataset_oracle.png" style="height: 500px; width:auto;" />
@@ -1093,11 +1120,11 @@
       <div class="notes">
       </div>
 
-    </div>
+    </div> -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <!-- <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <h4>Corrélation Méthodes/Jeux de données</h4>
         <img src="images/1_2D/jo_method_dataset_oracle_tnn.png" style="height: 500px; width:auto;" />
@@ -1106,7 +1133,7 @@
       <div class="notes">
       </div>
 
-    </div>
+    </div> -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
@@ -1143,108 +1170,108 @@
             <td>
               <table style="font-size:15px;text-align:center;">
                 <tr>
-                  <td> <b>Méthode</b> </td>
-                  <td> <b>Précision moyenne (%)</b> </td>
+                  <td class="results"> <b>Méthode</b> </td>
+                  <td class="results"> <b>Précision moyenne (%)</b> </td>
                 </tr>
                 <tr>
-                  <td> bvlc_GoogleNet </td>
-                  <td> 24,7 </td>
+                  <td class="results"> bvlc_GoogleNet </td>
+                  <td class="results"> <b>24,7</b> </td>
                 </tr>
                 <tr>
-                  <td> VGG_cnn_s </td>
-                  <td> 23,7 </td>
+                  <td class="results"> VGG_cnn_s </td>
+                  <td class="results"> 23,7 </td>
                 </tr>
                 <tr>
-                  <td> an_cifar10_gs </td>
-                  <td> 18,3 </td>
+                  <td class="results"> an_cifar10_gs </td>
+                  <td class="results"> 18,3 </td>
                 </tr>
                 <tr>
-                  <td> an_cifar10_rgb </td>
-                  <td> 18,2 </td>
+                  <td class="results"> an_cifar10_rgb </td>
+                  <td class="results"> 18,2 </td>
                 </tr>
                 <tr>
-                  <td> bvlc_AlexNet </td>
-                  <td> 17,7 </td>
+                  <td class="results"> bvlc_AlexNet </td>
+                  <td class="results"> 17,7 </td>
                 </tr>
                 <tr>
-                  <td> svm_mountain_forest </td>
-                  <td> 17 </td>
+                  <td class="results"> svm_mountain_forest </td>
+                  <td class="results"> 17 </td>
                 </tr>
                 <tr>
-                  <td> SqueezeNet </td>
-                  <td> 16,8 </td>
+                  <td class="results"> SqueezeNet </td>
+                  <td class="results"> 16,8 </td>
                 </tr>
                 <tr>
-                  <td> ln_cifar10_rgb </td>
-                  <td> 14 </td>
+                  <td class="results"> ln_cifar10_rgb </td>
+                  <td class="results"> 14 </td>
                 </tr>
                 <tr>
-                  <td> ln_cifar10_gs </td>
-                  <td> 13,7 </td>
+                  <td class="results"> ln_cifar10_gs </td>
+                  <td class="results"> 13,7 </td>
                 </tr>
                 <tr>
-                  <td> ln_caltech101_gs </td>
-                  <td> 12,5 </td>
+                  <td class="results"> ln_caltech101_gs </td>
+                  <td class="results"> 12,5 </td>
                 </tr>
                 <tr>
-                  <td> svm_caltech101 </td>
-                  <td> 11,3 </td>
+                  <td class="results"> svm_caltech101 </td>
+                  <td class="results"> 11,3 </td>
                 </tr>
                 <tr>
-                  <td> ln_cifar100_gs </td>
-                  <td> 11,3 </td>
+                  <td class="results"> ln_cifar100_gs </td>
+                  <td class="results"> 11,3 </td>
                 </tr>
                 <tr>
-                  <td> ln_sun3d_gs </td>
-                  <td> 11,3 </td>
+                  <td class="results"> ln_sun3d_gs </td>
+                  <td class="results"> 11,3 </td>
                 </tr>
                 <tr>
-                  <td> ln_caltech256_gs </td>
-                  <td> 9,3 </td>
+                  <td class="results"> ln_caltech256_gs </td>
+                  <td class="results"> 9,3 </td>
                 </tr>
                 <tr>
-                  <td> svm_cifar10 </td>
-                  <td> 9 </td>
+                  <td class="results"> svm_cifar10 </td>
+                  <td class="results"> 9 </td>
                 </tr>
                 <tr>
-                  <td> an_sun3d_rgb </td>
-                  <td> 8 </td>
+                  <td class="results"> an_sun3d_rgb </td>
+                  <td class="results"> 8 </td>
                 </tr>
                 <tr>
-                  <td> svm_caltech256 </td>
-                  <td> 6,3 </td>
+                  <td class="results"> svm_caltech256 </td>
+                  <td class="results"> 6,3 </td>
                 </tr>
                 <tr>
-                  <td> svm_sun3d </td>
-                  <td> 5,7 </td>
+                  <td class="results"> svm_sun3d </td>
+                  <td class="results"> 5,7 </td>
                 </tr>
                 <tr>
-                  <td> svm_cifar100 </td>
-                  <td> 1,8 </td>
+                  <td class="results"> svm_cifar100 </td>
+                  <td class="results"> 1,8 </td>
                 </tr>
               </table>
             </td>
             <td>
               <table style="font-size:15px;text-align:center;">
                 <tr>
-                  <td> <b>Méthode</b> </td>
-                  <td> <b>Précision moyenne (%)</b> </td>
+                  <td class="results"> <b>Méthode</b> </td>
+                  <td class="results"> <b>Précision moyenne (%)</b> </td>
                 </tr>
                 <tr>
-                  <td> Oracle </td>
-                  <td> 77,8 </td>
+                  <td class="results"> Oracle </td>
+                  <td class="results"> 77,8 </td>
                 </tr>
                 <tr>
-                  <td> RC : SqueezeNet 256x256 </td>
-                  <td> 43 </td>
+                  <td class="results"> <b>Réseau de Confiance [SqueezeNet] </b></td>
+                  <td class="results"> <b>43,0</b> </td>
                 </tr>
                 <tr>
-                  <td> RC : LeNet 32x32 </td>
-                  <td> 36,3 </td>
+                  <td class="results"> Réseau de Confiance [LeNet]</td>
+                  <td class="results"> 36,3 </td>
                 </tr>
                 <tr>
-                  <td> RC : AlexNet 256x256 </td>
-                  <td> 23,7 </td>
+                  <td class="results"> Réseau de Confiance [AlexNet]</td>
+                  <td class="results"> 23,7 </td>
                 </tr>
               </table>
             </td>
@@ -1307,49 +1334,39 @@
 
         <table style="font-size:20px;text-align:center;">
           <tr>
-            <td> <b>Méthode</b> </td>
-            <td> <b>Top-1 score (%)</b> </td>
-            <td> <b>Temps de calcul cumulés</b> </td>
+            <td class="results"> <b>Méthode</b> </td>
+            <td class="results"> <b>Top-1 score (%)</b> </td>
+            <td class="results"> <b>Temps de calcul cumulés</b> </td>
           </tr>
           <tr>
-            <td> AlexNet </td>
-            <td> 83,2 </td>
-            <td> 41,98 s </td>
+            <td class="results"> AlexNet </td>
+            <td class="results"> 83,2 </td>
+            <td class="results"> 41,98 s </td>
           </tr>
           <tr>
-            <td> GoogleNet </td>
-            <td> 82,3 </td>
-            <td> 67,16 s </td>
+            <td class="results"> GoogleNet </td>
+            <td class="results"> 82,3 </td>
+            <td class="results"> 67,16 s </td>
           </tr>
           <tr>
-            <td> VGG </td>
-            <td> 83,9 </td>
-            <td> 73,88 s </td>
+            <td class="results"> VGG </td>
+            <td class="results"> 83,9 </td>
+            <td class="results"> 73,88 s </td>
           </tr>
           <tr>
-            <td> SqueezeNet </td>
-            <td> 80,4 </td>
-            <td> 100,74 s </td>
+            <td class="results"> SqueezeNet </td>
+            <td class="results"> 80,4 </td>
+            <td class="results"> 100,74 s </td>
           </tr>
           <tr style="border-bottom: 1px solid black">
-            <td>
-              Oracle
-
-            </td>
-            <td>
-              93,2
-
-            </td>
-            <td>
-              476,43 s
-
-            </td>
-
+            <td class="results"> Oracle </td>
+            <td class="results"> 93,2 </td>
+            <td class="results"> 476,43 s </td>
           </tr>
           <tr>
-            <td> RC Dofeann + méthodes choisies </td>
-            <td> 83,8 </td>
-            <td> 129,4 s </td>
+            <td class="results"> RC Dofeann + méthodes choisies </td>
+            <td class="results"> 83,8 </td>
+            <td class="results"> 129,4 s </td>
           </tr>
         </table>
       </center>
@@ -1475,9 +1492,14 @@
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h3 style="margin:0px;">Détecteur RGBD</h3>
-        <h5 style="margin-bottom:0px;font-style: italic;">Gating Network</h5>
-        <img src="images/2_25D/eitel.png" style="height: auto; width:100%" />
+        <h4 style="margin:0px;">Détecteur RGBD</h4>
+
+        <div style="height:600px;">
+          <h6 style="margin-top:0px;font-style: italic;">Gating Network</h6>
+        </div>
+        <!-- <img src="images/2_25D/eitel.png" style="height: auto; width:100%" /> -->
+        <img src="images/2_25D/eitel.png" style="height: auto; width:100%;position:absolute;right:0px;bottom:200px;" /><br />
+        <img src="images/2_25D/eitel_gn.png" style="height: auto; width:100%;position:absolute;right:0px;bottom:200px;" class="substep" />
 
         <blockquote class="article_blockquote">
           <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Choosing smartly: Adaptive multimodal fusion for object detection in changing
@@ -1494,7 +1516,7 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step step_25D" data-rel-x="0" data-rel-y="0" data-rel-z="-1500">
+    <!-- <div class="step step_25D" data-rel-x="0" data-rel-y="0" data-rel-z="-1500">
       <center class="fade-in" style="transition:2s">
         <h3 style="margin:0px;">Détecteur RGBD</h3>
         <h5 style="margin-bottom:0px;font-style: italic;">Gating Network</h5>
@@ -1510,7 +1532,7 @@
 
       <div class="notes">
       </div>
-    </div>
+    </div> -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
@@ -1553,7 +1575,7 @@
         <h5 style="margin-bottom:0px;">Notre objectif : <span style="font-style:italic">R&M CNN</span></h5>
         <!-- <img src="images/2_25D/r_mcnn.png" style="height: auto; width:100%" /><img src="images/2_25D/r_mcnn_selector.png" style="height: auto; width:100%" /> -->
         <div style="height:500px">
-&nbsp;
+          &nbsp;
         </div>
         <img src="images/2_25D/r_mcnn.png" style="height: auto; width:100%;position:absolute;left:5%;bottom:100px;" />
         <img src="images/2_25D/r_mcnn_selector.png" style="height: auto; width:100%;position:absolute;left:5%;bottom:100px;" class="substep" />
@@ -1583,8 +1605,7 @@
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h5 style="margin:0px;padding:0px">Détecteur RGBD</h5>
-        <h6 style="margin:0px;">Nos méthodes :</h6>
+        <h5 style="margin:0px;padding:0px">Nos méthodes :</h5>
         <img src="images/2_25D/archis.jpg" style="height: auto; width:60%" />
         <img src="images/2_25D/nms.png" style="height: auto; width:300px;box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); position: absolute;bottom: -80px; right: 150px;" class="substep" />
       </center>
@@ -1597,56 +1618,21 @@
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h3 style="margin:0px;">Résultats</h3>
-        <h5 style="margin:0px;">Jeu de données : <span style="font-style:italic">RGBD People</span></h5>
-        <img src="images/2_25D/rgbdp_404.jpg" style="margin-bottom:0px;height: auto; width:70%" />
-        <table style="font-size:20px;text-align:center;">
+        <h5 style="margin:0px;">Application sur 3 jeux de données RGBD</h5>
+
+        <table>
           <tr>
-            <th> Méthode </th>
-            <th> Source </th>
-            <th> EER </th>
+            <td style="text-align:center;"><span style="font-size:25px;padding:10px;">RGBD People  </span></td>
+            <td style="text-align:center;"><span style="font-size:25px;padding:10px;">InOutdoor RGBD People  </span></td>
+            <td style="text-align:center;"><span style="font-size:25px;padding:10px;color:#064d00;">ONERA.ROOM  </span></td>
           </tr>
           <tr>
-            <td> HOD [Spinello et al. 2012] </td>
-            <td> D </td>
-            <td> 56.3 </td>
-          </tr>
-          <tr>
-            <td> HGE [Spinello et al. 2012] </td>
-            <td> RGB-D </td>
-            <td> 87.4 </td>
-          </tr>
-          <tr>
-            <td> Gating Network [Mees et al. 2016] </td>
-            <td> RGBD-Optic. flow </td>
-            <td> 89.3 </td>
-          </tr>
-          <tr>
-            <td> Faster RCNN [Ren et al. 2015] </td>
-            <td> D </td>
-            <td> 98.3 </td>
-          </tr>
-          <tr>
-            <td> Faster RCNN [Ren et al. 2015] </td>
-            <td> RGB </td>
-            <td> 98.4 </td>
-          </tr>
-          <tr>
-            <td> U </td>
-            <td> RGB-D </td>
-            <td> 98.4 </td>
-          </tr>
-          <tr>
-            <td> Y </td>
-            <td> RGB-D </td>
-            <td> 98.3 </td>
-          </tr>
-          <tr>
-            <td> X </td>
-            <td> RGB-D </td>
-            <th> 98.6 </th>
+            <td style="text-align:center;padding:10px;"><img src="images/2_25D/rgbdp_dataset2.jpg" style="height: 170px; width:auto" /></td>
+            <td style="text-align:center;padding:10px;"><img src="images/2_25D/inout_dataset.png" style="height: 170px; width:auto" /></td>
+            <td style="text-align:center;padding:10px;"><img src="images/2_25D/or_dataset.png" style="height: 170px; width:auto" /></td>
           </tr>
         </table>
+
       </center>
 
       <div class="notes">
@@ -1657,123 +1643,235 @@
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h3 style="margin:0px;">Résultats</h3>
-        <h5 style="margin:0px;">Jeu de données : <span style="font-style:italic">InOutDoor RGBD People</span></h5>
-        <img src="images/2_25D/InOutPeople_image.png" style="height: auto; width:80%" />
-        <table style="font-size:20px;text-align:center;">
+        <h5 style="margin:0px;">Résultats : <span style="font-style:italic">RGBD People</span></h5>
+        <img src="images/2_25D/rgbdp_404.jpg" style="margin-bottom:0px;height: auto; width:50%" />
+
+        <table>
           <tr>
-            <th> Méthode </th>
-            <th> Source </th>
-            <!-- <th> Précision/Rappel </th> -->
-            <th> PM </th>
-            <th> EER </th>
-            <!-- <th> mIoU </th> -->
-            <!-- <th> F1 </th> -->
-          </tr>
-          <tr>
-            <td> Gating Net [Mees et al 2016] </td>
-            <td> RGB-D </td>
-            <!-- <td> –/81,1 </td> -->
-            <td> 80,4 </td>
-            <td> – </td>
-            <!-- <td> – </td> -->
-            <!-- <td> – </td> -->
-          </tr>
-          <tr>
-            <td> Faster RCNN [Ren et al. 2015] </td>
-            <td> RGB </td>
-            <!-- <td> <b>73,2</b>/94,2 </td> -->
-            <td> 91,9 </td>
-            <td> 90,1 </td>
-            <!-- <td> <b>80,3</b> </td> -->
-            <!-- <td> <b>82,4</b> </td> -->
-          </tr>
-          <tr>
-            <td> Faster RCNN [Ren et al. 2015] </td>
-            <td> D </td>
-            <!-- <td> 46,9/85,9 </td> -->
-            <td> 84 </td>
-            <td> 84,8 </td>
-            <!-- <td> 79,4 </td> -->
-            <!-- <td> 60,7 </td> -->
-          </tr>
-          <tr>
-            <td> U </td>
-            <td> RGB-D </td>
-            <!-- <td> 45,6/96,4 </td> -->
-            <td> <b>94,4</b> </td>
-            <td> 92,1 </td>
-            <!-- <td> <b>80,3</b> </td> -->
-            <!-- <td> 61,9 </td> -->
-          </tr>
-          <tr>
-            <td> X </td>
-            <td> RGB-D </td>
-            <!-- <td> 43,5/<b>96,5</b> </td> -->
-            <td> 94,3 </td>
-            <td> <b>92,4</b> </td>
-            <!-- <td> 79,9 </td> -->
-            <!-- <td> 60 </td> -->
-          </tr>
-          <tr>
-            <td> Y </td>
-            <td> RGB-D </td>
-            <!-- <td> 59,4/93,3 </td> -->
-            <td> 90,2 </td>
-            <td> 90,1 </td>
-            <!-- <td> 80,2 </td> -->
-            <!-- <td> 72,6 </td> -->
-          </tr>
-          <tr>
-            <td> U* </td>
-            <td> <span style="background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);">RGB</span>-D </td>
-            <!-- <td> 46,9/85,9 </td> -->
-            <td> 84 </td>
-            <td> 84,8 </td>
-            <!-- <td> 79,4 </td> -->
-            <!-- <td> 60,7 </td> -->
-          </tr>
-          <tr>
-            <td> X* </td>
-            <td> <span style="background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);">RGB</span>-D </td>
-            <!-- <td> 45,9/85,9 </td> -->
-            <td> 84,1 </td>
-            <td> 84,8 </td>
-            <!-- <td> 79,4 </td> -->
-            <!-- <td> 59,9 </td> -->
-          </tr>
-          <tr>
-            <td> Y* </td>
-            <td> <span style="background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);">RGB</span>-D </td>
-            <!-- <td> n.a/0 </td> -->
-            <td> n.a </td>
-            <td> n.a </td>
-            <!-- <td> 0 </td> -->
-            <!-- <td> n.a </td> -->
+            <td valign="middle" align="center"> <span style="font-size:20px">Fusion en X</span><br /><img src="images/2_25D/selection_rgbdp_x/rgbdp_x.gif" style="margin-bottom:0px;height: auto; width:60%;margin-bottom:0px;padding-bottom:0px;" /></td>
+            <td>
+              <table style="font-size:20px;text-align:center;">
+                <tr>
+                  <th class="results"> Méthode </th>
+                  <th class="results"> Source </th>
+                  <th class="results"> EER </th>
+                </tr>
+                <tr>
+                  <td class="results"> HOD <span style="font-size:15px;">[Spinello et al. 2012]</span> </td>
+                  <td class="results"> D </td>
+                  <td class="results"> 56.3 </td>
+                </tr>
+                <tr>
+                  <td class="results"> HGE <span style="font-size:15px;">[Spinello et al. 2012]</span> </td>
+                  <td class="results"> RGB-D </td>
+                  <td class="results"> 87.4 </td>
+                </tr>
+                <tr>
+                  <td class="results"> Gating Net. <span style="font-size:15px;">[Mees et al. 2016]</span></td>
+                  <td class="results"> RGBD-OF </td>
+                  <td class="results"> 89.3 </td>
+                </tr>
+                <tr>
+                  <td class="results"> <span style="color:#064d00;">Faster RCNN <span style="font-size:15px;">[Ren et al. 2015]</span> </span>
+                  </td>
+                  <td class="results"> <span style="color:#064d00;">D </span></td>
+                  <td class="results"> <span style="color:#064d00;">98.3 </span></td>
+                </tr>
+                <tr>
+                  <td class="results"> <span style="color:#064d00;">Faster RCNN <span style="font-size:15px;">[Ren et al. 2015]</span> </span>
+                  </td>
+                  <td class="results"> <span style="color:#064d00;">RGB </span></td>
+                  <td class="results"> <span style="color:#064d00;"> 98.4 </span></td>
+                </tr>
+                <tr>
+                  <td class="results"> <span style="color:#064d00;">U <span style="font-size:15px;">[Guerry et al. 2017]</span> </span>
+                  </td>
+                  <td class="results"> <span style="color:#064d00;">RGB-D </span></td>
+                  <td class="results"> <span style="color:#064d00;">98.4 </span></td>
+                </tr>
+                <tr>
+                  <td class="results"> <span style="color:#064d00;"> Y <span style="font-size:15px;">[Guerry et al. 2017] </span></td>
+                  <td class="results"> <span style="color:#064d00;">RGB-D </span></td>
+                  <td class="results"> <span style="color:#064d00;"> 98.3 </span></td>
+                </tr>
+                <tr>
+                  <td class="results"> <span style="color:#064d00;">X <span style="font-size:15px;">[Guerry et al. 2017] </span></td>
+                  <td class="results"> <span style="color:#064d00;">RGB-D </span></td>
+                  <th class="results"> <span style="color:#064d00;">98.6 </span></th>
+                </tr>
+              </table>
+            </td>
           </tr>
         </table>
+
+      </center>
+
+      <div class="notes">
+      </div>
+    </div>
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        <h5 style="margin:0px;">Résultats : <span style="font-style:italic">InOutDoor RGBD People</span></h5>
+        <img src="images/2_25D/InOutPeople_image.png" style="height: auto; width:50%" />
+
+        <table>
+          <tr>
+            <td valign="middle" align="center"> <span style="font-size:20px">Fusion en U</span><br /><img src="images/2_25D/u_inout.gif" style="margin-bottom:0px;height: auto; width:90%;margin-bottom:0px;padding-bottom:0px;" /></td>
+            <td>
+              <table style="font-size:20px;text-align:center;">
+                <tr>
+                  <th class="results"> Méthode </th>
+                  <th class="results"> Source </th>
+                  <!-- <th class="results"> Précision/Rappel </th> -->
+                  <th class="results"> mAP </th>
+                  <th class="results"> EER </th>
+                  <!-- <th class="results"> mIoU </th> -->
+                  <!-- <th class="results"> F1 </th> -->
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap" class="results"> Gating Net <span style="font-size:15px;">[Mees et al. 2016]</span> </td>
+                  <td style="white-space: nowrap" class="results"> RGB-D </td>
+                  <!-- <td class="results"> –/81,1 </td> -->
+                  <td class="results"> 80,4 </td>
+                  <td class="results"> – </td>
+                  <!-- <td class="results"> – </td> -->
+                  <!-- <td class="results"> – </td> -->
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap" class="results"> <span style="color:#064d00;"> Faster RCNN <span style="font-size:15px;">[Ren et al. 2015]</span></span>
+                  </td>
+                  <td class="results"> <span style="color:#064d00;"> RGB</span> </td>
+                  <!-- <td class="results"> <span style="color:#064d00;"> <b>73,2</b>/94,2 </span></td> -->
+                  <td class="results"> <span style="color:#064d00;"> 91,9 </span></td>
+                  <td class="results"> <span style="color:#064d00;"> 90,1</span> </td>
+                  <!-- <td class="results"> <span style="color:#064d00;"> <b>80,3</b> </span></td> -->
+                  <!-- <td class="results"> <span style="color:#064d00;"> <b>82,4</b></span> </td> -->
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap" class="results"> <span style="color:#064d00;"> Faster RCNN <span style="font-size:15px;">[Ren et al. 2015]</span> </span>
+                  </td>
+                  <td class="results"> <span style="color:#064d00;"> D </span></td>
+                  <!-- <td class="results"> <span style="color:#064d00;"> 46,9/85,9</span> </td> -->
+                  <td class="results"> <span style="color:#064d00;"> 84</span> </td>
+                  <td class="results"> <span style="color:#064d00;"> 84,8 </span></td>
+                  <!-- <td class="results"> <span style="color:#064d00;"> 79,4 </span></td> -->
+                  <!-- <td class="results"> <span style="color:#064d00;"> 60,7 </span></td> -->
+                </tr>
+                <tr>
+                  <td class="results"> <span style="color:#064d00;"> U <span style="font-size:15px;">[Guerry et al. 2017] </span></td>
+                  <td class="results"> <span style="color:#064d00;"> RGB-D </span></td>
+                  <!-- <td class="results"> <span style="color:#064d00;"> 45,6/96,4 </span></td> -->
+                  <td class="results"> <span style="color:#064d00;"> <b>94,4</b></span> </td>
+                  <td class="results"> <span style="color:#064d00;"> 92,1</span> </td>
+                  <!-- <td class="results"> <span style="color:#064d00;"> <b>80,3</b> </span></td> -->
+                  <!-- <td class="results"> <span style="color:#064d00;"> 61,9</span> </td> -->
+                </tr>
+                <tr>
+                  <td class="results"> <span style="color:#064d00;"> X <span style="font-size:15px;">[Guerry et al. 2017] </span> </td>
+                  <td class="results"> <span style="color:#064d00;"> RGB-D</span> </td>
+                  <!-- <td class="results"> <span style="color:#064d00;"> 43,5/<b>96,5</b> </td> -->
+                  <td class="results"> <span style="color:#064d00;"> 94,3 </span></td>
+                  <td class="results"> <span style="color:#064d00;"> <b>92,4</b> </span></td>
+                  <!-- <td class="results"> <span style="color:#064d00;"> 79,9 </span></td> -->
+                  <!-- <td class="results"> <span style="color:#064d00;"> 60 </span></td> -->
+                </tr>
+                <tr>
+                  <td class="results"> <span style="color:#064d00;"> Y <span style="font-size:15px;">[Guerry et al. 2017] </span></td>
+                  <td class="results"> <span style="color:#064d00;"> RGB-D </span></td>
+                  <!-- <td class="results"> <span style="color:#064d00;"> 59,4/93,3 </td> -->
+                  <td class="results"> <span style="color:#064d00;"> 90,2 </span></td>
+                  <td class="results"> <span style="color:#064d00;"> 90,1</span> </td>
+                  <!-- <td class="results"> <span style="color:#064d00;"> 80,2 </td> -->
+                  <!-- <td class="results"> <span style="color:#064d00;"> 72,6 </td> -->
+                </tr>
+                <tr>
+                  <td class="results"> <span style="color:#064d00;"> U<span style="color:#000;font-size:35px;">*</span> <span style="font-size:15px;">[Guerry et al. 2017]</span></td>
+                  <td class="results"> <span style="color:#064d00;"> <span style="background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);">RGB</span>-D</span>
+                  </td>
+                  <!-- <td class="results"> <span style="color:#064d00;"> 46,9/85,9 </span></td> -->
+                  <td class="results"> <span style="color:#064d00;"> 84</span> </td>
+                  <td class="results"> <span style="color:#064d00;"> 84,8</span> </td>
+                  <!-- <td class="results"> <span style="color:#064d00;"> 79,4 </span></td> -->
+                  <!-- <td class="results"> <span style="color:#064d00;"> 60,7 </span></td> -->
+                </tr>
+                <tr>
+                  <td class="results"> <span style="color:#064d00;"> X<span style="color:#000;font-size:35px;">*</span> <span style="font-size:15px;">[Guerry et al. 2017]</span> </td>
+                  <td class="results"> <span style="color:#064d00;"> <span style="background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);">RGB</span>-D </span>
+                  </td>
+                  <!-- <td class="results"> <span style="color:#064d00;"> 45,9/85,9 </span></td> -->
+                  <td class="results"> <span style="color:#064d00;"> 84,1 </span></td>
+                  <td class="results"> <span style="color:#064d00;"> 84,8 </span></td>
+                  <!-- <td class="results"> <span style="color:#064d00;"> 79,4</span> </td> -->
+                  <!-- <td class="results"> <span style="color:#064d00;"> 59,9 </span></td> -->
+                </tr>
+                <tr>
+                  <td class="results"> <span style="color:#064d00;"> Y<span style="color:#000;font-size:35px;">*</span> <span style="font-size:15px;">[Guerry et al. 2017]</span></td>
+                  <td class="results"> <span style="color:#064d00;"> <span style="background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);">RGB</span>-D </span>
+                  </td>
+                  <!-- <td class="results"> <span style="color:#064d00;"> n.a/0 </span></td> -->
+                  <td class="results"> <span style="color:#064d00;"> n.a</span> </td>
+                  <td class="results"> <span style="color:#064d00;"> n.a </span></td>
+                  <!-- <td class="results"> <span style="color:#064d00;"> 0 </span></td> -->
+                  <!-- <td class="results"> <span style="color:#064d00;"> n.a </span> </td> -->
+                </tr>
+              </table>
+              <span style="color:#000;font-size:35px;">*</span> <span style="color:#064d00;font-size:15px;">ablation de la couleur </span></td>
+          </tr>
+        </table>
+
       </center>
 
       <div class="notes">
       </div>
     </div>
 
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step step_25D" data-rel-x="-1400" data-rel-y="1000" data-rotate-x="0" data-rotate-y="0" data-rotate-z="-90" data-z="-100" data-scale="1">
+      <h5>Nouveau jeu de données : ONERA.ROOM</h5>
+      <table>
+        <tr>
+          <td><img src="images/2_25D/result_or_0.jpg" alt=""></td>
+          <td><img src="images/2_25D/result_or_1.jpg" alt=""></td>
+          <td><img src="images/2_25D/result_or_2.jpg" alt=""></td>
+          <!-- <td><img src="images/2_25D/result_or_3.jpg" alt=""></td> -->
+        </tr>
+      </table>
+    </div>
 
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div id="video-step-2" class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
-      <h3>Nouveau jeu de données : ONERA.ROOM</h3>
+    <div id="video-step-2" class="step step_25D" data-rel-x="700" data-rel-y="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="-90" data-z="-100" data-scale="1">
+      <h5>Nouveau jeu de données : ONERA.ROOM</h5>
       <center>
-        <video id="video_ecmr" style="width:70%; height:auto;" loop muted>
-          <source src="videos/ecmr.mp4" type="video/mp4">
+        <video id="video_ecmr1" style="width:40%; height:auto;" loop muted>
+          <source src="videos/ecmr-1.mp4" type="video/mp4">
         Votre navigateur ne supporte pas la balise vidéo.
         </video>
+        <video id="video_ecmr2" style="width:40%; height:auto;" loop muted>
+            <source src="videos/ecmr-2.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la balise vidéo.
+        </video><br />
+        <video id="video_ecmr3" style="width:40%; height:auto;" loop muted>
+              <source src="videos/ecmr-3.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la balise vidéo.
+            </video>
+        <video id="video_ecmr4" style="width:40%; height:auto;" loop muted>
+                <source src="videos/ecmr-4.mp4" type="video/mp4">
+              Votre navigateur ne supporte pas la balise vidéo.
+              </video>
       </center>
+
+
       <blockquote class="article_blockquote">
         <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Look At This One" Detection sharing between modality-independent classifiers for
-        robotic discovery of people (2017)
-        <cite class="article_cite">Joris Guerry, Bertrand Le Saux et David Filliat</cite>
+        robotic discovery of people (ECMR 2017)
+        <cite class="article_cite">Guerry, Le Saux and Filliat</cite>
       </blockquote>
       <div style="text-align:right;">
         <button onclick='ex2_play()' class="button button_blue">Lecture</button>
@@ -1787,94 +1885,121 @@
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
+    <div class="step step_25D" data-rel-x="700" data-rel-y="0" data-z="0">
       <center>
-        <h3 style="margin:0px;">Résultats</h3>
-        <h5 style="margin:0px;">Jeu de données : <span style="font-style:italic">ONERA.ROOM</span></h5>
-        <!-- <img src="images/2_25D/InOutPeople_image.png" style="height: auto; width:80%" /> -->
-        <table style="font-size:20px;text-align:center;">
+        <h5 style="margin:0px;">Résultats : <span style="font-style:italic">ONERA.ROOM</span></h5>
+
+        <img src="images/2_25D/result_or_0.jpg" style="height:auto;width:15%">
+        <img src="images/2_25D/result_or_1.jpg" style="height:auto;width:15%">
+        <img src="images/2_25D/result_or_2.jpg" style="height:auto;width:15%">
+
+        <table>
           <tr>
-            <th> Méthode </th>
-            <th> Source </th>
-            <!-- <th> Précision/Rappel </th> -->
-            <th> PM </th>
-            <th> EER </th>
-            <!-- <th> mIoU </th> -->
-            <!-- <th> F1 </th> -->
-          </tr>
-          <tr>
-            <td> Faster RCNN [Ren et al. 2015] </td>
-            <td> RGB </td>
-            <!-- <td> 61,0/96,1 </td> -->
-            <td> 91,2 </td>
-            <th> 91 </th>
-            <!-- <th> 72,8 </th> -->
-            <!-- <td> 74,6 </td> -->
-          </tr>
-          <tr>
-            <td> Faster RCNN [Ren et al. 2015] </td>
-            <td> Depth </td>
-            <!-- <td> 25,6/76,9 </td> -->
-            <td> 66,9 </td>
-            <td> 68,3 </td>
-            <!-- <td> 65,3 </td> -->
-            <!-- <td> 38,5 </td> -->
-          </tr>
-          <tr>
-            <td> U </td>
-            <td> RGB-D </td>
-            <!-- <td> 26,7/95,8 </td> -->
-            <td> 90,6 </td>
-            <td> 88 </td>
-            <!-- <td> 71,1 </td> -->
-            <!-- <td> 41,8 </td> -->
-          </tr>
-          <tr>
-            <td> X </td>
-            <td> RGB-D </td>
-            <!-- <td> 25,7/<b>96,6</b> </td> -->
-            <th> 91,3 </th>
-            <td> 89,1 </td>
-            <!-- <td> 71,7 </td> -->
-            <!-- <td> 40,7 </td> -->
-          </tr>
-          <tr>
-            <td> Y </td>
-            <td> RGB-D </td>
-            <!-- <td> <b>81,1</b>/92,1 </td> -->
-            <td> 87,1 </td>
-            <td> 90,3 </td>
-            <!-- <td> 71,7 </td> -->
-            <!-- <th> 86,3 </th> -->
-          </tr>
-          <tr>
-            <td> U* </td>
-            <td> RGB-D </td>
-            <!-- <td> 18,2/78,3 </td> -->
-            <td> 67 </td>
-            <td> 68,3 </td>
-            <!-- <td> 65,3 </td> -->
-            <!-- <td> 29,5 </td> -->
-          </tr>
-          <tr>
-            <td> X* </td>
-            <td> RGB-D </td>
-            <!-- <td> 25,0/77,0 </td> -->
-            <td> 66,7 </td>
-            <td> 68,1 </td>
-            <!-- <td> 65,3 </td> -->
-            <!-- <td> 37,8 </td> -->
-          </tr>
-          <tr>
-            <td> Y* </td>
-            <td> RGB-D </td>
-            <!-- <td> n.a/0 </td> -->
-            <td> n.a </td>
-            <td> n.a </td>
-            <!-- <td> 0 </td> -->
-            <!-- <td> n.a </td> -->
+            <td valign="middle" align="center" style="margin:0px;padding:0px 0px 0px 0px;">
+              <span style="font-size:20px;margin:0px;padding:0px;">Faster RCNN RGB</span>
+              <br />
+              <img src="images/2_25D/rgb_or.gif" style="height: auto; width:60%;margin:0px;padding:0px;" />
+              <br />
+              <span style="font-size:20px;margin:0px;padding:0px;">Fusion en X</span>
+              <br />
+              <img src="images/2_25D/x_or.gif" style="height: auto; width:60%;margin:0px;padding:0px;" />
+            </td>
+            <td>
+              <table style="font-size:20px;text-align:center;margin:0px;padding:0px;">
+                <tr>
+                  <th class="results;"> Méthode </th>
+                  <th class="results" class="results"> Source </th>
+                  <!-- <th class="results"> Précision/Rappel </th> -->
+                  <th class="results"> mAP </th>
+                  <th class="results"> EER </th>
+                  <!-- <th class="results"> mIoU </th> -->
+                  <!-- <th class="results"> F1 </th> -->
+                </tr>
+                <tr>
+                  <td class="results"> <span style="color:#064d00;">Faster RCNN <span style="font-size:15px;">[Ren et al. 2015]</span> </span>
+                  </td>
+                  <td class="results"> <span style="color:#064d00;">RGB </span></td>
+                  <!-- <td class="results"> 61,0/96,1 </td> -->
+                  <td class="results"> <span style="color:#064d00;">91,2 </span></td>
+                  <th class="results"> <span style="color:#064d00;">91 </span> </th>
+                  <!-- <th class="results"> 72,8 </th> -->
+                  <!-- <td class="results"> 74,6 </td> -->
+                </tr>
+                <tr>
+                  <td class="results"> <span style="color:#064d00;">Faster RCNN <span style="font-size:15px;">[Ren et al. 2015]</span> </span>
+                  </td>
+                  <td class="results"> <span style="color:#064d00;">Depth  </span></td>
+                  <!-- <td class="results"> 25,6/76,9 </td> -->
+                  <td class="results"> <span style="color:#064d00;">66,9 </span></td>
+                  <td class="results"> <span style="color:#064d00;">68,3  </span></td>
+                  <!-- <td class="results"> 65,3 </td> -->
+                  <!-- <td class="results"> 38,5 </td> -->
+                </tr>
+                <tr>
+                  <td class="results"><span style="color:#064d00;"> U <span style="font-size:15px;">[Guerry et al. 2017] </span> </span>
+                  </td>
+                  <td class="results"> <span style="color:#064d00;">RGB-D </span></td>
+                  <!-- <td class="results"> 26,7/95,8 </td> -->
+                  <td class="results"> <span style="color:#064d00;">90,6  </span></td>
+                  <td class="results"> <span style="color:#064d00;">88  </span></td>
+                  <!-- <td class="results"> 71,1 </td> -->
+                  <!-- <td class="results"> 41,8 </td> -->
+                </tr>
+                <tr>
+                  <td class="results"> <span style="color:#064d00;">X<span style="font-size:15px;">[Guerry et al. 2017] </span> </span>
+                  </td>
+                  <td class="results"><span style="color:#064d00;"> RGB-D  </span></td>
+                  <!-- <td class="results"> 25,7/<b>96,6</b> </td> -->
+                  <th class="results"> <span style="color:#064d00;">91,3</span> </th>
+                  <td class="results"><span style="color:#064d00;"> 89,1 </span></td>
+                  <!-- <td class="results"> 71,7 </td> -->
+                  <!-- <td class="results"> 40,7 </td> -->
+                </tr>
+                <tr>
+                  <td class="results"><span style="color:#064d00;"> Y <span style="font-size:15px;">[Guerry et al. 2017] </span></span>
+                  </td>
+                  <td class="results"> <span style="color:#064d00;">RGB-D </span></td>
+                  <!-- <td class="results"> <b>81,1</b>/92,1 </td> -->
+                  <td class="results"> <span style="color:#064d00;">87,1  </span></td>
+                  <td class="results"> <span style="color:#064d00;">90,3 </span></td>
+                  <!-- <td class="results"> 71,7 </td> -->
+                  <!-- <th class="results"> 86,3 </th> -->
+                </tr>
+                <tr>
+                  <td class="results"><span style="color:#064d00;"> U<span style="color:#000;font-size:35px;">*</span> <span style="font-size:15px;">[Guerry et al. 2017] </span></span>
+                  </td>
+                  <td class="results"><span style="color:#064d00;"> RGB-D  </span></td>
+                  <!-- <td class="results"> 18,2/78,3 </td> -->
+                  <td class="results"><span style="color:#064d00;"> 67 </span></td>
+                  <td class="results"> <span style="color:#064d00;">68,3  </span></td>
+                  <!-- <td class="results"> 65,3 </td> -->
+                  <!-- <td class="results"> 29,5 </td> -->
+                </tr>
+                <tr>
+                  <td class="results"><span style="color:#064d00;"> X<span style="color:#000;font-size:35px;">*</span><span style="font-size:15px;">[Guerry et al. 2017] </span> </span>
+                  </td>
+                  <td class="results"><span style="color:#064d00;"> RGB-D  </span></td>
+                  <!-- <td class="results"> 25,0/77,0 </td> -->
+                  <td class="results"><span style="color:#064d00;"> 66,7  </span></td>
+                  <td class="results"> <span style="color:#064d00;">68,1  </span></td>
+                  <!-- <td class="results"> 65,3 </td> -->
+                  <!-- <td class="results"> 37,8 </td> -->
+                </tr>
+                <tr>
+                  <td class="results"> <span style="color:#064d00;">Y<span style="color:#000;font-size:35px;">*</span><span style="font-size:15px;">[Guerry et al. 2017] </span> </span>
+                  </td>
+                  <td class="results"><span style="color:#064d00;"> RGB-D </span></td>
+                  <!-- <td class="results"> n.a/0 </td> -->
+                  <td class="results"><span style="color:#064d00;"> n.a </span></td>
+                  <td class="results"><span style="color:#064d00;"> n.a </span></td>
+                  <!-- <td class="results"> 0 </td> -->
+                  <!-- <td class="results"> n.a </td> -->
+                </tr>
+              </table>
+              <span style="color:#000;font-size:35px;">*</span> <span style="color:#064d00;font-size:15px;">ablation de la couleur </span></td>
           </tr>
         </table>
+
       </center>
 
       <div class="notes">
@@ -1885,7 +2010,7 @@
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h4 style="margin:0px;">Résultats de détection multimodale</h4>
+        <h5 style="margin:0px;">Analyse de résultats</h5>
         <img src="images/2_25D/exemple_ux_trans.jpg" style="height: auto; width:70%" />
       </center>
 
@@ -2021,15 +2146,8 @@
     <!-- ######################################################################## -->
     <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h3>Jeu de données : SUNRGBD<br>
-
-              <img src="images/3_3D/dataset_SUNRGBD_overview.jpg" style="height: 400px; width: auto;" />
-
-
-
-
+        <h3>Jeu de données : SUNRGBD<br> <img src="images/3_3D/dataset_SUNRGBD_overview.jpg" style="height: 400px; width: auto;" />
       </center>
-
       <div class="notes">
       </div>
     </div>
@@ -2047,10 +2165,7 @@
               <blockquote class="article_blockquote">
                 <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Unstructured point cloud semantic labeling using deep segmentation networks." Eurographics Workshop on 3D Object Retrieval (2017)                <cite class="article_cite">Boulch, Le Saux and Audebert</cite>
               </blockquote>
-
-
       </center>
-
       <div class="notes">
       </div>
     </div>
@@ -2082,7 +2197,7 @@
     <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
         <!-- <iframe src="./3d_objects/ply_viewer.html#cag2017/00003_xyzpred.ply" style="width:600px;height:600px;"></iframe> -->
-        <img src="images/3_3D/cag2017_00003.gif" style="height: auto; width: 100%;" />
+        <img src="images/3_3D/cag2017_00003.gif" style="height: auto; width: 80%;" />
       </center>
 
       <div class="notes">
@@ -2130,15 +2245,8 @@
                 <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
                   <center>
                     <h3 style="margin:0px;">Résultats</h3>
-        <h5 style="margin:0px;">Jeu de données : <span style="font-style:italic">SUNRGBD 37</span> classes</h5>
+        <h5 style="margin:0px;">Jeu de données : <span style="font-style:italic">SUNRGBD</span> 37 classes</h5>
         <!-- <img src="images/2_25D/InOutPeople_image.png" style="height: auto; width:80%" /> -->
-        <style>
-          .results {
-            border: 1px solid rgba(14, 42, 78, .5);
-            padding: 5px;
-            text-align: center;
-          }
-        </style>
         <table style="font-size:17px;border-collapse:collapse;">
           <!--text-align:center;border:1px solid black">-->
           <tr>
@@ -2403,6 +2511,22 @@
     </div>
 
 
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        <h3 style="margin:0px;">Résultats</h3>
+        <h5 style="margin:0px;">Jeu de données : <span style="font-style:italic">NYUDv2</span>40 et 13 classes</h5>
+        <!-- <img src="images/2_25D/InOutPeople_image.png" style="height: auto; width:80%" /> -->
+        <table style="font-size:17px;border-collapse:collapse;">
+
+        </table>
+
+
+
+    </div>
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
@@ -2604,7 +2728,7 @@
         <h3>Conclusion</h3>
         <table>
           <tr>
-            <td style="text-align:center;padding-right:20px;"><span style="position:relative;top:0px;font-size:40px;">I</span></td>
+            <td style="text-align:center;padding-right:20px;"><span style="position:relative;top:0px;font-size:40px;">I  </span></td>
             <td><img src="images/4_conclusion/2_1_2D.png" style="height: 150px; width: auto;" /><br /></td>
             <td>
               <ul style="font-size:20px">
@@ -2615,7 +2739,7 @@
             </td>
           </tr>
           <tr>
-            <td style="text-align:center;padding-right:20px;"><span style="position:relative;top:0px;font-size:40px;">II</span></td>
+            <td style="text-align:center;padding-right:20px;"><span style="position:relative;top:0px;font-size:40px;">II  </span></td>
             <td><img src="images/4_conclusion/2_2_25D.png" style="height: 150px; width: auto;" /><br /></td>
             <td>
               <ul style="font-size:20px">
@@ -2626,7 +2750,7 @@
             </td>
           </tr>
           <tr>
-            <td style="text-align:center;padding-right:20px;"><span style="position:relative;top:0px;font-size:40px;">III</span></td>
+            <td style="text-align:center;padding-right:20px;"><span style="position:relative;top:0px;font-size:40px;">III  </span></td>
             <td><img src="images/4_conclusion/2_3_3D.png" style="height: 150px; width: auto;" /></td>
             <td>
               <ul style="font-size:20px">
@@ -2815,7 +2939,10 @@
 
     // video 2
     var videoStep2 = document.getElementById("video-step-2");
-    var video_ecmr = document.getElementById("video_ecmr");
+    var video_ecmr1 = document.getElementById("video_ecmr1");
+    var video_ecmr2 = document.getElementById("video_ecmr2");
+    var video_ecmr3 = document.getElementById("video_ecmr3");
+    var video_ecmr4 = document.getElementById("video_ecmr4");
 
     videoStep1.addEventListener("impress:stepenter", function() {
       // alert("Hello! I am an alert box!!");
@@ -2832,11 +2959,16 @@
     }, false);
 
     videoStep2.addEventListener("impress:stepenter", function() {
-      // alert("Hello! I am an alert box!!");
-      video_ecmr.play();
+      video_ecmr1.play();
+      video_ecmr2.play();
+      video_ecmr3.play();
+      video_ecmr4.play();
     }, false);
     videoStep2.addEventListener("impress:stepleave", function() {
-      video_ecmr.pause();
+      video_ecmr1.pause();
+      video_ecmr2.pause();
+      video_ecmr3.pause();
+      video_ecmr4.pause();
     }, false);
 
     function ex1_play() {
@@ -2854,11 +2986,17 @@
     }
 
     function ex2_play() {
-      video_ecmr.play();
+      video_ecmr1.play();
+      video_ecmr2.play();
+      video_ecmr3.play();
+      video_ecmr4.play();
     }
 
     function ex2_pause() {
-      video_ecmr.pause();
+      video_ecmr1.pause();
+      video_ecmr2.pause();
+      video_ecmr3.pause();
+      video_ecmr4.pause();
     }
     // document.getElementById('vid1').addEventListener('loadedmetadata', function() {
     //   this.currentTime = 50;
@@ -3035,6 +3173,13 @@
   </script>
   <link href="css/soutenance.css" rel="stylesheet" type="text/css" />
 
+  <style>
+    .results {
+      border: 1px solid rgba(14, 42, 78, .5);
+      padding: 5px;
+      text-align: center;
+    }
+  </style>
   <!-- <script type="text/javascript">
     alert("ok")
   </script> -->
