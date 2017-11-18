@@ -15,6 +15,10 @@ body.impress-on-overview .step {
   opacity: 1;
   cursor: pointer;
 }
+body.impress-on-overview1 .step {
+  opacity: 1;
+  cursor: pointer;
+}
 /*
     We display a fallback message for users with browsers that don't support
     all the features required by it. All of the content will be still fully
@@ -134,7 +138,7 @@ body {
 
     width: 1000px;
     min-height: 500px;
-    max-height: 650px;
+    max-height: 700px;
     padding: 40px 60px;
 
     /*background-image: url(../css/images/background.png);*/
