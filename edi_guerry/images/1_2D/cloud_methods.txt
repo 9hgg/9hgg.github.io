@@ -1,0 +1,22 @@
+1	svm_mountain_forest	#000000
+1	ln_caltech256_gs	#1d4f14
+1	ln_caltech101_gs	#1d4f14
+1	svm_caltech256	#1d4f14
+1	svm_caltech101	#1d4f14
+1	bvlc_GoogleNet	#353861
+1	ln_cifar100_gs	#169995
+1	an_cifar10_rgb	#14a0cf
+1	ln_cifar10_rgb	#14a0cf
+1	ln_cifar10_gs	#14a0cf
+1	an_cifar10_gs	#14a0cf
+1	bvlc_AlexNet	#353861
+1	an_sun3d_rgb	#f05252
+1	svm_cifar100	#169995
+1	ln_sun3d_gs	#f05252
+1	svm_cifar10	#14a0cf
+1	SqueezeNet	#353861
+1	VGG_cnn_s	#353861
+1	svm_sun3d	#f05252
+
+
+svm_cifar10 svm_cifar100 svm_caltech101 svm_caltech256 svm_sun3d svm_mountain_forest bvlc_AlexNet bvlc_GoogleNet VGG_cnn_s SqueezeNet ln_cifar10_gs ln_cifar10_rgb an_cifar10_gs an_cifar10_rgb ln_cifar100_gs ln_caltech101_gs ln_caltech256_gs ln_sun3d_gs an_sun3d_rgb 

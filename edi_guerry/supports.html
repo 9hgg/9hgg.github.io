@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Soutenance Joris GUERRY</title>
+
+  <link rel="icon" href="favicon.ico" sizes="16x16" type="image/ico">
+  <meta name="description" content="Soutenance de thèse Joris GUERRY" />
+  <meta name="author" content="Joris GUERRY" />
+  <link rel="stylesheet" href="extras/highlight/styles/github.css">
+  <link rel="stylesheet" href="extras/mermaid/mermaid.forest.css">
+
+  <link href="css/classic-slides.css" rel="stylesheet" />
+
+  <link href="css/quotation.css" rel="stylesheet" />
+  <link href="css/buttons.css" rel="stylesheet" />
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src='js/jquery.svg3dtagcloud.min.js'></script>
+
+</head>
+
+<body class="impress-not-supported">
+
+
+  <div id="ribbon_question" style="width: 300px;
+background: #9e0e0e;
+position: fixed;
+text-align: center;
+line-height: 50px;
+letter-spacing: 1px;
+color: #f0f0f0;
+top: 54px;
+left: -65px;
+right: auto;
+transform: rotate(-45deg);
+-webkit-transform: rotate(-45deg);opacity:0;transition: 2s;z-index:10000;"><b>&#191;&nbsp;Phase de questions&nbsp;?</b></div>
+
+  <div class="fallback-message">
+    <p>Problème dans l'utilisation de Impress.js, est-ce que le navigateur est correct et que les fichiers sont disponibles ?</p>
+  </div>
+
+  <div id="impress" data-transition-duration="1000">
+
+
+
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        <img src="images/0_introduction/contexte/chabal.jpg" style="height: auto; width:100%;" /><br />
+      </center>
+    </div>
+    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        <h4 style="margin-bottom: -10px;">Fléau de la dimension</h4>
+        <blockquote class="article_blockquote">
+          <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Curse of dimensionality." Adaptive control processes: a guided tour. Princeton,
+          NJ (1961).
+          <cite class="article_cite">Bellman, R.</cite>
+        </blockquote>
+        <img src="images/0_introduction/curse_of_dim_curve.jpg" style="height: 400px; width:auto;margin-bottom: -40px;" />
+      </center>
+      <blockquote class="article_blockquote">
+        <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>Introduction to data mining. 1st. (2005).
+        <cite class="article_cite">Tan, Pang-Ning, Michael Steinbach, and Vipin Kumar.</cite>
+      </blockquote>
+      <div style="font-size:30px">
+        Pour chaque nombre de dimensions :
+        <ul>
+          <li>500 points générés aléatoirement</li>
+          <li> Calcul de : $log_{10} \left( \frac{distance_{max}-distance_{min}}{distance_{min}} \right)$</li>
+          <!-- <li>500 points générés aléatoirement</li> -->
+        </ul>
+        <table>
+          <tr>
+            <td>En dimension 2 : </td>
+            <td style="width: 100px; overflow: hidden; display: inline-block; white-space: nowrap;"></td>
+            <td>$distance_{max}\approx$ 2500 $distance_{min}$</td>
+          </tr>
+          <tr>
+            <td>En dimension 50 :</td>
+            <td style="width: 100px; overflow: hidden; display: inline-block; white-space: nowrap;"></td>
+            <td>$distance_{max}\approx$ 3 $distance_{min}$</td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- CARTE D'EUROPE -->
+    <div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+
+      <center>
+        <img src="images/0_introduction/map/cities-and-capitals-of-europe-in-map.png" style="height: auto; width:100%;" /><br />
+      </center>
+
+      <div class="notes">
+        Nicosie(Chypre) -> Reykyavik(Islande) : 4873km <br /> Viennes(Autriche) -> Bratislava(Slovaquie) : 55km <br /> Ratio : 100 (89) <br /><br /> Nicosie : 111 km² <br /> Reykyavik : Superficie 274 km² <br /> Vienne : Superficie 415 km² <br /> Bratislava
+        : Superficie 368 km² <br />
+
+      </div>
+    </div>
+
+
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <div class="step_title">
+        <h5>Image aléatoire</h5>
+      </div>
+      <div class="step_content">
+        <img src="images/0_introduction/random-math-horizontal.png" class="larger_img" />
+        <!-- <img src="" class="larger_img substep" /> -->
+      </div>
+    </div>
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <div class="step_title">
+        <h5>ResNet</h5>
+      </div>
+      <div class="step_content">
+        <img src="images/0_introduction/ResNet.gif" class="higher_img" />
+        <!-- <img src="" class="larger_img substep" /> -->
+      </div>
+    </div>
+
+
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+
+    <div class="step" data-rel-x="0" data-rel-y="1000">
+      <center>
+
+        Fonctionnement d'un écran LCD
+        <img src="images/0_introduction/fonctionnement_pixel.png" style="height: 300px; width:auto;" /><br />
+      </center>
+      <div class="notes">
+        <b>Fonctionnement d'un écran LCD :</b> Un écran LCD est divisé en petites unités lumineuses appelées pixels. Chaque pixel est subdivisé en trois rectangles (appelés sous-pixels) recouverts par des filtres colorés (rouge, vert ou bleu). Un tube
+        fluorescent (ou un panneau de D.E.L.) se trouvant derrière l'écran produit de la lumière blanche. Pour chaque sous-pixel, une couche de cristaux liquides est située entre deux polariseurs. L'ensemble laisse passer plus ou moins de lumière suivant
+        la tension électrique appliquée. Les pixels étant déjà très petits, l'œil ne distingue pas les sous-pixels.
+      </div>
+
+    </div>
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        <h3>Descripteurs et classification</h3>
+        <!-- formalisme de Lecun -->
+
+        <!-- <blockquote class="article_blockquote">
+                      <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Sketchable histograms of oriented gradients for object detection." ICPR 2012.
+                      Springer Berlin Heidelberg,
+                      <cite class="article_cite">Zaytseva, Ekaterina, Santi Seguí, and Jordi Vitria. </cite>
+                    </blockquote> -->
+
+        <img src="images/0_introduction/lecun_level.png" style="height: auto; width:80%; position: relative;top: 20px;left: 00px;" />
+        <img src="images/0_introduction/lecun.jpg" style="height: auto; width:300px;box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); position: absolute;top: 200px;left: 130px;" />
+      </center>
+
+      <div class="notes">
+
+      </div>
+    </div>
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="2500" data-y="1000" data-z="0">
+      <center>
+        <h3>L'apprentissage profond</h3>
+        <div style="font-size: 15px;">
+
+
+          <img src="images/0_introduction/cnn/vertFilter.png" style="height: auto; width:200px; position: relative;top: 0px;left: 100px; top:-50px;" />
+          <img src="images/0_introduction/cnn/convSobel_2.gif" style="height: auto; width:20%; position: relative;top: 50px;left: -100px; z-index:3" />
+          <br />
+          <img src="images/0_introduction/cnn/vertical_original.gif" style="height: auto; width:30%; position: relative;top: 0px;left: 0px;" />
+
+
+          <img src="images/0_introduction/cnn/vertical.gif" style="height: auto; width:30%; position: relative;top: 0px;left: 0px;" />
+
+          <blockquote class="article_blockquote">
+            <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>personnal webpage
+            <cite class="article_cite">Pr Jürgen Brauer</cite>
+          </blockquote>
+
+          <!-- Présenter rapidement les CNNs. Utiliser l'idée de changement d'espace de représentation pour expliquer le rôle de chaque couche. -->
+        </div>
+
+      </center>
+
+      <div class="notes">
+        cnn-> decoupler l'information exemple de jouer pour enfant avec le cube dans le carré
+      </div>
+    </div>
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        <h3 style="margin-bottom:-18px;">L'apprentissage profond</h3>
+
+        <blockquote class="article_blockquote" style="margin-bottom:-5px;">
+          <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>http://scs.ryerson.ca/~aharley/vis/conv/flat.html
+          <cite class="article_cite">Adam Harley </cite>
+        </blockquote>
+
+        <div id="div_one" style="display:none;">
+          <iframe src="http://scs.ryerson.ca/~aharley/vis/conv/flat.html" style="width:100%;height:600px;"></iframe>
+        </div>
+        <div id="div_two">
+          <img src="images/0_introduction/cnn/conv_all_8.png" style="height: auto; width:100%;" />
+        </div>
+        <script>
+          function myFunction() {
+            var div_one = document.getElementById("div_one");
+            var div_two = document.getElementById("div_two");
+            var button_one = document.getElementById("button_one");
+            var button_two = document.getElementById("button_two");
+            div_one.style.display = (
+              div_one.style.display == "none" ? "block" : "none");
+            div_two.style.display = (
+              div_two.style.display == "none" ? "block" : "none");
+            button_one.style.display = (
+              button_one.style.display == "none" ? "block" : "none");
+            button_two.style.display = (
+              button_two.style.display == "none" ? "block" : "none");
+          }
+        </script>
+        <button id="button_one" onclick="myFunction()" class="button button_blue">Interactif</button>
+        <button id="button_two" onclick="myFunction()" class="button button_blue" style="display:none;">Statique</button>
+      </center>
+
+      <div class="notes">
+
+      </div>
+    </div>
+
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        <h3>L'apprentissage profond</h3>
+      </center>
+      <img src="images/0_introduction/cnn/layer123_cnnvis.png" style="height: 85%; width:auto; position: relative;top: 0px;left: 0px; top:0px; padding:0px;" />
+      <div class="notes">
+
+      </div>
+    </div>
+
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        <h3 style="margin-bottom:0px;">L'apprentissage profond</h3>
+        <img src="images/0_introduction/cnn/backprop.gif" style="height: auto; width:50%; position: relative;top: 0px;left: 0px;" /> <span style="font-size:20px;position:relative;top:-110px;">Rétropropagation du gradient</span><br />
+        <img src="images/0_introduction/cnn/psd-anim.gif" style="height: auto; width:40%; position: relative;top: 0px;left: 0px; top:0px;" /><span style="font-size:20px;position:relative;top:-210px;">Filtres d'une première couche de CNN</span><br />
+      </center>
+      <blockquote class="article_blockquote">
+        <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>http://xxii.fr
+        <!-- <cite class="article_cite"></cite> -->
+      </blockquote>
+      <div class="notes">
+
+      </div>
+    </div>
+
+
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <center>
+        <h3 style="margin-bottom:-18px;">L'apprentissage profond</h3>
+      </center>
+      <img src="images/0_introduction/cnn/8pixel.gif" style="height: auto; width:200px; position: relative;top: 0px;left: 100px; top:-50px;" />
+      <img src="images/0_introduction/cnn/convSobel_2.gif" style="height: auto; width:20%; position: relative;top: 50px;left: -100px; z-index:3" />
+      <div class="notes">
+      </div>
+    </div>
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="2500" data-y="1000" data-z="0">
+      <div class="step_title">
+        <h5>SqueezeNet</h5>
+      </div>
+      <div class="step_content">
+        <img src="images/1_2D/structure_tnn_sn.png" style="width:100%" />
+
+      </div>
+    </div>
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <div class="step_title">
+        <h5>LeNet</h5>
+      </div>
+      <div class="step_content">
+        <center> <img src="images/1_2D/structure_tnn_ln.png" style="height:600px;width:auto;" />
+        </center>
+
+      </div>
+
+    </div>
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <div class="step_title">
+        <h5>AlexNet</h5>
+      </div>
+      <div class="step_content">
+        <center>
+
+
+
+          <img src="images/1_2D/structure_tnn_an.png" style="height:600px;width:auto;" />
+        </center>
+      </div>
+
+    </div>
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="2500" data-y="1000" data-z="0">
+      <div class="step_title">
+        <h5>courbes PR</h5>
+      </div>
+      <div class="step_content">
+        <table style="font-size:20px;text-align:center;">
+          <tr>
+            <td><img src="images/2_25D/roc_inout_0_6.png" style="width:100%" /></td>
+            <td><img src="images/2_25D/roc_or.png" style="width:100%" /></td>
+          </tr>
+          <tr>
+            <td>InOutDoor RGBD People</td>
+            <td>ONERA.ROOM</td>
+          </tr>
+
+        </table>
+
+
+      </div>
+    </div>
+
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <div class="step_title">
+        <h5>LATO, conférence ECMR</h5>
+      </div>
+      <div class="step_content">
+        <video id="video_ecmr1" style="width:100%; height:auto;" controls loop muted>
+            <source src="videos/ecmr.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la balise vidéo.
+          </video>
+
+        <div style="text-align:right;">
+          <button onclick='play()' class="button button_blue">Lecture</button>
+          <button onclick='pause()' class="button button_blue">Pause</button>
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <script>
+      var video_ecmr1 = document.getElementById("video_ecmr1");
+
+      function play() {
+        video_ecmr1.play();
+      }
+
+      function pause() {
+        video_ecmr1.pause();
+      }
+    </script>
+
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="2500" data-y="1000" data-z="0">
+      <div class="step_title">
+        <h5>SnapNet, plus de détails</h5>
+      </div>
+      <div class="step_content">
+        <img src="images/3_3D/snapnet_structure.png" class="larger_img" />
+        <!-- <img src="" class="larger_img substep" /> -->
+      </div>
+    </div>
+
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <div class="step_title">
+        <h5>3DRMS challenge</h5>
+      </div>
+      <div class="step_content">
+        <img src="images/3_3D/dataset_3DRMS_overview.jpg" class="larger_img" />
+        <!-- <img src="" class="larger_img substep" /> -->
+      </div>
+    </div>
+
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <div class="step_title">
+        <h5>3DRMS challenge, stratégies</h5>
+      </div>
+      <div class="step_content">
+        <img src="images/3_3D/3DRMS_pipeline2.svg" class="larger_img" />
+        <!-- <img src="" class="larger_img substep" /> -->
+      </div>
+    </div>
+
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <div class="step_title">
+        <h5>3DRMS challenge, résultats qualitatifs</h5>
+      </div>
+      <div class="step_content">
+        <img src="images/3_3D/moreviews_3DRMS.png" class="higher_img" />
+        <!-- <img src="" class="larger_img substep" /> -->
+      </div>
+    </div>
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <div class="step_title">
+        <h5>3DRMS, résultats quantitatifs</h5>
+      </div>
+      <div class="step_content">
+        <embed src="articles/rms_challenge.pdf" style="width:100%;height:700px;" type='application/pdf'>
+      </div>
+    </div>
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
+      <div class="step_title">
+        <h5>SunRGBD</h5>
+      </div>
+      <div class="step_content">
+        <img src="images/3_3D/sunrgbd_imbalance.png" class="larger_img" />
+        <!-- <img src="" class="larger_img substep" /> -->
+      </div>
+    </div>
+
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <div id="overview" class="step noribbon" data-x="5000" data-y="9000" data-z="5000" data-scale="1" data-rotate-x="-40" data-rotate-y="0" data-rotate-z="0" data-transition-duration="1000" style="pointer-events: none;"> </div>
+
+
+
+
+
+    <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+        &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+        &&&&                                                                &&&&
+        &&&&                                                                &&&&
+        &&&&                                                                &&&&
+        &&&&                                                                &&&&
+        &&&&                                                                &&&&
+        &&&&                                                                &&&&
+        &&&&                                                                &&&&
+        &&&&             & & & &                &                           &&&&
+        &&&&             &                      &                           &&&&
+        &&&&             &                      &                           &&&&
+        &&&&             & & &                  &                           &&&&
+        &&&&             &        & & &     & & &                           &&&&
+        &&&&             &        &     &  &    &                           &&&&
+        &&&&             &        &     &  &    &                           &&&&
+        &&&&             & & & &  &     &   & & &                           &&&&
+        &&&&                                                                &&&&
+        &&&&                                                                &&&&
+        &&&&                                                                &&&&
+        &&&&                                                                &&&&
+        &&&&                                                                &&&&
+        &&&&                                                                &&&&
+        &&&&                                                                &&&&
+        &&&&                                                                &&&&
+        &&&&                                                                &&&&
+        &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+        &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+
+  </div>
+
+  <div id="impress-toolbar"></div>
+
+  <div class="impress-progressbar">
+    <div></div>
+  </div>
+  <div class="impress-progress"></div>
+
+  <!-- <div id="impress-help"></div> -->
+
+
+
+  <script type="text/javascript" src="extras/highlight/highlight.pack.js"></script>
+  <script type="text/javascript" src="extras/mermaid/mermaid.min.js"></script>
+  <script type="text/javascript" src="extras/markdown/markdown.js"></script>
+  <script type="text/javascript" src="extras/impress-console/js/impressConsole.js"></script>
+  <script type="text/javascript">
+    var impressConsoleCss = 'extras/impress-console/css/impressConsole.css';
+  </script>
+
+  <script type="text/javascript" src="js/impress_henrik.js"></script>
+  <script>
+    impress().init();
+    // alert('init')
+    document.addEventListener("keydown", function(event) {
+      if (event.keyCode == 27) {
+
+        impress().goto("overview");
+
+        event.preventDefault();
+      }
+    }, false);
+    document.addEventListener("keydown", function(event) {
+      if (event.keyCode == 82) {
+        // 82 -> r
+        // impress().goto("overview");
+
+        event.preventDefault();
+        location.reload();
+      }
+    }, false);
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ['\\(','\\)'] ] }, TeX: { Macros: { energy: "e", eqby: ["\\stackrel{#1}{=}",1], } } });
+  </script>
+  <script type="text/javascript" async src="MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  <!-- Ribbon part -->
+  <script>
+    var ribbon_2D = document.getElementById("ribbon_2D");
+    var ribbon_25D = document.getElementById("ribbon_25D");
+    var ribbon_3D = document.getElementById("ribbon_3D");
+    var ribbon_question = document.getElementById("ribbon_question");
+
+    var steps_2D = document.getElementsByClassName("step_2D");
+    var steps_25D = document.getElementsByClassName("step_25D");
+    var steps_3D = document.getElementsByClassName("step_3D");
+    var steps_noribbon = document.getElementsByClassName("noribbon");
+    var step_question = document.getElementById("step_question");
+
+
+    step_question.addEventListener("impress:stepenter", function() {
+      ribbon_question.style.opacity = "1"
+    }, false);
+  </script>
+
+  <link href="css/soutenance.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    .results {
+      border: 1px solid rgba(14, 42, 78, .5);
+      padding: 5px;
+      text-align: center;
+    }
+
+    .step_title {
+      /*background-color: red;*/
+      width: 100%;
+      text-align: center;
+      height: 100px;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+    }
+
+    .step_title h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .step_content {
+      position: relative;
+      /*background-color: blue;*/
+      width: 100%;
+      /*text-align: center;*/
+      height: 700px;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .step_content .larger_img {
+      height: auto;
+      width: 99%;
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .step_content .higher_img {
+      height: 99%;
+      width: auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  </style>
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+<!-- CARTE D'EUROPE -->
+<div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+
+  <center>
+    <img src="images/0_introduction/map/cities-and-capitals-of-europe-in-map.png" style="height: auto; width:100%;" /><br />
+  </center>
+
+  <div class="notes">
+    Nicosie(Chypre) -> Reykyavik(Islande) : 4873km <br /> Viennes(Autriche) -> Bratislava(Slovaquie) : 55km <br /> Ratio : 100 (89) <br /><br /> Nicosie : 111 km² <br /> Reykyavik : Superficie 274 km² <br /> Vienne : Superficie 415 km² <br /> Bratislava
+    : Superficie 368 km² <br />
+
+  </div>
+</div>
+
+
+<!-- ESPACE TROP GRAND -->
+<div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+  <center>
+    <h4 style="margin-bottom: -10px;">Fléau de la dimension</h4>
+    <blockquote class="article_blockquote">
+      <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>"Curse of dimensionality." Adaptive control processes: a guided tour. Princeton,
+      NJ (1961).
+      <cite class="article_cite">Bellman, R.</cite>
+    </blockquote>
+    <img src="images/0_introduction/curse_of_dim_curve.jpg" style="height: 400px; width:auto;margin-bottom: -40px;" />
+  </center>
+  <blockquote class="article_blockquote">
+    <svg viewBox="0 0 17 16" class="article_reference"><path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path></svg>Introduction to data mining. 1st. (2005).
+    <cite class="article_cite">Tan, Pang-Ning, Michael Steinbach, and Vipin Kumar.</cite>
+  </blockquote>
+  <div style="font-size:30px">
+    Pour chaque nombre de dimensions :
+    <ul>
+      <li>500 points générés aléatoirement</li>
+      <li> Calcul de : $log_{10} \left( \frac{distance_{max}-distance_{min}}{distance_{min}} \right)$</li>
+      <!-- <li>500 points générés aléatoirement</li> -->
+    </ul>
+    <table>
+      <tr>
+        <td>En dimension 2 : </td>
+        <td style="width: 100px; overflow: hidden; display: inline-block; white-space: nowrap;"></td>
+        <td>$distance_{max}\approx$ 2500 $distance_{min}$</td>
+      </tr>
+      <tr>
+        <td>En dimension 50 :</td>
+        <td style="width: 100px; overflow: hidden; display: inline-block; white-space: nowrap;"></td>
+        <td>$distance_{max}\approx$ 3 $distance_{min}$</td>
+      </tr>
+    </table>
+  </div>
+
+
+
+
+
+  <div class="notes">
+    Pour comprendre cette courbe vous pouvez imaginez la carte de France. Si vous tirez au hasard 500 villes, il y aura deux villes qui seront plus proches entre-elles que les autres, et deux villes qui seront plus éloignés. Oui ? Cela permet de définir la
+    distance minimale et maximale qu'il existe entre deux villes. Et bien ce que vous dit cette courbe c'est que la distance max est 2500 fois plus grande que la distance min. Maintenant, qu'est-ce qui peut différencer deux villes ? (superficie, PIB,
+    taille moytenne) Et vous cherchez à définir les villes qui sont plus a "Donc plus le nombre de dimension augmente, moins la distance entre les objets devient significative et donc plus il devient difficile de différencier des vecteurs."
+  </div>
+</div>
+
+<!-- Résumé sur le besoin de diminuer les dimensions spatiales -->
+<div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+  objectif de cette slide : dire la phrase "C'est à cause du fléau de la dimension que nous ne pouvons pas utiliser directement l'image RGB comme espace de représentation pour faire de la classification. En effet, on pouvait voir qu'en dimension "
+  <center>
+    new slide
+  </center>
+
+  <div class="notes">
+  </div>
+</div>
+
+<div class="step" data-rel-x="0" data-rel-y="1000">
+  <center>
+    <img src="images/0_introduction/fonctionnement_pixel.png" style="height: 300px; width:auto;" /><br />
+  </center>
+  <div class="notes">
+    <b>Fonctionnement d'un écran LCD :</b> Un écran LCD est divisé en petites unités lumineuses appelées pixels. Chaque pixel est subdivisé en trois rectangles (appelés sous-pixels) recouverts par des filtres colorés (rouge, vert ou bleu). Un tube fluorescent
+    (ou un panneau de D.E.L.) se trouvant derrière l'écran produit de la lumière blanche. Pour chaque sous-pixel, une couche de cristaux liquides est située entre deux polariseurs. L'ensemble laisse passer plus ou moins de lumière suivant la tension électrique
+    appliquée. Les pixels étant déjà très petits, l'œil ne distingue pas les sous-pixels.
+  </div>
+
+</div>
+
+
+<div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+  <center>
+    new slide
+  </center>
+
+  <div class="notes">
+  </div>
+</div>
+
+
+
+<!-- 3D scene renderer -->
+<div id="3d_test" class="step slide" data-rel-x="0" data-rel-y="1000" data-z="0">
+  <div class="notes">
+  </div>
+  <script>
+    if (!Detector.webgl) {
+      Detector.addGetWebGLMessage();
+    }
+    var container;
+    var camera, controls, scene, renderer;
+    var lighting, ambient, keyLight, fillLight, backLight;
+    init("3d_test");
+    animate("3d_test");
+
+    function init(slide_id) {
+      slide_el = document.getElementById(slide_id);
+      container = document.createElement('div');
+      slide_el.appendChild(container);
+      var cs = getComputedStyle(slide_el);
+      var paddingX = parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight);
+      var paddingY = parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
+      var borderX = parseFloat(cs.borderLeftWidth) + parseFloat(cs.borderRightWidth);
+      var borderY = parseFloat(cs.borderTopWidth) + parseFloat(cs.borderBottomWidth);
+      // Element width and height minus padding and border
+      containerWidth = slide_el.offsetWidth - paddingX - borderX;
+      containerHeight = slide_el.offsetHeight - paddingY - borderY;
+      myWidth = containerWidth; //100;//window.innerWidth
+      myHeight = containerHeight; //100;//window.innerHeight
+      /* Camera */
+      camera = new THREE.PerspectiveCamera(45, myWidth / myHeight, 1, 1000);
+      camera.position.z = 3;
+      /* Scene */
+      scene = new THREE.Scene();
+      lighting = false;
+      ambient = new THREE.AmbientLight(0xffffff, 1.0);
+      scene.add(ambient);
+      keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 100%, 75%)'), 1.0);
+      keyLight.position.set(-100, 0, 100);
+      fillLight = new THREE.DirectionalLight(new THREE.Color('hsl(240, 100%, 75%)'), 0.75);
+      fillLight.position.set(100, 0, 100);
+      backLight = new THREE.DirectionalLight(0xffffff, 1.0);
+      backLight.position.set(100, 0, -100).normalize();
+      /* Model */
+      var mtlLoader = new THREE.MTLLoader();
+      mtlLoader.setBaseUrl('3d_objects/female-croupier-2013-03-26/');
+      mtlLoader.setPath('3d_objects/female-croupier-2013-03-26/');
+      mtlLoader.load('female-croupier-2013-03-26.mtl', function(materials) {
+        materials.preload();
+        materials.materials.default.map.magFilter = THREE.NearestFilter;
+        materials.materials.default.map.minFilter = THREE.LinearFilter;
+        var objLoader = new THREE.OBJLoader();
+        objLoader.setMaterials(materials);
+        objLoader.setPath('3d_objects/female-croupier-2013-03-26/');
+        objLoader.load('female-croupier-2013-03-26.obj', function(object) {
+          scene.add(object);
+        });
+      });
+      /* Renderer */
+      renderer = new THREE.WebGLRenderer();
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setSize(myWidth, myHeight);
+      renderer.setClearColor(new THREE.Color("hsl(360, 100%, 100%)")); //grey -> "hsl(0, 0%, 10%)"
+      container.appendChild(renderer.domElement);
+      /* Controls */
+      controls = new THREE.OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = true;
+      controls.dampingFactor = 0.25;
+      controls.enableZoom = false;
+      /* Events */
+      window.addEventListener('resize', onWindowResize, false);
+      window.addEventListener('keydown', onKeyboardEvent, false);
+    }
+
+    function onWindowResize() {
+      windowHalfX = window.innerWidth / 2;
+      windowHalfY = window.innerHeight / 2;
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    }
+
+    function onKeyboardEvent(e) {
+      if (e.code === 'KeyL') {
+        lighting = !lighting;
+        if (lighting) {
+          ambient.intensity = 0.25;
+          scene.add(keyLight);
+          scene.add(fillLight);
+          scene.add(backLight);
+        } else {
+          ambient.intensity = 1.0;
+          scene.remove(keyLight);
+          scene.remove(fillLight);
+          scene.remove(backLight);
+        }
+      }
+    }
+
+    function animate(slide_id) {
+      requestAnimationFrame(animate);
+      controls.update();
+      render();
+    }
+
+    function render() {
+      renderer.render(scene, camera);
+    }
+  </script>
+</div>
+
+<div class="step" data-rel-x="0" data-rel-y="1000" data-z="0">
+  <center>
+    <iframe src="./3d_objects/female-croupier-2013-03-26.html" style="width:600px;height:600px;"></iframe>
+  </center>
+
+  <div class="notes">
+  </div>
+</div>

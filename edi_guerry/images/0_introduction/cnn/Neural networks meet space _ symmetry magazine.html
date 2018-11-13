@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://www.symmetrymagazine.org/article/neural-networks-meet-space -->
+<html lang="en" class="js wf-aktivgrotesk-n4-active wf-aktivgrotesk-n9-active wf-aktivgrotesk-i4-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="https://www.symmetrymagazine.org/sites/all/themes/symmetry2015/images/icons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="https://www.symmetrymagazine.org/sites/all/themes/symmetry2015/images/icons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://www.symmetrymagazine.org/sites/all/themes/symmetry2015/images/icons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://www.symmetrymagazine.org/sites/all/themes/symmetry2015/images/icons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://www.symmetrymagazine.org/sites/all/themes/symmetry2015/images/icons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://www.symmetrymagazine.org/sites/all/themes/symmetry2015/images/icons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="https://www.symmetrymagazine.org/sites/all/themes/symmetry2015/images/icons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://www.symmetrymagazine.org/sites/all/themes/symmetry2015/images/icons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://www.symmetrymagazine.org/sites/all/themes/symmetry2015/images/icons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="https://www.symmetrymagazine.org/sites/all/themes/symmetry2015/images/icons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="https://www.symmetrymagazine.org/sites/all/themes/symmetry2015/images/icons/favicon-194x194.png" sizes="194x194">
+	<link rel="icon" type="image/png" href="https://www.symmetrymagazine.org/sites/all/themes/symmetry2015/images/icons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="https://www.symmetrymagazine.org/sites/all/themes/symmetry2015/images/icons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="https://www.symmetrymagazine.org/sites/all/themes/symmetry2015/images/icons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="https://www.symmetrymagazine.org/sites/all/themes/symmetry2015/images/icons/manifest.json">
+	<link rel="mask-icon" href="https://www.symmetrymagazine.org/sites/all/themes/symmetry2015/images/icons/safari-pinned-tab.svg">
+	<link rel="shortcut icon" href="https://www.symmetrymagazine.org/sites/all/themes/symmetry2015/images/icons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileImage" content="/sites/all/themes/symmetry2015/images/icons/mstile-144x144.png">
+	<meta name="msapplication-config" content="/sites/all/themes/symmetry2015/images/icons/browserconfig.xml">
+
+    <!--[if IE]><![endif]-->
+
+<meta name="description" content="Artificial intelligence analyzes gravitational lenses 10 million times faster.">
+<link rel="canonical" href="https://www.symmetrymagazine.org/article/neural-networks-meet-space">
+<meta property="og:site_name" content="symmetry magazine">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Neural networks meet space">
+<meta property="og:url" content="https://www.symmetrymagazine.org/article/neural-networks-meet-space">
+<meta property="og:description" content="Artificial intelligence analyzes gravitational lenses 10 million times faster.">
+<meta property="og:image" content="https://www.symmetrymagazine.org/sites/default/files/styles/2015_hero/public/images/standard/neural_network_lensing_final.jpg?itok=rtoHeV6m">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@symmetrymag">
+<meta name="twitter:creator:id" content="16130330">
+<meta name="twitter:url" content="https://www.symmetrymagazine.org/article/neural-networks-meet-space">
+<meta name="twitter:title" content="Neural networks meet space">
+<meta name="twitter:description" content="Artificial intelligence analyzes gravitational lenses 10 million times faster.">
+<meta name="twitter:image" content="https://www.symmetrymagazine.org/sites/default/files/styles/2015_hero/public/images/standard/neural_network_lensing_final.jpg?itok=rtoHeV6m">
+<meta name="twitter:image:width" content="1600">
+<meta name="twitter:image:height" content="900">
+    <script async="" src="./Neural networks meet space _ symmetry magazine_files/analytics.js"></script><script src="./Neural networks meet space _ symmetry magazine_files/qun4fsy.js"></script>
+    <style type="text/css">.tk-aktiv-grotesk{font-family:"aktiv-grotesk",sans-serif;}</style><style type="text/css">@font-face{font-family:aktiv-grotesk;src:url(https://use.typekit.net/af/312d48/00000000000000000001786f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/312d48/00000000000000000001786f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/312d48/00000000000000000001786f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:aktiv-grotesk;src:url(https://use.typekit.net/af/21b1e2/000000000000000000017870/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/21b1e2/000000000000000000017870/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/21b1e2/000000000000000000017870/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}@font-face{font-family:aktiv-grotesk;src:url(https://use.typekit.net/af/3acf01/000000000000000000017877/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3) format("woff2"),url(https://use.typekit.net/af/3acf01/000000000000000000017877/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3) format("woff"),url(https://use.typekit.net/af/3acf01/000000000000000000017877/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3) format("opentype");font-weight:900;font-style:normal;}</style><script>try{Typekit.load();}catch(e){}</script>
+    <title>Neural networks meet space | symmetry magazine</title>
+    <link type="text/css" rel="stylesheet" href="./Neural networks meet space _ symmetry magazine_files/css__ziml0QUkZAFare_YxTEDRX53jFCIDMYxi0Mv5WUpqIY__IELM4gXcHwfqY6SAqnzGIO7I2HaURRuIShnXXbtICBo__JuN1KO4B5sEUEUKsjB8XUMStKEqKnh9Mk9hsbcSibhE.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Neural networks meet space _ symmetry magazine_files/css__9QReTcPiLhrosUx4kADLbd2EYdKpQ9kJSk1sM7GD14M__5Q9GHucQBQY4O7-YKfBC2tx2ZphNkmNyYYEqcaFE7xw__JuN1KO4B5sEUEUKsjB8XUMStKEqKnh9Mk9hsbcSibhE.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Neural networks meet space _ symmetry magazine_files/css__SJF9vS0D3wm-ocKpcmMTYoTRDwkyhf-O-TV_nP57tpg__Nko7wvM0w4oQD0GSvz9TwjBaNIZmUHIyYYfT3QdXQ1w__JuN1KO4B5sEUEUKsjB8XUMStKEqKnh9Mk9hsbcSibhE.css" media="print">
+    <script type="text/javascript" src="./Neural networks meet space _ symmetry magazine_files/js__zYXL446PrvCyTPSew_WcH-w5h7-xpPhOvCVGZWvBUD0__aItFC4hZkSyOH0Ac7JTYjwVgwoFVQRSDjm6gBnzletQ__JuN1KO4B5sEUEUKsjB8XUMStKEqKnh9Mk9hsbcSibhE.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-25740520-1", {"cookieDomain":"auto"});ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="./Neural networks meet space _ symmetry magazine_files/js__OmyUCUjffCOuuoXUEtGaiCQxvHtzBXmCG2EhX8ZgYUU__luHi0EGH9-_rYtouLMe-2bjpv25iJWVlIfvC3qfPyoo__JuN1KO4B5sEUEUKsjB8XUMStKEqKnh9Mk9hsbcSibhE.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"symmetry2015","theme_token":"WstrlevdtaxxxZeN7v6aAsG6m-fwdz1LCGrCATxuN6E","css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/logintoboggan\/logintoboggan.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/themes\/symmetry2015\/layouts\/news\/news.css":1,"sites\/all\/modules\/contrib\/node_embed\/plugins\/node_embed\/node_embed.css":1,"sites\/all\/themes\/symmetry2015\/layouts\/default-fixed\/default-fixed.css":1,"sites\/all\/modules\/contrib\/gd_infinite_scroll\/css\/gd_infinite_scroll.css":1,"sites\/all\/themes\/symmetry2015\/bootstrap\/dist\/css\/bootstrap.css":1,"sites\/all\/themes\/symmetry2015\/bootstrap\/dist\/css\/print.css":1},"js":{"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.11\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox_inline.js":1,"sites\/all\/modules\/contrib\/field_group\/field_group.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"sites\/all\/modules\/contrib\/gd_infinite_scroll\/js\/gd_infinite_scroll.js":1,"sites\/all\/themes\/symmetry2015\/bootstrap\/dist\/js\/bootstrap.js":1,"sites\/all\/themes\/symmetry2015\/bootstrap\/dist\/js\/symmetry.js":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":false,"mobiledevicewidth":"480px"},"field_group":{"div":"feature_image"},"better_exposed_filters":{"views":{"recent_news":{"displays":{"recent_news_pane":{"filters":[]}}},"more_on_topic":{"displays":{"more_on_topic_block":{"filters":[]}}}}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":1},"urlIsAjaxTrusted":{"\/":true},"gd_infinite_scroll":{"1":{"img_path":"https:\/\/www.symmetrymagazine.org\/sites\/all\/modules\/contrib\/gd_infinite_scroll\/images\/ajax-loader.gif","name":"more_on_topic","pager_selector":"ul.pager","next_selector":"li.pager-next a:first","content_selector":".more-stories .view-display-id-more_on_topic_block .view-content","items_selector":".teaser","load_more":1,"load_more_markup":"\u003Cdiv class=\u0022at\u0022\u003E\u003Cdiv class=\u0022ml\u0022\u003E\u003Cdiv class=\u0022tg load-more\u0022\u003EView more stories \u003Ci class=\u0022icon-svg_arrowDWN\u0022\u003E\u003C\/i\u003E\u003C\/div\u003E\u003C\/div\u003E\u003C\/div\u003E","ajax_pager":0,"database_override":true,"url":"node\/*"}}});
+//--><!]]>
+</script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="page-node-52564 node-type-article breaking ">
+    <a href="https://www.symmetrymagazine.org/article/neural-networks-meet-space#content" id="skip">Skip to main content</a>
+    <div class="print-logo"><img src="./Neural networks meet space _ symmetry magazine_files/logo-full-black.svg" alt="symmetry | dimensions of particle physics"></div>
+        <header class="header sticky affix">
+    <div class="container">
+        <div class="header-content">
+  
+  
+      
+    <div class="logo">
+<a href="https://www.symmetrymagazine.org/">
+<img class="logo-only" alt="symmetry | dimensions of particle physics" src="./Neural networks meet space _ symmetry magazine_files/logo.svg">
+<img class="logo-full" alt="symmetry | dimensions of particle physics" src="./Neural networks meet space _ symmetry magazine_files/logo-full.svg">
+</a>
+</div>
+  
+  
+
+  
+  
+      
+    <div class="topics">
+<ul class="topics-nav">
+	<li class="dropdown"><a aria-expanded="false" aria-haspopup="true" class="btn dropdown-toggle" data-toggle="dropdown" href="https://www.symmetrymagazine.org/article/neural-networks-meet-space#" role="button">Topics <i class="icon-svg_arrowDWN"></i></a>
+	<ul class="dropdown-menu">
+		<li><a href="https://www.symmetrymagazine.org/archive?topic=3364">Higgs boson</a></li>
+		<li><a href="https://www.symmetrymagazine.org/archive?topic=3366">Neutrinos</a></li>
+		<li><a href="https://www.symmetrymagazine.org/archive?topic=3362">Dark matter</a></li>
+		<li><a href="https://www.symmetrymagazine.org/archive?topic=3361">Dark energy</a></li>
+		<li><a href="https://www.symmetrymagazine.org/archive?topic=3367">New physics</a></li>
+		<li><a href="https://www.symmetrymagazine.org/archive?topic=3379">Applications</a></li>
+		<li><a href="https://www.symmetrymagazine.org/archive">Full archive</a></li>
+	</ul>
+	</li>
+</ul>
+</div>
+
+<div class="follow"><a href="https://www.symmetrymagazine.org/subscribe" onclick="_gaq.push([\&#39;_trackEvent\&#39;, \&#39;Engagement\&#39;, \&#39;Click\&#39;, \&#39;Header -  Follow\&#39;]);">Follow</a></div>
+
+<div class="search-group">
+<div class="search-toggle"><i class="icon-svg_search"></i></div>
+    <div class="search-overlay">
+        <form action="https://www.symmetrymagazine.org/archive" class="form-search" method="get">
+            <div class="container-inline">
+                <div class="input-append"><input class="search-query span2 form-text" name="s" placeholder="Search" title="Enter the terms you wish to search for." type="text"><button class="btn" type="submit"><i class="icon-svg_search"></i><span class="element-invisible">Search</span></button></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+  
+  
+</div>
+        <div class="tagline-wrapper">
+			<div class="tagline">A joint Fermilab/SLAC publication</div>
+		</div>
+    </div>
+</header>
+
+  
+  
+      
+    <section class="article-header container-fluid">
+    <div class="article-header-content">
+        <div class="hero">
+  
+  
+      
+    
+  
+  <img src="./Neural networks meet space _ symmetry magazine_files/neural_network_lensing_final.jpg" width="1600" height="900" alt="Neurons and Einstein ring"><div class="image-credit">
+  Greg Stewart, SLAC National Accelerator Laboratory</div>
+  
+  
+</div>
+        <div class="article-title">
+  
+  
+      
+    <h1>Neural networks meet space</h1>
+
+  
+  
+</div>
+        <div class="article-deck">
+  
+  
+      
+    <div class="teaser-date">08/30/17</div>
+  
+  
+
+  
+  
+      
+    <div class="byline">By Manuel Gnida</div>
+  
+  
+
+  
+  
+      
+    
+  <p>Artificial intelligence analyzes gravitational lenses 10 million times faster.</p>
+
+  
+  
+</div>
+    </div>
+</section>
+<div class="divider"></div>
+<article class="article feature container">
+    <div class="article-content">
+  
+  
+      
+    
+    <div class="body-element">
+    <p>Researchers from the Department of Energy’s SLAC National Accelerator Laboratory and Stanford University have for the first time shown that neural networks—a form of artificial intelligence—can accurately analyze the complex distortions in spacetime known as gravitational lenses 10 million times faster than traditional methods.</p>
+
+<p>“Analyses that typically take weeks to months to complete, that require the input of experts and that are computationally demanding, can be done by neural nets within a fraction of a second, in a fully automated way and, in principle, on a cell phone’s computer chip,” says postdoctoral fellow Laurence Perreault Levasseur, a co-author of a study published today in <a href="https://www.nature.com/nature/journal/v548/n7669/full/nature23463.html" target="_blank"><em>Nature</em></a>.</p>
+
+<h3>Lightning-fast complex analysis</h3>
+
+<p>The team at the Kavli Institute for Particle Astrophysics and Cosmology (KIPAC), a joint institute of SLAC and Stanford, used neural networks to analyze images of strong <a href="https://www.youtube.com/watch?v=PviYbX7cUUg&amp;list=PL8BCE8824BFF1BB4B&amp;index=41&amp;t=15s" target="_blank">gravitational lensing</a>, where the image of a faraway galaxy is multiplied and distorted into rings and arcs by the gravity of a massive object, such as a galaxy cluster, that’s closer to us. The distortions provide important clues about how mass is distributed in space and how that distribution changes over time – properties linked to invisible dark matter that makes up 85 percent of all matter in the universe and to dark energy that’s accelerating the expansion of the universe.</p>
+
+<p>Until now this type of analysis has been a tedious process that involves comparing actual images of lenses with a large number of computer simulations of mathematical lensing models. This can take weeks to months for a single lens.</p>
+
+<p>But with the neural networks, the researchers were able to do the same analysis in a few seconds, which they demonstrated using real images from NASA’s Hubble Space Telescope and simulated ones.</p>
+
+<p>To train the neural networks in what to look for, the researchers showed them about half a million simulated images of gravitational lenses for about a day. Once trained, the networks were able to analyze new lenses almost instantaneously with a precision that was comparable to traditional analysis methods. In a <a href="https://arxiv.org/abs/1708.08843" target="_blank">separate paper</a>, submitted to <em>The Astrophysical Journal Letters</em>, the team reports how these networks can also determine the uncertainties of their analyses.</p>
+  </div>
+  <div class="entity entity-paragraphs-item paragraphs-item-sym-image-single-free paragraphs-item-1062">
+  <div class="inset inset-one">
+        <div class="inset-item freeform">
+        
+  <a href="./Neural networks meet space _ symmetry magazine_files/Hubble Lenses 2.jpg" title="Grid of nine boxes showing various gravitational lenses" class="colorbox init-colorbox-processed cboxElement" data-colorbox-gallery="gallery-all-nTPpZ6dG0q4" data-cbox-img-attrs="{&quot;title&quot;: &quot;&quot;, &quot;alt&quot;: &quot;Grid of nine boxes showing various gravitational lenses&quot;}"><img src="./Neural networks meet space _ symmetry magazine_files/Hubble Lenses 2.jpg" width="754" height="753" alt="Grid of nine boxes showing various gravitational lenses" title=""></a><div class="caption">
+  <p>KIPAC researchers used images of strongly lensed galaxies taken with the Hubble Space Telescope to test the performance of neural networks, which promise to speed up complex astrophysical analyses tremendously.</p>
+</div><div class="image-credit">
+  Yashar Hezaveh/Laurence Perreault Levasseur/Phil Marshall/Stanford/SLAC National Accelerator Laboratory; NASA/ESA</div>    </div>
+    </div>
+
+</div>
+    <div class="body-element">
+    <h3>Prepared for the data floods of the future</h3>
+
+<p>“The neural networks we tested—three publicly available neural nets and one that we developed ourselves—were able to determine the properties of each lens, including how its mass was distributed and how much it magnified the image of the background galaxy,” says the study’s lead author Yashar Hezaveh, a NASA Hubble postdoctoral fellow at KIPAC.</p>
+
+<p>This goes far beyond recent applications of neural networks in astrophysics, which were limited to solving classification problems, such as determining whether an image shows a gravitational lens or not.</p>
+
+<p>The ability to sift through large amounts of data and perform complex analyses very quickly and in a fully automated fashion could transform astrophysics in a way that is much needed for future sky surveys that will look deeper into the universe—and produce more data—than ever before.</p>
+
+<p>The <a href="https://www.lsst.org/" target="_blank">Large Synoptic Survey Telescope (LSST)</a>, for example, whose <a href="https://lsst.slac.stanford.edu/" target="_blank">3.2-gigapixel camera</a> is currently under construction at SLAC, will provide unparalleled views of the universe and is expected to increase the number of known strong gravitational lenses from a few hundred today to tens of thousands.</p>
+
+<p>“We won’t have enough people to analyze all these data in a timely manner with the traditional methods,” Perreault Levasseur says. “Neural networks will help us identify interesting objects and analyze them quickly. This will give us more time to ask the right questions about the universe.”</p>
+  </div>
+  <div class="entity entity-paragraphs-item paragraphs-item-sym-image-single paragraphs-item-1058">
+  <div class="inset inset-one">
+        <div class="inset-item">
+        
+  <a href="https://www.symmetrymagazine.org/sites/default/files/images/standard/neural_network_visual_final.jpg" title="Convolutional neural network example with pictures of dogs and features" class="colorbox init-colorbox-processed cboxElement" data-colorbox-gallery="gallery-all-nTPpZ6dG0q4" data-cbox-img-attrs="{&quot;title&quot;: &quot;&quot;, &quot;alt&quot;: &quot;Convolutional neural network example with pictures of dogs and features&quot;}"><img src="./Neural networks meet space _ symmetry magazine_files/neural_network_visual_final.jpg" width="1140" height="641" alt="Convolutional neural network example with pictures of dogs and features" title=""></a><div class="caption">
+  <p>Scheme of an artificial neural network, with individual computational units organized into hundreds of layers. Each layer searches for certain features in the input image (at left). The last layer provides the result of the analysis. The researchers used particular kinds of neural networks, called convolutional neural networks, in which individual computational units (neurons, gray spheres) of each layer are also organized into 2-D slabs that bundle information about the original image into larger computational units.</p>
+</div><div class="image-credit">
+  Greg Stewart, SLAC National Accelerator Laboratory</div>    </div>
+    </div>
+
+</div>
+    <div class="body-element">
+    <h3>A revolutionary approach</h3>
+
+<p>Neural networks are inspired by the architecture of the human brain, in which a dense network of neurons quickly processes and analyzes information.</p>
+
+<p>In the artificial version, the “neurons” are single computational units that are associated with the pixels of the image being analyzed. The neurons are organized into layers, up to hundreds of layers deep. Each layer searches for features in the image. Once the first layer has found a certain feature, it transmits the information to the next layer, which then searches for another feature within that feature, and so on.</p>
+
+<p>“The amazing thing is that neural networks learn by themselves what features to look for,” says&nbsp;KIPAC staff scientist Phil Marshall, a co-author of the paper. “This is comparable to the way small children learn to recognize objects. You don’t tell them exactly what a dog is; you just show them pictures of dogs.”</p>
+
+<p>But in this case, Hezaveh says, “It’s as if they not only picked photos of dogs from a pile of photos, but also returned information about the dogs’ weight, height and age.”</p>
+
+<p>Although the KIPAC scientists ran their tests on the Sherlock high-performance computing cluster at the Stanford Research Computing Center, they could have done their computations on a laptop or even on a cell phone, they said. In fact, one of the neural networks they tested was designed to work on iPhones.</p>
+
+<p>“Neural nets have been applied to astrophysical problems in the past with mixed outcomes,” says&nbsp;KIPAC faculty member Roger Blandford, who was not a co-author on the paper. “But new algorithms combined with modern graphics processing units, or GPUs, can produce extremely fast and reliable results, as the gravitational lens problem tackled in this paper dramatically demonstrates. There is considerable optimism that this will become the approach of choice for many more data processing and analysis problems in astrophysics and other fields.”&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<p><em>Editor's note: This article originally appeared as a <a href="https://www6.slac.stanford.edu/news/2017-08-30-artificial-intelligence-analyzes-gravitational-lenses-10-million-times-faster.aspx" target="_blank">SLAC&nbsp;press release</a>.</em></p>
+  </div>
+
+  
+  
+</div>
+    <div class="article-actions">
+  
+  
+      
+    <div class="subscribe"><a href="https://www.symmetrymagazine.org/subscribe" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;Engagement&#39;, &#39;Click&#39;, &#39;Follow - Article&#39;]);">Follow</a></div>
+
+<div class="share">
+<ul class="social-links">
+	<li class="print-link"><a class="icon-print" href="javascript:if(window.print)window.print()" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;Social&#39;, &#39;Share&#39;, &#39;Print&#39;]);">Print</a></li>
+	<li><a class="icon-facebook" href="https://www.facebook.com/sharer.php?u=https://www.symmetrymagazine.org/article/neural-networks-meet-space" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;Social&#39;, &#39;Share&#39;, &#39;Facebook&#39;]);" target="_blank">Facebook</a></li>
+	<li><a class="icon-twitter" href="http://twitter.com/share" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;Social&#39;, &#39;Share&#39;, &#39;Twitter&#39;]);" target="_blank">Twitter</a></li>
+	<li><a class="icon-reddit_sm" href="https://www.reddit.com/submit" onclick="window.location = &#39;//www.reddit.com/submit?url=&#39; + encodeURIComponent(window.location); return false; _gaq.push([&#39;_trackEvent&#39;, &#39;Social&#39;, &#39;Share&#39;, &#39;Reddit&#39;]);" target="_blank">Reddit</a></li>
+	<li><a class="icon-hacker_sm" href="http://news.ycombinator.com/submit" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;Social&#39;, &#39;Share&#39;, &#39;Hacker News&#39;]);" target="_blank">Hacker News</a></li>
+</ul>
+</div>
+
+<div class="print-tooltip" style="display: none;">Use your browser’s print dialog box to create a pdf.</div>
+
+  
+  
+</div>
+</article>
+<section class="recent-breaking">
+    <div class="container-fluid">
+  
+  
+        <div class="pane-title">Latest news articles</div>
+    
+    <div class="view view-recent-news view-id-recent_news view-display-id-recent_news_pane view-dom-id-a9d4183a15034063e35d403f861be3ba">
+        
+  
+  
+      <div class="view-content">
+        <div class="teaser">
+    <div class="teaser-date">11/02/17</div><div class="teaser-attribution">NPR</div><h4 class="teaser-headline trending"><a href="http://www.npr.org/sections/thetwo-way/2017/11/02/561468384/scientists-say-theyve-found-hidden-space-in-great-pyramid-of-giza">Scientists say they've found hidden space in Great Pyramid of Giza</a></h4>
+  <p>The Great Pyramid of Giza has been probed with the tools of modern particle physics.</p>
+  </div>
+  <div class="teaser">
+    <div class="teaser-date">11/02/17</div><div class="teaser-attribution">New Scientist</div><h4 class="teaser-headline trending"><a href="https://www.newscientist.com/article/2152224-cosmic-rays-have-revealed-a-new-chamber-in-egypts-great-pyramid/">Cosmic rays have revealed a new chamber in Egypt’s Great Pyramid</a></h4>
+  <p>Scientists used muons&nbsp;to explore inside Egypt’s Great Pyramid without moving a stone.</p>
+  </div>
+  <div class="teaser">
+    <div class="teaser-date">10/31/17</div><div class="teaser-attribution">New Yorker</div><h4 class="teaser-headline trending"><a href="https://www.newyorker.com/tech/elements/dark-matter-gets-its-day">Dark matter gets its day</a></h4>
+  <p>A new cosmological celebration, coinciding with Halloween, seeks to shed light on one of the great mysteries of the universe.</p>
+  </div>
+  <div class="teaser">
+    <div class="teaser-date">10/30/17</div><div class="teaser-attribution">Newsweek</div><h4 class="teaser-headline trending"><a href="http://www.newsweek.com/dark-matter-day-universe-biggest-mystery-696502">What is Dark Matter Day?</a></h4>
+  <p>Scientists launch first-ever event celebrating universe's&nbsp;biggest mystery.</p>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>
+  
+  
+<div class="more-stories">
+  <div class="container">
+    
+      
+      
+                    <div class="pane-title">More on Topic</div>
+            
+        <div class="view view-more-on-topic view-id-more_on_topic view-display-id-more_on_topic_block view-dom-id-6251f918e31c842a9a7072863cc0e28a">
+        
+  
+  
+      <div class="view-content gd-infinite-scroll-initialized">
+        <div class="teaser">
+    <div class="teaser-date">10/16/17</div>
+  <h4 class="teaser-headline"><a href="https://www.symmetrymagazine.org/article/scientists-observe-first-verified-neutron-star-collision">Scientists observe first verified neutron-star collision</a></h4>
+
+  <p>For the first time, experiments have seen both light and gravitational waves released by a single celestial crash.</p>
+  </div>
+  <div class="teaser">
+    <div class="teaser-date">08/03/17</div>
+  <h4 class="teaser-headline"><a href="https://www.symmetrymagazine.org/article/our-clumpy-cosmos">Our clumpy cosmos</a></h4>
+
+  <p>The Dark Energy Survey reveals the most accurate measurement of dark matter structure in the universe.</p>
+  </div>
+  <div class="teaser">
+    <div class="teaser-date">08/01/17</div>
+  <h4 class="teaser-headline"><a href="https://www.symmetrymagazine.org/article/tuning-in-for-science">Tuning in for science</a></h4>
+
+  <p>The sprawling Square Kilometer Array radio telescope hunts signals from one of the quietest places on earth.</p>
+  </div>
+  <div class="teaser">
+    <div class="teaser-date">06/01/17</div>
+  <h4 class="teaser-headline"><a href="https://www.symmetrymagazine.org/article/at-ligo-threes-a-trend">At LIGO, three’s a trend</a></h4>
+
+  <p>The&nbsp;third detection of gravitational waves from merging black holes provides a new test of the theory of general relativity.</p>
+  </div>
+  <div class="teaser">
+    <div class="teaser-date">03/21/17</div>
+  <h4 class="teaser-headline"><a href="https://www.symmetrymagazine.org/article/high-energy-visionary">High-energy visionary</a></h4>
+
+  <p>Meet Hernán Quintana Godoy, a scientist who helped make Chile central to international astronomy.</p>
+  </div>
+  <div class="teaser">
+    <div class="teaser-date">02/07/17</div>
+  <h4 class="teaser-headline"><a href="https://www.symmetrymagazine.org/article/what-ended-the-dark-ages-of-the-universe">What ended the dark ages of the universe?  </a></h4>
+
+  <p>New experiments will help astronomers uncover the sources that helped make the universe transparent.</p>
+  </div>
+  <div class="teaser">
+    <div class="teaser-date">12/02/16</div>
+  <h4 class="teaser-headline"><a href="https://www.symmetrymagazine.org/article/viewing-our-turbulent-universe">Viewing our turbulent universe</a></h4>
+
+  <p>Construction has begun for&nbsp;the CTA, a discovery machine that will study the highest energy objects and events across the entire sky.</p>
+  </div>
+  <div class="teaser">
+    <div class="teaser-date">11/02/16</div>
+  <h4 class="teaser-headline"><a href="https://www.symmetrymagazine.org/article/asksymmetry-twitter-chat-with-leonardo-senatore">#AskSymmetry Twitter chat with Leonardo Senatore</a></h4>
+
+  <p>See theorist Leonardo Senatore’s answers to readers’ questions about&nbsp;parallel universes.</p>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+    <div class="archive-teaser">
+	<div id="more-stories" class="more-link">
+		<div class="item-list"><ul class="pager" style="display: none;"><li class="pager-previous first">&nbsp;</li>
+<li class="pager-current">1 of 28</li>
+<li class="pager-next last"><a title="Go to next page" href="https://www.symmetrymagazine.org/article/neural-networks-meet-space?utm_source=main_feed_click&amp;utm_medium=rss&amp;utm_campaign=main_feed&amp;utm_content=click&amp;page=1">next ›</a></li>
+</ul></div>	</div>    
+    <div class="archive-link"><a href="https://www.symmetrymagazine.org/archive">View full archive</a></div>
+  </div>
+  
+<div class="at gd-infinite-scroll-load-more"><div class="ml"><div class="tg load-more">View more stories <i class="icon-svg_arrowDWN"></i></div></div></div></div>
+      
+      
+      </div>
+</div>
+</div>
+</section>
+
+  
+  
+<footer class="footer">
+    <div class="container-fluid">
+                <div class="footer-content">
+            
+  
+  
+      
+    <div class="logo"><a href="https://www.symmetrymagazine.org/"><img alt="symmetry | dimensions of particle physics" src="./Neural networks meet space _ symmetry magazine_files/logo-full.svg"></a></div>
+  
+  
+            
+  
+  
+      
+    <div class="links">
+<div class="h2">An online magazine about particle physics.</div>
+
+<ul class="footer-nav">
+	<li><a href="https://www.symmetrymagazine.org/subscribe" onclick="_gaq.push([\&#39;_trackEvent\&#39;, \&#39;Engagement\&#39;, \&#39;Click\&#39;, \&#39;Footer Subscribe\&#39;]);">Subscribe</a></li>
+	<li><a href="https://www.symmetrymagazine.org/contact-us">Contact</a></li>
+	<li><a href="https://www.symmetrymagazine.org/about">About</a></li>
+	<li><a href="https://www.symmetrymagazine.org/archive">Archive</a></li>
+</ul>
+</div>
+
+  
+  
+        </div>
+                        <div class="footer-info">
+            
+  
+  
+      
+    <div class="copyright">
+<div class="copyright-info">Copyright 2016 Symmetry Magazine</div>
+
+<div class="joint-publication">A joint Fermilab/SLAC publication</div>
+
+<div class="terms-of-use"><a href="https://www.symmetrymagazine.org/node/48371">Terms of Use</a></div>
+</div>
+
+  
+  
+            
+  
+  
+      
+    <div class="doe-logo"><a href="https://www.symmetrymagazine.org/"><img alt="U.S. Department of Energy | Office of Science" src="./Neural networks meet space _ symmetry magazine_files/DOE.svg"></a></div>
+  
+  
+        </div>
+            </div>
+</footer>
+      
+
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>
