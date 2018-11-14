@@ -34,8 +34,8 @@ top: 54px;
 left: -65px;
 right: auto;
 transform: rotate(-45deg);
--webkit-transform: rotate(-45deg);opacity:0;transition: 2s;z-index:10000;"><b>&#191;&nbsp;Phase
-      de questions&nbsp;?</b></div>
+-webkit-transform: rotate(-45deg);opacity:0;transition: 2s;z-index:10000;"><b>&#191;&nbsp;Questions
+      time&nbsp;?</b></div>
 
 
 
@@ -51,7 +51,7 @@ right: -65px;
 left: auto;
 transform: rotate(45deg);
 -webkit-transform: rotate(45deg);opacity:0;transition: 2s;z-index:10000;">I
-    - Sélection d'algorithmes</div>
+    - Algorithm selection</div>
 
   <div id="ribbon_25D" style="width: 300px;
 background: rgb(0, 62, 145);
@@ -65,7 +65,7 @@ right: -65px;
 left: auto;
 transform: rotate(45deg);
 -webkit-transform: rotate(45deg);opacity:0;transition: 2s;z-index:10000;">II
-    - Détection multimodale</div>
+    - Multimodal detection</div>
 
   <div id="ribbon_3D" style="width: 300px;
 background: rgb(0, 62, 145);
@@ -79,7 +79,7 @@ right: -65px;
 left: auto;
 transform: rotate(45deg);
 -webkit-transform: rotate(45deg);opacity:0;transition: 2s;z-index:10000;">III
-    - Segmentation multivue</div>
+    - Multiview segmentation</div>
 
 
   <div class="fallback-message">
@@ -171,7 +171,7 @@ transform: rotate(45deg);
     <div class="step noribbon" data-x="5000" data-y="0" data-z="0">
       <center>
         <h3>a world about</h3>
-          <h2>computer vision</h2>
+        <h2>computer vision</h2>
       </center>
     </div>
 
@@ -335,19 +335,20 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step noribbon" data-rel-x="0" data-rel-y="1200" data-z="0">
-        <center>
-          <h5 style="margin-bottom:0px;padding-bottom:0px;">a little big problem</h5>
-          <img src="images/0_introduction/grumpy/grumpy_rgb.png" style="height: auto; width:100%;" /><br />
-          <!-- $Image\in[0:255]^{W \cdot H \cdot D}$ -->
-          <img src="images/0_introduction/vecteur_image.png" style="height: auto; width:70%;" />
-        </center>
-  
-        <div class="notes">
-          Ce que l'on peut voir ici c'est la représentation d'une image sous sa forme RGB. Elle est utile car nos yeux sont sensibles à ces trois couleurs et ainsi nous avons directement accès à l'information nécessaire pour générer cette image sur un écran.
-        </div>
+    <!-- <div class="step noribbon" data-rel-x="0" data-rel-y="1200" data-z="0">
+      <center>
+        <h5 style="margin-bottom:0px;padding-bottom:0px;">a little big problem</h5>
+        <img src="images/0_introduction/grumpy/grumpy_rgb.png" style="height: auto; width:100%;" /><br />
+        <img src="images/0_introduction/vecteur_image.png" style="height: auto; width:70%;" />
+      </center>
+
+      <div class="notes">
+        Ce que l'on peut voir ici c'est la représentation d'une image sous sa forme RGB. Elle est utile car nos yeux
+        sont sensibles à ces trois couleurs et ainsi nous avons directement accès à l'information nécessaire pour
+        générer cette image sur un écran.
       </div>
-  
+    </div> -->
+
 
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
@@ -402,57 +403,21 @@ transform: rotate(45deg);
         <img src="images/0_introduction/blackbox/features_13.png" class="larger_img substep" />
       </div>
     </div>
-
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <div class="step noribbon" data-rel-x="0" data-rel-y="1500" data-z="0">
-      <h4>Un réseau de neurone : GoogleNet</h4>
-      <blockquote class="article_blockquote">
-        <svg viewBox="0 0 17 16" class="article_reference">
-          <path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path>
-        </svg>"Going deeper with convolutions." (CVPR 2015)
-        <cite class="article_cite">Szegedy et al.</cite>
-      </blockquote>
-      <table>
-        <tr>
-          <td><img src="images/0_introduction/GoogleNet.gif" style="height: auto; width:500px;" /></td>
-
-          <td style="font-size:30px;">
-            <ul>
-              <li style="list-style-type: none;">&#8599; couches</li>
-              <li style="list-style-type: none;">&#8599; paramètres</li>
-              <li style="list-style-type: none;">&#8599; opérations</li>
-              <div class="substep">
-
-
-                <li style="list-style-type: none;">&#8599; le temps de calcul</li>
-                <li style="list-style-type: none;">&#8599; la mémoire nécessaire</li>
-              </div>
-            </ul>
-          </td>
-        </tr>
-      </table>
-      <img src="images/0_introduction/GoogLeNet.png" style="height: auto; width:100%;" />
-    </div>
-
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
       <div class="step_title">
-        <h5>Des contraintes</h5>
+        <h5>Problem</h5>
       </div>
       <div class="step_content">
-        <img src="images/0_introduction/problematiques/problematiques_v2_6.png" class="larger_img fade-in" />
-        <img src="images/0_introduction/problematiques/problematiques_v2_5.png" class="larger_img substep" />
-        <img src="images/0_introduction/problematiques/problematiques_v2_4.png" class="larger_img substep" />
-        <img src="images/0_introduction/problematiques/problematiques_v2_3.png" class="larger_img substep" />
-        <img src="images/0_introduction/problematiques/problematiques_v2_2.png" class="larger_img substep" />
-        <img src="images/0_introduction/problematiques/problematiques_v2_1.png" class="larger_img substep" />
-        <img src="images/0_introduction/problematiques/problematiques_v2_0.png" class="larger_img substep" />
+        <center>
+          <img src="images/0_introduction/problematiques/da_1.png" class="" style="width:50%;" /><br>
+          <img src="images/0_introduction/problematiques/da_2.png" class="" style="width:50%;" />
+        </center>
       </div>
     </div>
+
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
@@ -462,9 +427,9 @@ transform: rotate(45deg);
       </center>
 
       <ul style="font-size:40px;">
-        <li>utiliser plusieurs experts complémentaires</li>
-        <li>augmenter les sources d'informations</li>
-        <li>accumuler différentes observations</li>
+        <li>use complementary experts</li>
+        <li>add other sources of information</li>
+        <li>accumulate differents observations</li>
       </ul>
 
       <center>
@@ -478,7 +443,6 @@ transform: rotate(45deg);
     </div>
 
 
-
     <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
     &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
     &&&&                        PLAN                                  &&&&
@@ -489,16 +453,15 @@ transform: rotate(45deg);
       data-rotate-x="-50" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
       <center>
         <div style="opacity:1">
-          <h4 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios
-            d’exploration robotique.</h4>
-          <h5 style="margin:0px;">Détecte-moi si tu peux !</h5><br /><br /><br />
+          <h4 style="margin:0px;">Robust visual recognition by neural networks in robotic exploration scenarios.</h4>
+          <h5 style="margin:0px;">Detect me if you can!</h5><br /><br /><br />
         </div>
       </center>
       <div style="">
         <ol type="I" style="display:table; margin:auto;">
-          <li style="font-size: 40px;font-weight: bold; opacity:1">Sélection d'algorithmes de classification</li>
-          <li style="font-size: 40px;font-weight: bold; opacity:1">Approche multimodale pour la détection</li>
-          <li style="font-size: 40px;font-weight: bold; opacity:1">Approche multivue pour la segmentation</li>
+          <li style="font-size: 40px;font-weight: bold; opacity:1">Classification algorithm selection</li>
+          <li style="font-size: 40px;font-weight: bold; opacity:1">Multimodal detection</li>
+          <li style="font-size: 40px;font-weight: bold; opacity:1">Multiview segmentation</li>
         </ol>
       </div>
     </div>
@@ -551,16 +514,15 @@ transform: rotate(45deg);
     <div id="start-2D" class="step noribbon slide" data-x="7500" data-y="0" data-z="0" data-transition-duration="3000">
       <center>
         <div style="opacity:1">
-          <h4 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios
-            d’exploration robotique.</h4>
-          <h5 style="margin:0px;">Détecte-moi si tu peux !</h5><br /><br /><br />
+          <h4 style="margin:0px;">Robust visual recognition by neural networks in robotic exploration scenarios.</h4>
+          <h5 style="margin:0px;">Detect me if you can!</h5><br /><br /><br />
         </div>
       </center>
       <div style="">
         <ol type="I" style="display:table; margin:auto;">
-          <li style="font-size: 40px;font-weight: bold; opacity:1">Sélection d'algorithmes de classification</li>
-          <li style="font-size: 40px;font-weight: bold; opacity:0.3">Approche multimodale pour la détection</li>
-          <li style="font-size: 40px;font-weight: bold; opacity:0.3">Approche multivue pour la segmentation</li>
+          <li style="font-size: 40px;font-weight: bold; opacity:1">Classification algorithm selection</li>
+          <li style="font-size: 40px;font-weight: bold; opacity:0.3">Multimodal detection</li>
+          <li style="font-size: 40px;font-weight: bold; opacity:0.3">Multiview segmentation</li>
         </ol>
       </div>
     </div>
@@ -570,7 +532,7 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <div class="step_title">
-        <h5>Fusion vs. Sélection</h5>
+        <h5>Fusion vs. Selection</h5>
       </div>
       <div class="step_content">
         <img src="images/1_2D/choixmethodes4.png" class="larger_img" />
@@ -583,8 +545,8 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h3>Preuve de concept</h3>
-        <h5>Réseau de confiance</h5>
+        <h3>Idea</h3>
+        <h5>Trust network</h5>
 
 
         <img src="images/1_2D/rc_0.png" style="height: auto; width:45%;" />
@@ -593,86 +555,12 @@ transform: rotate(45deg);
 
     </div>
 
-
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        Jeux de données : SUN3D
-        <img src="images/1_2D/sun3d.png" style="height: auto; width:100%;" />
-
-      </center>
-
-    </div>
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
-      <center>
-        Méthodes :<br />
-        <span style="font-size:20px">LeNet (<svg viewBox="0 0 17 16" class="article_reference">
-            <path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path>
-          </svg>1998 LeCun) &</span><br />
-        <img src="images/1_2D/lenet.png" style="height: 60px; width:auto" /><br />
-
-
-        <span style="font-size:20px">AlexNet (<svg viewBox="0 0 17 16" class="article_reference">
-            <path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path>
-          </svg>2012 Krizhevsky)</span>
-        <img src="images/1_2D/alexnet.png" style="height: 60px; width:auto" /><br />
-      </center>
-
-    </div>
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
-      <center>
-        <h5>Complémentarité des méthodes</h5>
-        <table>
-          <tr>
-            <td>
-              <img src="images/1_2D/cam_an_nolegend.png" style="height: 300px;; width:auto" />
-            </td>
-            <td>
-              <img src="images/1_2D/cam_ln_nolegend.png" style="height: 300px;; width:auto" />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <img src="images/1_2D/legend_proof_1.png" style="height: 100px;; width:auto" /><br />
-              <img src="images/1_2D/legend_proof_2.png" style="height: 100px;; width:auto" class="substep" />
-            </td>
-            <td>
-              <img src="images/1_2D/cam_all_nolegend.png" style="height: 300px;; width:auto" class="substep" />
-            </td>
-          </tr>
-        </table>
-
-        <br />
-      </center>
-    </div>
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
-
-      <center>
-        <h5>Performance du réseau de confiance</h5>
-        <img src="images/1_2D/cam_oracle_nolegend.png" style="height: auto; width:40%;" />
-        <img src="images/1_2D/rc_1.png" style="height: auto; width:15%;" class="substep" />
-        <img src="images/1_2D/cam_tnn_nolegend.png" style="height: auto; width:40%;" class="substep" /><br />
-        <img src="images/1_2D/legend_proof_oracle_tnn.png" style="height: auto; width:40%;" />
-        <span style="font-size:20px;color:black;" class="substep">+7.4 points /AlexNet et +4.9 points /LeNet</span>
-      </center>
-    </div>
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
-      <center>
-        <h3>Cas applicatif n°1</h3> 6 jeux de données :<br>
+        <h3>Use-case 1</h3> 6 datasets :<br>
         <table>
           <tr>
             <td>
@@ -703,8 +591,8 @@ transform: rotate(45deg);
             <td>Mountain/Forest</td>
           </tr>
         </table>
-        6 méthodes de classification :<br>
-        <span style="font-size:20px;">HoG+SVM et 5 CNNs (AlexNet, LeNet, GoogleNet, SqueezeNet, VGG16)</span>
+        6 classification methods:<br>
+        <span style="font-size:20px;">HoG+SVM and 5 CNNs (AlexNet, LeNet, GoogleNet, SqueezeNet, VGG16)</span>
       </center>
     </div>
     <!-- ######################################################################## -->
@@ -712,7 +600,7 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h3>Cas applicatif n°1</h3>
+        <h3>Use-case n°1</h3>
         <div id='method_holder'></div>
       </center>
     </div>
@@ -722,13 +610,13 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <div class="step_title">
-        <h5>Corrélation Méthodes/Jeux de données</h5>
+        <h5>Methods/datasets correlation</h5>
       </div>
       <div class="step_content">
         <img src="images/1_2D/jo_method/jo_method_1.png" class="higher_img" />
-        <img src="images/1_2D/jo_method/jo_method_2.png" class="higher_img substep" />
+        <!-- <img src="images/1_2D/jo_method/jo_method_2.png" class="higher_img substep" />
         <img src="images/1_2D/jo_method/jo_method_3.png" class="higher_img substep" />
-        <img src="images/1_2D/jo_method/jo_method_4.png" class="higher_img substep" />
+        <img src="images/1_2D/jo_method/jo_method_4.png" class="higher_img substep" /> -->
         <img src="images/1_2D/jo_method/jo_method_5.png" class="higher_img substep" />
         <img src="images/1_2D/jo_method/jo_method_6.png" class="higher_img substep" />
         <img src="images/1_2D/jo_method/jo_method_7.png" class="higher_img substep" />
@@ -740,15 +628,15 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h4>Cas n°1 : Résultats quantitatifs</h4>
+        <h4>Case n°1 : quantitative results</h4>
 
         <table>
           <tr>
             <td>
               <table style="font-size:15px;text-align:center;border-collapse:collapse;">
                 <tr>
-                  <td class="results"> <b>Méthode</b> </td>
-                  <td class="results"> <b>Précision moyenne (%)</b> </td>
+                  <td class="results"> <b>Method</b> </td>
+                  <td class="results"> <b>Average precision (%)</b> </td>
                 </tr>
                 <tr>
                   <td class="results"> bvlc_GoogleNet </td>
@@ -831,23 +719,22 @@ transform: rotate(45deg);
             <td>
               <table style="font-size:15px;text-align:center;border-collapse:collapse;">
                 <tr>
-                  <td class="results"> <b>Méthode</b> </td>
-                  <td class="results"> <b>Précision moyenne (%)</b> </td>
-                </tr>
+                  <td class="results"> <b>Method</b> </td>
+                  <td class="results"> <b>Average precision (%)</b> </td>
                 <tr>
                   <td class="results"> Oracle </td>
                   <td class="results"> 77,8 </td>
                 </tr>
                 <tr>
-                  <td class="results"> <b>Réseau de Confiance [SqueezeNet] </b></td>
+                  <td class="results"> <b>Trust network [SqueezeNet] </b></td>
                   <td class="results"> <b>43,0</b> </td>
                 </tr>
                 <tr>
-                  <td class="results"> Réseau de Confiance [LeNet]</td>
+                  <td class="results"> Trust network [LeNet]</td>
                   <td class="results"> 36,3 </td>
                 </tr>
                 <tr>
-                  <td class="results"> Réseau de Confiance [AlexNet]</td>
+                  <td class="results"> Trust network [AlexNet]</td>
                   <td class="results"> 23,7 </td>
                 </tr>
               </table>
@@ -862,90 +749,24 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h3>Cas applicatif n°2</h3> <span style="font-size:30px;">1 seul jeu de données : ImageNet</span><br>
+        <h3>Use-case n°2</h3> <span style="font-size:30px;">1 dataset : ImageNet</span><br>
 
         <img src="images/1_2D/datasets/imagenet.png" style="height: auto; width: 100%;" />
-        <br /> <span style="font-size:30px;">4 méthodes de classification :</span>
+        <br /> <span style="font-size:30px;">4 classification methods :</span>
         <span style="font-size:20px;">AlexNet, GoogleNet, SqueezeNet, VGG16</span>
     </div>
-
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
-      <center>
-        <h3>Cas applicatif n°2</h3>
-        <img src="images/1_2D/dofeann.png" style="height: 500px; width:auto;" /><br />
-        <span style="font-size:20px;">Réseau de confiance "<i>DoFeaNN</i>" : <i>Domain Features Neural Network</i></span>
-      </center>
-    </div>
-
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <div class="step step_2D" data-rel-x="0" data-rel-y="1000" data-z="0">
-      <center>
-        <h3>Cas applicatif n°2</h3>
-        <img src="images/1_2D/pipeline.png" style="height: auto; width: 55%;" />
-        <img src="images/1_2D/dofeann.png" style="height: auto; width:20%;" /><br />
-
-        <table style="font-size:20px;text-align:center;border-collapse:collapse;">
-          <tr>
-            <td class="results"> <b>Méthode</b> </td>
-            <td class="results"> <b>Top-1 score (%)</b> </td>
-            <td class="results"> <b>Temps de calcul cumulés</b> </td>
-          </tr>
-          <tr>
-            <td class="results"> AlexNet </td>
-            <td class="results"> 83,2 </td>
-            <td class="results"> 41,98 s </td>
-          </tr>
-          <tr>
-            <td class="results"> GoogleNet </td>
-            <td class="results"> 82,3 </td>
-            <td class="results"> 67,16 s </td>
-          </tr>
-          <tr>
-            <td class="results"> VGG </td>
-            <td class="results"> <b>83,9</b> </td>
-            <td class="results"> 73,88 s </td>
-          </tr>
-          <tr>
-            <td class="results"> SqueezeNet </td>
-            <td class="results"> 80,4 </td>
-            <td class="results"> 100,74 s </td>
-          </tr>
-          <tr style="border-bottom: 1px solid black">
-            <td class="results"> Oracle </td>
-            <td class="results"> <span style="text-decoration:underline">93,2</span> </td>
-            <td class="results"> 476,43 s </td>
-          </tr>
-          <tr>
-            <td class="results"> Réseau de confiance "<i>DoFeaNN</i>" + méthodes choisies </td>
-            <td class="results"> 83,8 </td>
-            <td class="results"> 129,4 s </td>
-          </tr>
-        </table>
-      </center>
-    </div>
-
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <div class="step noribbon slide fade-in" style="transition-delay: 2s" data-rel-x="0" data-rel-y="1000" data-z="1000"
       data-rotate-x="-50" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
       <center>
-        <h4>Conclusion I - Sélection d'algorithmes</h4>
+        <h4>Conclusion I - Classification algorithm selection</h4>
 
       </center>
       <ul>
-        <li>Le concept de réseau de confiance a du potentiel <img src="images/1_2D/rc_0.png" style="height: 100px; width:auto;position:relative;top:40px;" /></li>
-        <li>Deux situations :</li>
-        <ul>
-          <li>données facilement séparables (cas 1) <img src="images/1_2D/jo_oracle_tnn.png" style="height: 100px; width:auto;position:relative;top:40px;" /></li>
-          <li>données difficilement séparables (cas 2) <img src="images/1_2D/pipeline.png" style="height: 100px; width:auto;position:relative;top:40px;" /></li>
-        </ul>
-        <li> Structure DoFeaNN inadaptée <img src="images/1_2D/dofeann.png" style="height: 100px; width:auto;position:relative;top:40px;" /></li>
+        <li> Several datasets, good results<img src="images/1_2D/jo_oracle_tnn.png" style="height: 100px; width:auto;position:relative;top:40px;" /></li>
+        <li> Unique dataset, mitigated results<img src="images/1_2D/pipeline.png" style="height: 100px; width:auto;position:relative;top:40px;" /></li>
       </ul>
     </div>
 
@@ -995,16 +816,15 @@ transform: rotate(45deg);
     <div id="start-25D" class="step noribbon slide" data-x="10000" data-y="0" data-z="0" data-transition-duration="3000">
       <center>
         <div style="opacity:1">
-          <h4 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios
-            d’exploration robotique.</h4>
-          <h5 style="margin:0px;">Détecte-moi si tu peux !</h5><br /><br /><br />
+          <h4 style="margin:0px;">Robust visual recognition by neural networks in robotic exploration scenarios.</h4>
+          <h5 style="margin:0px;">Detect me if you can!</h5><br /><br /><br />
         </div>
       </center>
       <div style="">
         <ol type="I" style="display:table; margin:auto;">
-          <li style="font-size: 40px;font-weight: bold; opacity:0.3">Sélection d'algorithmes de classification</li>
-          <li style="font-size: 40px;font-weight: bold; opacity:1">Approche multimodale pour la détection</li>
-          <li style="font-size: 40px;font-weight: bold; opacity:0.3">Approche multivue pour la segmentation</li>
+          <li style="font-size: 40px;font-weight: bold; opacity:0.3">Classification algorithm selection</li>
+          <li style="font-size: 40px;font-weight: bold; opacity:1">Multimodal detection</li>
+          <li style="font-size: 40px;font-weight: bold; opacity:0.3">Multiview segmentation</li>
         </ol>
       </div>
     </div>
@@ -1600,16 +1420,15 @@ transform: rotate(45deg);
     <div id="start-3D" class="step noribbon slide" data-x="12500" data-y="0" data-z="0" data-transition-duration="3000">
       <center>
         <div style="opacity:1">
-          <h4 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios
-            d’exploration robotique.</h4>
-          <h5 style="margin:0px;">Détecte-moi si tu peux !</h5><br /><br /><br />
+          <h4 style="margin:0px;">Robust visual recognition by neural networks in robotic exploration scenarios.</h4>
+          <h5 style="margin:0px;">Detect me if you can!</h5><br /><br /><br />
         </div>
       </center>
       <div style="">
         <ol type="I" style="display:table; margin:auto;">
-          <li style="font-size: 40px;font-weight: bold; opacity:0.3">Sélection d'algorithmes de classification</li>
-          <li style="font-size: 40px;font-weight: bold; opacity:0.3">Approche multimodale pour la détection</li>
-          <li style="font-size: 40px;font-weight: bold; opacity:1">Approche multivue pour la segmentation</li>
+          <li style="font-size: 40px;font-weight: bold; opacity:0.3">Classification algorithm selection</li>
+          <li style="font-size: 40px;font-weight: bold; opacity:0.3">Multimodal detection</li>
+          <li style="font-size: 40px;font-weight: bold; opacity:1">Multiview segmentation</li>
         </ol>
       </div>
     </div>
@@ -2033,33 +1852,31 @@ transform: rotate(45deg);
     <div id="start-conclusion" class="step slide noribbon" data-x="15000" data-y="0" data-z="0" data-rotate-x="0"
       data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
       <center>
-
         <div style="opacity:0.5">
-          <h6 style="margin:0px;">Reconnaissance visuelle robuste par réseaux de neurones dans des scénarios
-            d’exploration robotique.</h6>
-          <span style="font-size:15px;font-style:italic">Détecte-moi si tu peux !</span>
+          <h6 style="margin:0px;">Robust visual recognition by neural networks in robotic exploration scenarios.</h6>
+          <span style="font-size:15px;font-style:italic">Detect me if you can!</span>
         </div>
         <h3>Conclusion</h3>
       </center>
-      <div style="">
+      <div>
         <ol type="I" style="display:table; margin:auto;">
 
-          <li style="font-size: 40px;font-weight: bold; margin: 30px 0; opacity:1">Sélection d'algorithmes de <span
-              class="late-enhanced" style="transition-delay: 2s">classification</span>
+          <li style="font-size: 40px;font-weight: bold; margin: 30px 0; opacity:1"><span class="late-enhanced" style="transition-delay: 2s">Classification</span>
+            algorithm selection
             <div id="burst-2D" class="substep">
               <span style="position:relative;top:10px">2D</span>
             </div>
           </li>
 
           <li style="font-size: 40px;font-weight: bold; margin: 30px 0; opacity:1">
-            Approche multimodale pour la <span class="late-enhanced" style="transition-delay: 3s">détection</span>
+            Multimodal detection <span class="late-enhanced" style="transition-delay: 3s">detection</span>
             <div id="burst-25D" class="substep">
               <span style="position:relative;top:10px">2.5D</span>
             </div>
           </li>
 
-          <li style="font-size: 40px;font-weight: bold; margin: 30px 0; opacity:1">Approche multivue pour la <span
-              class="late-enhanced" style="transition-delay: 4s">segmentation</span>
+          <li style="font-size: 40px;font-weight: bold; margin: 30px 0; opacity:1">Multiview <span class="late-enhanced"
+              style="transition-delay: 4s">segmentation</span>
             <div id="burst-3D" class="substep">
               <span style="position:relative;top:10px">3D</span>
             </div>
@@ -2233,7 +2050,7 @@ transform: rotate(45deg);
       </center>
       <div style="font-size:20px;margin:0px;">
         <ol type="I" style="display:table; margin:auto;">
-          <li style="font-size: 25px;font-weight: bold; opacity:1">Sélection d'algorithmes de classification</li>
+          <li style="font-size: 25px;font-weight: bold; opacity:1">Classification algorithm selection</li>
 
           <ul>
             <li>
@@ -2258,7 +2075,7 @@ transform: rotate(45deg);
             </li>
           </ul>
 
-          <li style="font-size: 25px;font-weight: bold; opacity:1">Approche multimodale pour la détection</li>
+          <li style="font-size: 25px;font-weight: bold; opacity:1">Multimodal detection</li>
           <ul>
 
             <li>
@@ -2285,7 +2102,7 @@ transform: rotate(45deg);
               <br /><span class="communication_authors">Joris Guerry, Bertrand Le Saux, David Filliat</span>
             </li>
           </ul>
-          <li style="font-size: 25px;font-weight: bold; opacity:1">Approche multivue pour la segmentation</li>
+          <li style="font-size: 25px;font-weight: bold; opacity:1">Multiview segmentation</li>
 
           <ul>
             <li>
