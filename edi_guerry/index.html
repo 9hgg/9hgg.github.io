@@ -106,7 +106,7 @@ transform: rotate(45deg);
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
     <div id="start-introduction" class="step noribbon slide" data-x="2500" data-y="0">
       <center>
-        <h4 style="margin:0px;">Robust visual recognition by neural networks in robotic exploration scenarios.</h4>
+        <h4 style="margin:0px;">Robust visual recognition by neural networks <br>in robotic exploration scenarios.</h4>
         <h5 style="margin:0px;">Detect me if you can!</h5><br />
         <span style="font-size:25px;">Excerpt from the 20th of November 2017 thesis defence of</span>
         <h4>Joris GUERRY</h4>
@@ -453,7 +453,7 @@ transform: rotate(45deg);
       data-rotate-x="-50" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
       <center>
         <div style="opacity:1">
-          <h4 style="margin:0px;">Robust visual recognition by neural networks in robotic exploration scenarios.</h4>
+          <h4 style="margin:0px;">Robust visual recognition by neural networks <br>in robotic exploration scenarios.</h4>
           <h5 style="margin:0px;">Detect me if you can!</h5><br /><br /><br />
         </div>
       </center>
@@ -514,7 +514,7 @@ transform: rotate(45deg);
     <div id="start-2D" class="step noribbon slide" data-x="7500" data-y="0" data-z="0" data-transition-duration="3000">
       <center>
         <div style="opacity:1">
-          <h4 style="margin:0px;">Robust visual recognition by neural networks in robotic exploration scenarios.</h4>
+          <h4 style="margin:0px;">Robust visual recognition by neural networks <br>in robotic exploration scenarios.</h4>
           <h5 style="margin:0px;">Detect me if you can!</h5><br /><br /><br />
         </div>
       </center>
@@ -765,8 +765,9 @@ transform: rotate(45deg);
 
       </center>
       <ul>
-        <li> Several datasets, good results<img src="images/1_2D/jo_oracle_tnn.png" style="height: 100px; width:auto;position:relative;top:40px;" /></li>
-        <li> Unique dataset, mitigated results<img src="images/1_2D/pipeline.png" style="height: 100px; width:auto;position:relative;top:40px;" /></li>
+        <li>Concept of Trust neural network <img src="images/1_2D/rc_0.png" style="height: 150px; width:auto;position:relative;top:40px;" /></li>
+        <li>Selection instead of fusion<img src="images/1_2D/pipeline.png" style="height: 150px; width:auto;position:relative;top:40px;" /></li>
+        <li>Best method < Trust network < Oracle<img src="images/1_2D/jo_oracle_tnn.png" style="height: 150px; width:auto;position:relative;top:40px;" /></li>
       </ul>
     </div>
 
@@ -816,7 +817,7 @@ transform: rotate(45deg);
     <div id="start-25D" class="step noribbon slide" data-x="10000" data-y="0" data-z="0" data-transition-duration="3000">
       <center>
         <div style="opacity:1">
-          <h4 style="margin:0px;">Robust visual recognition by neural networks in robotic exploration scenarios.</h4>
+          <h4 style="margin:0px;">Robust visual recognition by neural networks <br>in robotic exploration scenarios.</h4>
           <h5 style="margin:0px;">Detect me if you can!</h5><br /><br /><br />
         </div>
       </center>
@@ -860,41 +861,8 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
-      <div class="step_title">
-        <h5>Détecteur RGBD</h5>
-        <h6>Gating Network</h6>
-      </div>
-      <div class="step_content">
-        <img src="images/2_25D/eitel.png" class="larger_img" />
-        <img src="images/2_25D/eitel_gn.png" class="larger_img substep" />
-        <blockquote class="article_blockquote" style="position:absolute;bottom:0">
-          <svg viewBox="0 0 17 16" class="article_reference">
-            <path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path>
-          </svg>"Choosing smartly: Adaptive multimodal fusion for object detection in changing
-          environments." IROS (2016)
-          <cite class="article_cite">Mees, Eitel and Burgard</cite>
-        </blockquote>
-      </div>
-    </div>
-
-
-
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h3 style="">Détecteur RGBD</h3>
-        <h5 style="">Notre objectif</h5>
-        <img src="images/2_25D/r_mcnn_begin_questionmark.png" style="height: auto; width:100%" />
-      </center>
-    </div>
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
-      <center>
-        <h3>Détecteur RGB<span style="background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);">D</span></h3>
+        <h3>RGB<span style="background: linear-gradient(to left top, transparent 47.75%, currentColor 49.5%, currentColor 50.5%, transparent 52.25%);">D</span> detector</h3>
         <h5 style="font-style: italic;">Faster RCNN</h5>
         <img src="images/2_25D/rcnn.png" style="height: auto; width:70%;" />
         <blockquote class="article_blockquote">
@@ -914,8 +882,8 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <div class="step_title">
-        <h5>Détecteur RGBD</h5>
-        <h6>Notre objectif : <span style="font-style:italic">R&M CNN</span></h6>
+        <h5>RGBD detector</h5>
+        <h6>Our objective : <span style="font-style:italic">R&M CNN</span></h6>
       </div>
       <div class="step_content">
         <img src="images/2_25D/r_mcnn.png" class="larger_img" />
@@ -929,7 +897,7 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h5>Nos méthodes :</h5>
+        <h5>Our methods :</h5>
         <br />
         <img src="images/2_25D/archis.jpg" style="height: auto; width:60%" />
         <img src="images/2_25D/nms.png" style="height: auto; width:300px;box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); position: absolute;top: 300px; left: -100px;"
@@ -944,7 +912,7 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h5 style="margin:0px;">Application sur 3 jeux de données RGBD</h5>
+        <h5 style="margin:0px;">Application on 3 RGBD datasets</h5>
 
         <table>
           <tr>
@@ -971,41 +939,18 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
-      <div class="step_title">
-        <h5>Métriques</h5>
-      </div>
-      <div class="step_content">
-        <img src="images/2_25D/metrique/metrique_0.png" class="higher_img" />
-        <img src="images/2_25D/metrique/metrique_1.png" class="higher_img substep" />
-        <img src="images/2_25D/metrique/metrique_2.png" class="higher_img substep" />
-        <img src="images/2_25D/metrique/metrique_3.png" class="higher_img substep" />
-        <img src="images/2_25D/metrique/metrique_4.png" class="higher_img substep" />
-        <img src="images/2_25D/metrique/metrique_5.png" class="higher_img substep" />
-        <img src="images/2_25D/metrique/metrique_6.png" class="higher_img substep" />
-        <img src="images/2_25D/metrique/metrique_7.png" class="higher_img substep" />
-        <img src="images/2_25D/metrique/metrique_8.png" class="higher_img substep" />
-        <img src="images/2_25D/metrique/metrique_9.png" class="higher_img substep" />
-        <img src="images/2_25D/metrique/metrique_10.png" class="higher_img substep" />
-        <img src="images/2_25D/metrique/metrique_11.png" class="higher_img substep" />
-      </div>
-    </div>
-
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h5 style="margin:0px;">Résultats : <span style="font-style:italic">RGBD People</span></h5>
+        <h5 style="margin:0px;">Results : <span style="font-style:italic">RGBD People</span></h5>
         <img src="images/2_25D/rgbdp_404.jpg" style="margin-bottom:0px;height: auto; width:50%" />
 
         <table>
           <tr>
-            <td valign="middle" align="center"> <span style="font-size:20px">Fusion en X</span><br /><img src="images/2_25D/selection_rgbdp_x/rgbdp_x.gif"
+            <td valign="middle" align="center"> <span style="font-size:20px">X fusion</span><br /><img src="images/2_25D/selection_rgbdp_x/rgbdp_x.gif"
                 style="margin-bottom:0px;height: auto; width:60%;margin-bottom:0px;padding-bottom:0px;" /></td>
             <td>
               <table style="font-size:20px;text-align:center;border-collapse:collapse;">
                 <tr>
-                  <th class="results"> Méthode </th>
+                  <th class="results"> Method </th>
                   <th class="results"> Source </th>
                   <th class="results"> EER </th>
                 </tr>
@@ -1075,12 +1020,12 @@ transform: rotate(45deg);
 
         <table>
           <tr>
-            <td valign="middle" align="center"> <span style="font-size:20px">Fusion en U</span><br /><img src="images/2_25D/u_inout.gif"
+            <td valign="middle" align="center"> <span style="font-size:20px">U fusion</span><br /><img src="images/2_25D/u_inout.gif"
                 style="margin-bottom:0px;height: auto; width:90%;margin-bottom:0px;padding-bottom:0px;" /></td>
             <td>
               <table style="font-size:20px;text-align:center;border-collapse:collapse;">
                 <tr>
-                  <th class="results"> Méthode </th>
+                  <th class="results"> Method </th>
                   <th class="results"> Source </th>
                   <th class="results"> mAP </th>
                   <th class="results"> EER </th>
@@ -1156,8 +1101,7 @@ transform: rotate(45deg);
                   <td class="results"> <span style="color:#064d00;"> n.a </span></td>
                 </tr>
               </table>
-              <span style="color:#000;font-size:35px;">*</span> <span style="color:#064d00;font-size:15px;">ablation de
-                la couleur </span>
+              <span style="color:#000;font-size:35px;">*</span> <span style="color:#064d00;font-size:15px;">without RGB data </span>
             </td>
           </tr>
         </table>
@@ -1171,7 +1115,7 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="-1400" data-rel-y="1000" data-rotate-x="0" data-rotate-y="0" data-rotate-z="-90"
       data-z="-100" data-scale="1">
-      <h5>Nouveau jeu de données : ONERA.ROOM</h5>
+      <h5>a new dataset : ONERA.ROOM</h5>
       <table>
         <tr>
           <!-- <td><img src="images/2_25D/result_or_0.jpg" alt=""></td> -->
@@ -1182,9 +1126,9 @@ transform: rotate(45deg);
           <td></td>
           <td><span style="font-size:20px;">
               <ul>
-                <li>35000 images annotés</li>
-                <li>Trois niveaux de difficultés<br /> ("Easy","Average", "Hard")</li>
-                <li><b>+</b> de variété</li>
+                <li>35000 annotated images</li>
+                <li>3 difficulty levels<br /> ("Easy","Average", "Hard")</li>
+                <li>more different situations (people, places, enlightement)</li>
               </ul>
             </span></td>
           <td></td>
@@ -1197,7 +1141,7 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <div id="video-step-2" class="step step_25D" data-rel-x="700" data-rel-y="0" data-rotate-x="0" data-rotate-y="0"
       data-rotate-z="-90" data-z="-100" data-scale="1">
-      <h5>Nouveau jeu de données : ONERA.ROOM</h5>
+      <h5>New dataset : ONERA.ROOM</h5>
       <center>
         <video id="video_ecmr1" style="width:40%; height:auto;" loop muted>
           <source src="videos/ecmr-1.mp4" type="video/mp4">
@@ -1238,7 +1182,7 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="700" data-rel-y="0" data-z="0">
       <center>
-        <h5 style="margin:0px;">Résultats : <span style="font-style:italic">ONERA.ROOM</span></h5>
+        <h5 style="margin:0px;">Results : <span style="font-style:italic">ONERA.ROOM</span></h5>
 
         <img src="images/2_25D/result_or_0.jpg" style="height:auto;width:15%">
         <img src="images/2_25D/result_or_1.jpg" style="height:auto;width:15%">
@@ -1251,14 +1195,14 @@ transform: rotate(45deg);
               <br />
               <img src="images/2_25D/rgb_or.gif" style="height: auto; width:60%;margin:0px;padding:0px;" />
               <br />
-              <span style="font-size:20px;margin:0px;padding:0px;">Fusion en X</span>
+              <span style="font-size:20px;margin:0px;padding:0px;">X fusion</span>
               <br />
               <img src="images/2_25D/x_or.gif" style="height: auto; width:60%;margin:0px;padding:0px;" />
             </td>
             <td>
               <table style="font-size:20px;text-align:center;margin:0px;padding:0px;">
                 <tr>
-                  <th class="results;"> Méthode </th>
+                  <th class="results;"> Method </th>
                   <th class="results" class="results"> Source </th>
                   <th class="results"> mAP </th>
                   <th class="results"> EER </th>
@@ -1331,8 +1275,7 @@ transform: rotate(45deg);
                   <td class="results"><span style="color:#064d00;"> n.a </span></td>
                 </tr>
               </table>
-              <span style="color:#000;font-size:35px;">*</span> <span style="color:#064d00;font-size:15px;">ablation de
-                la couleur </span>
+              <span style="color:#000;font-size:35px;">*</span> <span style="color:#064d00;font-size:15px;">without RGB data </span>
             </td>
           </tr>
         </table>
@@ -1345,7 +1288,7 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <div class="step step_25D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h5 style="">Analyse de résultats</h5>
+        <h5 style="">Results analysis</h5>
         <img src="images/2_25D/exemple_ux_trans.jpg" style="height: auto; width:70%" />
       </center>
 
@@ -1357,18 +1300,18 @@ transform: rotate(45deg);
     <div class="step noribbon slide fade-in" style="transition-delay: 2s" data-rel-x="0" data-rel-y="1000" data-z="1000"
       data-rotate-x="-50" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
       <center>
-        <h4>Conclusion II - Détection multimodale</h4>
+        <h4>Conclusion II - Multimodal detection</h4>
       </center>
       <ul>
-        <li>trois nouvelles architectures de détection (U,X,Y)&nbsp;<img src="images/4_conclusion/2_2_25D.png" style="height: 50px; width:auto; position:relative; top:15px;" /></li>
-        <li>nouveaux résultats de référence sur 2 jeux de données RGBD :</li>
+        <li>3 new detection architectures (U,X,Y)&nbsp;<img src="images/4_conclusion/2_2_25D.png" style="height: 50px; width:auto; position:relative; top:15px;" /></li>
+        <li>new state of the art results on 2 RGBD datasets:</li>
         <ul>
           <li>RGBD People&nbsp;<img src="images/2_25D/rgbdp_404.jpg" style="height: 40px; width:auto; position:relative; top:10px;" />
           </li>
           <li>InOutDoor RGBD People&nbsp;<img src="images/2_25D/InOutPeople_image.png" style="height: 40px; width:auto; position:relative; top:10px;" />
           </li>
         </ul>
-        <li>création et mise à disposition d'un nouveau jeu de données RGBD complexe : ONERA.ROOM<img src="images/2_25D/orvidz.png"
+        <li>design and sharing of a new complex RGBD dataset: <br>ONERA.ROOM<img src="images/2_25D/orvidz.png"
             style="height: 50px; width:auto; position:relative; top:15px;" /></li>
       </ul>
     </div>
@@ -1420,7 +1363,7 @@ transform: rotate(45deg);
     <div id="start-3D" class="step noribbon slide" data-x="12500" data-y="0" data-z="0" data-transition-duration="3000">
       <center>
         <div style="opacity:1">
-          <h4 style="margin:0px;">Robust visual recognition by neural networks in robotic exploration scenarios.</h4>
+          <h4 style="margin:0px;">Robust visual recognition by neural networks <br>in robotic exploration scenarios.</h4>
           <h5 style="margin:0px;">Detect me if you can!</h5><br /><br /><br />
         </div>
       </center>
@@ -1439,7 +1382,7 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <div class="step_title">
-        <h5>Image RGBD</h5>
+        <h5>RGBD image</h5>
       </div>
       <div class="step_content">
         <img src="images/3_3D/RGBD_d.png" class="higher_img" />
@@ -1452,7 +1395,7 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h5>Jeu de données : SUNRGBD</h5> <img src="images/3_3D/dataset_SUNRGBD_overview.jpg" style="height: 400px; width: auto;" />
+        <h5>Dataset : SUNRGBD</h5> <img src="images/3_3D/dataset_SUNRGBD_overview.jpg" style="height: 400px; width: auto;" />
       </center>
     </div>
 
@@ -1461,7 +1404,7 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <div class="step_title">
-        <h5>De SnapNet à SnapNet-R</h5>
+        <h5>From SnapNet to SnapNet-R</h5>
       </div>
       <div class="step_content">
         <img src="images/3_3D/snap_vs_snapR/snap_vs_snapR_0.png" class="larger_img" />
@@ -1483,17 +1426,7 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h5>SnapNet-R : stratégie d'observation</h5>
-        <img src="images/3_3D/cag2017_00003.gif" style="height: auto; width: 80%;" />
-      </center>
-    </div>
-
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
-      <center>
-        <h5>SnapNet-R : stratégie d'observation</h5>
+        <h5>SnapNet-R : observation strategy</h5>
         <img src="images/3_3D/dataset_SUNRGBD_sampling.png" style="height: auto; width: 70%;" />
       </center>
     </div>
@@ -1515,7 +1448,7 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h5 style="margin:0px;">Résultats : <span style="font-style:italic">SUNRGBD</span> (37 classes)</h5>
+        <h5 style="margin:0px;">Results: <span style="font-style:italic">SUNRGBD</span> (37 classes)</h5>
 
         <img src="images/3_3D/sunrgbd_outputs.jpg" style="height: auto; width: 50%;" />
 
@@ -1530,18 +1463,18 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h5 style="">Résultats : <span style="font-style:italic">SUNRGBD</span> (37 classes)</h5>
+        <h5 style="">Results: <span style="font-style:italic">SUNRGBD</span> (37 classes)</h5>
         <table style="font-size:17px;border-collapse:collapse;">
           <tr>
-            <th class="results"> Expérience
+            <th class="results"> Experience
             </th>
             <th class="results"> Source
             </th>
-            <th class="results"> Précision
+            <th class="results"> Precision
             </th>
-            <th class="results"> Précision Moyenne
+            <th class="results"> Average precision
             </th>
-            <th class="results"> IoU moyen
+            <th class="results"> Mean IoU
 
             </th>
           </tr>
@@ -1631,7 +1564,7 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <div class="step step_3D" data-rel-x="0" data-rel-y="1000" data-z="0">
       <center>
-        <h5 style="">Résultats : <span style="font-style:italic">NYUDv2</span> (40 et 13 classes)</h5>
+        <h5 style="">Results: <span style="font-style:italic">NYUDv2</span> (40 and 13 classes)</h5>
         <table>
           <tr>
             <td>
@@ -1640,10 +1573,10 @@ transform: rotate(45deg);
                   <td class="results" bgcolor="#f6f9fe" colspan="4"> 40 classes </td>
                 </tr>
                 <tr>
-                  <td class="results"><b> Expérience </b></td>
+                  <td class="results"><b> Experience </b></td>
                   <td class="results"> <b> P </b> </td>
-                  <td class="results"><b> PM </b> </td>
-                  <td class="results"> <b> mIoU </b></td>
+                  <td class="results"><b> Average precision </b> </td>
+                  <td class="results"> <b> Mean IoU </b></td>
                 </tr>
                 <tr>
                   <td style="white-space: nowrap" class="results"> RCNN <span style="font-size:15px;">[Girshick et al.
@@ -1719,10 +1652,10 @@ transform: rotate(45deg);
                   <td class="results" bgcolor="#f6f9fe" colspan="4"> 13 classes </td>
                 </tr>
                 <tr>
-                  <td class="results"><b> Expérience </b></td>
-                  <td class="results"> <b> P </b> </td>
-                  <td class="results"><b> PM </b> </td>
-                  <td class="results"> <b> mIoU </b></td>
+                  <td class="results"><b> Experience </b></td>
+                  <td class="results"> <b> Precision </b> </td>
+                  <td class="results"><b> Average precision </b> </td>
+                  <td class="results"> <b> Mean IoU </b></td>
                 </tr>
                 <tr>
                   <td style="white-space: nowrap" class="results"> Couprie et al.<span style="font-size:15px;">[Couprie
@@ -1801,16 +1734,16 @@ transform: rotate(45deg);
     <div class="step noribbon slide fade-in" style="transition-delay: 2s" data-rel-x="0" data-rel-y="1000" data-z="1000"
       data-rotate-x="-50" data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
       <center>
-        <h4>Conclusion III - Segmentation multivue</h4>
+        <h4>Conclusion III - Multiview segmentation</h4>
       </center>
       <ul>
-        <li>Adaptation de SnapNet à des données RGBD monovues<img src="images/3_3D/snapnet_r_pipeline.png" style="position:absolute;height: auto; width:25%;top:35%;right:2%" /></li>
+        <li>Adaptation of SnapNet to RGBD monoview data<img src="images/3_3D/snapnet_r_pipeline.png" style="position:absolute;height: auto; width:25%;top:35%;right:2%" /></li>
         <ul>
-          <li> nouvelle stratégie d'observation</li>
-          <li> retrait du maillage</li>
-          <li> changement de structure sémantique : FuseNet</li>
+          <li> new observation strategy</li>
+          <li> removing meshing</li>
+          <li> using a new semantic segmentation method : FuseNet</li>
         </ul>
-        <li>Nouveaux résultats de référence sur :<img src="images/3_3D/sunrgbd_outputs.png" style="position:absolute;height: auto; width:15%;top:60%;right:20%" /></li>
+        <li>New state of the art results on :<img src="images/3_3D/sunrgbd_outputs.png" style="position:absolute;height: auto; width:15%;top:60%;right:20%" /></li>
         <ul>
           <li> SUNRGBD 37 classes</li>
           <li> NYUDv2 40 classes</li>
@@ -1853,7 +1786,7 @@ transform: rotate(45deg);
       data-rotate-y="0" data-rotate-z="0" data-transition-duration="3000">
       <center>
         <div style="opacity:0.5">
-          <h6 style="margin:0px;">Robust visual recognition by neural networks in robotic exploration scenarios.</h6>
+          <h6 style="margin:0px;">Robust visual recognition by neural networks <br>in robotic exploration scenarios.</h6>
           <span style="font-size:15px;font-style:italic">Detect me if you can!</span>
         </div>
         <h3>Conclusion</h3>
@@ -2008,9 +1941,9 @@ transform: rotate(45deg);
             <td><img src="images/4_conclusion/2_1_2D.png" style="height: 150px; width: auto;" /><br /></td>
             <td>
               <ul style="font-size:20px">
-                <li>Concept de Réseau de Confiance</li>
-                <li>Fonctionnel sous certaines conditions</li>
-                <li>Potentiel inexploité</li>
+                <li>Trust neural network concept</li>
+                <li>It works !</li>
+                <li>a lot of potential</li>
               </ul>
             </td>
           </tr>
@@ -2020,9 +1953,9 @@ transform: rotate(45deg);
             <td><img src="images/4_conclusion/2_2_25D.png" style="height: 150px; width: auto;" /><br /></td>
             <td>
               <ul style="font-size:20px">
-                <li>Nouvelles architectures multimodales</li>
-                <li>Fusion simple de l'information</li>
-                <li>Nouvelles références de détection RGBD</li>
+                <li>New multimodal architectures</li>
+                <li>Easy fusion of information</li>
+                <li>New state of the art results on RGBD detection</li>
               </ul>
             </td>
           </tr>
@@ -2032,8 +1965,8 @@ transform: rotate(45deg);
             <td><img src="images/4_conclusion/2_3_3D.png" style="height: 150px; width: auto;" /></td>
             <td>
               <ul style="font-size:20px">
-                <li>Adaptation d'une méthode multivue 3D</li>
-                <li>Nouvelles références de segmentation RGBD</li>
+                <li>Adaptation of a 3D multiview method</li>
+                <li>New state of the art results on RGBD segmentation</li>
               </ul>
             </td>
           </tr>
@@ -2046,7 +1979,7 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <div class="step noribbon slide_dissemination" data-rel-x="0" data-rel-y="1000">
       <center>
-        <h4 style="margin:0px;">Dissémination</h4>
+        <h4 style="margin:0px;">Dissemination</h4>
       </center>
       <div style="font-size:20px;margin:0px;">
         <ol type="I" style="display:table; margin:auto;">
@@ -2116,7 +2049,6 @@ transform: rotate(45deg);
             <li>
               <span class="conference_name">Computers and Graphics <b>2017</b>&nbsp;:</span>
               <span class="communication_type">[Journal]</span>
-              <span class="communication_state">[SOUMIS]</span><br />
               <span class="communication_name">“SnapNet”, 3D point cloud semantic labeling with 2D deep segmentation
                 networks</span>
               <br /><span class="communication_authors"> Alexandre Boulch, Joris Guerry, Bertrand Le Saux, Nicolas
@@ -2169,149 +2101,11 @@ transform: rotate(45deg);
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
     <!-- ######################################################################## -->
-    <div class="step noribbon slide" data-rel-x="0" data-rel-y="1000">
-      <center>
-        <br /><br /><br /><br />
-        <h3>Perspectives</h3>
-      </center>
-    </div>
-
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
-      <div class="step_title">
-        <h5>Perspectives</h5>
-        <h6>Unification des contributions</h6>
-      </div>
-      <div class="step_content">
-        <img src="images/4_conclusion/p_snapnet_r_x/p_snapnet_r_x_0.png" class="higher_img" />
-        <img src="images/4_conclusion/p_snapnet_r_x/p_snapnet_r_x_1.png" class="higher_img substep" />
-        <img src="images/4_conclusion/p_snapnet_r_x/p_snapnet_r_x_2.png" class="higher_img substep" />
-        <img src="images/4_conclusion/p_snapnet_r_x/p_snapnet_r_x_3.png" class="higher_img substep" />
-        <img src="images/4_conclusion/p_snapnet_r_x/p_snapnet_r_x_4.png" class="higher_img substep" />
-      </div>
-    </div>
-
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
-      <div class="step_title">
-        <h5>Perspectives</h5>
-        <h6>SnapNet-R "<span style="font-style:italic;">Scene-aware</span>"</h6>
-      </div>
-      <div class="step_content">
-        <div style="font-size:25px">
-
-
-          SnapNet-R :
-          <ol>
-            <li>génère N observations sémantisées</li>
-            <li>accumule les résultats en 3D</li>
-            <li>sélectionne la classe de chaque point par vote</li>
-          </ol>
-        </div>
-
-        <div style="text-align:right;" class="substep">
-          <table>
-            <tr>
-              <td> <img src="images/2_25D/shrec/challenge.png" style="height:200px;width:auto;" />
-                <img src="images/2_25D/shrec/3_canal.png" style="height:200px;width:auto;" />
-              </td>
-              <td style="font-size:25px;text-align:center;" width="300">
-                Encodage tensoriel
-              </td>
-            </tr>
-          </table>
-
-
-          <blockquote class="article_blockquote">
-            <svg viewBox="0 0 17 16" class="article_reference">
-              <path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path>
-            </svg>SHREC’17 Track: 3D Hand Gesture Recognition Using a Depth and Skeletal Dataset
-            (Eurographics 2017)
-            <cite class="article_cite">Q. De Smedt, H. Wannous, J.-P. Vandeborre, J. Guerry, B. Le Saux, D. Filliat</cite>
-          </blockquote>
-        </div>
-        <div class="substep">
-          <table>
-            <tr>
-              <td> <img src="images/4_conclusion/RNN-unrolled.png" style="height:auto;width:680px;" /></td>
-              <td style="font-size:25px;text-align:center;" width="300">
-                Réseau de neurones "récurrents"
-              </td>
-            </tr>
-          </table>
-
-
-
-        </div>
-
-      </div>
-    </div>
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <div class="step noribbon" data-rel-x="0" data-rel-y="1000" data-z="0">
-      <div class="step_title">
-        <h5>Perspectives</h5>
-        <h6>Intégration robotique</h6>
-      </div>
-      <div class="step_content">
-        <div style="font-size:25px;">
-
-
-          <table>
-            <tr class="substep">
-              <td width="300px" style="text-align:center;">Réseaux de neurones binaires</td>
-              <td><img src="images/4_conclusion/xnor.png" style="width:600px;height:auto;" />
-
-                <blockquote class="article_blockquote">
-                  <svg viewBox="0 0 17 16" class="article_reference">
-                    <path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path>
-                  </svg>Xnor-net: Imagenet classification using binary convolutional neural networks.
-                  (ECCV 2016)
-                  <cite class="article_cite">Rastegari et al.</cite>
-                </blockquote>
-
-              </td>
-            </tr>
-            <tr class="substep">
-              <td width="300px" style="text-align:center;">Aspect temporel</td>
-              <td>
-                <ul>
-                  <li>tracking des objets détectés + détections localisées</li>
-                  <li>SLAM sémantique (SnapNet)</li>
-                </ul>
-              </td>
-            </tr>
-            <tr class="substep">
-              <td width="300px" style="text-align:center;">Apprentissage profond bayésien</td>
-              <td><img src="images/4_conclusion/bayesian_segnet.png" style="width:600px;height:auto;" />
-
-                <blockquote class="article_blockquote">
-                  <svg viewBox="0 0 17 16" class="article_reference">
-                    <path d="M1.5 3.5v5h2v.375L1.75 12.5h3L6.5 8.875V3.5zM9.5 3.5v5h2v.375L9.75 12.5h3L14.5 8.875V3.5z"></path>
-                  </svg>Bayesian segnet: Model uncertainty in deep convolutional encoder-decoder
-                  architectures for scene understanding. (2015)
-                  <cite class="article_cite">Kendall et al.</cite>
-                </blockquote>
-              </td>
-            </tr>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
-    <!-- ######################################################################## -->
     <div id="step_question" class="step noribbon" data-rel-x="0" data-rel-y="2000">
       <center>
         <table>
           <tr>
-            <td>Merci</td>
+            <td>Thanks</td>
             <td></td>
           </tr>
           <tr>
@@ -2327,11 +2121,11 @@ transform: rotate(45deg);
     </div>
 
 
-    <div id="overview_end" class="step noribbon" data-x="8500" data-y="16000" data-z="5000" data-scale="1"
-      data-rotate-x="-50" data-rotate-y="0" data-rotate-z="0" data-transition-duration="13000" style="pointer-events: none;">
+    <div id="overview_end" class="step noribbon" data-x="8500" data-y="13000" data-z="5000" data-scale="1"
+      data-rotate-x="-50" data-rotate-y="0" data-rotate-z="0" data-transition-duration="8000" style="pointer-events: none;">
     </div>
 
-    <div id="overview" class="step noribbon" data-x="8500" data-y="16000" data-z="5000" data-scale="1" data-rotate-x="-50"
+    <div id="overview" class="step noribbon" data-x="8500" data-y="13000" data-z="5000" data-scale="1" data-rotate-x="-50"
       data-rotate-y="0" data-rotate-z="0" data-transition-duration="1000" style="pointer-events: none;"> </div>
 
 
