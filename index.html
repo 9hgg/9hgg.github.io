@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head lang="en">
     <meta charset="UTF-8" />
@@ -9,9 +9,9 @@
     <!--Meta Keywords and Description-->
     <meta
       name="keywords"
-      content="personal website, joris guerry, developer, freelance, researcher, PhD"
+      content="personal website, joris guerry, developer, software engineer, open source"
     />
-    <meta name="description" content="Personal page of PhD Joris GUERRY" />
+    <meta name="description" content="Personal page of Joris GUERRY" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no"
@@ -38,6 +38,115 @@
       rel="stylesheet"
       type="text/css"
     />
+    <style>
+      .hero-clock {
+        width: 170px;
+        height: 170px;
+        margin-bottom: 26px;
+        border: 3px solid #111;
+        border-radius: 50%;
+        position: relative;
+      }
+
+      .hero-clock .tick-nine {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        font-size: 1.15rem;
+        font-weight: 700;
+        line-height: 1;
+        transform: translateY(-50%);
+        color: #111;
+      }
+
+      .hero-clock .hand {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 3px;
+        border-radius: 2px;
+        background: #d2b356;
+        transform-origin: 0 50%;
+      }
+
+      .hero-clock .hand-hour {
+        width: 34px;
+        transform: translateY(-50%) rotate(180deg);
+        animation: hand-hour-intro 5s ease-out 1 forwards;
+      }
+
+      .hero-clock .hand-minute {
+        width: 42px;
+        transform: translateY(-50%) rotate(-90deg);
+        animation: hand-minute-intro 5s ease-out 1 forwards;
+      }
+
+      .hero-clock .clock-center {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #d2b356;
+        transform: translate(-50%, -50%);
+      }
+
+      .hero-clock .clock-gg {
+        position: absolute;
+        right: 22px;
+        bottom: 26px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        opacity: 0.26;
+        letter-spacing: 0.05em;
+      }
+
+      @keyframes hand-hour-intro {
+        0% {
+          transform: translateY(-50%) rotate(-60deg);
+        }
+        100% {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+
+      @keyframes hand-minute-intro {
+        0% {
+          transform: translateY(-50%) rotate(-450deg);
+        }
+        100% {
+          transform: translateY(-50%) rotate(-90deg);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-clock {
+          width: 132px;
+          height: 132px;
+          margin-bottom: 20px;
+        }
+
+        .hero-clock .tick-nine {
+          font-size: 1rem;
+          left: 9px;
+        }
+
+        .hero-clock .hand-hour {
+          width: 28px;
+        }
+
+        .hero-clock .hand-minute {
+          width: 34px;
+        }
+
+        .hero-clock .clock-gg {
+          right: 18px;
+          bottom: 18px;
+          font-size: 0.8rem;
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- Preloader -->
@@ -77,7 +186,7 @@
               <!--Logo-->
               <div id="logo">
                 <!--Logo that is shown on the banner-->
-                <div id="banner-logo"><h2 class="section-title">9h.gg</h2></div>
+                <!-- <div id="banner-logo"><h2 class="section-title">9h.gg</h2></div> -->
                 <!-- <img src="images/logo.png" id="banner-logo" alt="Landing Page"/> -->
                 <!--End of Banner Logo-->
 
@@ -116,16 +225,16 @@
               </aside>
 
               <!--Main Navigation-->
-              <nav id="nav-main">
+              <!-- <nav id="nav-main">
                 <ul>
                   <li>
                     <a href="#banner">Home</a>
                   </li>
                   <li>
-                    <a href="#lako">Lako</a>
+                    <a href="#open-source">Open source</a>
                   </li>
                 </ul>
-              </nav>
+              </nav> -->
               <!--End of Main Navigation-->
 
               <div id="nav-trigger"><span></span></div>
@@ -138,9 +247,16 @@
         <!--Banner Content-->
         <div id="banner-content" class="row clearfix">
           <div class="col-38">
+            <div class="hero-clock" aria-hidden="true">
+              <span class="hand hand-hour"></span>
+              <span class="hand hand-minute"></span>
+              <span class="clock-center"></span>
+              <span class="tick-nine">9h</span>
+              <span class="clock-gg">.gg</span>
+            </div>
             <div class="section-heading">
-              <h1>Joris Guerry, PhD</h1>
-              <h2>Researcher, Founder, Developer</h2>
+              <h1>Joris Guerry</h1>
+              <h2>Software Engineer</h2>
             </div>
 
             <!--Call to Action-->
@@ -148,7 +264,11 @@
             <!--End Call to Action-->
           </div>
           <div class="col-61">
-            <img src="./images/banner-images/banner-image-2.webp" alt="">
+            <img
+              src="./images/banner-images/banner-image-2.webp"
+              alt="Génération d'image en 2024"
+              title="Génération d'image en 2024"
+            />
           </div>
         </div>
         <!--End of Row-->
@@ -156,21 +276,18 @@
 
       <!--Main Content Area-->
       <main id="content">
-        <!--lako-->
-        <section id="lako" class="introduction scrollto">
+        <!--Open source-->
+        <section id="open-source" class="introduction scrollto">
           <div class="row clearfix">
             <div class="col-3">
-              <!-- click should redirect to https://lako.do -->
-              <a href="https://lako.do" target="_blank">
-                <div class="section-heading">
-                  <h3>dev</h3>
-                  <h2 class="section-title">Lako.do project</h2>
-                  <p class="section-subtitle">
-                    A list of web and datascience oriented packages (mostly
-                    Python).
-                  </p>
-                </div>
-              </a>
+              <div class="section-heading">
+                <h3>dev</h3>
+                <h2 class="section-title">Open source</h2>
+                <p class="section-subtitle">
+                  Small public projects and monorepos shared with colleagues and
+                  friends.
+                </p>
+              </div>
             </div>
 
             <div class="col-2-3">
@@ -181,15 +298,41 @@
               >
                 <!--Icon-->
                 <div class="icon">
-                  <i class="fa fa-bolt fa-2x"></i>
+                  <i class="fa fa-code fa-2x"></i>
                 </div>
                 <!--Icon Block Description-->
                 <div class="icon-block-description">
-                  <a href="https://lako.do/stuff-saver" target="_blank">
-                    <h4>Stuff saver</h4>
+                  <a href="https://lako.do" target="_blank">
+                    <h4>Lako.do - sharing some code</h4>
                   </a>
                   <p>
-                    Just save stuff, with pickle or any other load/dump backend.
+                    A curated list of web and data-oriented packages, mostly
+                    Python.
+                  </p>
+                </div>
+              </div>
+              <!--End of Icon Block-->
+
+              <!--Icon Block-->
+              <div
+                class="col-2 icon-block icon-top wow fadeInUp"
+                data-wow-delay="0.45s"
+              >
+                <!--Icon-->
+                <div class="icon">
+                  <i class="fa fa-sitemap fa-2x"></i>
+                </div>
+                <!--Icon Block Description-->
+                <div class="icon-block-description">
+                  <a
+                    href="https://github.com/9hgg/foundation-os"
+                    target="_blank"
+                  >
+                    <h4>foundation-os - open source monorepo</h4>
+                  </a>
+                  <p>
+                    A public monorepo for shared building blocks, experiments,
+                    and reusable development tooling.
                   </p>
                 </div>
               </div>
@@ -197,7 +340,7 @@
             </div>
           </div>
         </section>
-        <!--End of lako-->
+        <!--End of open source-->
       </main>
       <!--End Main Content Area-->
 
