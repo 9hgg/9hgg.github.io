@@ -146,6 +146,33 @@
           font-size: 0.8rem;
         }
       }
+
+      #side-projects .col-2-3 {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      #side-projects .icon-block.col-2 {
+        float: none;
+        width: 50%;
+        box-sizing: border-box;
+      }
+
+      #side-projects .project-media {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 14px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        background: #fff;
+      }
+
+      @media (max-width: 768px) {
+        #side-projects .icon-block.col-2 {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -398,6 +425,184 @@
           </div>
         </section>
         <!--End of daily stack-->
+
+        <!--Side projects-->
+        <section id="side-projects" class="introduction scrollto">
+          <div class="row clearfix">
+            <div class="col-3">
+              <div class="section-heading">
+                <h3>build</h3>
+                <h2 class="section-title">Side projects</h2>
+                <p class="section-subtitle">
+                  A few products and experiments I worked on, with mixed
+                  outcomes.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-2-3">
+              <div
+                class="col-2 icon-block icon-top wow fadeInUp"
+                data-wow-delay="0.3s"
+              >
+                <div class="icon">
+                  <img
+                    src="assets/rumble-studio.png"
+                    alt="Rumble Studio preview"
+                    class="project-media"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="icon-block-description">
+                  <h4>
+                    Rumble Studio
+                    <a
+                      href="https://rumble.studio"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Open rumble.studio"
+                      style="margin-left: 8px"
+                    >
+                      <i class="fa fa-external-link"></i>
+                    </a>
+                  </h4>
+                  <p>Audio interview platform, currently in admin-only mode.</p>
+                  <p>
+                    Initially a full-time startup effort over 3 years, with a
+                    small team and around EUR 500k€ in cumulative revenue.
+                  </p>
+                  <p>
+                    Built at
+                    <a
+                      href="https://stationf.co/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Station F</a
+                    >
+                    with
+                    <a
+                      href="https://www.joinef.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Entrepreneur First</a
+                    >
+                    and Havas.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="col-2 icon-block icon-top wow fadeInUp"
+                data-wow-delay="0.4s"
+              >
+                <div class="icon">
+                  <img
+                    src="assets/spoken.png"
+                    alt="Spoken preview"
+                    class="project-media"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="icon-block-description">
+                  <h4>
+                    Spoken
+                    <a
+                      href="https://spoken.systems"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Open spoken.systems"
+                      style="margin-left: 8px"
+                    >
+                      <i class="fa fa-external-link"></i>
+                    </a>
+                  </h4>
+                  <p>
+                    A new version of Rumble Studio, built from lessons learned in the
+                    first product.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="col-2 icon-block icon-top wow fadeInUp"
+                data-wow-delay="0.5s"
+              >
+                <div class="icon">
+                  <span aria-hidden="true" style="font-size: 2em">🍌</span>
+                </div>
+                <div class="icon-block-description">
+                  <h4>Banana Army</h4>
+                  <p>
+                    No-code web app builder project, incubated at
+                    <a
+                      href="https://www.euratechnologies.com/en"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >EuraTechnologies</a
+                    >, currently on hold.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="col-2 icon-block icon-top wow fadeInUp"
+                data-wow-delay="0.6s"
+              >
+                <div class="icon">
+                  <i class="fa fa-user-secret fa-2x"></i>
+                </div>
+                <div class="icon-block-description">
+                  <h4>Mimo Vision</h4>
+                  <p>
+                    Privacy-first camera network SaaS project, now discontinued.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="col-2 icon-block icon-top wow fadeInUp"
+                data-wow-delay="0.7s"
+              >
+                <div class="icon">
+                  <img
+                    src="assets/boosty.png"
+                    alt="Boosty preview"
+                    class="project-media"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="icon-block-description">
+                  <h4>Boosty</h4>
+                  <p>
+                    Early design-to-code attempt, stopped after initial work.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="col-2 icon-block icon-top wow fadeInUp"
+                data-wow-delay="0.8s"
+              >
+                <div class="icon">
+                  <img
+                    src="assets/thermal.gif"
+                    alt="Thermal printer IoT preview"
+                    class="project-media"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="icon-block-description">
+                  <h4>Thermal printer IoT</h4>
+                  <p>
+                    Raspberry Pi module that printed images submitted from a
+                    small public webpage.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--End of side projects-->
       </main>
       <!--End Main Content Area-->
 
